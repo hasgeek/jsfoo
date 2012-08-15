@@ -15,7 +15,7 @@ stack (update this list)
 
 
 
-namespace foo - 
+namespace foo - (ala YUI)
 foo/core
 - foo.js - module management stuff 
 - core.js - object twiddling, sugar for common stuff
@@ -59,6 +59,7 @@ foo/iso
 
 - app.js
 - /config
+ - defaults.js
  - development.js
  - production.js
 
@@ -69,10 +70,7 @@ foo/iso
   - /dom
   - /io
   - /iso
-  - /anim
-- /server
- - /views
- - 
+  - /tween
 
 
 
