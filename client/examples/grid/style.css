@@ -1,0 +1,95 @@
+body{
+	/*background-color: black;	*/
+	
+}
+
+.iso-grid{
+	/*background-image:url('grid.png');*/
+	position: relative;
+	display: block;
+	width:100%;
+	height:600px;
+	
+	/*left:600px;*/
+	
+	-webkit-filter: blur(0px);
+	/*opacity:0.2;*/
+
+
+}
+
+.iso-grid .iso-face{
+	width:30px;
+	height:30px;
+	/*outline: 5px solid black;*/
+	/*background-color: green;*/
+	/*opacity: 0.7;*/
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box; 
+	display:block;
+	position: absolute;
+	background: -moz-linear-gradient(top, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.3)), color-stop(100%,rgba(255,255,255,0))); 
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%); 
+	background: -o-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%); 
+	background: -ms-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%); 
+	background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); 
+
+	transition: transform 0.8s, background-color 0.8s;
+	-moz-transition: -moz-transform 0.8s, background-color 0.8s;
+	-webkit-transition: -webkit-transform 0.8s, background-color 0.8s;
+	-o-transition: -o-transform 0.8s, background-color 0.8s;
+
+	
+
+	/*opacity: 0.8;*/
+}
+
+/* from http://www.zachstronaut.com/lab/isocube.html */
+.iso-face.front{
+	-webkit-transform: rotate(-30deg) skewX(-30deg) skewY(0deg);
+	-ms-transform: rotate(-30deg) skewX(-30deg) skewY(0deg);
+	-moz-transform: rotate(-30deg) skewX(-30deg) skewY(0deg);
+	-o-transform: rotate(-30deg) skewX(-30deg) skewY(0deg);
+	transform: rotate(-30deg) skewX(-30deg) skewY(0deg);
+}
+
+.iso-face.left{
+	-webkit-transform: rotate(30deg) skewX(30deg) skewY(0deg) translateX(-30px) translateY(14.2px);
+	-ms-transform: rotate(30deg) skewX(30deg) skewY(0deg) translateX(-30px) translateY(14.2px);
+	-moz-transform: rotate(30deg) skewX(30deg) skewY(0deg) translateX(-30px) translateY(14.2px);
+	-o-transform: rotate(30deg) skewX(30deg) skewY(0deg) translateX(-30px) translateY(14.2px);
+	transform: rotate(30deg) skewX(30deg) skewY(0deg) translateX(-30px) translateY(14.2px);
+}
+
+
+.iso-face.top{
+	-webkit-transform: rotate(-30deg) skewX(30deg) skewY(0deg) scaleY(0.87) translateX(15px) translateY(-30px);
+	-ms-transform: rotate(-30deg) skewX(30deg) skewY(0deg) scaleY(0.87) translateX(15px) translateY(-30px);
+	-moz-transform: rotate(-30deg) skewX(30deg) skewY(0deg) scaleY(0.87) translateX(15px) translateY(-30px);
+	-o-transform: rotate(-30deg) skewX(30deg) skewY(0deg) scaleY(0.87) translateX(15px) translateY(-30px);
+	transform: rotate(-30deg) skewX(30deg) skewY(0deg) scaleY(0.87) translateX(15px) translateY(-30px);
+}
+
+.iso-face.back{
+	display: none;
+}
+.iso-face.right{
+	display: none;	
+}
+.iso-face.bottom{
+	display: none;
+}
+
+.iso-face.blue.front{
+	background-color:#85c7ff;
+}
+.iso-face.blue.left{
+	background-color:#006bc3;
+}
+.iso-face.blue.top{
+	
+	background-color:#3aa5ff;
+}
