@@ -9,9 +9,37 @@
 
 /* 768 =================================================== */
 
-header, div.content, footer {
-	width: 720px;
+@pagewidth: 720px;
+
+h1 {
+	.font-size(48);
+}
+
+div.content, footer, nav ul {
+	width: @pagewidth;
 	margin: 0 auto;
+}
+
+header h1 {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -@pagewidth/2
+}
+
+nav ul {
+	text-align: right;
+}
+
+nav ul li {
+	font-size: 18px;
+	line-height: 36px;
+	margin: 0 8px 0 0;
+}
+
+#logo {
+	width: 150px;
+	margin-top: 0;
 }
 
 // 1. ROOT 					==============================

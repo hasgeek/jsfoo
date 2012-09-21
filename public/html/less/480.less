@@ -8,15 +8,52 @@
 // ==========================================================
 
 /* 480 =================================================== */
+@pagewidth: 470px;
 
-header, div.content, footer {
-	width: 440px;
+h1 {
+	.font-size(36);
+	text-align: left;
+	background: none;
+	border: none;
+}
+
+div.content, footer, nav ul {
+	width: @pagewidth;
 	margin: 0 auto;
 }
 
-nav {
-	clear: none;
+div#content {
+	background: url(../img/hexagons.png) top center no-repeat, url(../img/bg.png) top center no-repeat, url(../img/bg-color.png) repeat;
 }
+
+header h1 {
+	position: absolute;
+	left: 50%;
+	margin-left: -@pagewidth/2;
+	top: -34px;
+}
+
+article.hero {
+	height: 500px;
+	
+	div {
+		top: 188px;
+		margin: 0 -64px;
+	}
+}
+
+#logo {
+	width: 90px;
+}
+
+nav ul {
+	text-align: right;
+}
+
+nav ul li {
+	padding: 0 6px 0 0;
+}
+
 // 1. ROOT 					==============================
 // 2. TYPOGRAPHY 			==============================
 // 3. COLOUR 				==============================

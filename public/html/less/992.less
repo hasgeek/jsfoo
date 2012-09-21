@@ -9,18 +9,31 @@
 
 /* 992 =================================================== */
 
-header, div.content, footer {
-	width: 960px;
+@pagewidth: 960px;
+
+div.content, footer, nav ul {
+	width: @pagewidth;
 	margin: 0 auto;
+}
+
+header h1 {
+	position: absolute;
+	left: 50%;
+	margin-left: -@pagewidth/2
 }
 
 nav ul li {
 	font-size: 21px;
-	padding: 0 20px 0 0;
+	line-height: 42px;
+	margin: 0 12px 0 0;
 }
 
 nav {
-	margin: 100px 0 0 260px;
+	margin: 0;
+}
+
+#logo {
+	width: 220px;
 }
 
 // 1. ROOT 					==============================

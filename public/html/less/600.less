@@ -9,10 +9,29 @@
 
 /* 600 =================================================== */
 
-header, div.content, footer {
-	width: 580px;
+@pagewidth: 580px;
+
+div.content, footer, nav ul {
+	width: @pagewidth;
 	margin: 0 auto;
 }
+
+header h1 {
+	position: absolute;
+	left: 50%;
+	margin-left: -@pagewidth/2
+}
+
+nav ul li {
+	font-size: 16px;
+	line-height: 36px;
+}
+
+#logo {
+	margin-top: 40px;
+	width: 110px;
+}
+
 // 1. ROOT 					==============================
 // 2. TYPOGRAPHY 			==============================
 // 3. COLOUR 				==============================

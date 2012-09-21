@@ -132,58 +132,6 @@ body {
   line-height: 1.5em;
   color: #000000;
 }
-h1 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 48px;
-}
-header,
-div.content,
-footer {
-  width: 320px;
-  margin: 0 auto;
-}
-div#content {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 100;
-  background: url(../img/bg.png) top center no-repeat, url(../img/bg-color.png) repeat;
-  overflow-y: scroll;
-}
-div#grid {
-  background: url(../img/grid.png) repeat;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  z-index: 0;
-}
-img#logo {
-  float: left;
-}
-nav {
-  clear: left;
-  border-top: 4px solid #bb0000;
-  padding: 12px 0 0;
-}
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-nav ul li {
-  float: left;
-  margin: 0;
-  padding: 0 10px 0 0;
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
-  font-size: 16px;
-  color: #3d3636;
-}
-nav ul li a:hover {
-  text-decoration: none;
-}
 /* Typography =================================================== */
 h1,
 h2,
@@ -310,7 +258,7 @@ blockquote {
   margin: 0 0 1.5em -24px;
   padding-left: 24px;
   border-left: 2px solid #c7ced6;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Gruppo', cursive;
   font-style: normal;
 }
 q {
@@ -401,7 +349,7 @@ a:visited {
   color: #736666;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: #584e4e;
 }
 a:focus {
@@ -1912,6 +1860,106 @@ table tbody tr:hover th {
 .table-striped tbody tr:nth-child(odd) th {
   background-color: #c7ced6;
 }
+h1 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  text-align: center;
+  line-height: 48px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-left: 0;
+  border-right: 0;
+  padding: 0;
+  margin: 0;
+}
+div#content {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  background: url(../img/bg.png) top center no-repeat, url(../img/bg-color.png) repeat;
+}
+div#grid {
+  background: url(../img/grid.png) top center repeat;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+#logo {
+  width: 130px;
+}
+header h1 {
+  position: absolute;
+  left: 50%;
+  margin-left: -68px;
+  top: 52px;
+  background: none;
+  border: none;
+}
+nav {
+  padding: 0;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-left: 0;
+  border-right: 0;
+  margin: 0;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+nav ul li {
+  display: inline;
+  margin: 0;
+  padding: 0 3px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 36px;
+  color: #3d3636;
+}
+article.hero {
+  height: 320px;
+}
+article.hero div {
+  position: absolute;
+  top: 220px;
+  margin: 0 -60px;
+  left: 50%;
+  width: 130px;
+}
+article.hero div h2 {
+  line-height: 32px;
+  margin: 0;
+  padding: 0;
+}
+article.hero div h2 span {
+  display: block;
+  font-family: 'Gruppo', cursive;
+  font-size: 16px;
+  line-height: 12px;
+}
+article.hero div h2 span.convention {
+  letter-spacing: 1px;
+}
+article.hero div h2 span.centre {
+  letter-spacing: 11.7px;
+}
+article.hero div h2 span.bangalore {
+  letter-spacing: 3px;
+}
+article.hero div h2 span.october {
+  letter-spacing: 7.1px;
+}
+article.hero div time {
+  display: block;
+  margin-top: 6px;
+  letter-spacing: 5px;
+}
 @media print {
   /* Print =================================================== */
   * {
@@ -1967,64 +2015,142 @@ table tbody tr:hover th {
 }
 @media only screen and (min-width: 480px) {
   /* 480 =================================================== */
-  header,
+  h1 {
+    font-size: 36px;
+    font-size: 3.6rem;
+    text-align: left;
+    background: none;
+    border: none;
+  }
   div.content,
-  footer {
-    width: 440px;
+  footer,
+  nav ul {
+    width: 470px;
     margin: 0 auto;
   }
-  nav {
-    clear: none;
+  div#content {
+    background: url(../img/hexagons.png) top center no-repeat, url(../img/bg.png) top center no-repeat, url(../img/bg-color.png) repeat;
+  }
+  header h1 {
+    position: absolute;
+    left: 50%;
+    margin-left: -235px;
+    top: -34px;
+  }
+  article.hero {
+    height: 500px;
+  }
+  article.hero div {
+    top: 188px;
+    margin: 0 -64px;
+  }
+  #logo {
+    width: 90px;
+  }
+  nav ul {
+    text-align: right;
+  }
+  nav ul li {
+    padding: 0 6px 0 0;
   }
 }
 @media only screen and (min-width: 600px) {
   /* 600 =================================================== */
-  header,
   div.content,
-  footer {
+  footer,
+  nav ul {
     width: 580px;
     margin: 0 auto;
+  }
+  header h1 {
+    position: absolute;
+    left: 50%;
+    margin-left: -290px;
+  }
+  nav ul li {
+    font-size: 16px;
+    line-height: 36px;
+  }
+  #logo {
+    margin-top: 40px;
+    width: 110px;
   }
 }
 @media only screen and (min-width: 768px) {
   /* 768 =================================================== */
-  header,
+  h1 {
+    font-size: 48px;
+    font-size: 4.8rem;
+  }
   div.content,
-  footer {
+  footer,
+  nav ul {
     width: 720px;
     margin: 0 auto;
+  }
+  header h1 {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -360px;
+  }
+  nav ul {
+    text-align: right;
+  }
+  nav ul li {
+    font-size: 18px;
+    line-height: 36px;
+    margin: 0 8px 0 0;
+  }
+  #logo {
+    width: 150px;
+    margin-top: 0;
   }
 }
 @media only screen and (min-width: 992px) {
   /* 992 =================================================== */
-  header,
   div.content,
-  footer {
+  footer,
+  nav ul {
     width: 960px;
     margin: 0 auto;
   }
+  header h1 {
+    position: absolute;
+    left: 50%;
+    margin-left: -480px;
+  }
   nav ul li {
     font-size: 21px;
-    padding: 0 20px 0 0;
+    line-height: 42px;
+    margin: 0 12px 0 0;
   }
   nav {
-    margin: 100px 0 0 260px;
+    margin: 0;
+  }
+  #logo {
+    width: 220px;
   }
 }
 @media only screen and (min-width: 1382px) {
   /* 1382 =================================================== */
-  div#content {
-    width: 100%;
-    height: 100%;
-  }
-  header,
   div.content,
-  footer {
+  footer,
+  nav ul {
     width: 1350px;
     margin: 0 auto;
   }
+  nav ul {
+    top: 50px;
+  }
+  header h1 {
+    position: absolute;
+    left: 50%;
+    margin-left: -675px;
+  }
   nav ul li {
     font-size: 24px;
+    line-height: 48px;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {

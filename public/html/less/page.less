@@ -6,7 +6,116 @@
 // Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
 // ==========================================================
-
-img#logo {
+h1 {
+	.font-size(24);
+	text-align: center;
+	line-height: 48px;
+	background: RGBA(255,255,255,0.5);
+	border: 1px solid RGBA(255,255,255,0.75);
+	border-left: 0;
+	border-right: 0;
+	padding: 0;
+	margin: 0;
 }
 
+div#content {
+	width: 100%;
+	position: relative;
+	z-index: 10;
+	background: url(../img/bg.png) top center no-repeat, url(../img/bg-color.png) repeat;
+}
+
+div#grid {
+	background: url(../img/grid.png) top center repeat;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 0;
+}
+
+#logo {
+	width: 130px;
+}
+
+header h1 {
+	position: absolute;
+	left: 50%;
+	margin-left: -68px;
+	top: 52px;
+	background: none;
+	border: none;
+}	
+
+nav {	
+	padding: 0;
+	background: RGBA(255,255,255,0.5);
+	border: 1px solid RGBA(255,255,255,0.75);
+	border-left: 0;
+	border-right: 0;
+	margin: 0;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+nav ul li {
+	display: inline;
+	margin: 0;
+	padding: 0 3px;
+	font-family: @baseheadingfont;
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 36px;
+	color: #3d3636;
+}
+
+article.hero {
+	height: 320px;
+	div {
+		position: absolute;
+		top: 220px;
+		margin: 0 -60px;
+		left: 50%;
+		width: 130px;
+		
+		h2 {
+			line-height: 32px;
+			margin: 0;
+			padding: 0;
+			span {			
+				display: block;
+				font-family: @altfont;
+				font-size: 16px;
+				line-height: 12px;
+			}
+			
+			span.convention {
+				letter-spacing: 1px;
+			}
+			
+			span.centre {
+				letter-spacing: 11.7px;
+			}
+			
+			span.bangalore {
+				letter-spacing: 3px;
+			}
+			
+			span.october {
+				letter-spacing: 7.1px;			
+			}
+		}	
+		
+		time {	
+			display: block;
+			margin-top: 6px;
+			letter-spacing: 5px;
+		}
+	}
+}
