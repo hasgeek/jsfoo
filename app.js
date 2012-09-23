@@ -22,7 +22,7 @@ app.configure(function(){
   app.use(express.session());
   app.use(app.router);
   app.use(require('less-middleware')({ src: __dirname + '/public' }));
-  app.use(express.static(path.join(__dirname, 'public')));
+  app.use(express.static(path.join(__dirname, 'public', 'html')));
   app.use('/build', express.static(path.join(__dirname, 'client/build')));
   app.use('/lib', express.static(path.join(__dirname, 'client/lib')));
   app.use('/examples', express.static(path.join(__dirname, 'client/examples')));

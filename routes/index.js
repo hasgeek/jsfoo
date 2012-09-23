@@ -1,8 +1,8 @@
-
+var fs = require("fs");
 /*
  * GET home page.
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
+  fs.createReadStream(__dirname + "/../public/html/index.html").pipe(res);
 };
