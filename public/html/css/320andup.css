@@ -1944,6 +1944,7 @@ article.hero div h2 span {
   line-height: 12px;
 }
 article.hero div h2 span.convention {
+  padding-top: 2px;
   letter-spacing: 1px;
 }
 article.hero div h2 span.centre {
@@ -1953,6 +1954,7 @@ article.hero div h2 span.bangalore {
   letter-spacing: 3px;
 }
 article.hero div h2 span.october {
+  padding-top: 2px;
   letter-spacing: 7.1px;
 }
 article.hero div time {
@@ -2021,6 +2023,7 @@ article.hero div time {
     text-align: left;
     background: none;
     border: none;
+    margin-bottom: 12px;
   }
   div.content,
   footer,
@@ -2035,7 +2038,7 @@ article.hero div time {
     position: absolute;
     left: 50%;
     margin-left: -235px;
-    top: -34px;
+    top: -25px;
   }
   article.hero {
     height: 500px;
@@ -2072,7 +2075,7 @@ article.hero div time {
     line-height: 36px;
   }
   #logo {
-    margin-top: 40px;
+    margin-top: 32px;
     width: 110px;
   }
 }
@@ -2081,6 +2084,7 @@ article.hero div time {
   h1 {
     font-size: 48px;
     font-size: 4.8rem;
+    margin-bottom: 24px;
   }
   div.content,
   footer,
@@ -2104,7 +2108,7 @@ article.hero div time {
   }
   #logo {
     width: 150px;
-    margin-top: 0;
+    margin-top: 12px;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -2129,7 +2133,7 @@ article.hero div time {
     margin: 0;
   }
   #logo {
-    width: 220px;
+    width: auto;
   }
 }
 @media only screen and (min-width: 1382px) {
