@@ -30,6 +30,11 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 	<link rel="stylesheet" href="css/320andup.css">
 	<link href='http://fonts.googleapis.com/css?family=Gruppo|Oswald:400,300,700' rel='stylesheet' type='text/css'>
 	
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.css" />
+	 <!--[if lte IE 8]>
+	     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.ie.css" />
+	 <![endif]-->
+	
 	<!--[if (lt IE 9) & (!IEMobile)]>
 	<script src="js/selectivizr-min.js"></script>
 	<![endif]-->
@@ -93,10 +98,14 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 			</article>
 			
 			<a name="about"><h1>About</h1></a>
+			<h2>Sub-Heading</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id quam at est iaculis mattis. Vivamus feugiat dui ligula. Morbi nec porttitor nibh. Aenean at risus mauris, eget blandit neque. Sed ultrices, elit non pharetra vulputate, dolor ligula auctor elit, ut volutpat enim ipsum at orci. Nulla et augue lobortis nibh tempus rhoncus.</p>
+			<p>Quisque imperdiet pulvinar tortor ut placerat. Etiam in lorem ultrices nisl dapibus aliquam quis in nibh. In vehicula ante sed felis placerat in bibendum quam faucibus. Nunc nec sollicitudin arcu. Cras tincidunt diam eu turpis tincidunt porta. Proin erat mi, euismod quis fringilla nec, imperdiet vel nibh. Phasellus a felis nibh, ac ultrices massa. Aenean scelerisque nisl at odio pulvinar ut convallis nisl blandit. Proin ut eros ante, eu sagittis mi.</p>
 			<a name="blog"><h1>Blog</h1></a>
 			<a name="programme"><h1>Programme</h1></a>
 			<a name="sponsors"><h1>Sponsors</h1></a>
 			<a name="venue"><h1>Venue</h1></a>
+			<div id="map"></div>
 			<a name="parners"><h1>Partners</h1></a>
 			<a name="register"><h1>Register</h1></a>
 		</div><!-- / content -->
@@ -112,10 +121,21 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
-	
+	<script src="http://cdn.leafletjs.com/leaflet-0.4/leaflet.js"></script>
+
 	<script src="js/plugins.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/helper.js"></script>
+	
+	<script type="text/javascript">
+		var map = L.map('map').setView([12.9431, 77.5969], 13);
+		
+		L.tileLayer('http://{s}.tile.cloudmade.com/API-key/997/256/{z}/{x}/{y}.png', {
+		    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="http://cloudmade.com">CloudMade</a>',
+		    maxZoom: 18
+		}).addTo(map);
+	</script>
+		
 	<script>
 		var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
 		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
