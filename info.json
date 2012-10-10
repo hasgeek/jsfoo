@@ -1,0 +1,13 @@
+{
+    "application": "eventframe",
+    "identifier": "jsfoo2012",
+    "name": "JSFoo 2012",
+    "author": "HasGeek",
+    "description": "JSFoo Bangalore 2012 website template",
+    "license": "All rights reserved",
+    "doctype": "html5",
+    "options": {
+        "assets_css": [],
+        "assets_js": []
+    }
+}

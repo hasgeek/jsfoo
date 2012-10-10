@@ -1,0 +1,438 @@
+<!doctype html>
+
+<!-- 
+320 and Up by Andy Clarke
+Version: 3.0
+URL: http://stuffandnonsense.co.uk/projects/320andup/
+Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+-->
+
+<!-- HTML5 Boilerplate -->
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	
+	<title>JSFoo 2012 | HasGeek</title>
+	
+	<meta name="description" content="JSFoo: JavaScript Conference in Bengaluru, India">
+	<meta name="author" content="Vishal Parpia">
+	
+	<!-- http://t.co/dKP3o1e -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- For all browsers -->
+	<link rel="stylesheet" href="{{ theme_static('css/320andup.css') }}">
+	<link rel="stylesheet" href="{{ theme_static('css/skeleton.css') }}">
+	<link href='http://fonts.googleapis.com/css?family=Gruppo|Oswald:400,300,700' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.css" />
+	 <!--[if lte IE 8]>
+	     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.ie.css" />
+	 <![endif]-->
+	
+	<!--[if (lt IE 9) & (!IEMobile)]>
+	<script src="js/selectivizr-min.js"></script>
+	<![endif]-->
+	
+	<!-- JavaScript -->
+	<script src="{{ theme_static('js/modernizr-2.5.3-min.js') }}"></script>
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+	<meta http-equiv="cleartype" content="on">
+</head>
+
+<body class="clearfix">
+	<div id="content">		
+		<header role="banner" class="clearfix">
+			<h1><a href="/"><img src="{{ theme_static('img/jslogo.png') }}" alt="JSFoo Logo" id="logo"></a></h1>			
+			<nav>
+				<ul>
+					<li><a href="#about">About</a></li>
+					<li><a href="#schedule">Schedule</a></li>
+					<li><a href="#sponsors">Sponsors</a></li>
+					<li><a href="#venue">Venue</a></li>
+					<li><a href="#partners">Partners</a></li>
+					<li><a href="#register">Register</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<div class="content clearfix">
+			<article class="hero">
+				<div>
+					<h2>
+						NIMHANS
+						<span class="convention">Convention </span><span class="centre">Centre </span><span class="bangalore">Bangalore</span>
+						<time datetime="2012-10-19">19 &amp; 20
+						<span class="october">October</span></time>					
+					</h2>
+				</div>
+			</article>
+			
+			<h1 id="about">About</h1>
+			{{ node.content }}
+
+			<h1 id="schedule">Schedule</h1>
+			<div class="container schedule">
+				<h2>Day One: October 19</h2>
+				<div class="row">
+					<div class="two columns">8:30 - 9:30</div>
+					<div class="fourteen columns">Registration</div>
+				</div>
+				<div class="row">
+					<div class="two columns">9:30 - 10:00</div>
+					<div class="fourteen columns">Introductions</div>
+				</div>
+				<div class="row">
+					<div class="two columns">10:00 - 11:00</div>
+					<div class="fourteen columns">Keynote</div>
+				</div>
+				<div class="row">
+					<div class="two columns">11:00 - 11:30</div>
+					<div class="fourteen columns">Tea Break</div>
+				</div>
+				<div class="row">
+					<div class="two columns">11:30 - 12:00</div>
+					<div class="seven columns">
+						<b><a href="">TBA</a></b>
+						<p>Rakesh Pai</p>
+					</div>
+					<div class="seven columns">
+						<b><a href="">Test Drive your JavaScript code using JSTestDriver, Jasmine and your Browser</a></b>
+						<p>Manoj Kumar</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">12:00 - 12:30</div>
+					<div class="seven columns">
+						<b><a href="">Firefox Mobile OS - Meet the new kid in town</a></b>
+						<p>Selvan</p>
+					</div>
+					<div class="seven columns">
+						<b><a href="">RESTful API Using Node.js With Express</a></b>
+						<p>Ravindra</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">12:30 - 1:00</div>
+					<div class="seven columns">
+						<b><a href="">Phonegap was just the beginning</a></b>
+						<p>Andre Charland</p>
+					</div>
+					<div class="seven columns">
+						<b><a href="">Score with Underscore.js</a></b>
+						<p>Shreyank Gupta</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">1:00 - 2:00</div>
+					<div class="fourteen columns">
+						Lunch
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">2:00 - 3:00</div>
+					<div class="seven columns">
+						<b><a href="">Programming for Canvas with CreateJS - What can you do in 40 mins?</a></b>
+						<p>Harish Sivaramakrishnan</p>
+					</div>
+					<div class="seven columns">
+						<b><a href="">3D FPS multiplayer game using JavaScript</a></b>
+						<p>Milan Chandna</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">3:00 - 3:30</div>
+					<div class="seven columns">
+						<b><a href="">Compare and contrast internals of two (SpiderMonkey and V8) Javascript Engines</a></b>
+						<p>Shaswat Agarwal</p>
+					</div>
+					<div class="seven columns">
+						<b><a href="">Scaling with Unconventional Tech-Stack (nodejs + redis + mongodb)</a></b>
+						<p>Sourav Sachin</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">3:30 - 4:00</div>
+					<div class="seven columns">
+						<b>TBA</b>
+					</div>
+					<div class="seven columns">
+						<b><a href="">Escape from Callback Hell with Deferreds</a></b>
+						<p>Yuvi Panda</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">4:00 - 4:30</div>
+					<div class="fourteen columns">
+						Tea Break
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">4:30 - 5:00</div>
+					<div class="seven columns">
+						<b><a href="">AngularJS: Is it time to drop everything for it?</a></b>
+						<p>Jon Maim</p>
+					</div>
+					<div class="seven columns">
+						<b><a href="">Internationalize your web applications using Wikimedia i18n libraries</a></b>
+						<p>Santhosh Thottingal</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">5:00 - 5:45</div>
+					<div class="fourteen columns">
+						<b><a href="">Finger in the Pi</a></b>
+						<p>Rakesh Pai</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">5:45 - 6:15</div>
+					<div class="fourteen columns">
+						Feedback
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">7:00 - 11:00</div>
+					<div class="fourteen columns">
+						Beer.js
+					</div>
+				</div>
+
+
+				<h2>Day Two: October 20</h2>
+				<div class="row">
+					<div class="two columns">8:30 - 9:45</div>
+					<div class="fourteen columns">Registration</div>
+				</div>
+				<div class="row">
+					<div class="two columns">9:45 - 10:00</div>
+					<div class="fourteen columns">Introductions</div>
+				</div>
+				<div class="row">
+					<div class="two columns">10:00 - 11:00</div>
+					<div class="fourteen columns">
+						<b><a href="">Keynote: JavaScript - Pushing the Boundary of What's Possible</a></b>
+						<p>Rajasekharan Vengalil, Microsoft</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">11:00 - 11:30</div>
+					<div class="ten columns">Tea Break</div>
+					<div class="four columns"><b>Sponsored Workshops:</b></div>
+				</div>
+				<div class="row">
+					<div class="two columns">11:30 - 12:00</div>
+					<div class="five columns">
+						<b><a href="">JavaScript as a Build Tool *for everything!*</a></b>
+						<p>Karthik Kastury</p>
+					</div>
+					<div class="five columns">
+						<b><a href="">Glueing application components with Javascript</a></b>
+						<p>Sankha narayan Guria</p>
+					</div>
+					<div class="four columns">
+						<b><a href="">Windows 8 apps with JavaScript - Windows 8 Platform Overview</a></b>
+						<p>Rajasekharan Vengalil, Microsoft</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">12:00 - 12:30</div>
+					<div class="five columns">
+						<b><a href="">Getting Started with WebRTC - A kickstart for Developers</a></b>
+						<p>Nagarjuna Varma</p>
+					</div>
+					<div class="five columns">
+						<b><a href="">Choosing your Pearl in JOcean</a></b>
+						<p>Prakash Jothiramalingam</p>
+					</div>
+					<div class="four columns">
+						<b><a href="">Windows 8 apps with JavaScript - Windows 8 Platform Overview</a></b>
+						<p>Rajasekharan Vengalil, Microsoft</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">12:30 - 1:00</div>
+					<div class="five columns">
+						<b><a href="">TBA</a></b>
+					</div>
+					<div class="five columns">
+						<b><a href="">Multi-touch events/gestures on mobile/tablet devices</a></b>
+						<p>Kush Sharma</p>
+					</div>
+					<div class="four columns">
+						<b><a href="">Windows 8 apps with JavaScript - Windows API, WinJS and async<a/></b>
+						<p>Rajasekharan Vengalil, Microsoft</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">1:00 - 2:00</div>
+					<div class="fourteen columns">
+						Lunch
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">2:00 - 3:00</div>
+					<div class="five columns">
+						<b><a href="">Beautiful Visualizations with d3.js</a></b>
+						<p>Anand S</p>
+					</div>
+					<div class="five columns">
+						<b><a href="">Tools for debugging JavaScript</a></b>
+						<p>Varunkumar Nagarajan</p>
+					</div>
+					<div class="four columns">
+						<b><a href="">Windows 8 apps with JavaScript - Windows API, WinJS and async<a/></b>
+						<p>Rajasekharan Vengalil, Microsoft</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">3:00 - 3:30</div>
+					<div class="five columns">
+						<b><a href="">Building 10 Apps in 10 Days</a></b>
+						<p>Satish</p>
+					</div>
+					<div class="five columns">
+						<b><a href="">Tooling, Unit Testing and Analyzing a modular Backbone Application</a></b>
+						<p>Saket Bhushan</p>
+					</div>
+					<div class="four columns">
+						<b><a href="">Windows 8 apps with JavaScript - Fragments, page navigation and controls<a/></b>
+						<p>Rajasekharan Vengalil, Microsoft</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">3:30 - 4:00</div>
+					<div class="five columns">
+						<b><a href="">Top JS Hacks @ flipkart.com</a></b>
+						<p>Harsha BN</p>
+					</div>
+					<div class="five columns">
+						<b><a href="">Animating HTML elements for fun and profit</a></b>
+						<p>Sunil Pai</p>
+					</div>
+					<div class="four columns">
+						<b><a href="">Windows 8 apps with JavaScript - Integrating with system contracts</a></b>
+						<p>Rajasekharan Vengalil, Microsoft</p>
+					</div>
+			</div>
+				<div class="row">
+					<div class="two columns">4:00 - 4:30</div>
+					<div class="fourteen columns">
+						Tea Break
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">4:30 - 5:15</div>
+					<div class="five columns">
+						<b><a href="">Control robots using JavaScript</a></b>
+						<p>Sudar Muthu</p>
+					</div>
+					<div class="four columns offset-by-five">
+						<b><a href="">Windows 8 apps with JavaScript - Visual Studio and Expression Blend</a></b>
+						<p>Rajasekharan Vengalil, Microsoft</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">5:15 - 5:45</div>
+					<div class="fourteen columns">
+						Thanks and feedback
+					</div>
+				</div>
+				<div class="row">
+					<div class="two columns">5:45 - 6:15</div>
+					<div class="fourteen columns">
+						About JSFoo 2013
+					</div>
+				</div>
+			</div>
+			<a name="sponsors"><h1>Sponsors</h1></a>
+			<h2>Platinum Sponsor - Microsoft</h2>
+			<p> As the world moves towards a blend of web and client applications that work across devices and form factors, Microsoft has committed itself to help developers deliver immersive experiences that enable this blend between web and client. We call this “native HTML5”, which enables developers to leverage the power and capabilities of HTML5, CSS3 and JavaScript to build faster, richer and trusted Windows 8 applications.</p>
+			<div class="row">
+				<div class="five columns">Fast and Fluid</div>
+				<p>Built for speed, Internet Explorer brings you a faster web. Whether you're loading sites, sharing sites, or going from sites to apps, it all runs at a speed comparable to apps on your PC. Learn more - http://msdn.microsoft.com/en-us/library/IE</p>
+			</div>
+			<div class=:"row">
+				<div class="five columns">Intuitive</div>
+				<p>Browse with ease. There when you need them, tabs and navigation controls appear at the swipe of a finger. Share sites with friends—just swipe and tap. And pin sites to Start for one–click access. Learn more - http://msdn.microsoft.com/en-us/library/IE/hh771815(v=vs.85).aspx</p>
+				</div>
+			<div Class="row">
+			<div class="six columns">A more trusted web</div>
+			<p>More security, more privacy, more peace of mind: Building on innovations like SmartScreen and Tracking Protection, Internet Explorer is designed to give you greater control over your personal info and help keep you safe from the latest online threats. Learn more - http://msdn.microsoft.com/en-us/library/IE/hh673549(v=vs.85).aspx</p>
+			</div>
+		<h2>Adobe</h2>
+		<p>Adobe is a proud sponsor of JS Foo 2012. We take pride in moving the web forward by giving web designers and developers the best tools and services to share their creativity. We're excited to introduce the new Adobe Edge Tools and Services to help you create beautiful mobile-ready content and apps with HTML, CSS, and JavaScript. Focused on specific tasks, Edge Tools and Services work well together, individually, or with other tools to design, animate, code, package, and deliver content and apps.Get started with all the Edge Tools and Services by signing up for a free or paid Creative Cloud membership today!</p><h2>
+		<h2>Flipkart</h2>
+		<p> Write-up to be sent ...</p>
+		<h2>Multunus</h2>
+		<p>Web and Mobile apps. That's what we build. BUT..there's a <b>THOUSAND</b> others who do the same thing. Ugh!! So why us?</p>
+		<p>Because we write tests. (No manual-testing-zombies here..)</p>
+		<p>Because we ship new features. Every day. (Psst..Some folks call it Continuous Delivery)</p>
+		<p>Because we LOVE creating great user experiences.</p>
+		<p>Because we CARE.</p>
+		<p>Looking for a <b>RELIABLE</b> tech partner to build your next app? Reach out to us at info@multunus.com.</p>
+		<p>Is your career going <b>FASTER</b> than these guys? No? Start by solving this puzzle - if you need some acceleration.</p>
+		<p>PS: Manoj is speaking on "Test Driving your JS Code" at JSFoo. Read his proposal here. Find his timeline here.</p>
+		<p>PPS: Coming out for the JSFoo 2012 conference? Hang out with our folks at the Multunus table.</p>
+		<h2>ProjectPlace</h2>
+		<p>Write-up to be sent ....</p>
+
+	
+
+
+			<a name="venue"><h1>Venue</h1></a>
+			<p>NIMHANS Convention Centre is a well-known conference venue. It consists of three auditoriums, a large expo area, and several open spaces where participants can hang out, chat with each other and/or find comfortable corners to code in solitude.</p> 
+
+			<div id="map"></div>
+			<h1 id="partners">Partners</h1>
+			<h2>BangaloreJS</h2>
+			<p>We think JavaScript deserves even more love from Bangalore developers. Every month or two, we get together, listen to some speakers, connect and learn new JS awesomeness!</p>
+			<h2>ActivElement</h2>
+			<p>ActivElement builds intelligent interfaces that are designed to be as simple as possible. We make beautiful websites and applications for interesting clients. ActivElement has designed JSFoo 2012 website.</p>
+
+			<h1 id="register">Register</h1>
+			<iframe id="ifrm" name="ifrm" src="http://doattend.com/embed_ticket/23248" scrolling="auto" width="100%" height="720"><a href="http://jsfoo-2012.doattend.com">Register here</a></iframe>
+		</div><!-- / content -->
+		
+		<footer role="contentinfo">
+			<small>&copy; 2012 HasGeek</small>
+		</footer>
+	</div>	
+	
+	<div id="grid">
+		<!-- Isometric code will write in here -->
+	</div>	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="{{ theme_static('js/jquery-1.7.2.min.js') }}"><\/script>')</script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.4/leaflet.js"></script>
+
+	<script src="{{ theme_static('js/plugins.js') }}"></script>
+	<script src="{{ theme_static('js/script.js') }}"></script>
+	<script src="{{ theme_static('js/helper.js') }}"></script>
+	
+	<script type="text/javascript">
+		var map = L.map('map').setView([12.9431, 77.5969], 13);
+		
+		L.tileLayer('http://{s}.tile.cloudmade.com/API-key/997/256/{z}/{x}/{y}.png', {
+		    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="http://cloudmade.com">CloudMade</a>',
+		    maxZoom: 18
+		}).addTo(map);
+	</script>
+		
+	<script>
+		var _gaq=[["_setAccount","{{ website.googleanalytics_code }}"],["_trackPageview"]];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+		g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+		s.parentNode.insertBefore(g,s)}(document,"script"));
+	</script>
+</body>
+</html>
