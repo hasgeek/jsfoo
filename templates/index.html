@@ -639,11 +639,9 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
           maxZoom: 18,
           subdomains: ['otile1','otile2','otile3','otile4']
       }).addTo(map);
-      var marker = new L.Marker(L.LatLng(12.9431, 77.5969));
-      // map.addLayer(marker);
-      // marker.addTo(map);
-      // marker.bindPopup("NIMHANS Convention Centre");
-      // marker.openPopup();
+      var marker = new L.Marker(new L.LatLng(12.9431, 77.5969)).addTo(map);
+      marker.bindPopup("NIMHANS Convention Centre");
+      marker.openPopup();
     </script>
     <script type="text/javascript">
       var _gaq=[["_setAccount","{{ website.googleanalytics_code }}"],["_trackPageview"]];
