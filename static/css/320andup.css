@@ -1893,7 +1893,7 @@ header h1 {
   position: absolute;
   left: 50%;
   margin-left: -68px;
-  top: 52px;
+  top: 110px;
   background: none;
   border: none;
 }
@@ -1926,7 +1926,7 @@ article.hero {
 }
 article.hero div {
   position: absolute;
-  top: 220px;
+  top: 250px;
   margin: 0 -60px;
   left: 50%;
   width: 130px;
@@ -2045,7 +2045,7 @@ div#map {
     position: absolute;
     left: 50%;
     margin-left: -235px;
-    top: -25px;
+    top: 65px;
   }
   article.hero {
     height: 500px;
@@ -2076,6 +2076,7 @@ div#map {
     position: absolute;
     left: 50%;
     margin-left: -290px;
+    top: 35px;
   }
   nav ul li {
     font-size: 16px;
@@ -2118,7 +2119,7 @@ div#map {
   header h1 {
     position: absolute;
     left: 50%;
-    top: 0;
+    top: 30px;
     margin-left: -360px;
   }
   nav ul {

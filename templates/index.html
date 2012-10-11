@@ -1,3 +1,4 @@
+{% from "baseframe/components.html" import networkbar -%}
 <!DOCTYPE html>
 <!-- 
 320 and Up by Andy Clarke
@@ -20,6 +21,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- For all browsers -->
     <link rel="stylesheet" href="{{ theme_static('css/320andup.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ theme_static('css/skeleton.css') }}" type="text/css">
+    <link rel="stylesheet" href="/baseframe/css/networkbar.css" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Gruppo|Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.css" type="text/css">
     <!--[if lte IE 8]><link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.ie.css" /><![endif]-->
@@ -32,6 +34,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
   </head>
   <body class="clearfix">
     <div id="content">
+      {{ networkbar(siteid="events", login=false) }}
       <header role="banner" class="clearfix">
         <h1>
           <a href="/2012/"><img src="{{ theme_static('img/jslogo.png') }}" alt="JSFoo Logo" id="logo"></a>
