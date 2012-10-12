@@ -1860,6 +1860,9 @@ table tbody tr:hover th {
 .table-striped tbody tr:nth-child(odd) th {
   background-color: #c7ced6;
 }
+header {
+  position: relative;
+}
 h1 {
   text-align: center;
   line-height: 48px;
@@ -1870,6 +1873,7 @@ h1 {
   padding: 0;
   margin: 0;
   margin-bottom: 24px;
+  z-index: 2;
 }
 div#content {
   width: 100%;
@@ -1893,16 +1897,15 @@ header h1 {
   position: absolute;
   left: 50%;
   margin-left: -68px;
-  top: 110px;
+  top: 52px;
   background: none;
   border: none;
 }
 nav {
   padding: 0;
   background: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  border-left: 0;
-  border-right: 0;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
   margin: 0;
 }
 nav ul {
@@ -2045,13 +2048,13 @@ div#map {
     position: absolute;
     left: 50%;
     margin-left: -235px;
-    top: 65px;
+    top: -25px;
   }
   article.hero {
     height: 500px;
   }
   article.hero div {
-    top: 188px;
+    top: 228px;
     margin: 0 -64px;
   }
   #logo {
@@ -2076,7 +2079,7 @@ div#map {
     position: absolute;
     left: 50%;
     margin-left: -290px;
-    top: 35px;
+    /* top: 35px; */
   }
   nav ul li {
     font-size: 16px;
@@ -2119,8 +2122,17 @@ div#map {
   header h1 {
     position: absolute;
     left: 50%;
-    top: 30px;
+    top: 0;
     margin-left: -360px;
+  }
+  nav {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+  nav.fixed {
+    position: fixed;
+    top: 0;
   }
   nav ul {
     text-align: right;
