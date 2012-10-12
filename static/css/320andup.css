@@ -116,7 +116,7 @@ section {
 html {
   background: #ffffff;
   font-size: 62.5%;
-  /* -webkit-overflow-scrolling: touch; */
+  -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: #f3f5f6;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1884,7 +1884,7 @@ div#grid {
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 0;
+  z-index: -1;
 }
 #logo {
   width: 130px;
