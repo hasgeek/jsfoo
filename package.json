@@ -1,20 +1,13 @@
 {
-  "name": "jsfoo",
+  "name": "application-name",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node app"
   },
   "dependencies": {
-    "express": "3.0.0rc2",
-    "ejs": "*",
+    "express": "3.0.6",
+    "jade": "*",
     "less-middleware": "*"
-  },
-  "repository": "",
-  "keywords": [
-    "jsfoo",
-    "hasgeek"
-  ],
-  "author": "Hasgeek",
-  "license": "BSD"
+  }
 }
