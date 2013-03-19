@@ -4,7 +4,16 @@
   "description": "jsfoo",
   "version": "0.0.1",
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "threepointone/twain": "*",
+    "threepointone/beam": "*",
+    "segmentio/extend": "*",
+    "manuelstofer/each": "*",
+    "component/domify": "*",
+    "threepointone/times": "*",
+    "threepointone/flatten": "*",
+    "threepointone/iso": "*"
+  },
   "development": {},
   "license": "MIT",
   "scripts": [
