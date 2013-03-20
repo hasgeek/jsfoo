@@ -35,19 +35,18 @@ h6 {
   width: 30px;
   height: 30px;
   z-index: 0;
-  background: -moz-linear-gradient(top, rgba(180, 180, 180, 0.3) 0%, rgba(180, 180, 180, 0) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(180, 180, 180, 0.3)), color-stop(100%, rgba(180, 180, 180, 0)));
-  background: -webkit-linear-gradient(top, rgba(180, 180, 180, 0.3) 0%, rgba(180, 180, 180, 0) 100%);
-  background: -o-linear-gradient(top, rgba(180, 180, 180, 0.3) 0%, rgba(180, 180, 180, 0) 100%);
-  background: -ms-linear-gradient(top, rgba(180, 180, 180, 0.3) 0%, rgba(180, 180, 180, 0) 100%);
-  background: linear-gradient(to bottom, rgba(180, 180, 180, 0.3) 0%, rgba(180, 180, 180, 0) 100%);
+  background: -moz-linear-gradient(top, rgba(90, 90, 90, 0.3) 0%, rgba(90, 90, 90, 0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(90, 90, 90, 0.3)), color-stop(100%, rgba(90, 90, 90, 0)));
+  background: -webkit-linear-gradient(top, rgba(90, 90, 90, 0.3) 0%, rgba(90, 90, 90, 0) 100%);
+  background: -o-linear-gradient(top, rgba(90, 90, 90, 0.3) 0%, rgba(90, 90, 90, 0) 100%);
+  background: -ms-linear-gradient(top, rgba(90, 90, 90, 0.3) 0%, rgba(90, 90, 90, 0) 100%);
+  background: linear-gradient(to bottom, rgba(90, 90, 90, 0.3) 0%, rgba(90, 90, 90, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
 }
 #container {
   margin: 0 auto;
   position: relative;
   text-align: center;
-  padding: 20px;
 }
 #boxes {
   -webkit-transform: scale(0.8);
@@ -72,6 +71,10 @@ h6 {
   display: block;
   margin-top: 20px;
   margin-bottom: 80px;
+}
+.spiel {
+  position: relative;
+  padding: 20px;
 }
 footer {
   width: 100%;

@@ -1183,9 +1183,9 @@ function Grid(el, options) {
     this.offset = options.offset || 0;
 
     this.colorMap = {
-        front: '#000000',
-        left: '#333333',
-        top: '#666666'
+        front: '#444444',
+        left: '#222222',
+        top: '#777777'
     };
 
 }
@@ -1215,16 +1215,16 @@ extend(Grid.prototype, {
             backgroundColor: this.colorMap[dir]
         }, iso.transform(null, null, pos.x, pos.y, pos.z, this.offset), {
             transform: iso.face(dir),
-            opacity:1
+            opacity: 1
         });
         el.setAttribute('face', dir);
         el.setAttribute('x:y:z', [pos.x, pos.y, pos.z].join(':'));
 
         beam(el, coOrds);
 
-        el.__beam__.multiply(0.007);
+        el.__beam__.multiply(0.005);
 
-        el.__beam__.transformer.multiply(0.007);
+        el.__beam__.transformer.multiply(0.005);
         return el;
 
     },

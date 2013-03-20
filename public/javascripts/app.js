@@ -1,12 +1,125 @@
 (function() {
+    // "glider gun" grid
+    var gun = [{
+        x: 1,
+        y: 4
+    }, {
+        x: 1,
+        y: 5
+    }, {
+        x: 2,
+        y: 4
+    }, {
+        x: 2,
+        y: 5
+    }, {
+        x: 11,
+        y: 3
+    }, {
+        x: 11,
+        y: 4
+    }, {
+        x: 11,
+        y: 5
+    }, {
+        x: 12,
+        y: 2
+    }, {
+        x: 12,
+        y: 6
+    }, {
+        x: 13,
+        y: 1
+    }, {
+        x: 13,
+        y: 7
+    }, {
+        x: 14,
+        y: 1
+    }, {
+        x: 14,
+        y: 7
+    }, {
+        x: 15,
+        y: 4
+    }, {
+        x: 16,
+        y: 2
+    }, {
+        x: 16,
+        y: 6
+    }, {
+        x: 17,
+        y: 3
+    }, {
+        x: 17,
+        y: 4
+    }, {
+        x: 17,
+        y: 5
+    }, {
+        x: 18,
+        y: 4
+    }, {
+        x: 21,
+        y: 5
+    }, {
+        x: 21,
+        y: 6
+    }, {
+        x: 21,
+        y: 7
+    }, {
+        x: 22,
+        y: 5
+    }, {
+        x: 22,
+        y: 6
+    }, {
+        x: 22,
+        y: 7
+    }, {
+        x: 23,
+        y: 4
+    }, {
+        x: 23,
+        y: 8
+    }, {
+        x: 25,
+        y: 3
+    }, {
+        x: 25,
+        y: 4
+    }, {
+        x: 25,
+        y: 8
+    }, {
+        x: 25,
+        y: 9
+    }, {
+        x: 35,
+        y: 6
+    }, {
+        x: 35,
+        y: 7
+    }, {
+        x: 36,
+        y: 6
+    }, {
+        x: 36,
+        y: 7
+    }
+
+    ];
+
     var doc = document,
         win = window,
         jsfoo = require('jsfoo'),
         grid = jsfoo(doc.getElementById('boxes'), {
-            side: 15,
+            side: 40,
             offset: {
-                top: 400,
-                left: 120
+                top: 700,
+                left: -100
 
             }
         }),
@@ -100,9 +213,9 @@
                 var cube = [];
                 each(['front', 'top', 'left'], function(o) {
                     cube.push(grid.face({
-                        x: Math.round(Math.random() * grid.side),
-                        y: Math.round(Math.random() * grid.side),
-                        z: 0,
+                        x: pos.x,
+                        y: pos.y,
+                        z: 2,
                         dir: o
                     }));
                 });
@@ -123,11 +236,11 @@
         each(pool, function(f) {
             var pieces = f.getAttribute('x:y:z').split(':');
             grid.move(f, {
-                x: Math.round(Math.random() * grid.side),
-                y: Math.round(Math.random() * grid.side),
+                // x: Math.round(Math.random() * grid.side),
+                // y: Math.round(Math.random() * grid.side),
 
-                // x: parseInt(pieces[0],10),
-                // y: parseInt(pieces[1],10),
+                x: parseInt(pieces[0], 10),
+                y: parseInt(pieces[1], 10),
                 z: 3,
                 dir: f.getAttribute('face')
             });
@@ -150,18 +263,23 @@
 
 
     // prepopulate some cells with live state
-    for (var i = 0; i < 50; i++) {
-        var x = Math.ceil(Math.random() * grid.side);
-        var y = Math.ceil(Math.random() * grid.side);
-        gol.at(x, y, true);
+    // for (var i = 0; i < 50; i++) {
+    //     var x = Math.ceil(Math.random() * grid.side);
+    //     var y = Math.ceil(Math.random() * grid.side);
+    //     gol.at(x, y, true);
+    // }
+
+    for (var i = 0; i < gun.length; i++) {
+        gol.at(gun[i].x, 10 + gun[i].y, true);
     }
 
     setInterval(function() {
         step();
-    }, 1000);
+    }, 600);
 
     grid.gol = gol;
     win.grid = grid;
     win.jsfoo = jsfoo;
-    
+    win.step = step;
+
 })();
