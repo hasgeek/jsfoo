@@ -1208,7 +1208,7 @@ extend(Grid.prototype, {
         el.style.zIndex = 1;
         el.style.opacity = 0;
 
-        el.style.backgroundColor = '#fff';
+        el.style.backgroundColor = '#000';
 
         var dir = pos.dir || 'front';
         var coOrds = extend({

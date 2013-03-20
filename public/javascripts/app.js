@@ -4,8 +4,8 @@ var doc = document,
     grid = jsfoo(doc.getElementById('boxes'), {
         side: 15,
         offset: {
-            top: 600,
-            left: 200
+            top: 400,
+            left: 120
 
         }
     }),
@@ -270,7 +270,7 @@ for (var i = 0; i < 50; i++) {
 // gol.step();
 setInterval(function() {
     step();
-}, 1200);
+}, 1000);
 // document.body.addEventListener('click', function() {
 //     step();
 // });
