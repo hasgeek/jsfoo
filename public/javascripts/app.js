@@ -1,12 +1,13 @@
 var doc = document,
     win = window,
-    grid = require('jsfoo')(doc.getElementById('boxes'), {
+    jsfoo = require('jsfoo'),
+    grid = jsfoo(doc.getElementById('boxes'), {
         side: 10
     }),
-    times = require('jsfoo').times,
+    times = jsfoo.times,
     slice = [].slice,
-    each = require('jsfoo').each,
-    extend = require('jsfoo').extend;
+    each = jsfoo.each,
+    extend = jsfoo.extend;
 
 function random(min, max) {
     if (max == null) {
@@ -37,10 +38,8 @@ function randPos(n) {
     });;
 }
 
-
-
-
 function bunch(arr, n) {
+    // segment an array into parts of size <= n
     n = n || 1;
     var result = [];
     for (var i = 0; i < arr.length / n; i++) {
@@ -51,16 +50,18 @@ function bunch(arr, n) {
 }
 
 function step(grid) {
-    // take all the faces from the cube, shuffle them around, and make new cubes. 
+    // mess with the speeds of each face. 
     each(grid.faces, function(f) {
-        // f.__beam__.multiply(function() {
-        //     return Math.random() * 0.005
-        // });
+        f.__beam__.multiply(function() {
+            return Math.max(0.005, Math.random() * 0.01);
+        });
 
-        // f.__beam__.transformer.multiply(function() {
-        //     return Math.random() * 0.005
-        // });
+        f.__beam__.transformer.multiply(function() {
+            return Math.max(0.005, Math.random() * 0.01);
+        });
     });
+
+    // take all the faces from the cube, shuffle them around, and make new cubes. 
     var sets = bunch(shuffle(grid.faces), 3);
     each(sets, function(set) {
         var pos = randPos(grid.side);
@@ -69,15 +70,16 @@ function step(grid) {
                 dir: o
             }, pos);
             grid.move(set[i], to);
+            // todo - colormap
         });
     });
 }
 
-times(50, function(i) {
+times(20, function(i) {
     grid.add(grid.cube(randPos(grid.side)));
 });
 
 
-// setInterval(function() {
-step(grid);
-// }, 3000);
+setInterval(function() {
+    step(grid);
+}, 1000);

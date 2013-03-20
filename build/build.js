@@ -1009,8 +1009,8 @@ var faceMap = {
         rotateZ: '-30deg',
         skewX: '-30deg',
         skewY: '0deg',
-        translateX: '-30px',
-        translateY: '14.2px'
+        translateX: '0px',
+        translateY: '0px'
     },
     left: {
         rotateZ: '30deg',
