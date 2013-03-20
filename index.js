@@ -51,7 +51,7 @@ extend(Grid.prototype, {
             backgroundColor: this.colorMap[dir]
         }, iso.transform(null, null, pos.x, pos.y, pos.z, this.offset), {
             transform: iso.face(dir),
-            opacity:0.9
+            opacity:1
         });
         el.setAttribute('face', dir);
         el.setAttribute('x:y:z', [pos.x, pos.y, pos.z].join(':'));
