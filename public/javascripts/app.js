@@ -2,7 +2,7 @@ var doc = document,
     win = window,
     jsfoo = require('jsfoo'),
     grid = jsfoo(doc.getElementById('boxes'), {
-        side: 10,
+        side: 20,
         offset: {
             top: 500,
             left: 200
@@ -40,7 +40,7 @@ function randPos(n) {
     return ({
         x: Math.round(Math.random() * n),
         y: Math.round(Math.random() * n),
-        z: Math.round(Math.random() * n)
+        z: 0//Math.round(Math.random() * n)
     });;
 }
 
@@ -59,6 +59,7 @@ function bunch(arr, n) {
 
 function step(grid) {
     // mess with the speeds of each face. 
+
     each(grid.faces, function(f) {
         f.__beam__.multiply(function() {
             return Math.max(0.005, Math.random() * 0.01);
@@ -82,11 +83,11 @@ function step(grid) {
     });
 }
 
-times(100, function(i) {
+times(30, function(i) {
     grid.add(grid.cube(randPos(grid.side)));
 });
 
 
 setInterval(function() {
     step(grid);
-}, 2300);
+}, 2000);
