@@ -11,7 +11,8 @@
     "manuelstofer/each": "*",
     "threepointone/times": "*",
     "threepointone/flatten": "*",
-    "threepointone/iso": "*"
+    "threepointone/iso": "*",
+    "threepointone/game-of-life": "*"
   },
   "development": {},
   "license": "MIT",

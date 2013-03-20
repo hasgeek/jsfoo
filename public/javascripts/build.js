@@ -1036,6 +1036,131 @@ module.exports = {
     face: face
 };
 });
+require.register("threepointone-game-of-life/index.js", function(exports, require, module){
+module.exports = Grid;
+
+function Grid(options) {
+    options = options || {};
+    // assuming 2 dimensional grid, standard rules
+    if(!(this instanceof Grid)) return new Grid(options);
+    this.grid = [];
+    this.added = [];
+    this.removed = [];
+    this.width = options.width || 20;
+    this.height = options.height || 20;
+}
+
+Grid.prototype.at = function(x, y, live) {
+    if(typeof live === 'boolean') {
+        this.grid[y] = this.grid[y] || [];
+        if(live){
+            if(!this.grid[y][x]){
+                this.added.push({
+                    x:x,
+                    y:y
+                });
+            }
+
+        }
+        else{
+            if(this.grid[y][x]){
+                this.removed.push({
+                    x:x,
+                    y:y
+                });
+            }
+        }
+        this.grid[y][x] = live;
+        return this;
+    }
+
+    if(this.grid[y]) {
+        return this.grid[y][x] || false;
+    }
+    return false;
+};
+
+Grid.prototype.step = function() {
+    var _grid = [];
+
+    var added = [];
+    var removed = [];
+
+    for(var i = this.width; i--;) {
+        for(var j = this.height; j--;) {
+            var state = this.rules(i, j);
+            if(state) {
+                _grid[j] = _grid[j] || [];
+                _grid[j][i] = state;
+
+                if(!this.grid[j] || (this.grid[j] && !this.grid[j][i]) ){
+                    added.push({
+                        x:i,
+                        y:j
+                    });
+                }
+            }
+            else{
+                if(this.grid[j] && this.grid[j][i]){
+                    removed.push({
+                        x: i,
+                        y: j
+                    });
+                }
+            }
+        }
+    }
+    this.grid = _grid;
+    this.added = added;
+    this.removed = removed;
+    return this;
+};
+
+Grid.prototype.rules = function(x, y) {
+    // applies rules and sends back true or false on basis of live or dead
+    if(this.at(x, y) === true) { // live cell
+        switch(this.neighbors(x, y)) {
+        case 0:
+        case 1:
+            return false;
+        case 2:
+        case 3:
+            return true;
+        default:
+            return false;
+        }
+    } else {
+        if(this.neighbors(x, y) === 3) {
+            return true;
+        }
+    }
+    return false;
+};
+
+Grid.prototype.neighbors = function(x, y) {
+    var ctr = 0;
+    for(var i = x - 1; i < x + 2; i++) {
+        for(var j = y - 1; j < y + 2; j++) {
+            if((i >= 0) && (i < this.width) && (j >= 0) && (j < this.height) && (!((x === i) && (y === j))) && (this.at(i, j) === true)) {
+                ctr++;
+            }
+        }
+    }
+    return ctr;
+};
+
+Grid.prototype.str = function() {
+    var str = [];
+    for(var j = 0; j < this.height; j++) {
+        for(var i = 0; i < this.width; i++) {
+            str += (this.at(i, j) ? 'O' : '.');
+        }
+        str += '\n';
+    }
+    return str;
+
+};
+});
 require.register("jsfoo/index.js", function(exports, require, module){
 module.exports = Grid;
 
@@ -1075,28 +1200,31 @@ extend(Grid.prototype, {
                 me.appendChild(el);
                 t.faces.push(el);
             }
-
-
-            // that's it, for now. 
-            // todo - animation
         });
     },
     face: function(pos) {
         var el = doc.createElement('div');
         el.className = 'face';
         el.style.zIndex = 1;
+        el.style.opacity = 0;
 
-        el.style.backgroundColor = '#000';
+        el.style.backgroundColor = '#fff';
 
         var dir = pos.dir || 'front';
         var coOrds = extend({
             backgroundColor: this.colorMap[dir]
         }, iso.transform(null, null, pos.x, pos.y, pos.z, this.offset), {
-            transform: iso.face(dir)
+            transform: iso.face(dir),
+            opacity:1
         });
         el.setAttribute('face', dir);
         el.setAttribute('x:y:z', [pos.x, pos.y, pos.z].join(':'));
+
         beam(el, coOrds);
+
+        el.__beam__.multiply(0.005);
+
+        el.__beam__.transformer.multiply(0.005);
         return el;
 
     },
@@ -1111,11 +1239,15 @@ extend(Grid.prototype, {
     move: function(face, pos) {
         var dir = pos.dir || 'front';
 
-        beam(face, extend({
+        var coOrds = extend({
             backgroundColor: this.colorMap[dir]
         }, iso.transform(null, null, pos.x, pos.y, pos.z, this.offset), {
             transform: iso.face(dir)
-        }));
+        });
+
+        beam(face, coOrds);
+
+
         face.setAttribute('face', dir);
         face.setAttribute('x:y:z', [pos.x, pos.y, pos.z].join(':'));
         return this;
@@ -1150,4 +1282,6 @@ require.alias("yields-isarray/index.js", "threepointone-flatten/deps/isArray/ind
 require.alias("manuelstofer-each/index.js", "threepointone-flatten/deps/each/index.js");
 
 require.alias("threepointone-iso/index.js", "jsfoo/deps/iso/index.js");
+
+require.alias("threepointone-game-of-life/index.js", "jsfoo/deps/game-of-life/index.js");
 

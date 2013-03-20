@@ -36,28 +36,31 @@ extend(Grid.prototype, {
                 me.appendChild(el);
                 t.faces.push(el);
             }
-
-
-            // that's it, for now. 
-            // todo - animation
         });
     },
     face: function(pos) {
         var el = doc.createElement('div');
         el.className = 'face';
         el.style.zIndex = 1;
+        el.style.opacity = 0;
 
-        el.style.backgroundColor = '#000';
+        el.style.backgroundColor = '#fff';
 
         var dir = pos.dir || 'front';
         var coOrds = extend({
             backgroundColor: this.colorMap[dir]
         }, iso.transform(null, null, pos.x, pos.y, pos.z, this.offset), {
-            transform: iso.face(dir)
+            transform: iso.face(dir),
+            opacity:1
         });
         el.setAttribute('face', dir);
         el.setAttribute('x:y:z', [pos.x, pos.y, pos.z].join(':'));
+
         beam(el, coOrds);
+
+        el.__beam__.multiply(0.005);
+
+        el.__beam__.transformer.multiply(0.005);
         return el;
 
     },
@@ -72,11 +75,15 @@ extend(Grid.prototype, {
     move: function(face, pos) {
         var dir = pos.dir || 'front';
 
-        beam(face, extend({
+        var coOrds = extend({
             backgroundColor: this.colorMap[dir]
         }, iso.transform(null, null, pos.x, pos.y, pos.z, this.offset), {
             transform: iso.face(dir)
-        }));
+        });
+
+        beam(face, coOrds);
+
+
         face.setAttribute('face', dir);
         face.setAttribute('x:y:z', [pos.x, pos.y, pos.z].join(':'));
         return this;
