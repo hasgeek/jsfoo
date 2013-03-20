@@ -163,8 +163,7 @@
             var bx = parseInt(bxyz[0], 10),
                 by = parseInt(bxyz[1], 10);
 
-            var expr = (((ax - x) * (ax - x)) + ((ay - y) * (ay - y))) - (((bx - x) * (bx - x)) + ((by - y) * (by - y)))
-
+            var expr = Math.sqrt(((ax - x) * (ax - x)) + ((ay - y) * (ay - y))) - Math.sqrt(((bx - x) * (bx - x)) + ((by - y) * (by - y)));
 
             return -1 * expr;
         });
@@ -184,8 +183,10 @@
         });
 
 
-        var added = gol.added.sort(function(a,b){
-            return ((a.x*a.x) + (a.y*a.y)) - ((b.x*b.x) + (b.y*b.y));
+        var added = gol.added.sort(function(a, b) {
+            var expr = Math.sqrt(((a.x - 10) * (a.x - 10)) + ((a.y - 10) * (a.y - 10))) - Math.sqrt(((b.x - 10) * (b.x - 10)) + ((b.y - 10) * (b.y - 10)))
+            return -1 * expr;
+
         });
         var removed = gol.removed;
 
