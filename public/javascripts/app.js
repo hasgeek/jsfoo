@@ -2,12 +2,18 @@ var doc = document,
     win = window,
     jsfoo = require('jsfoo'),
     grid = jsfoo(doc.getElementById('boxes'), {
-        side: 10
+        side: 10,
+        offset: {
+            top: 500,
+            left: 200
+
+        }
     }),
     times = jsfoo.times,
     slice = [].slice,
     each = jsfoo.each,
-    extend = jsfoo.extend;
+    extend = jsfoo.extend,
+    beam = jsfoo.beam;
 
 function random(min, max) {
     if (max == null) {
@@ -34,7 +40,7 @@ function randPos(n) {
     return ({
         x: Math.round(Math.random() * n),
         y: Math.round(Math.random() * n),
-        z: 0
+        z: Math.round(Math.random() * n)
     });;
 }
 
@@ -49,15 +55,17 @@ function bunch(arr, n) {
 
 }
 
+
+
 function step(grid) {
     // mess with the speeds of each face. 
     each(grid.faces, function(f) {
         f.__beam__.multiply(function() {
-            return Math.max(0.005, Math.random() * 0.01);
+            return Math.max(0.01, Math.random() * 0.05);
         });
 
         f.__beam__.transformer.multiply(function() {
-            return Math.max(0.005, Math.random() * 0.01);
+            return Math.max(0.01, Math.random() * 0.05);
         });
     });
 
@@ -75,11 +83,17 @@ function step(grid) {
     });
 }
 
-times(20, function(i) {
+times(50, function(i) {
     grid.add(grid.cube(randPos(grid.side)));
 });
+
+// grid.add(grid.cube({x:0,y:0,z:0}));
+// grid.add(grid.cube({x:0,y:1,z:0}));
+// grid.add(grid.cube({x:0,y:2,z:0}));
+// grid.add(grid.cube({x:0,y:3,z:0}));
+// grid.add(grid.cube({x:0,y:4,z:0}));
 
 
 setInterval(function() {
     step(grid);
-}, 1000);
+}, 1300);

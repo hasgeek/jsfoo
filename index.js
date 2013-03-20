@@ -16,6 +16,14 @@ function Grid(el, options) {
     options = options || {};
     this.side = options.side || 10;
     this.faces = [];
+    this.offset = options.offset || 0;
+
+    this.colorMap = {
+        front: '#ffffff',
+        left: '#999999',
+        top: '#cccccc'
+    };
+
 }
 
 extend(Grid.prototype, {
@@ -24,12 +32,12 @@ extend(Grid.prototype, {
             me = this.el,
             t = this;
         each(els, function(el) {
-            if(el.parentNode !== me){
-                me.appendChild(el);    
+            if (el.parentNode !== me) {
+                me.appendChild(el);
                 t.faces.push(el);
             }
 
-            
+
             // that's it, for now. 
             // todo - animation
         });
@@ -38,11 +46,17 @@ extend(Grid.prototype, {
         var el = doc.createElement('div');
         el.className = 'face';
         el.style.zIndex = 1;
-        el.__iso__ = {};
-        el.__iso__.dir = pos.dir || 'front';
-        var coOrds = extend(iso.transform(null, null, pos.x, pos.y, pos.z), {
-            transform: iso.face(pos.dir || 'front')
+
+        el.style.backgroundColor = '#000';
+
+        var dir = pos.dir || 'front';
+        var coOrds = extend({
+            backgroundColor: this.colorMap[dir]
+        }, iso.transform(null, null, pos.x, pos.y, pos.z, this.offset), {
+            transform: iso.face(dir)
         });
+        el.setAttribute('face', dir);
+        el.setAttribute('x:y:z', [pos.x, pos.y, pos.z].join(':'));
         beam(el, coOrds);
         return el;
 
@@ -56,11 +70,15 @@ extend(Grid.prototype, {
         });
     },
     move: function(face, pos) {
-        face.__iso__.dir = pos.dir || 'front';
+        var dir = pos.dir || 'front';
 
-        beam(face, extend(iso.transform(null, null, pos.x, pos.y, pos.z), {
-            transform: iso.face(pos.dir || 'front')
+        beam(face, extend({
+            backgroundColor: this.colorMap[dir]
+        }, iso.transform(null, null, pos.x, pos.y, pos.z, this.offset), {
+            transform: iso.face(dir)
         }));
+        face.setAttribute('face', dir);
+        face.setAttribute('x:y:z', [pos.x, pos.y, pos.z].join(':'));
         return this;
     }
 });
@@ -69,3 +87,4 @@ Grid.each = each;
 Grid.times = times;
 Grid.extend = extend;
 Grid.iso = iso;
+Grid.beam = beam;

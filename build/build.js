@@ -984,11 +984,11 @@ module.exports = function(arr, shallow) {
 };
 });
 require.register("threepointone-iso/index.js", function(exports, require, module){
-function transform(pxlen, height, x, y, z) {
+function transform(pxlen, height, x, y, z, offset) {
     // convert a point from 
     // isometric x, y, z space to 
     // top, left, zIndex
-
+    offset = offset || {}
 
     pxlen = pxlen || 24;
     height = height || 33;
@@ -998,9 +998,9 @@ function transform(pxlen, height, x, y, z) {
     z = z || 0;
 
     return {
-        left: ((x - y) * pxlen) + 'px',
-        top: (((x + y) * 0.6 * pxlen) + (z * height)) + 'px',
-        zIndex: Math.round(1000 + (1000 * z) - ((x + y)))
+        left: ((offset.left || 0) + ((x - y) * pxlen)) + 'px',
+        top: ((offset.top || 0 ) - (((x + y) * 0.6 * pxlen) + (z * height))) + 'px',
+        zIndex: Math.round(1000 + (1000 * z) - ((x + y))) + ''
     }
 }
 
@@ -1010,21 +1010,24 @@ var faceMap = {
         skewX: '-30deg',
         skewY: '0deg',
         translateX: '0px',
-        translateY: '0px'
+        translateY: '0px',
+        scaleY:'1'
     },
     left: {
         rotateZ: '30deg',
         skewX: '30deg',
         skewY: '0deg',
         translateX: '-30px',
-        translateY: '14.2px'
+        translateY: '14.2px',
+        scaleY:'1'
     },
     top: {
         rotateZ: '-30deg',
         skewX: '30deg',
         skewY: '0deg',
-        translateX: '15px',
-        translateY: '-30px'
+        translateX: '16px',
+        translateY: '-28px',
+        scaleY:'0.88'
     }
 };
 
@@ -1056,6 +1059,14 @@ function Grid(el, options) {
     options = options || {};
     this.side = options.side || 10;
     this.faces = [];
+    this.offset = options.offset || 0;
+
+    this.colorMap = {
+        front: '#ffffff',
+        left: '#999999',
+        top: '#cccccc'
+    };
+
 }
 
 extend(Grid.prototype, {
@@ -1064,12 +1075,12 @@ extend(Grid.prototype, {
             me = this.el,
             t = this;
         each(els, function(el) {
-            if(el.parentNode !== me){
-                me.appendChild(el);    
+            if (el.parentNode !== me) {
+                me.appendChild(el);
                 t.faces.push(el);
             }
 
-            
+
             // that's it, for now. 
             // todo - animation
         });
@@ -1078,11 +1089,17 @@ extend(Grid.prototype, {
         var el = doc.createElement('div');
         el.className = 'face';
         el.style.zIndex = 1;
-        el.__iso__ = {};
-        el.__iso__.dir = pos.dir || 'front';
-        var coOrds = extend(iso.transform(null, null, pos.x, pos.y, pos.z), {
-            transform: iso.face(pos.dir || 'front')
+
+        el.style.backgroundColor = '#000';
+
+        var dir = pos.dir || 'front';
+        var coOrds = extend({
+            backgroundColor: this.colorMap[dir]
+        }, iso.transform(null, null, pos.x, pos.y, pos.z, this.offset), {
+            transform: iso.face(dir)
         });
+        el.setAttribute('face', dir);
+        el.setAttribute('x:y:z', [pos.x, pos.y, pos.z].join(':'));
         beam(el, coOrds);
         return el;
 
@@ -1096,11 +1113,15 @@ extend(Grid.prototype, {
         });
     },
     move: function(face, pos) {
-        face.__iso__.dir = pos.dir || 'front';
+        var dir = pos.dir || 'front';
 
-        beam(face, extend(iso.transform(null, null, pos.x, pos.y, pos.z), {
-            transform: iso.face(pos.dir || 'front')
+        beam(face, extend({
+            backgroundColor: this.colorMap[dir]
+        }, iso.transform(null, null, pos.x, pos.y, pos.z, this.offset), {
+            transform: iso.face(dir)
         }));
+        face.setAttribute('face', dir);
+        face.setAttribute('x:y:z', [pos.x, pos.y, pos.z].join(':'));
         return this;
     }
 });
@@ -1109,6 +1130,7 @@ Grid.each = each;
 Grid.times = times;
 Grid.extend = extend;
 Grid.iso = iso;
+Grid.beam = beam;
 });
 require.alias("threepointone-twain/lib/twain.js", "jsfoo/deps/twain/lib/twain.js");
 require.alias("threepointone-twain/lib/twain.js", "jsfoo/deps/twain/index.js");
