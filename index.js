@@ -36,7 +36,10 @@ extend(Grid.prototype, {
     },
     face: function(pos) {
         var el = doc.createElement('div');
-        el.className = 'face ' + (pos.dir || 'front');
+        el.className = 'face';
+        el.style.zIndex = 1;
+        el.__iso__ = {};
+        el.__iso__.dir = pos.dir || 'front';
         var coOrds = extend(iso.transform(null, null, pos.x, pos.y, pos.z), {
             transform: iso.face(pos.dir || 'front')
         });
@@ -53,6 +56,8 @@ extend(Grid.prototype, {
         });
     },
     move: function(face, pos) {
+        face.__iso__.dir = pos.dir || 'front';
+
         beam(face, extend(iso.transform(null, null, pos.x, pos.y, pos.z), {
             transform: iso.face(pos.dir || 'front')
         }));
@@ -63,3 +68,4 @@ extend(Grid.prototype, {
 Grid.each = each;
 Grid.times = times;
 Grid.extend = extend;
+Grid.iso = iso;

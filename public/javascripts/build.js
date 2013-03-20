@@ -523,9 +523,18 @@ require.register("threepointone-claw/index.js", function(exports, require, modul
     function claw(el, vals) {
         var t = this;
         el.__claw__ = el.__claw__ || {};
+        el.__clawprev__ = el.__clawprev__ || '';
         extend(el.__claw__, vals);
 
-        el.style[transform] = formatTransform(el.__claw__);
+        var str = formatTransform(el.__claw__);
+
+        if(el.__clawprev__ !== str){
+            el.style[transform] = str;
+            el.__clawprev__ = str
+                
+        }
+
+        
 
         // return a curried function for further chaining
         return function(v) {
@@ -663,7 +672,7 @@ require.register("threepointone-beam/beam.js", function(exports, require, module
         }
 
 
-        if(prev[prop] !== val) {
+        if(prev[prop] !== val) {            
 
             // the following line is easily the most expensive line in the entire lib. 
             // and that's why kids, you never make a css animation engine
@@ -710,9 +719,15 @@ require.register("threepointone-beam/beam.js", function(exports, require, module
                     return;
                 }
                 o[prop] = num(val);
-                return;
+                // return;
             }
-            o[prop] = val;
+            else{
+                o[prop] = val;    
+            }
+            if(prop==='zIndex'){
+                o[prop]= Math.round(o[prop]);
+            }
+            
         });
         return o;
     }
@@ -776,7 +791,7 @@ require.register("threepointone-beam/beam.js", function(exports, require, module
             }
 
             if(!tracker.tweens[prop]) {
-                var currentStyle = getStyle(el, prop);
+                var currentStyle = getStyle(el, prop) || '';
                 if(rgbOhex.test(currentStyle)) {
                     var tween = tracker.$t(prop, true).from(encodeColor(currentStyle));
                 } else {
@@ -876,88 +891,6 @@ module.exports = function (obj, iterator, context) {
         }
     }
 };
-
-});
-require.register("component-domify/index.js", function(exports, require, module){
-
-/**
- * Expose `parse`.
- */
-
-module.exports = parse;
-
-/**
- * Wrap map from jquery.
- */
-
-var map = {
-  option: [1, '<select multiple="multiple">', '</select>'],
-  optgroup: [1, '<select multiple="multiple">', '</select>'],
-  legend: [1, '<fieldset>', '</fieldset>'],
-  thead: [1, '<table>', '</table>'],
-  tbody: [1, '<table>', '</table>'],
-  tfoot: [1, '<table>', '</table>'],
-  colgroup: [1, '<table>', '</table>'],
-  caption: [1, '<table>', '</table>'],
-  tr: [2, '<table><tbody>', '</tbody></table>'],
-  td: [3, '<table><tbody><tr>', '</tr></tbody></table>'],
-  th: [3, '<table><tbody><tr>', '</tr></tbody></table>'],
-  col: [2, '<table><tbody></tbody><colgroup>', '</colgroup></table>'],
-  _default: [0, '', '']
-};
-
-/**
- * Parse `html` and return the children.
- *
- * @param {String} html
- * @return {Array}
- * @api private
- */
-
-function parse(html) {
-  if ('string' != typeof html) throw new TypeError('String expected');
-  
-  // tag name
-  var m = /<([\w:]+)/.exec(html);
-  if (!m) throw new Error('No elements were generated.');
-  var tag = m[1];
-  
-  // body support
-  if (tag == 'body') {
-    var el = document.createElement('html');
-    el.innerHTML = html;
-    return [el.removeChild(el.lastChild)];
-  }
-  
-  // wrap map
-  var wrap = map[tag] || map._default;
-  var depth = wrap[0];
-  var prefix = wrap[1];
-  var suffix = wrap[2];
-  var el = document.createElement('div');
-  el.innerHTML = prefix + html + suffix;
-  while (depth--) el = el.lastChild;
-
-  return orphan(el.children);
-}
-
-/**
- * Orphan `els` and return an array.
- *
- * @param {NodeList} els
- * @return {Array}
- * @api private
- */
-
-function orphan(els) {
-  var ret = [];
-
-  while (els.length) {
-    ret.push(els[0].parentNode.removeChild(els[0]));
-  }
-
-  return ret;
-}
 
 });
 require.register("threepointone-times/index.js", function(exports, require, module){
@@ -1075,7 +1008,9 @@ var faceMap = {
     front: {
         rotateZ: '-30deg',
         skewX: '-30deg',
-        skewY: '0deg'
+        skewY: '0deg',
+        translateX: '-30px',
+        translateY: '14.2px'
     },
     left: {
         rotateZ: '30deg',
@@ -1141,7 +1076,10 @@ extend(Grid.prototype, {
     },
     face: function(pos) {
         var el = doc.createElement('div');
-        el.className = 'face ' + (pos.dir || 'front');
+        el.className = 'face';
+        el.style.zIndex = 1;
+        el.__iso__ = {};
+        el.__iso__.dir = pos.dir || 'front';
         var coOrds = extend(iso.transform(null, null, pos.x, pos.y, pos.z), {
             transform: iso.face(pos.dir || 'front')
         });
@@ -1158,6 +1096,8 @@ extend(Grid.prototype, {
         });
     },
     move: function(face, pos) {
+        face.__iso__.dir = pos.dir || 'front';
+
         beam(face, extend(iso.transform(null, null, pos.x, pos.y, pos.z), {
             transform: iso.face(pos.dir || 'front')
         }));
@@ -1168,6 +1108,7 @@ extend(Grid.prototype, {
 Grid.each = each;
 Grid.times = times;
 Grid.extend = extend;
+Grid.iso = iso;
 });
 require.alias("threepointone-twain/lib/twain.js", "jsfoo/deps/twain/lib/twain.js");
 require.alias("threepointone-twain/lib/twain.js", "jsfoo/deps/twain/index.js");
@@ -1182,8 +1123,6 @@ require.alias("threepointone-claw/index.js", "threepointone-beam/deps/claw/index
 require.alias("segmentio-extend/index.js", "jsfoo/deps/extend/index.js");
 
 require.alias("manuelstofer-each/index.js", "jsfoo/deps/each/index.js");
-
-require.alias("component-domify/index.js", "jsfoo/deps/domify/index.js");
 
 require.alias("threepointone-times/index.js", "jsfoo/deps/times/index.js");
 

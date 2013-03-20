@@ -9,7 +9,6 @@
     "threepointone/beam": "*",
     "segmentio/extend": "*",
     "manuelstofer/each": "*",
-    "component/domify": "*",
     "threepointone/times": "*",
     "threepointone/flatten": "*",
     "threepointone/iso": "*"
