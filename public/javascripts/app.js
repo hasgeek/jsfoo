@@ -247,6 +247,10 @@
                 dir: f.getAttribute('face')
             });
             setTimeout(function() {
+                // to prevent memory leak
+                beam.instances.splice(beam.instances.indexOf(f.__beam__), 1);
+                delete f.__beam__;
+
                 if (f.parentNode) {
                     f.parentNode.removeChild(f);
                 }
@@ -256,6 +260,7 @@
             beam(f, {
                 opacity: 0
             });
+
             grid.faces = without(grid.faces, f);
         });
 
