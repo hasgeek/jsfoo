@@ -118,7 +118,7 @@
         grid = jsfoo(doc.getElementById('boxes'), {
             side: 40,
             offset: {
-                top: 700,
+                top: 760,
                 left: -100
 
             }
@@ -184,7 +184,9 @@
         });
 
 
-        var added = gol.added;
+        var added = gol.added.sort(function(a,b){
+            return ((a.x*a.x) + (a.y*a.y)) - ((b.x*b.x) + (b.y*b.y));
+        });
         var removed = gol.removed;
 
         var pool = [];
@@ -215,7 +217,7 @@
                     cube.push(grid.face({
                         x: pos.x,
                         y: pos.y,
-                        z: 2,
+                        z: 1,
                         dir: o
                     }));
                 });
@@ -241,7 +243,7 @@
 
                 x: parseInt(pieces[0], 10),
                 y: parseInt(pieces[1], 10),
-                z: 3,
+                z: -2,
                 dir: f.getAttribute('face')
             });
             setTimeout(function() {
@@ -275,7 +277,7 @@
 
     setInterval(function() {
         step();
-    }, 600);
+    }, 400);
 
     grid.gol = gol;
     win.grid = grid;

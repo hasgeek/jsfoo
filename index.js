@@ -58,9 +58,9 @@ extend(Grid.prototype, {
 
         beam(el, coOrds);
 
-        el.__beam__.multiply(0.005);
+        el.__beam__.multiply(0.007);
 
-        el.__beam__.transformer.multiply(0.005);
+        el.__beam__.transformer.multiply(0.007);
         return el;
 
     },

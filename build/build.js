@@ -674,7 +674,7 @@ require.register("threepointone-beam/beam.js", function(exports, require, module
 
             // the following line is easily the most expensive line in the entire lib. 
             // and that's why kids, you never make a css animation engine
-            if(prop==='zIndex'){ val = Math.round(val); } // gah.
+            if(prop==='zIndex'){ val = Math.ceil(val); } // gah.
             el.style[prop] = val + (unitless[prop] ? '' : b.$t(prop).unit);
             prev[prop] = val;
         }
@@ -1222,9 +1222,9 @@ extend(Grid.prototype, {
 
         beam(el, coOrds);
 
-        el.__beam__.multiply(0.005);
+        el.__beam__.multiply(0.007);
 
-        el.__beam__.transformer.multiply(0.005);
+        el.__beam__.transformer.multiply(0.007);
         return el;
 
     },
