@@ -61,11 +61,11 @@ function step(grid) {
     // mess with the speeds of each face. 
     each(grid.faces, function(f) {
         f.__beam__.multiply(function() {
-            return Math.max(0.01, Math.random() * 0.05);
+            return Math.max(0.005, Math.random() * 0.01);
         });
 
         f.__beam__.transformer.multiply(function() {
-            return Math.max(0.01, Math.random() * 0.05);
+            return Math.max(0.005, Math.random() * 0.01);
         });
     });
 
@@ -78,22 +78,15 @@ function step(grid) {
                 dir: o
             }, pos);
             grid.move(set[i], to);
-            // todo - colormap
         });
     });
 }
 
-times(50, function(i) {
+times(100, function(i) {
     grid.add(grid.cube(randPos(grid.side)));
 });
-
-// grid.add(grid.cube({x:0,y:0,z:0}));
-// grid.add(grid.cube({x:0,y:1,z:0}));
-// grid.add(grid.cube({x:0,y:2,z:0}));
-// grid.add(grid.cube({x:0,y:3,z:0}));
-// grid.add(grid.cube({x:0,y:4,z:0}));
 
 
 setInterval(function() {
     step(grid);
-}, 1300);
+}, 2300);

@@ -524,8 +524,8 @@ require.register("threepointone-claw/index.js", function(exports, require, modul
         var t = this;
         el.__claw__ = el.__claw__ || {};
         el.__clawprev__ = el.__clawprev__ || '';
-        extend(el.__claw__, vals);
 
+        extend(el.__claw__, vals);
         var str = formatTransform(el.__claw__);
 
         if(el.__clawprev__ !== str){
@@ -533,8 +533,6 @@ require.register("threepointone-claw/index.js", function(exports, require, modul
             el.__clawprev__ = str
                 
         }
-
-        
 
         // return a curried function for further chaining
         return function(v) {
@@ -676,6 +674,7 @@ require.register("threepointone-beam/beam.js", function(exports, require, module
 
             // the following line is easily the most expensive line in the entire lib. 
             // and that's why kids, you never make a css animation engine
+            if(prop==='zIndex'){ val = Math.round(val); } // gah.
             el.style[prop] = val + (unitless[prop] ? '' : b.$t(prop).unit);
             prev[prop] = val;
         }
@@ -723,9 +722,6 @@ require.register("threepointone-beam/beam.js", function(exports, require, module
             }
             else{
                 o[prop] = val;    
-            }
-            if(prop==='zIndex'){
-                o[prop]= Math.round(o[prop]);
             }
             
         });
