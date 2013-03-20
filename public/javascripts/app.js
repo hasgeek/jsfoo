@@ -171,18 +171,6 @@
 
 
     function step() {
-
-        var result = [];
-        each(gol.grid, function(row, j) {
-            each(row, function(el, i) {
-                result.push({
-                    x: i,
-                    y: j
-                })
-            });
-        });
-
-
         var added = gol.added.sort(function(a, b) {
             var expr = Math.sqrt(((a.x - 10) * (a.x - 10)) + ((a.y - 10) * (a.y - 10))) - Math.sqrt(((b.x - 10) * (b.x - 10)) + ((b.y - 10) * (b.y - 10)))
             return -1 * expr;
