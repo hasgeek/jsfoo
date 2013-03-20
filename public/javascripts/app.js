@@ -2,7 +2,7 @@ var doc = document,
     win = window,
     jsfoo = require('jsfoo'),
     grid = jsfoo(doc.getElementById('boxes'), {
-        side: 20,
+        side: 15,
         offset: {
             top: 600,
             left: 200
@@ -256,9 +256,9 @@ function step() {
 
 
 // prepopulate some cells with live state
-for (var i = 0; i < 60; i++) {
-    var x = Math.ceil(Math.random() * 20);
-    var y = Math.ceil(Math.random() * 20);
+for (var i = 0; i < 50; i++) {
+    var x = Math.ceil(Math.random() * grid.side);
+    var y = Math.ceil(Math.random() * grid.side);
     gol.at(x, y, true);
     // grid.add(grid.cube({
     //     x: x,
@@ -270,7 +270,7 @@ for (var i = 0; i < 60; i++) {
 // gol.step();
 setInterval(function() {
     step();
-}, 1000);
+}, 1200);
 // document.body.addEventListener('click', function() {
 //     step();
 // });
