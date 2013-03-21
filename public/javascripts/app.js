@@ -1,115 +1,42 @@
 (function() {
     // "glider gun" grid
-    var gun = [{
-        x: 1,
-        y: 4
-    }, {
-        x: 1,
-        y: 5
-    }, {
-        x: 2,
-        y: 4
-    }, {
-        x: 2,
-        y: 5
-    }, {
-        x: 11,
-        y: 3
-    }, {
-        x: 11,
-        y: 4
-    }, {
-        x: 11,
-        y: 5
-    }, {
-        x: 12,
-        y: 2
-    }, {
-        x: 12,
-        y: 6
-    }, {
-        x: 13,
-        y: 1
-    }, {
-        x: 13,
-        y: 7
-    }, {
-        x: 14,
-        y: 1
-    }, {
-        x: 14,
-        y: 7
-    }, {
-        x: 15,
-        y: 4
-    }, {
-        x: 16,
-        y: 2
-    }, {
-        x: 16,
-        y: 6
-    }, {
-        x: 17,
-        y: 3
-    }, {
-        x: 17,
-        y: 4
-    }, {
-        x: 17,
-        y: 5
-    }, {
-        x: 18,
-        y: 4
-    }, {
-        x: 21,
-        y: 5
-    }, {
-        x: 21,
-        y: 6
-    }, {
-        x: 21,
-        y: 7
-    }, {
-        x: 22,
-        y: 5
-    }, {
-        x: 22,
-        y: 6
-    }, {
-        x: 22,
-        y: 7
-    }, {
-        x: 23,
-        y: 4
-    }, {
-        x: 23,
-        y: 8
-    }, {
-        x: 25,
-        y: 3
-    }, {
-        x: 25,
-        y: 4
-    }, {
-        x: 25,
-        y: 8
-    }, {
-        x: 25,
-        y: 9
-    }, {
-        x: 35,
-        y: 6
-    }, {
-        x: 35,
-        y: 7
-    }, {
-        x: 36,
-        y: 6
-    }, {
-        x: 36,
-        y: 7
-    }
-
+    var gun = [
+        [1, 4],
+        [1, 5],
+        [2, 4],
+        [2, 5],
+        [11, 3],
+        [11, 4],
+        [11, 5],
+        [12, 2],
+        [12, 6],
+        [13, 1],
+        [13, 7],
+        [14, 1],
+        [14, 7],
+        [15, 4],
+        [16, 2],
+        [16, 6],
+        [17, 3],
+        [17, 4],
+        [17, 5],
+        [18, 4],
+        [21, 5],
+        [21, 6],
+        [21, 7],
+        [22, 5],
+        [22, 6],
+        [22, 7],
+        [23, 4],
+        [23, 8],
+        [25, 3],
+        [25, 4],
+        [25, 8],
+        [25, 9],
+        [35, 6],
+        [35, 7],
+        [36, 6],
+        [36, 7]
     ];
 
     var doc = document,
@@ -123,6 +50,7 @@
 
             }
         }),
+        times = jsfoo.times,
         slice = [].slice,
         each = jsfoo.each,
         beam = jsfoo.beam;
@@ -186,6 +114,7 @@
             pool = pool.concat(faces);
         });
 
+
         each(added, function(pos) {
             if (pool.length > 0) {
                 var faces = closest(pool, pos.x, pos.y);
@@ -201,15 +130,12 @@
                 });
             } else {
 
-                var cube = [];
-                each(['front', 'top', 'left'], function(o) {
-                    cube.push(grid.face({
-                        x: pos.x,
-                        y: pos.y,
-                        z: 1,
-                        dir: o
-                    }));
+                var cube = grid.cube({
+                    x: pos.x,
+                    y: pos.y,
+                    z: 1
                 });
+
 
                 grid.add(cube);
                 each(cube, function(f) {
@@ -266,10 +192,41 @@
     // }
 
     for (var i = 0; i < gun.length; i++) {
-        gol.at(gun[i].x, 20 + gun[i].y, true);
+        gol.at(gun[i][0], 20 + gun[i][1], true);
     }
 
+    times(70, function() {
+        gol.step();
+    });
+
+
+    var init = false;
+
+
     setInterval(function() {
+        if (!init) {
+            each(gol.unchanged, function(pos) {
+                var cube = grid.cube({
+                    x: pos.x,
+                    y: pos.y,
+                    z: 1
+                });
+
+                grid.add(cube);
+                each(cube, function(f) {
+                    grid.move(f, {
+                        x: pos.x,
+                        y: pos.y,
+                        z: 0,
+                        dir: f.getAttribute('face')
+                    });
+
+                });
+
+            });
+            init = true;
+
+        }
         step();
     }, 400);
 
