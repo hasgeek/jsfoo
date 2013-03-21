@@ -116,10 +116,10 @@
         win = window,
         jsfoo = require('jsfoo'),
         grid = jsfoo(doc.getElementById('boxes'), {
-            side: 40,
+            side: 70,
             offset: {
-                top: 760,
-                left: -100
+                top: 900,
+                left: -170
 
             }
         }),
@@ -266,7 +266,7 @@
     // }
 
     for (var i = 0; i < gun.length; i++) {
-        gol.at(gun[i].x, 10 + gun[i].y, true);
+        gol.at(gun[i].x, 20 + gun[i].y, true);
     }
 
     setInterval(function() {

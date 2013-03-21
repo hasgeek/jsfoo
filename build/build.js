@@ -925,8 +925,13 @@ module.exports = function(n, fn) {
 };
 });
 require.register("threepointone-flatten/index.js", function(exports, require, module){
-var isArray = require('isArray'),
-    each = require('each');
+var each = require('each');
+
+var isArray = Array.isArray ||
+function(obj) {
+    return toString.call(obj) == '[object Array]';
+};
+
 
 function flatten(input, shallow, output) {
     each(input, function(value) {
