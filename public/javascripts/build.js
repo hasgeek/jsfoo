@@ -924,42 +924,6 @@ module.exports = function(n, fn) {
     return ret;
 };
 });
-require.register("yields-isarray/index.js", function(exports, require, module){
-
-/**
- * isArray
- */
-
-var isArray = Array.isArray;
-
-/**
- * toString
- */
-
-var str = Object.prototype.toString;
-
-/**
- * Whether or not the given `val`
- * is an array.
- *
- * example:
- *
- *        isArray([]);
- *        // > true
- *        isArray(arguments);
- *        // > false
- *        isArray('');
- *        // > false
- *
- * @param {mixed} val
- * @return {bool}
- */
-
-module.exports = isArray || function (val) {
-  return !! val && '[object Array]' == str.call(val);
-};
-
-});
 require.register("threepointone-flatten/index.js", function(exports, require, module){
 var isArray = require('isArray'),
     each = require('each');
@@ -1161,6 +1125,42 @@ Grid.prototype.str = function() {
 
 };
 });
+require.register("yields-isarray/index.js", function(exports, require, module){
+
+/**
+ * isArray
+ */
+
+var isArray = Array.isArray;
+
+/**
+ * toString
+ */
+
+var str = Object.prototype.toString;
+
+/**
+ * Whether or not the given `val`
+ * is an array.
+ *
+ * example:
+ *
+ *        isArray([]);
+ *        // > true
+ *        isArray(arguments);
+ *        // > false
+ *        isArray('');
+ *        // > false
+ *
+ * @param {mixed} val
+ * @return {bool}
+ */
+
+module.exports = isArray || function (val) {
+  return !! val && '[object Array]' == str.call(val);
+};
+
+});
 require.register("jsfoo/index.js", function(exports, require, module){
 module.exports = Grid;
 
@@ -1284,4 +1284,6 @@ require.alias("manuelstofer-each/index.js", "threepointone-flatten/deps/each/ind
 require.alias("threepointone-iso/index.js", "jsfoo/deps/iso/index.js");
 
 require.alias("threepointone-game-of-life/index.js", "jsfoo/deps/game-of-life/index.js");
+
+require.alias("yields-isarray/index.js", "jsfoo/deps/isArray/index.js");
 

@@ -12,7 +12,8 @@
     "threepointone/times": "*",
     "threepointone/flatten": "*",
     "threepointone/iso": "*",
-    "threepointone/game-of-life": "*"
+    "threepointone/game-of-life": "*",
+    "yields/isarray": "*"
   },
   "development": {},
   "license": "MIT",
