@@ -63,7 +63,9 @@
     width: 2rem;
     text-align: right;
     font-size: 90%;
-    margin: 1rem 0 0 -5.75rem;
+    line-height: 40px;
+    padding-top: .3rem;
+    margin-left: -5.75rem;
 }
 .banner h3 i.amp    { font-style: italic; line-height: inherit; font-size: inherit; margin-top: 0.3rem; }
 .banner .intro {
@@ -81,10 +83,14 @@
         padding-left: 0;
     }
     .banner h3 a        { display: inline;  width: auto; margin: auto; }
-    .banner h3 i        { position: static; width: auto; margin: auto; left: 0;
+    .banner h3 i        { 
+        position: static;
+        width: auto;
+        left: 0;
         font-family: inherit;
         font-style: normal !important;
         margin: 0 0.5rem;
+        padding-top: 0;
     }
     .banner .intro {
         margin: 5rem 0 3rem;
