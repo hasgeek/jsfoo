@@ -52,7 +52,8 @@
     padding-left: 3rem;
     text-align: left;
 }
-.banner h3 a {
+.banner h3 a,
+.banner h3 span.link {
     display: block;
     width: 8rem;
     margin: 0 auto 0.5rem;
@@ -82,8 +83,9 @@
         text-align: center;
         padding-left: 0;
     }
-    .banner h3 a        { display: inline;  width: auto; margin: auto; }
-    .banner h3 i        { 
+    .banner h3 a,
+    .banner h3 span.link { display: inline;  width: auto; margin: auto; }
+    .banner h3 i         { 
         position: static;
         width: auto;
         left: 0;
