@@ -1,675 +1,548 @@
 {% from "baseframe/components.html" import networkbar with context -%}
+
 <!DOCTYPE html>
-<!-- 
-320 and Up by Andy Clarke
-Version: 3.0
-URL: http://stuffandnonsense.co.uk/projects/320andup/
-Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
--->
-<!-- HTML5 Boilerplate -->
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <title>JSFoo 2012 | HasGeek</title>
-    <meta name="description" content="JSFoo: JavaScript Conference in Bangalore, India">
-    <meta name="author" content="Vishal Parpia"><!-- http://t.co/dKP3o1e -->
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- For all browsers -->
-    <link rel="stylesheet" href="{{ theme_static('css/320andup.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ theme_static('css/skeleton.css') }}" type="text/css">
-    <link rel="stylesheet" href="/_baseframe/css/networkbar.css" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700|Gruppo|Oswald:400,300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.css" type="text/css">
-    <!--[if lte IE 8]><link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.ie.css" /><![endif]-->
-    <!--[if (lt IE 9) & (!IEMobile)]><script src="js/selectivizr-min.js"></script><![endif]-->
-    <!-- JavaScript -->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9">     <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js{%- if config['DEBUG'] %} wf-active{% endif %}">        <!--<![endif]-->
+<head>
 
-    <script src="{{ theme_static('js/modernizr-2.5.3-min.js') }}" type="text/javascript"></script>
-    <link rel="shortcut icon" href="/favicon.ico">
-    <meta http-equiv="cleartype" content="on">
-  </head>
-  <body class="clearfix">
-    <div id="content">
-      {{ networkbar(siteid="events", login=false) }}
-      <header role="banner" class="clearfix">
-        <h1>
-          <a href="/2012/"><img src="{{ theme_static('img/jslogo.png') }}" alt="JSFoo Logo" id="logo"></a>
-        </h1>
-        <nav>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#schedule">Schedule</a></li>
-            <li><a href="#sponsors">Sponsors</a></li>
-            <li><a href="#venue">Venue</a></li>
-            <li><a href="#partners">Partners</a></li>
-            <li><a href="#register">Register</a></li>
-          </ul>
-        </nav>
-      </header>
-      <div class="content clearfix">
-        <article class="hero">
-          <div>
-            <h2>
-              NIMHANS <span class="convention">Convention</span> <span class="centre">Centre</span> <span class="bangalore">Bangalore</span> <time datetime="2012-10-19">19 &amp; 20 <span class="october">October</span></time>
-            </h2>
-          </div>
-        </article>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="sixteen columns">
-            <h1 id="about">About</h1>
-            {{ node.content }}
-            <h2>About HasGeek</h2>
-            <p>
-              <a href="http://hasgeek.com/">HasGeek</a> creates discussion spaces for geeks. Come to our events to meet like-minded people, learn new things and discover opportunities.
-              HasGeek events are community-driven. Your money makes the event possible and your opinion determines how the event shapes up. HasGeek consists of a small core team of geeks holed up in a charming bungalow in Domlur, Bangalore, plotting awesome things, and a vast extended community of freelancers, volunteers, speakers and participants that includes you.
-            </p>
-          </div>
-        </div>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="{% if description %}{{ description }}{% else %}JSFoo: JavaScript Conference in Bangalore, India{% endif %}">
+<meta name="author" content="HasGeek and friends">
 
-        <div class="row">
-          <div class="sixteen columns">
-            <h1 id="schedule">Schedule</h1>
-            <h2>Day One: October 19</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            8:30 - 9:30
-          </div>
-          <div class="fourteen columns">
-            Registration
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            9:30 - 10:00
-          </div>
-          <div class="fourteen columns">
-            Introductions
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            10:00 - 11:00
-          </div>
-          <div class="fourteen columns">
-            <b>Keynote: TBA</b>
+<meta property="og:title" content="JSFoo 2013"/>
+<meta property="og:image" content="{{ request.url_root[:-1] }}{{ theme_static('img/logo.png') }}"/>
+<meta property="og:url" content="{{ request.url }}"/>
+<meta property="og:description" content="{% if description %}{{ description }}{% else %}JSFoo: JavaScript Conference in Bangalore, India{% endif %}"/>
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<title>JSFoo 2013</title>
+
+{%- if _theme %}
+  {% assets "css_" + _theme -%}
+    <link rel="stylesheet" href="{{ ASSET_URL }}"/>
+  {% endassets -%}
+{%- endif %}
+
+<!-- Leaflet -->
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.2/leaflet.css" />
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.2/leaflet.ie.css" />
+<![endif]-->
+<link rel="stylesheet" href="/_baseframe/css/networkbar.css">
+
+<script src="{{ theme_static('js/vendor/modernizr-2.6.2.js') }}"></script>
+
+{%- if config['DEBUG'] %}
+  <link rel="stylesheet" href="{{ theme_static('css/fonts.css') }}">
+{%- else %}
+  <!-- <script type="text/javascript" src="//use.typekit.net/XXXXXX.js"></script> -->
+  <!-- <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
+{%- endif %}
+
+</head>
+<body class="fill-redgray">
+
+<div class="hg-bar-holder fill-dark">{% block networkbar %}{{ networkbar(siteid='events', login=true, baseclass='hg-dark') }}{% endblock %}</div>
+  
+<div id="page">
+
+<header class="banner text-center clearfix">
+  <h1 class="ir logo">
+    JSFoo 2013
+  </h1>
+  <h2 class="legible-prose calm all-caps">
+    <span>20<sup>th</sup> — 21<sup>st</sup></span>
+    <span>September</span>
+    <span>2013</span>
+  </h2>
+  <h3 class="red calm all-lower extralarge">
+    <a href="#">Conference</a>
+    <i class="amp">&amp;</i>
+    <a href="#">Workshops</a>
+    <i class="on">on</i>
+    <a href="#">JavaScript</a>
+    <i>in</i>
+    <a href="#">Bengaluru</a>
+  </h3>
+  
+  <div class="intro row-fluid text-left prose prose-type">
+    <p class="span8 offset2 large-prose">
+      JSFoo is back! India’s only JavaScript conference returns for a third edition after two successful runs in 2011 and 2012.
+      This year’s event will focus on <em>original creations with&nbsp;JavaScript</em>. Come join us.
+    </p>
+  </div>
+  
+  <p class="secondary space-six-bottom">
+    <a class="button" href="#">Buy your Ticket</a>
+  </p>
+</header>
+
+<section class="program-committee page-section fill-red full-width clearfix">
+  <div class="row-fluid">
+    <h2 class="offset1 span4 extralarge all-caps">Program Committee</h2>
+    
+    <div class="offset1 span5 legible-prose">
+      <ul class="list-space-one list-plain">
+        <li><a href="#">Barbara Maim</a></li>
+        <li><a href="#">Jonathan Maim</a></li>
+        <li><a href="#">Rajasekharan Vengalil</a></li>
+        <li><a href="#">Rakesh Pai</a></li>
+        <li><a href="#">Sunil Pai</a></li>
+        <li><a href="#">Vishal Parpia</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="funnel page-section clearfix">
+  <div class="row-fluid">
+    <h2 class="offset1 span4 extralarge all-caps">Session Proposals</h2>
+    
+    <div class="offset1 span5 legible-prose prose-type space-one-top">
+      <p>
+        Anyone is welcome to propose a session. Participants who have purchased conference tickets will vote on session proposals. The Programme Committee steering JSFoo will also vote on submissions and balance the community voting.
+      </p>
+      
+      <p class="title-type secondary space-one-top">
+        <a class="button" href="https://funnel.hasgeek.com/jsfoo2013/">Propose a Session</a>
+      </p>
+    </div>
+  </div>
+  
+  <hr class="invisible space-one">
+  
+  <div class="row-fluid space-two">
+    <h3 class="offset1 span4 legible all-caps space-one-bottom">Talks</h3>
+    
+    <div class="offset1 span5 legible-prose prose prose-type">
+      <ul class="space-half-top list-space-line list-plain link-silent">
+        <li>
+          <a href="#">
+            The Rise of DocPad - The Hybrid Static Site Generator for Node
+          </a>
+          <br>
+          <em class="occupy space-1q-top secondary">
+            Benjamin Arthur Lupton
+          </em>
+        </li>
+        <li>
+          <a href="#">
+            JSON-LD : JSON for Linked Data
+          </a>
+          <em class="occupy space-1q-top secondary">
+            Vikash Agrawal
+          </em>
+        </li>
+        <li>
+          <a href="#">
+            FlatSurface
+          </a>
+          <em class="occupy space-1q-top secondary">
+            Jon Maim
+          </em>
+        </li>
+      </ul>
+      <p class="tiny all-caps title-type text-right">
+        <a href="https://funnel.hasgeek.com/jsfoo2013/#sessions">More &rarr;</a>
+      </p>
+    </div>
+  </div>
+  
+  <hr class="invisible space-one">
+  
+  <div class="row-fluid space-two">
+    <h3 class="offset1 span4 legible all-caps space-one-bottom">Workshops</h3>
+    
+    <div class="offset1 span5 legible-prose prose prose-type">
+      <ul class="space-half-top list-space-line list-plain link-silent">
+        <li>
+          <a href="#">
+            Roll Your Own Node Server
+          </a>
+          <br>
+          <em class="occupy space-1q-top secondary">
+            Santosh Rajan
+          </em>
+        </li>
+        <li>
+          <a href="#">
+            Develop your first multi room chat with Node.js, Websockets and MongoDB
+          </a>
+          <em class="occupy space-1q-top secondary">
+            Vikash Agrawal
+          </em>
+        </li>
+      </ul>
+      <p class="tiny all-caps title-type text-right">
+        <a href="https://funnel.hasgeek.com/jsfoo2013/#sessions">More &rarr;</a>
+      </p>
+    </div>
+  </div>
+  
+</section>
+
+
+
+<section class="highlights page-section nopush-bottom fill-red clearfix">
+  <div class="row-fluid">
+    <div class="offset1 span4 push-one-bottom">
+      <h2 class="extralarge all-caps">Previously at&nbsp;JSFoo</h2>
+      <ul class="inline-on-mobile list-plain secondary prose">
+        <li><a href="//jsfoo.in/2012">Bangalore&nbsp;2012</a></li>
+        <li><a href="//jsfoo.in/chennai2012/">Chennai&nbsp;2012</a></li>
+        <li><a href="//jsfoo.in/pune2012/">Pune&nbsp;2012</a></li>
+        <li><a href="//jsfoo.in/bangalore2011/">Bangalore&nbsp;2011</a></li>
+      </ul>
+    </div>
+    
+    <div class="offset1 span5 legible-prose prose-type space-one-top">
+      <p>
+        The first season of JSFoo featured editions in Bangalore, Pune and Chennai between Oct 2011 and Feb 2012. The second edition in Bangalore in Oct 2012 was based on the theme “JavaScript Everywhere”&nbsp;— featuring JavaScript on web servers, embedded in robots, as a cross-platform language for mobile, and in its original home, the browser.
+      </p>
+    </div>
+  </div>
+  
+  <div class="row-fluid space-two-top">
+    <h3 class="offset1 span4 legible all-caps space-one-bottom">Highlights</h3>
+    
+    <div class="offset1 span3 contain-width link-silent">
+      <article class="ngap-one pad-one push-one-bottom fade-red-to-dark video-thumbnail prose-type clearfix">
+        <p>
+          <a href="https://hasgeek.tv/jsfoo/2012/73-score-with-underscore-js">
+            <img alt="" src="{{ theme_static('img/2012-speaker-1.jpg') }}">
+          </a>
+        </p>
+        <h4>
+          <a href="https://hasgeek.tv/jsfoo/2012/73-score-with-underscore-js">
+            Score with Underscore.js
+          </a>
+        </h4>
+        <h5>
+          Shreyank Gupta
+        </h5>
+      </article>
+    </div>
+    
+    <div class="clearboth full-width fill-dark push-three-top push-two-bottom">
+      <ul class="nospace-bottom contain-width list-space-line list-plain link-silent video-thumbnails clearfix">
+        <li>
+          <article class="video-thumbnail prose-type">
             <p>
-              Sunil Pai &amp; Vishal Parpia
+              <a href="https://hasgeek.tv/jsfoo/2012/73-score-with-underscore-js">
+                <img alt="" src="{{ theme_static('img/2012-speaker-2.jpg') }}">
+              </a>
             </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            11:00 - 11:30
-          </div>
-          <div class="fourteen columns">
-            Tea Break
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            11:30 - 12:00
-          </div>
-          <div class="seven columns">
-            <b>Scaling Node at Errorception</b>
-            <p>
-              Rakesh Pai
-            </p>
-          </div>
-          <div class="seven columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/472-test-drive-your-javascript-code-using-jstestdriver-jasmine-and-your-browser">Test Drive your JavaScript code using JSTestDriver, Jasmine and your Browser</a></b>
-            <p>
-              Manoj Kumar
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            12:00 - 12:30
-          </div>
-          <div class="seven columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/460-firefox-mobile-os-meet-the-new-kid-in-town">Firefox Mobile OS - Meet the new kid in town</a></b>
-            <p>
-              Selvan
-            </p>
-          </div>
-          <div class="seven columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/425-restful-api-using-node-js-with-express">RESTful API Using Node.js With Express</a></b>
-            <p>
-              Ravindra
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            12:30 - 1:00
-          </div>
-          <div class="seven columns">
-            <b>TBA</b>
-            <p>
-              TBA
-            </p>
-          </div>
-          <div class="seven columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/431-score-with-underscore-js">Score with Underscore.js</a></b>
-            <p>
+            <h4>
+              <a href="https://hasgeek.tv/jsfoo/2012/73-score-with-underscore-js">
+                Score with Underscore.js
+              </a>
+            </h4>
+            <h5>
               Shreyank Gupta
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            1:00 - 2:00
-          </div>
-          <div class="fourteen columns">
-            Lunch
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            2:00 - 3:00
-          </div>
-          <div class="seven columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/508-programming-for-canvas-with-createjs-what-can-you-do-in-40-mins">Programming for Canvas with CreateJS - What can you do in 40 mins?</a></b>
+            </h5>
+          </article>
+        </li>
+        <li>
+          <article class="video-thumbnail prose-type">
             <p>
+              <a href="https://hasgeek.tv/jsfoo/2012/73-score-with-underscore-js">
+                <img alt="" src="{{ theme_static('img/2012-speaker-3.jpg') }}">
+              </a>
+            </p>
+            <h4>
+              <a href="https://hasgeek.tv/jsfoo/2012/73-score-with-underscore-js">
+                Programming for Canvas with CreateJS - What can you do in 40 mins?
+              </a>
+            </h4>
+            <h5>
               Harish Sivaramakrishnan
-            </p>
-          </div>
-          <div class="seven columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/496-3d-fps-multiplayer-game-using-javascript">3D FPS multiplayer game using JavaScript</a></b>
+            </h5>
+          </article>
+        </li>
+        <li>
+          <article class="video-thumbnail prose-type">
             <p>
-              Milan Chandna
+              <a href="https://hasgeek.tv/jsfoo/2012/201-web-storage">
+                <img alt="" src="{{ theme_static('img/2012-speaker-4.jpg') }}">
+              </a>
             </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            3:00 - 3:30
-          </div>
-          <div class="seven columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/531-compare-and-contrast-internals-of-two-spidermonkey-and-v8-javascript-engines">Compare and contrast internals of two (SpiderMonkey and V8) Javascript Engines</a></b>
+            <h4>
+              <a href="https://hasgeek.tv/jsfoo/2012/201-web-storage">
+                Web Storage
+              </a>
+            </h4>
+            <h5>
+              Aditya
+            </h5>
+          </article>
+        </li>
+        <li>
+          <article class="video-thumbnail prose-type">
             <p>
-              Shaswat Agarwal
+              <a href="https://hasgeek.tv/jsfoo/2012/73-score-with-underscore-js">
+                <img alt="" src="{{ theme_static('img/2012-speaker-1.jpg') }}">
+              </a>
             </p>
-          </div>
-          <div class="seven columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/534-scaling-with-unconventional-tech-stack-nodejs-redis-mongodb">Scaling with Unconventional Tech-Stack (nodejs + redis + mongodb)</a></b>
-            <p>
-              Sourav Sachin
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            3:30 - 4:00
-          </div>
-          <div class="seven columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/438-angularjs-is-it-time-to-drop-everything-for-it">AngularJS: Is it time to drop everything for it?</a></b>
-            <p>
-              Jon Maim
-            </p>
-          </div>
-          <div class="seven columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/463-escape-from-callback-hell-with-deferreds">Escape from Callback Hell with Deferreds</a></b>
-            <p>
-              Yuvi Panda
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            4:00 - 4:30
-          </div>
-          <div class="fourteen columns">
-            Tea Break
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            4:30 - 5:00
-          </div>
-          <div class="seven columns">
-            <b>TypeScript: An Introduction</b>
-            <p>
-              Rajasekharan Vengalil
-            </p>
-          </div>
-          <div class="seven columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/484-internationalize-your-web-applications-using-wikimedia-i18n-libraries">Internationalize your web applications using Wikimedia i18n libraries</a></b>
-            <p>
-              Santhosh Thottingal
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            5:00 - 5:45
-          </div>
-          <div class="fourteen columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/511-having-a-finger-in-the-pi">Finger in the Pi</a></b>
-            <p>
-              Rakesh Pai
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            5:45 - 6:15
-          </div>
-          <div class="fourteen columns">
-            Feedback
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            7:00 - 11:00
-          </div>
-          <div class="fourteen columns">
-            Beer.js
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="sixteen columns">
-            <h2>Day Two: October 20</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            8:30 - 9:45
-          </div>
-          <div class="fourteen columns">
-            Registration
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            9:45 - 10:00
-          </div>
-          <div class="fourteen columns">
-            Introductions
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            10:00 - 11:00
-          </div>
-          <div class="fourteen columns">
-            <b>Keynote: JavaScript - Pushing the Boundary of What's Possible</b>
-            <p>
-              Rajasekharan Vengalil, Microsoft
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            11:00 - 11:30
-          </div>
-          <div class="ten columns">
-            Tea Break
-          </div>
-          <div class="four columns">
-            <b>Sponsored Workshops:</b>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            11:30 - 12:00
-          </div>
-          <div class="five columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/454-yeoman-io-javascript-as-a-build-tool-for-everything">Yeoman.io | JavaScript as a Build Tool *for everything!*</a></b>
-            <p>
-              Karthik Kastury
-            </p>
-          </div>
-          <div class="five columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/434-glueing-application-components-with-javascript">Glueing application components with Javascript</a></b>
-            <p>
-              Sankha narayan Guria
-            </p>
-          </div>
-          <div class="four columns">
-            <b>Windows 8 apps with JavaScript - Windows 8 Platform Overview</b>
-            <p>
-              Ujjwal Kumar, Microsoft
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            12:00 - 12:30
-          </div>
-          <div class="five columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/486-getting-started-with-webrtc-a-kickstart-for-developers">Getting Started with WebRTC - A kickstart for Developers</a></b>
-            <p>
-              Nagarjuna Varma
-            </p>
-          </div>
-          <div class="five columns">
-            <b>Choosing your Pearl in JOcean</b>
-            <p>
-              Prakash Jothiramalingam
-            </p>
-          </div>
-          <div class="four columns">
-            <b>Windows 8 apps with JavaScript - Windows 8 Platform Overview</b>
-            <p>
-              Ujjwal Kumar, Microsoft
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            12:30 - 1:00
-          </div>
-          <div class="five columns">
-            <b>The Clockworks behind a JavaScript Framework that Powers a Billion Charts per Month</b>
-            <p>
-              Shamasis Bhattacharya
-            </p>
-          </div>
-          <div class="five columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/539-handling-multi-touch-events-gestures-on-mobile-tablet-devices">Multi-touch events/gestures on mobile/tablet devices</a></b>
-            <p>
-              Kush Sharma
-            </p>
-          </div>
-          <div class="four columns">
-            <b>Windows 8 apps with JavaScript - Windows API, WinJS and async</b>
-            <p>
-              Rajasekharan Vengalil, Microsoft
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            1:00 - 2:00
-          </div>
-          <div class="fourteen columns">
-            Lunch
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            2:00 - 3:00
-          </div>
-          <div class="five columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/428-d3-js">Beautiful Visualizations with d3.js</a></b>
-            <p>
-              Anand S
-            </p>
-          </div>
-          <div class="five columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/445-tools-for-debugging-javascript">Tools for debugging JavaScript</a></b>
-            <p>
-              Varunkumar Nagarajan
-            </p>
-          </div>
-          <div class="four columns">
-            <b>Windows 8 apps with JavaScript - Windows API, WinJS and async</b>
-            <p>
-              Rajasekharan Vengalil, Microsoft
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            3:00 - 3:30
-          </div>
-          <div class="five columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/465-building-10-apps-in-10-days-using-only-javascript-and-apify-as-backend">Building 10 Apps in 10 Days using only JavaScript and APIfy as backend</a></b>
-            <p>
-              Satish
-            </p>
-          </div>
-          <div class="five columns">
-            <b>Unit Testing a Modular Backbone Application</b>
-            <p>
-              Saket Bhushan
-            </p>
-          </div>
-          <div class="four columns">
-            <b>Windows 8 apps with JavaScript - Fragments, page navigation and controls</b>
-            <p>
-              Rajasekharan Vengalil, Microsoft
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            3:30 - 4:00
-          </div>
-          <div class="five columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/529-top-js-hacks-flipkart-com">Top JS Hacks @ flipkart.com</a></b>
-            <p>
-              Harsha BN
-            </p>
-          </div>
-          <div class="five columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/540-animating-html-elements-for-fun-and-profit">Animating HTML elements for fun and profit</a></b>
-            <p>
-              Sunil Pai
-            </p>
-          </div>
-          <div class="four columns">
-            <b>Windows 8 apps with JavaScript - Visual Studio and Expression Blend</b>
-            <p>
-              Ujjwal Kumar, Microsoft
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            4:00 - 4:30
-          </div>
-          <div class="fourteen columns">
-            Tea Break
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            4:30 - 5:15
-          </div>
-          <div class="five columns">
-            <b><a href="http://funnel.hasgeek.com/jsfoo/450-control-robots-using-javascript">Control robots using JavaScript</a></b>
-            <p>
-              Sudar Muthu
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            5:15 - 5:45
-          </div>
-          <div class="fourteen columns">
-            Thanks and feedback
-          </div>
-        </div>
-        <div class="row">
-          <div class="two columns">
-            5:45 - 6:15
-          </div>
-          <div class="fourteen columns">
-            About JSFoo 2013
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="sixteen columns">
-            <h1 id="sponsors">Sponsors</h1>
-            <h2><a href="http://www.microsoft.com/">Microsoft</a> <small>(Platinum Sponsor)</small></h2>
-            <p>
-              As the world moves towards a blend of web and client applications that work across devices and form factors, Microsoft has committed itself to help developers deliver immersive experiences that enable this blend between web and client. We call this “native HTML5”, which enables developers to leverage the power and capabilities of HTML5, CSS3 and JavaScript to build faster, richer and trusted Windows 8 applications.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="five columns">
-            <h3>Fast and Fluid</h3>
-            <p>
-              Built for speed, Internet Explorer brings you a faster web. Whether you're loading sites, sharing sites, or going from sites to apps, it all runs at a speed comparable to apps on your PC. <a href="http://msdn.microsoft.com/en-us/library/IE">Learn more</a>.
-            </p>
-          </div>
-          <div class="five columns">
-            <h3>Intuitive</h3>
-            <p>
-              Browse with ease. There when you need them, tabs and navigation controls appear at the swipe of a finger. Share sites with friends—just swipe and tap. And pin sites to Start for one–click access. <a href="http://msdn.microsoft.com/en-us/library/IE/hh771815(v=vs.85).aspx">Learn more</a>.
-            </p>
-          </div>
-          <div class="six columns">
-            <h3>A more trusted web</h3>
-            <p>
-              More security, more privacy, more peace of mind: Building on innovations like SmartScreen and Tracking Protection, Internet Explorer is designed to give you greater control over your personal info and help keep you safe from the latest online threats. <a href="http://msdn.microsoft.com/en-us/library/IE/hh673549(v=vs.85).aspx">Learn more</a>.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="sixteen columns">
-            <h2><a href="http://www.adobe.com/">Adobe</a> <small>(Gold Sponsor)</small></h2>
-            <p>
-              Adobe is a proud sponsor of JSFoo 2012. We take pride in moving the web forward by giving web designers and developers the best tools and services to share their creativity. We're excited to introduce the new Adobe Edge Tools and Services to help you create beautiful mobile-ready content and apps with HTML, CSS, and JavaScript. Focused on specific tasks, Edge Tools and Services work well together, individually, or with other tools to design, animate, code, package, and deliver content and apps.Get started with all the Edge Tools and Services by signing up for a free or paid Creative Cloud membership today!
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="sixteen columns">
-            <h2><a href="http://www.flipkart.com/">Flipkart</a> <small>(Silver Sponsor)</small></h2>
-            <p>
-              Flipkart.com, is India's largest e-commerce brand, and it functions in 14 verticals and counting today. Flipkart is portraying ever increasing volumes of information (categories, reviews) on the same limited screen size of desktops and mobile phones. There is a silent constant evolution of the elements positioned, image sizes, brightness, ordering etc. and all this with serious experimentation. Being one of India's top web properties flipkart.com has all the challenges from SEO, SEM, cross browser portability, testing across various browsers, Website design, Images, A/B Testing, Self Serve forms with complex validations, Self Serve forms and Javascript, site download time for constrained bandwidth, apparent and real load time and real load time and site performance etc.
-            </p>
-            <p>
-              Online transactions are central to Flipkart and so the entire gamut requires a lot of the usual security etc.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="sixteen columns">
-            <h2><a href="http://www.multunus.com/">Multunus</a> <small>(Community Sponsor)</small></h2>
-            <p>
-              Web and Mobile apps. That's what we build. BUT..there's a <b>THOUSAND</b> others who do the same thing. Ugh!! So why us?
-            </p>
-            <p>
-              Because we write tests. (No manual-testing-zombies here..)<br>
-              Because we ship new features. Every day. (Psst..Some folks call it Continuous Delivery)<br>
-              Because we LOVE creating great user experiences.<br>
-              Because we CARE.<br>
-              Looking for a <b>RELIABLE</b> tech partner to build your next app? Reach out to us at info@multunus.com.<br>
-              Is your career going <b>FASTER</b> <a href="http://www.multunus.com/youngturks">than these guys</a>? No? Start by <a href="http://puzzle.multunus.com/">solving this puzzle</a> - if you need some acceleration.
-            </p>
-            <p>
-              PS: Manoj is speaking on "Test Driving your JS Code" at JSFoo. <a href="http://funnel.hasgeek.com/jsfoo/472-test-drive-your-javascript-code-using-jstestdriver-jasmine-and-your-browser">Read his proposal here</a>. <a href="http://www.multunus.com/youngturks">Find his timeline here</a>.<br>
-              PPS: Coming out for the JSFoo 2012 conference? Hang out with our folks at the Multunus table.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="sixteen columns">
-            <h2><a href="http://www.projectplace.com/">ProjectPlace</a> <small>(Community Sponsor)</small></h2>
-            <p>
-              console.log({<br>
-              &nbsp;&nbsp;<b>Projectplace:</b> {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;<b>SayWho:</b> 'Projectplace is Europe\'s leading cloud service when it comes to social project collaboration',<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;<b>What:</b> 'Through the use of modern web technologies we deliver a delightful system, for the web as well as mobile, serving more then 800.000 users',<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;<b>WhyJSFOO:</b> 'Since we love to work with Javascript in the browser, on the mobile and on the server. We are really proud to be a JSFoo sponsor and help the community grow in India!',<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;<b>WordsFromTheManager:</b> 'Yes, we need more passionate developers to the development team here in Bangalore (<a href="http://www.projectplace.com/about-us/job-openings/frontend-developer-bangalore/">http://www.projectplace.com/about-us/job-openings/frontend-developer-bangalore/</a>)'<br>
-              &nbsp;&nbsp;}<br>
-              });
-            </p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="sixteen columns">
-            <h1 id="venue">Venue</h1>
-            <p>
-              The NIMHANS Convention Centre is a well-known conference venue. It consists of three auditoriums, a large expo area, and several open spaces where participants can hang out, chat with each other or find comfortable corners to code in solitude.
-            </p>
-            <div id="map"></div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="sixteen columns">
-            <h1 id="partners">Partners</h1>
-          </div>
-        </div>
-        <div class="row">
-          <div class="eight columns">
-            <h2><a href="http://www.bangalorejs.org/">Bangalore JS</a></h2>
-            <p>
-              We think JavaScript deserves even more love from Bangalore developers. Every month or two, we get together, listen to some speakers, connect and learn new JS awesomeness!
-            </p>
-          </div>
-          <div class="eight columns">
-            <h2><a href="http://www.activelement.com/">ActivElement</a></h2>
-            <p>
-              ActivElement builds intelligent interfaces that are designed to be as simple as possible. We make beautiful websites and applications for interesting clients. ActivElement designed the JSFoo 2012 website.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="sixteen columns">
-            <h2><a href="http://www.cis-india.org/">The Centre for Internet and Society</a></h2>
-            <p>
-              The Centre for Internet and Society critically engages with concerns of digital pluralism, public accountability and pedagogic practices, in the field of Internet and Society, with particular emphasis on South-South dialogues and exchange.
-            </p>
-            <p>
-              Through multidisciplinary research, intervention, and collaboration, we seek to explore, understand, and affect the shape and form of the internet, and its relationship with the political, cultural, and social milieu of our times.
-            </p>
-            <p>
-              CIS is a proud sponsor of HasGeek, offering working space and a venue for hacknights.
-            </p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="sixteen columns">
-            <h1 id="register">Register</h1>
-            <iframe id="ifrm" name="ifrm" src="http://doattend.com/embed_ticket/23248" scrolling="auto" width="100%" height="750"><a href="http://jsfoo-2012.doattend.com">Register here</a></iframe>
-          </div>
-        </div>
-      </div><!-- / content+container -->
-      <footer role="contentinfo container">
-        <div class="sixteen columns">
-          <small>© 2012 HasGeek</small>
-        </div>
-      </footer>
+            <h4>
+              <a href="https://hasgeek.tv/jsfoo/2012/73-score-with-underscore-js">
+                Score with Underscore.js
+              </a>
+            </h4>
+            <h5>
+              Shreyank Gupta
+            </h5>
+          </article>
+        </li>
+      </ul>
     </div>
-    <div id="grid">
-      <!-- Isometric code will write in here -->
+  </div>
+</section>
+
+
+
+<section class="venue page-section fill-dark clearfix">
+  <div class="row-fluid">
+    <h2 class="offset1 span4 extralarge all-caps">Venue</h2>
+    <div
+      class="leaflet-map city-level"
+      data-label="NIMHANS Convention Centre"
+      data-zoom="14"
+      data-marker="12.9431, 77.5969">
+      
+      <p class="offset6 span6 legible-prose">
+        <abbr>NIMHANS</abbr> Convention Centre<br>
+        <abbr>NIMHANS</abbr> Hospital Premises<br>
+        Hosur Road / Marigowda Road<br>
+        (Lakkasandra, Wilson Garden)
+      </p>
+      
     </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      window.jQuery || document.write('<script src="{{ theme_static('js/jquery-1.7.2.min.js') }}"><\/script>');
-    </script>
-    <script src="http://cdn.leafletjs.com/leaflet-0.4/leaflet.js" type="text/javascript"></script>
-    <script src="{{ theme_static('js/plugins.js') }}" type="text/javascript"></script>
-    <script src="{{ theme_static('js/script.js') }}" type="text/javascript"></script>
-    <script src="{{ theme_static('js/helper.js') }}" type="text/javascript"></script>
-    <script type="text/javascript">
-      var map = L.map('map').setView([12.9431, 77.5969], 15);
-      map.scrollWheelZoom.disable();
-      L.tileLayer('http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
-          attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap<\/a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA<\/a>, Imagery &copy; <a href="http://open.mapquest.co.uk">MapQuest<\/a>',
-          maxZoom: 18,
-          subdomains: ['otile1','otile2','otile3','otile4']
-      }).addTo(map);
-      var marker = new L.Marker(new L.LatLng(12.9431, 77.5969)).addTo(map);
-      marker.bindPopup('<a href="http://goo.gl/maps/74b9A" target="_blank">NIMHANS Convention Centre</a>');
-      marker.openPopup();
-    </script>
-    <script type="text/javascript">
-      var _gaq=[["_setAccount","{{ website.googleanalytics_code }}"],["_trackPageview"]];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-      g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
-      s.parentNode.insertBefore(g,s)}(document,"script"));
-    </script>
-  </body>
+    
+    <div
+      class="leaflet-map country-level"
+      data-zoom="3"
+      data-label="Bangalore"
+      data-marker="12.9833, 77.5833">
+      
+      <p class="offset6 span6 legible-prose">
+        Bangalore<br>
+        Karnataka 560029<br>
+        India
+      </p>
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="sponsors page-section nopush-bottom fill-black clearfix">
+  <div class="row-fluid">
+    <div class="offset1 span4 push-one-bottom">
+      <h2 class="extralarge all-caps">Sponsors</h2>
+      <ul class="inline-on-mobile list-plain secondary prose">
+        <li><a href="#sponsors-platinum">Platinum</a></li>
+        <li><a href="#sponsors-gold">Gold</a></li>
+        <li><a href="#sponsors-silver">Silver</a></li>
+        <li><a href="#sponsors-bronze">Bronze</a></li>
+        <li><a href="#sponsors-community">Community</a></li>
+        <li><a href="#sponsors-party">Party</a></li>
+        <li><a href="#sponsors-travel">Travel</a></li>
+        <li><a href="#sponsors-corporate-tickets">Corporate tickets</a></li>
+      </ul>
+    </div>
+    
+    <div class="offset1 span5 legible-prose prose-type space-one-top">
+      <p>
+        Startups to Fast Growing Companies<br>
+        Developers to Chiefs in-charge<br>
+        Under One Roof
+      </p>
+      
+      <p class="title-type secondary space-one-top">
+        <a class="button button-on-dark" href="#">Get Sponsorship Deck</a>
+      </p>
+    </div>
+  </div>
+  
+  <div id="sponsors-platinum" class="row-fluid space-two-top">
+    <h3 class="offset1 span4 legible all-caps space-one-bottom">Platinum</h3>
+    
+    <ul class="offset1 span5 nospace-bottom list-space-line list-plain link-silent clearfix sponsor-xl">
+      <li>
+          <a href="#" class="occupy fill-white sponsor-logo contain-height">
+            <img alt="HasGeek" src="{{ theme_static('img/hasgeek-large-logo.png') }}">
+          </a>
+      </li>
+      <li>
+          <a href="#" class="occupy fill-white sponsor-logo contain-height">
+            <img alt="HasGeek" src="{{ theme_static('img/hasgeek-large-logo.png') }}">
+          </a>
+      </li>
+      <li>
+          <a href="#" class="occupy fill-white sponsor-logo contain-height">
+            <img alt="HasGeek" src="{{ theme_static('img/hasgeek-large-logo.png') }}">
+          </a>
+      </li>
+    </ul>
+  </div>
+
+  <div id="sponsors-gold" class="row-fluid space-two-top">
+    <h3 class="offset1 span4 legible all-caps space-one-bottom">Gold</h3>
+    
+    <ul class="offset1 span5 nospace-bottom list-space-line list-plain link-silent clearfix sponsor-l">
+      <li>
+          <a href="#" class="occupy fill-white sponsor-logo contain-height">
+            <img alt="HasGeek" src="{{ theme_static('img/hasgeek-large-logo.png') }}">
+          </a>
+      </li>
+      <li>
+          <a href="#" class="occupy fill-white sponsor-logo contain-height">
+            <img alt="HasGeek" src="{{ theme_static('img/hasgeek-large-logo.png') }}">
+          </a>
+      </li>
+      <li>
+          <a href="#" class="occupy fill-white sponsor-logo contain-height">
+            <img alt="HasGeek" src="{{ theme_static('img/hasgeek-large-logo.png') }}">
+          </a>
+      </li>
+    </ul>
+  </div>
+
+  <div id="sponsors-silver" class="row-fluid space-two-top">
+    <h3 class="offset1 span4 legible all-caps space-one-bottom">Silver</h3>
+    
+    <ul class="offset1 span5 nospace-bottom list-space-line list-plain link-silent clearfix sponsor-m">
+      <li>
+          <a href="#" class="occupy fill-white sponsor-logo contain-height">
+            <img alt="HasGeek" src="{{ theme_static('img/hasgeek-large-logo.png') }}">
+          </a>
+      </li>
+      <li>
+          <a href="#" class="occupy fill-white sponsor-logo contain-height">
+            <img alt="HasGeek" src="{{ theme_static('img/hasgeek-large-logo.png') }}">
+          </a>
+      </li>
+      <li>
+          <a href="#" class="occupy fill-white sponsor-logo contain-height">
+            <img alt="HasGeek" src="{{ theme_static('img/hasgeek-large-logo.png') }}">
+          </a>
+      </li>
+    </ul>
+  </div>
+
+  <div id="sponsors-community" class="row-fluid space-two-top">
+    <h3 class="offset1 span4 legible all-caps space-one-bottom">Community</h3>
+    
+    <ul class="offset1 span5 nospace-bottom list-space-line list-plain link-silent clearfix sponsor-s">
+      <li>
+          <a href="#" class="occupy fill-white sponsor-logo contain-height">
+            <img alt="HasGeek" src="{{ theme_static('img/hasgeek-large-logo.png') }}">
+          </a>
+      </li>
+      <li>
+          <a href="#" class="occupy fill-white sponsor-logo contain-height">
+            <img alt="HasGeek" src="{{ theme_static('img/hasgeek-large-logo.png') }}">
+          </a>
+      </li>
+      <li>
+          <a href="#" class="occupy fill-white sponsor-logo contain-height">
+            <img alt="HasGeek" src="{{ theme_static('img/hasgeek-large-logo.png') }}">
+          </a>
+      </li>
+      <li>
+          <a href="#" class="occupy fill-white sponsor-logo contain-height">
+            <img alt="HasGeek" src="{{ theme_static('img/hasgeek-large-logo.png') }}">
+          </a>
+      </li>
+      <li>
+          <a href="#" class="occupy fill-white sponsor-logo contain-height">
+            <img alt="HasGeek" src="{{ theme_static('img/hasgeek-large-logo.png') }}">
+          </a>
+      </li>
+    </ul>
+  </div>
+
+  <div id="sponsors-corporate-tickets" class="row-fluid space-two-top">
+    <h3 class="offset1 span4 legible all-caps space-one-bottom">Corporate Tickets</h3>
+    
+    <ul class="offset1 span5 nospace-bottom list-plain link-silent clearfix sponsor-compact fill-white">
+      <li>
+          <a href="#" class="occupy sponsor-logo contain-height">
+            <img alt="HasGeek" src="{{ theme_static('img/hasgeek-large-logo.png') }}">
+          </a>
+      </li>
+      <li>
+          <a href="#" class="occupy sponsor-logo contain-height">
+            <img alt="HasGeek" src="{{ theme_static('img/hasgeek-large-logo.png') }}">
+          </a>
+      </li>
+      <li>
+          <a href="#" class="occupy sponsor-logo contain-height">
+            <img alt="HasGeek" src="{{ theme_static('img/hasgeek-large-logo.png') }}">
+          </a>
+      </li>
+      <li>
+          <a href="#" class="occupy sponsor-logo contain-height">
+            <img alt="HasGeek" src="{{ theme_static('img/hasgeek-large-logo.png') }}">
+          </a>
+      </li>
+      <li>
+          <a href="#" class="occupy sponsor-logo contain-height">
+            <img alt="HasGeek" src="{{ theme_static('img/hasgeek-large-logo.png') }}">
+          </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<footer class="page-footer page-section fill-dark clearfix">
+  <div class="text-center tiny">
+    <p class="">Copyright &copy; 2010–13. All rights reserved.</p>
+    
+    <h3>
+      <a class="ir hasgeek-logo" href="//hasgeek.com">
+        HasGeek
+      </a>
+    </h3>
+  </div>
+</footer>
+
+
+</div><!-- #page -->
+{%- if not config['DEBUG'] %}
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+{%- endif %}
+<script>window.jQuery || document.write('<script src="{{ theme_static('js/vendor/jquery-1.10.2.min.js') }}"><\/script>')</script>
+<script src="http://cdn.leafletjs.com/leaflet-0.6.2/leaflet.js"></script>
+{%- if _theme %}
+  {% assets "js_" + _theme -%}
+    <script src="{{ ASSET_URL }}"></script>
+  {% endassets -%}
+{%- endif %}
+
+<script>
+// Google Analytics
+if (location.hostname == 'jsfoo.in') {
+  var _gaq=[['_setAccount','UA-19123154-15'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+}
+</script>
+
+<!-- Prompt IE 6 users to install Chrome Frame. -->
+<!-- chromium.org/developers/how-tos/chrome-frame-getting-started -->
+<!--[if lt IE 7 ]>
+  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+  <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+<![endif]-->
+
+</body>
 </html>

@@ -1,0 +1,99 @@
+/* ============== */
+/* = Typography = */
+/* ============== */
+
+
+/*  Families  */
+
+body,
+.title-type     { font-family: Brandon Grotesque; }
+
+i,
+em,
+.prose-type     { font-family: Adobe Caslon Pro, serif; }
+
+
+/*  Scale  */
+
+html                    { font-size: 16px;     line-height: 1.5; }
+
+.huge                   { font-size: 3.000rem; line-height: 1.10; }
+.huge.body-type         { font-size: 2.125rem; line-height: 1.10; }
+.extralarge             { font-size: 1.750rem; line-height: 1.30; }
+.large                  { font-size: 1.500rem; line-height: 1.15; }
+.large-prose            { font-size: 1.250rem; line-height: 1.40; }
+.legible                { font-size: 1.125rem; line-height: 1.15; }
+.legible-prose          { font-size: 1.125rem; line-height: 1.40; }
+.regular                { font-size: 1.000rem; line-height: 1.50; }
+.regular-prose          { font-size: 1.125rem; line-height: 1.45; }
+.secondary              { font-size: 0.875rem; line-height: 1.90; }
+.secondary-prose        { font-size: 0.950rem; line-height: 1.40; }
+.tiny                   { font-size: 0.750rem; line-height: 1.60; }
+
+@media only screen and (min-width: 30em) {
+    html                { font-size: 18px; }
+    .huge.body-type     { font-size: 2.500rem; line-height: 1.05; }
+    .large-prose        { font-size: 1.250rem; line-height: 1.42; }
+    .regular-prose      { font-size: 1.000rem; line-height: 1.47; }
+}
+@media only screen and (min-width: 45em) {
+    html                { font-size: 21px; }
+    .huge.body-type     { font-size: 2.500rem; line-height: 1.05; }
+    .extralarge         { font-size: 2.000rem; line-height: 1.30; }
+    .large-prose        { font-size: 1.500rem; line-height: 1.44; }
+    .regular-prose      { font-size: 1.000rem; line-height: 1.50; }
+    .secondary-prose    { font-size: 0.800rem; line-height: 1.49; }
+    .tiny               { font-size: 0.750rem; line-height: 1.49; }
+}
+@media only screen and (min-width: 55em) {
+/*    .huge.body-type     { font-size: 3.500rem; line-height: 0.95; }*/
+    .regular-prose      { font-size: 1.000rem; line-height: 1.60; }
+}
+@media only screen and (min-width: 85em) {
+    html                { font-size: 24px; }
+}
+
+
+
+/*  Helpers  */
+
+abbr {
+    font-size: 0.9em;
+    font-variant: small-caps;
+    border-bottom: none;
+}
+
+.thin           { font-weight: 300;    }
+.calm           { font-weight: normal; }
+.semibold       { font-weight: 600;    }
+.bold           { font-weight: bold;   }
+.extrabold      { font-weight: 900;    }
+.italic         { font-style: italic;  }
+.no-italic      { font-style: normal;  }
+
+.all-caps       { text-transform: uppercase;    }
+.all-lower      { text-transform: lowercase;    }
+.small-caps     { font-variant: small-caps;     }
+.strike         { text-decoration: line-through;}
+.no-underline   { text-decoration: none;        }
+
+.unordered      { list-style-type: none; }
+
+.amp  {
+    font-family: 'Hoefler Text', Baskerville, Palatino, 'Book Antiqua', Constantia, 'URW Palladio L';
+    font-style: italic;
+    font-size: 1.2em;
+    line-height: 0.5em;
+}
+.quo  { margin-left: -0.24em; }
+.dquo { margin-left: -0.44em; }
+.tquo { margin-left: -0.68em; }
+
+
+.list-plain { list-style-type: none; margin-left: 0; }
+@media (max-width: 768px) {
+    .inline-on-mobile li { display: inline; margin-right: 0.5rem; }
+}
+.prose li { line-height: inherit; }
+
+

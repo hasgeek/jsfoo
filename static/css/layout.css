@@ -1,0 +1,167 @@
+/* ========== */
+/* = Layout = */
+/* ========== */
+
+/* natural box layout model */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+@media (max-width: 767px) {
+    .full-width {
+        margin-left:  -20px;
+        margin-right: -20px;
+    }
+}
+
+/*  Helpers  */
+
+.clearboth          { clear: both;  }
+
+.resetcoords        { position: relative; }
+.freeflow           { position: absolute; }
+.freeflow.pull-left { left: 0;     }
+.freeflow.pull-right{ right:0;     }
+.freeflow.pull-top  { top:  0;     }
+.freeflow.pull-bottom{ bottom: 0;  }
+.layer-base         { z-index: 0;  }
+.layer-one          { z-index: 10; }
+.layer-two          { z-index: 20; }
+
+.occupy             { display: block;  }
+.inline             { display: inline; }
+.inline-block       { display: inline-block; }
+.center-block       { margin-left: auto; margin-right: auto; }
+.right-block        { margin-left: auto; margin-right: 0;    }
+
+.truncate           { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.forcewrap          { word-wrap: break-word; }
+
+.contain-width  img { max-width:  100%; height: auto; }
+.contain-height img { max-height: 100%; width:  auto; }
+
+.js .js-hidden      { display: none; }
+.no-js .no-js-hidden{ display: none; }
+
+
+
+/*  Margins  */
+
+.space-eight,.space-eight-top   { margin-top:    8.00rem !important; }
+.space-eight,.space-eight-bottom{ margin-bottom: 8.00rem !important; }
+.space-six,  .space-six-top     { margin-top:    6.00rem !important; }
+.space-six,  .space-six-bottom  { margin-bottom: 6.00rem !important; }
+.space-four, .space-four-top    { margin-top:    4.00rem !important; }
+.space-four, .space-four-bottom { margin-bottom: 4.00rem !important; }
+.space-three,.space-three-top   { margin-top:    3.00rem !important; }
+.space-three,.space-three-bottom{ margin-bottom: 3.00rem !important; }
+.space-two,  .space-two-top     { margin-top:    2.00rem !important; }
+.space-two,  .space-two-bottom  { margin-bottom: 2.00rem !important; }
+.space-line, .space-line-top    { margin-top:    1.50rem !important; }
+.space-line, .space-line-bottom { margin-bottom: 1.50rem !important; }
+.space-one,  .space-one-top     { margin-top:    1.00rem !important; }
+.space-one,  .space-one-bottom  { margin-bottom: 1.00rem !important; }
+.space-3q,   .space-3q-top      { margin-top:    0.75rem !important; }
+.space-3q,   .space-3q-bottom   { margin-bottom: 0.75rem !important; }
+.space-half, .space-half-top    { margin-top:    0.50rem !important; }
+.space-half, .space-half-bottom { margin-bottom: 0.50rem !important; }
+.space-1q,   .space-1q-top      { margin-top:    0.25rem !important; }
+.space-1q,   .space-1q-bottom   { margin-bottom: 0.25rem !important; }
+.nospace,    .nospace-top       { margin-top:    0       !important; }
+.nospace,    .nospace-bottom    { margin-bottom: 0       !important; }
+
+.list-space-one  li             { margin-bottom: 1.50rem !important; }
+.list-space-line li             { margin-bottom: 1.50rem !important; }
+
+
+.pad-six,    .pad-six-left      { padding-left:  6.00rem !important; }
+.pad-six,    .pad-six-right     { padding-right: 6.00rem !important; }
+.pad-three,  .pad-three-left    { padding-left:  3.00rem !important; }
+.pad-three,  .pad-three-right   { padding-right: 3.00rem !important; }
+.pad-two,    .pad-two-left      { padding-left:  2.00rem !important; }
+.pad-two,    .pad-two-right     { padding-right: 2.00rem !important; }
+.pad-line,   .pad-line-left     { padding-left:  1.50rem !important; }
+.pad-line,   .pad-line-right    { padding-right: 1.50rem !important; }
+.pad-one,    .pad-one-left      { padding-left:  1.00rem !important; }
+.pad-one,    .pad-one-right     { padding-right: 1.00rem !important; }
+.pad-3q,     .pad-3q-left       { padding-left:  0.75rem !important; }
+.pad-3q,     .pad-3q-right      { padding-right: 0.75rem !important; }
+.pad-half,   .pad-half-left     { padding-left:  0.50rem !important; }
+.pad-half,   .pad-half-right    { padding-right: 0.50rem !important; }
+.pad-1q,     .pad-1q-left       { padding-left:  0.25rem !important; }
+.pad-1q,     .pad-1q-right      { padding-right: 0.25rem !important; }
+.nopad,      .nopad-left        { padding-left:  0       !important; }
+.nopad,      .nopad-right       { padding-right: 0       !important; }
+
+
+.push-four,  .push-four-top     { padding-top:    4.00rem !important; }
+.push-four,  .push-four-bottom  { padding-bottom: 4.00rem !important; }
+.push-three, .push-three-top    { padding-top:    3.00rem !important; }
+.push-three, .push-three-bottom { padding-bottom: 3.00rem !important; }
+.push-two,   .push-two-top      { padding-top:    2.00rem !important; }
+.push-two,   .push-two-bottom   { padding-bottom: 2.00rem !important; }
+.push-line,  .push-line-top     { padding-top:    1.50rem !important; }
+.push-line,  .push-line-bottom  { padding-bottom: 1.50rem !important; }
+.push-one,   .push-one-top      { padding-top:    1.00rem !important; }
+.push-one,   .push-one-bottom   { padding-bottom: 1.00rem !important; }
+.push-3q,    .push-3q-top       { padding-top:    0.75rem !important; }
+.push-3q,    .push-3q-bottom    { padding-bottom: 0.75rem !important; }
+.push-half,  .push-half-top     { padding-top:    0.50rem !important; }
+.push-half,  .push-half-bottom  { padding-bottom: 0.50rem !important; }
+.push-1q,    .push-1q-top       { padding-top:    0.25rem !important; }
+.push-1q,    .push-1q-bottom    { padding-bottom: 0.25rem !important; }
+.nopush,     .nopush-top        { padding-top:    0       !important; }
+.nopush,     .nopush-bottom     { padding-bottom: 0       !important; }
+
+
+.gap-three,  .gap-three-left    { margin-left:  3.00rem !important; }
+.gap-three,  .gap-three-right   { margin-right: 3.00rem !important; }
+.gap-two,    .gap-two-left      { margin-left:  2.00rem !important; }
+.gap-two,    .gap-two-right     { margin-right: 2.00rem !important; }
+.gap-one,    .gap-one-left      { margin-left:  1.00rem !important; }
+.gap-one,    .gap-one-right     { margin-right: 1.00rem !important; }
+.gap-3q,     .gap-3q-left       { margin-left:  0.75rem !important; }
+.gap-3q,     .gap-3q-right      { margin-right: 0.75rem !important; }
+.gap-half,   .gap-half-left     { margin-left:  0.50rem !important; }
+.gap-half,   .gap-half-right    { margin-right: 0.50rem !important; }
+.gap-1q,     .gap-1q-left       { margin-left:  0.25rem !important; }
+.gap-1q,     .gap-1q-right      { margin-right: 0.25rem !important; }
+.nogap,      .nogap-left        { margin-left:  0 !important; }
+.nogap,      .nogap-right       { margin-right: 0 !important; }
+
+
+.ngap-six,   .ngap-six-left     { margin-left: -6.00rem !important; }
+.ngap-six,   .ngap-six-right    { margin-right:-6.00rem !important; }
+.ngap-three, .ngap-three-left   { margin-left: -3.00rem !important; }
+.ngap-three, .ngap-three-right  { margin-right:-3.00rem !important; }
+.ngap-two,   .ngap-two-left     { margin-left: -2.00rem !important; }
+.ngap-two,   .ngap-two-right    { margin-right:-2.00rem !important; }
+.ngap-line,  .ngap-line-left    { margin-left: -1.50rem !important; }
+.ngap-line,  .ngap-line-right   { margin-right:-1.50rem !important; }
+.ngap-one,   .ngap-one-left     { margin-left: -1.00rem !important; }
+.ngap-one,   .ngap-one-right    { margin-right:-1.00rem !important; }
+.ngap-half,  .ngap-half-left    { margin-left: -0.50rem !important; }
+.ngap-half,  .ngap-half-right   { margin-right:-0.50rem !important; }
+.ngap-1q,    .ngap-1q-left      { margin-left: -0.25rem !important; }
+.ngap-1q,    .ngap-1q-right     { margin-right:-0.25rem !important; }
+
+
+
+/*  H5BP Helpers  */
+
+/* For image replacement */
+.js .js-ir,
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.js .js-ir br,
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.always-hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+

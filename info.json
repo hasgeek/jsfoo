@@ -1,13 +1,23 @@
 {
     "application": "eventframe",
-    "identifier": "jsfoo2012",
-    "name": "JSFoo 2012",
-    "author": "HasGeek",
-    "description": "JSFoo Bangalore 2012 website template",
+    "identifier": "jsfoo2013",
+    "name": "JSFoo 2013",
+    "author": "Miranj",
+    "description": "JSFoo Bangalore 2013 website template",
     "license": "All rights reserved",
     "doctype": "html5",
     "options": {
-        "assets_css": [],
-        "assets_js": []
+        "assets_css": [
+            "css/vendor/bootstrap.min.css",
+            "css/vendor/bootstrap-responsive.min.css",
+            "css/typography.css",
+            "css/layout.css",
+            "css/theme.css",
+            "css/objects.css"
+        ],
+        "assets_js": [
+            "js/vendor/bootstrap.min.js",
+            "js/maps.js"
+        ]
     }
 }
