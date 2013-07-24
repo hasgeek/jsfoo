@@ -91,7 +91,7 @@ abbr {
 
 
 .list-plain { list-style-type: none; margin-left: 0; }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .inline-on-mobile li { display: inline; margin-right: 0.5rem; }
 }
 .prose li { line-height: inherit; }

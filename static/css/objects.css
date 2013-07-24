@@ -109,13 +109,11 @@
     list-style-type: none;
     margin: 1rem 0 0;
 }
-@media (max-width: 768px) {
-    .program-committee ul {
-        margin: 2rem 0 0;
-        -webkit-column-count: 2;  -webkit-column-gap: 1rem;
-           -moz-column-count: 2;     -moz-column-gap: 1rem;
-                column-count: 2;          column-gap: 1rem;
-    }
+@media (max-width: 767px) {
+    .program-committee ul                     { margin: 2rem 0 0; }
+    .program-committee ul li                  { width: 49%; }
+    .program-committee ul li:nth-child(odd)   { float: left;  }
+    .program-committee ul li:nth-child(even)  { float: right; }
 }
 .program-committee a {
     border-bottom: none;
@@ -155,7 +153,7 @@
 .js .venue .leaflet-map a { border-bottom: none; }
 .js .venue .city-level    { width: 65%; }
 .js .venue .country-level { width: 35%; float: left; }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .js .venue { padding: 0; }
     .js .venue h2 {
         right: 5%;
