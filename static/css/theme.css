@@ -21,6 +21,7 @@ a.link-silent { border-bottom: none; }
 
 .black          { color: #000000 !important; }
 .dark           { color: #444444 !important; }
+.gray           { color: #666666 !important; }
 .light          { color: #EEEEEE !important; }
 .red            { color: #FF3333 !important; }
 .white          { color: #FFFFFF !important; }

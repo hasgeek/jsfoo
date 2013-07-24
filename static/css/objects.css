@@ -44,7 +44,6 @@
     height: 10rem;
     margin: 3rem 0;
 }
-.banner h2 { margin: 0.5rem 0 2rem; }
 .banner h2 span + span { display: inline-block; margin-left: 0.5rem; }
 .banner h2 sup { top: 0; font-size: 65%; }
 .banner h3 {
