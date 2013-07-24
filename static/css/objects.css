@@ -36,6 +36,7 @@
 }
 
 
+@media (max-width: 767px) { .hg-bar-holder { margin: auto -20px; padding: 0 10px; } }
 
 
 .banner .logo {
