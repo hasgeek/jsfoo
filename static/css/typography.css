@@ -6,11 +6,18 @@
 /*  Families  */
 
 body,
-.title-type     { font-family: Brandon Grotesque; }
+.title-type     { font-family: Brandon Grotesque, Gill Sans, Gill Sans MT, sans-serif; }
 
 i,
 em,
 .prose-type     { font-family: Adobe Caslon Pro, serif; }
+
+.wf-active body,
+.wf-active .title-type     { font-family: brandon-grotesque, Brandon Grotesque, Gill Sans, Gill Sans MT, sans-serif; }
+
+.wf-active i,
+.wf-active em,
+.wf-active .prose-type     { font-family: adobe-caslon-pro, Adobe Caslon Pro, serif; }
 
 
 /*  Scale  */
