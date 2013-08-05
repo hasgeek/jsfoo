@@ -28,9 +28,9 @@
 {%- endif %}
 
 <!-- Leaflet -->
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.2/leaflet.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.min.css" />
 <!--[if lte IE 8]>
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.2/leaflet.ie.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.ie.css" />
 <![endif]-->
 <link rel="stylesheet" href="/_baseframe/css/networkbar.css">
 
@@ -546,7 +546,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 {%- endif %}
 <script>window.jQuery || document.write('<script src="{{ theme_static('js/vendor/jquery-1.10.2.min.js') }}"><\/script>')</script>
-<script src="http://cdn.leafletjs.com/leaflet-0.6.2/leaflet.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.js"></script>
 {%- if _theme %}
   {% assets "js_" + _theme -%}
     <script src="{{ ASSET_URL }}"></script>
