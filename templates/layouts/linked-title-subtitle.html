@@ -1,0 +1,7 @@
+{% for item in items -%}
+  <li>
+    <a href="{{ item.link }}">{{ item.title }}</a>
+    <br>
+    <em class="occupy space-1q-top secondary">{{ item.subtitle }}</em>
+  </li>
+{%- endfor %}

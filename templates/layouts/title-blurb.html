@@ -1,0 +1,10 @@
+{% for item in items -%}
+  <div id="{{ item.id }}" class="row-fluid push-two">
+    <h3 class="offset1 span4 legible all-caps space-one-bottom">{{ item.title }}</h3>
+    <div class="offset1 span5 legible-prose prose prose-type">
+      <div class="prose-type regular-prose space-three-bottom">
+        {{ item.blurb|safe }}
+      </div>
+    </div>
+  </div>
+{%- endfor %}
