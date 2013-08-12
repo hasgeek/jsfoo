@@ -1,0 +1,44 @@
+{% extends theme("page.html") %}
+
+{% set title = '' %}
+{% set description = '' %}
+
+{% block content %}
+  
+  <section class="sponsors page-section fill-red full-width clearfix nopush-bottom">
+    <div class="row-fluid">
+      <h2 class="offset1 extralarge all-caps space-two-bottom">Sponsors</h2>
+    </div>
+  </section>
+  
+  {% with fill_cycler = cycler('fill-red', 'fill-dark') %}
+    {% from theme("data/sponsors.html") import types, items %}
+    {% for type in types %}
+      {% set outer = loop %}
+      {% for item in items if item.type == type.id and type.size != 'compact'  %}
+        {% if loop.first %}
+        <section class="sponsor-platinum page-section {{ fill_cycler.next() }} full-width clearfix">
+          <div class="row-fluid">
+            <h2 class="offset1 legible all-caps space-one-bottom">{{ type.title }}</h2>
+          </div>
+        {% endif %}
+          <div id="{{ type.id }}-{{ item.id }}" class="row-fluid push-two">
+            <h3 class="offset1 span4 legible all-caps space-two-bottom clearfix">
+              <a href="#" class="occupy fill-white sponsor-logo contain-height flushleft">
+                <img alt="HasGeek" src="{{ item.logo }}">
+              </a>
+            </h3>
+            <div class="offset1 span5 legible-prose prose prose-type">
+              <div class="prose-type regular-prose space-three-bottom">
+                {{ item.blurb|safe }}
+              </div>
+            </div>
+          </div>
+        {% if loop.last %}
+        </section>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endwith %}
+
+{% endblock %}

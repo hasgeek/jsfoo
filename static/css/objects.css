@@ -226,9 +226,10 @@
 }
 .sponsor-s > li:nth-child(3n+1) { margin-left: 0; }
 
-.sponsor-compact { border-radius: 0.25em; }
+.sponsor-compact { border-radius: 0.25em; background-color: white; }
 .sponsor-compact > li {
     float: left !important;
+    margin-bottom: 0 !important;
     width: 33.3333% !important;
     width: calc(100/3)% !important;
 }
