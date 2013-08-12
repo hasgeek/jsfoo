@@ -1,0 +1,90 @@
+{% extends theme("page.html") %}
+
+{% set title = '' %}
+{% set description = '' %}
+
+{% block content %}
+  
+  <section class="venue fill-dark bleed-section clearfix">
+  
+    <div class="fill-red bleed-section">
+      <div class="row-fluid push-four-top">
+        <h2 class="offset1 extralarge all-caps space-four-bottom">MLR Convention Centre<span class="large occupy">J. P. Nagar</span></h2>
+      </div>
+      <div class="full-width"><img src="{{ theme_static('img/venue.jpg') }}" class="contain-width"></div>
+    </div>
+  
+    <div class="row-fluid space-two-top">
+      <h3 class="offset1 span4 legible all-caps space-one-bottom">Address</h3>
+
+      <div class="offset1 span5 legible-prose prose prose-type">
+        <div class="prose-type regular-prose space-three-bottom">
+          <p>
+            MLR Convention Centre, J.P. Nagar<br>
+            Brigade Millenium Complex, J.P. Nagar 7th Phase<br>
+            Bangalore, Karnataka  India
+          </p>
+          <p>
+            <a href="https://maps.google.co.in/maps?q=MLR+Convention+Centre+-+JP+Nagar,+Bangalore,+Karnataka&hl=en&ll=12.894143,77.585106&spn=0.047523,0.077934&sll=12.945288,77.643446&sspn=0.190051,0.311737&oq=MLR+Convention+Centre,+J+Bangalore,+Karnataka&hq=MLR+Convention+Centre+-&hnear=J+P+Nagar,+Bangalore,+Bangalore+Urban,+Karnataka&t=m&z=14&iwloc=A" class='tiny gray'>View on Google Maps</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="full-width no-js-hidden">
+      <h3 class="visuallyhidden">Map</h3>
+      <div class="row-fluid">
+        <div class="offset6 span5 legible-prose prose prose-type clearfix">
+          <div class="prose-type regular-prose space-three-bottom">
+            <div
+              class="leaflet-map span12"
+              data-label="MLR Convention Centre, J. P. Nagar"
+              data-zoom="14"
+              data-marker="12.891476, 77.585079">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </section>
+
+  <section class="page-section fill-red full-width clearfix">
+  
+    <div class="row-fluid">
+      <h2 class="offset1 extralarge all-caps space-two-bottom">Hotels</h2>
+    </div>
+  
+    {% with %}
+      {% from theme("data/hotels.html") import types, items %}
+      {% for type in types %}
+        {% set outer = loop %}
+        {% for item in items if item.type == type.id  %}
+          {% if loop.first %}
+          <article id="{{ type.id }}-hotels" class="row-fluid">
+            <h3 class="offset1 span4 legible all-caps space-one-bottom">{{ type.title }}</h3>
+            <ul class="offset1 span5 legible-prose prose prose-type unstyled">
+          {% endif %}
+              <li>
+                <h4 class="legible-prose">{{ item.title }}</h4>
+                <div class="prose-type regular-prose space-three-bottom">
+                  <h5 class="visuallyhidden">Address</h5>
+                  <p class="space-one-bottom">{{ item.address|safe }}</p>
+                  <h5 class="visuallyhidden">Contact</h5>
+                  <p class="space-one-bottom">{{ item.contact|safe }}</p>
+                  <h4 class="visuallyhidden">Distance</h4>
+                  <p class="space-one-bottom secondary">
+                    {{ item.distance }} kms from event venue
+                  </p>
+                </div>
+              </li>
+          {% if loop.last %}
+            </ul>
+          </article>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    {% endwith %}
+  
+  </section>
+
+{% endblock %}
