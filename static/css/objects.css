@@ -58,7 +58,7 @@
 .banner .logo:hover { background-color: transparent; }
 .banner.banner-home h1 { width: 10rem; float: none; margin: 3rem auto; }
 .banner.banner-home h2 span + span { display: inline-block; margin-left: 0.5rem; }
-.banner sup { top: 0; font-size: 65%; }
+.banner sup, sup.date { top: 0; font-size: 65%; }
 .banner.banner-home h3 {
     padding-left: 3rem;
     text-align: left;
