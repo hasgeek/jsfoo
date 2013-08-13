@@ -7,14 +7,14 @@
   
   <section class="venue fill-dark bleed-section clearfix">
   
-    <div class="fill-red bleed-section">
+    <div class="fill-red">
       <div class="row-fluid push-four-top">
-        <h2 class="offset1 extralarge all-caps space-four-bottom">MLR Convention Centre<span class="large occupy">J. P. Nagar</span></h2>
+        <h2 class="offset1 extralarge all-caps space-four-bottom pad-section-bleeding">MLR Convention Centre<span class="large occupy">J. P. Nagar</span></h2>
       </div>
-      <div class="full-width"><img src="{{ theme_static('img/venue.jpg') }}" class="contain-width"></div>
+      <div class="full-width bleed-section"><img src="{{ theme_static('img/venue.jpg') }}" class="contain-width"></div>
     </div>
   
-    <div class="row-fluid space-two-top">
+    <div class="row-fluid space-two-top pad-section-bleeding">
       <h3 class="offset1 span4 legible all-caps space-one-bottom">Address</h3>
 
       <div class="offset1 span5 legible-prose prose prose-type">
@@ -70,10 +70,10 @@
                   <h5 class="visuallyhidden">Address</h5>
                   <p class="space-one-bottom">{{ item.address|safe }}</p>
                   <h5 class="visuallyhidden">Contact</h5>
-                  <p class="space-one-bottom">{{ item.contact|safe }}</p>
+                  <p class="space-one-bottom link-silent">{{ item.contact|safe }}</p>
                   <h4 class="visuallyhidden">Distance</h4>
                   <p class="space-one-bottom secondary">
-                    {{ item.distance }} kms from event venue
+                    {{ item.distance }} kms from conference venue
                   </p>
                 </div>
               </li>

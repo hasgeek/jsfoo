@@ -35,6 +35,13 @@
         margin-right: -20px;
     }
 }
+.pad-section-bleeding {}
+@media (max-width: 767px) {
+    .pad-section-bleeding {
+        padding-left:  20px;
+        padding-right: 20px;
+    }
+}
 
 
 @media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
