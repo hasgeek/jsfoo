@@ -6,9 +6,11 @@
     line-height: 1.4;
     padding: 1em 2em 1em;
     text-transform: uppercase;
+    text-align: center;
     border-radius: 0.25em;
     border: 0;
 }
+.button-mini    { padding: 0.2em 0.6em; }
 .button-on-dark { background: #BB3311; }
 .button:active {
     box-shadow: inset 0 0 10px #000;
@@ -84,17 +86,9 @@
     margin: 4rem auto 3rem;
     max-width: 28rem;
 }
-.banner .button                 { width: 13rem; }
-.banner.banner-internal .button { padding: .15rem 1rem; width: auto; }
-.banner.banner-internal .event-meta-container { margin: .75rem -20px .75rem 0; padding-left: 5rem; }
-.banner.banner-internal p { margin: 0; }
-.banner.banner-internal p.event-tickets { margin-top: .5rem; }
+.banner .button               { width: 13rem; }
 @media (min-width: 560px) {
-    .banner h1 { width: 5rem; margin: .5rem auto; }
-    .banner.banner-internal .event-meta-container { margin: .75rem 0; padding: 1.25rem 0 0 6rem; }
-    .banner.banner-internal p.event-venue         { float: left; }
-    .banner.banner-internal p.event-tickets       { float: right; margin: 0 0 0 1rem; width: 35%; }
-    .banner.banner-internal .button               { width: 100%; max-width: 10rem; padding: .4rem 0; }
+    .banner h1                { width: 5rem; margin: .5rem auto; }
 }
 @media (min-width: 768px) {
     .banner h1                { margin: 1.25rem auto .5rem; }
@@ -117,6 +111,50 @@
         max-width: 100%;
     }
 }
+
+.banner-internal .logo {
+    background: url(../img/logo.png) no-repeat scroll center center;
+    background-size: contain;
+    height: 0;
+    width:       5.5rem;
+    padding-top: 5.5rem;
+    -webkit-transition: all 0.5s;
+}
+.banner-internal .logo:hover {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+            transform: rotate(360deg);
+}
+@media (max-width:767px) {
+    .banner-internal        { padding: 1rem 0 !important; }
+    .banner-internal .logo  { margin: 0 auto; }
+    .banner-internal nav    {
+        margin-top: 1rem !important;
+        text-align: center;
+        text-transform: lowercase;
+    }
+    .banner-internal nav ul { font-size: 1rem; }
+    .banner-internal h3 {
+        position: absolute;
+        margin: 0;
+        top:    2.4rem;
+        left:   0;
+        width:  4.5rem !important;
+        line-height: 1.3;
+    }
+    .ticket-link-container  {
+        position: absolute;
+        top: 1.55rem;
+        right: 0;
+        max-width: 6rem;
+    }
+    .ticket-link-container .button { padding: 0.2em 0.6em; }
+}
+@media (min-width: 768px) {
+    .banner-internal nav    { margin-top: -0.5rem; }
+    .banner-internal h3     { margin-top: 1rem; }
+}
+
 
 .program-committee h2 {
     line-height: 1.2;

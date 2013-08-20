@@ -47,21 +47,44 @@
 </head>
 <body class="fill-redgray">
 
-<div class="bleed-section">{% block networkbar %}{{ networkbar(siteid='events', login=false) }}{% endblock %}</div>
+<div class="bleed-section fill-silver">
+  {% block networkbar %}
+    {{ networkbar(siteid='events', login=false) }}
+  {% endblock %}
+</div>
   
 <div id="page">
 
 {% block banner %}
-<header class="row-fluid banner banner-internal clearfix">
-  <div class="offset1 span10">
-    <h1><a class="ir logo" href="/">JSFoo 2013</a></h1>
-    <div class="event-meta-container clearfix secondary">
-      <p class="event-dates">20<sup>th</sup> — 21<sup>st</sup> Sep 2013</p>
-      <p class="event-venue"><a href="http://goo.gl/maps/pTOsq">MLR Convention Centre, J. P. Nagar</a></p>
-      <p class="event-tickets">
-        <a class="button text-center tiny" href="http://jsfoo.doattend.com/">Buy your Ticket</a>
-      </p>
-    </div>
+<header class="banner-internal row-fluid push-two resetcoords clearfix">
+  <div class="offset1 span2">
+    <h1 class="nospace">
+      <a class="ir logo" href="/2013">
+        JSFoo 2013
+      </a>
+    </h1>
+  </div>
+  <nav class="span3 secondary">
+    <ul class="inline-on-mobile list-plain red prose">
+      <li><a href="/2013">Home</a></li>
+      <li><a href="/2013/conference">Conference</a></li>
+      <li><a href="/2013/workshops">Workshops</a></li>
+      <li><a href="/2013/venue">Venue</a></li>
+    </ul>
+  </nav>
+  <h3 class="calm tiny nospace-bottom all-caps span2">
+    20<span class="hidden-phone"> </span>—<span class="hidden-phone"> </span>21<sup class="date">st</sup>
+    Sep<span class="hidden-phone">tember</span>&nbsp;2013
+    <br>
+    Bangalore
+  </h3>
+  <div class="ticket-link-container span3">
+    <p class="text-right space-line">
+      <a class="button" href="http://jsfoo.doattend.com/">
+        <span class="hidden-phone">Buy Your</span>
+        Ticket<span class="visible-phone">s</span>
+      </a>
+    </p>
   </div>
 </header>
 {% endblock %}
