@@ -7,14 +7,16 @@ a {
     color: inherit;
     border-bottom: 1px solid;
 }
-a:hover {
+a:hover,
+a:focus {
     text-decoration: none;
     color: white;
-    background-color: #444;
+    background-color: #005580;
     border-color: transparent;
 }
+a:hover         { background-color: #444; }
 .link-silent a,
-a.link-silent { border-bottom: none; }
+a.link-silent   { border-bottom: none; }
 
 
 /*  Colours  */
