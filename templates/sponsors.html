@@ -22,16 +22,28 @@
             <h2 class="offset1 legible all-caps space-one-bottom">{{ type.title }}</h2>
           </div>
         {% endif %}
-          <div id="{{ type.id }}-{{ item.id }}" class="row-fluid push-two">
-            <h3 class="offset1 span4 legible all-caps space-two-bottom clearfix">
-              <a href="#" class="occupy fill-white sponsor-logo contain-height flushleft">
-                <img alt="{{ item.title }}" src="{{ item.logo }}">
-              </a>
-            </h3>
-            <div class="offset1 span5 legible-prose prose prose-type">
-              <div class="prose-type regular-prose space-three-bottom">
+          <h3 class="visuallyhidden">{{ item.title }}</h3>
+          <div id="{{ type.id }}-{{ item.id }}" class="row-fluid push-two-top">
+            <div class="offset1 span4 legible space-two-bottom clearfix clearboth">
+              <p class="clearfix space-two-bottom">
+                <a href="#" class="occupy fill-white sponsor-logo contain-height flushleft">
+                  <img alt=" " src="{{ item.logo }}">
+                </a>
+              </p>
+              
+              {% if item.attendee %}
+              <h4 class="tiny all-caps nospace faded">Sponsor Attendee</h3>
+              <p class="regular prose-type space-half-top space-one-bottom link-silent">{{ item.attendee|safe }}</p>
+              {% endif %}
+              
+              {% if item.contact %}
+              <h4 class="tiny all-caps nospace faded">Contact</h3>
+              <p class="regular prose-type space-half-top space-one-bottom link-silent">{{ item.contact|safe }}</p>
+              {% endif %}
+              
+            </div>
+            <div class="offset1 span5 regular-prose prose prose-type space-three-bottom">
                 {{ item.blurb|safe }}
-              </div>
             </div>
           </div>
         {% if loop.last %}

@@ -26,8 +26,8 @@ a.link-silent   { border-bottom: none; }
 .gray           { color: #AAAAAA !important; }
 .light          { color: #EEEEEE !important; }
 .red            { color: #FF3333 !important; }
-.lightred       { color: #EECCCC !important; }
 .white          { color: #FFFFFF !important; }
+.faded          { color: rgba(255,255,255,.8) !important; }
 
 .fill-white     { background-color: #FFFFFF !important; color: #444; }
 .fill-dark      { background-color: #121212 !important; color: #EEE; }
