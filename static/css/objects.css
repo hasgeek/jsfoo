@@ -230,7 +230,6 @@
 @media (min-height: 630px) { .js .venue-home .leaflet-map { height: 620px; } }
 @media (min-height: 725px) { .js .venue-home .leaflet-map { height: 725px; } }
 @media (min-height: 800px) { .js .venue-home .leaflet-map { height: 800px; } }
-@media (min-width:  768px) { .js .venue .leaflet-map { margin-bottom: 3rem; } }
 
 .video-thumbnail h4 {
     font-weight: normal;
