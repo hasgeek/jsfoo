@@ -90,9 +90,12 @@ abbr {
 .tquo { margin-left: -0.68em; }
 
 
-.list-plain { list-style-type: none; margin-left: 0; }
+.list-plain         { list-style-type: none; margin-left: 0; }
+.dl-plain dd        { margin-left: 0; line-height: inherit; }
+.dl-plain dd + dt   { margin-top: 2rem; }
 @media (max-width: 767px) {
     .inline-on-mobile li { display: inline; margin-right: 0.5rem; }
+    .inline-on-mobile dd { display: inline; margin-right: 0.5rem; }
 }
 .prose li { line-height: inherit; }
 

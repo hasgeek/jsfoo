@@ -18,6 +18,8 @@ a:hover         { background-color: #444; }
 .link-silent a,
 a.link-silent   { border-bottom: none; }
 
+.prose.prose-type a { border-bottom: none; text-decoration: underline; }
+
 
 /*  Colours  */
 
@@ -39,8 +41,8 @@ a.link-silent   { border-bottom: none; }
 .fill-redgray   { background-color: #EFE7E6 !important; color: #222020; }
 
 .fade-red-to-dark {
-    background-image: -webkit-linear-gradient(top,      #BB3311 20%, #121212);
-    background-image:    -moz-linear-gradient(top,      #BB3311 20%, #121212);
-    background-image:      -o-linear-gradient(top,      #BB3311 20%, #121212);
-    background-image:         linear-gradient(to bottom,#BB3311 20%, #121212);
+    background-image: -webkit-linear-gradient(top,       #BB3311 20%, #121212);
+    background-image:    -moz-linear-gradient(top,       #BB3311 20%, #121212);
+    background-image:      -o-linear-gradient(top,       #BB3311 20%, #121212);
+    background-image:         linear-gradient(top bottom,#BB3311 20%, #121212);
 }

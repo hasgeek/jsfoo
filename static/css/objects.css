@@ -288,10 +288,36 @@
 .sponsor-logo:hover { background-color: #E5E5E5 !important; }
 
 .sponsor-xl       .sponsor-logo { height: 6.67rem;  line-height: 4rem;    padding: 1.34rem; }
-.sponsor-l        .sponsor-logo { height: 5.34rem;  line-height: 3.35rem; padding: .84rem; }
-.sponsor-m        .sponsor-logo { height: 5.34rem;  line-height: 2.68rem; padding: 1.34rem;   }
-.sponsor-s        .sponsor-logo { height: 4rem;     line-height: 2rem;    padding: .84rem; }
-.sponsor-compact  .sponsor-logo { height: 4rem;     line-height: 2rem;    padding: .84rem; }
+.sponsor-l        .sponsor-logo { height: 5.34rem;  line-height: 3.35rem; padding: .84rem;  }
+.sponsor-m        .sponsor-logo { height: 5.34rem;  line-height: 2.68rem; padding: 1.34rem; }
+.sponsor-s        .sponsor-logo { height: 4rem;     line-height: 2rem;    padding: .84rem;  }
+.sponsor-compact  .sponsor-logo { height: 4rem;     line-height: 2rem;    padding: .84rem;  }
+
+
+.credits .row-fluid .offset1 {
+  margin-left: 8.51063829787234%;
+  *margin-left: 8.404255319148938%;
+}
+
+@media (min-width: 1200px) {
+    .credits .row-fluid .offset1 {
+        margin-left: 8.547008547008547%;
+        *margin-left: 8.440625568285142%;
+    }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    .credits .row-fluid .offset1 {
+        margin-left: 8.56353591160221%;
+        *margin-left: 8.457152932878806%;
+    }
+}
+@media (max-width: 767px) {
+    .credits .row-fluid [class*="span"] {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .credits .row-fluid .offset1 { margin-left: 0; }
+}
 
 .page-footer {
     background-color: #000 !important;
@@ -305,7 +331,6 @@
     background: url(../img/hasgeek-logo.png) no-repeat scroll center center;
     width:  130px;
     height: 120px;
-    margin: 1rem auto 0;
     -webkit-border-radius: 30px 30px 30px 0;
             border-radius: 30px 30px 30px 0;
 }

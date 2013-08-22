@@ -69,9 +69,7 @@
 .nospace,    .nospace-top       { margin-top:    0       !important; }
 .nospace,    .nospace-bottom    { margin-bottom: 0       !important; }
 
-.list-space-one  li             { margin-bottom: 1.50rem !important; }
 .list-space-line li             { margin-bottom: 1.50rem !important; }
-
 
 .pad-six,    .pad-six-left      { padding-left:  6.00rem !important; }
 .pad-six,    .pad-six-right     { padding-right: 6.00rem !important; }
