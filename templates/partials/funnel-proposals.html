@@ -1,0 +1,52 @@
+<section class="funnel page-section clearfix">
+  <div class="row-fluid">
+    <h2 class="offset1 span4 extralarge all-caps">Session Proposals</h2>
+    
+    <div class="offset1 span5 legible-prose prose-type space-one-top">
+      <p>
+        Anyone is welcome to propose a session. Participants who have purchased conference tickets will vote on session proposals. The Programme Committee steering JSFoo will also vote on submissions and balance the community voting.
+      </p>
+      
+      <p class="title-type secondary space-one-top">
+        <a class="button" href="https://funnel.hasgeek.com/jsfoo2013/">Propose a Session</a>
+      </p>
+    </div>
+  </div>
+
+  <hr class="invisible space-one">
+  
+  <div class="row-fluid space-two">
+    <h3 class="offset1 span4 legible all-caps space-one-bottom">Talks</h3>
+    
+    <div class="offset1 span5 legible-prose prose prose-type">
+      <ul class="space-half-top list-space-line list-plain link-silent">
+        {% with %}
+          {% from theme("data/featured-talk-proposals.html") import items %}
+          {% include theme("layouts/linked-title-subtitle.html") %}
+        {% endwith %}
+      </ul>
+      <p class="tiny all-caps title-type text-right">
+        <a href="https://funnel.hasgeek.com/jsfoo2013/#sessions">More &rarr;</a>
+      </p>
+    </div>
+  </div>
+  
+  <hr class="invisible space-one">
+  
+  <div class="row-fluid space-two">
+    <h3 class="offset1 span4 legible all-caps space-one-bottom">Workshops</h3>
+    
+    <div class="offset1 span5 legible-prose prose prose-type">
+      <ul class="space-half-top list-space-line list-plain link-silent">
+        {% with %}
+          {% from theme("data/featured-workshop-proposals.html") import items %}
+          {% include theme("layouts/linked-title-subtitle.html") %}
+        {% endwith %}
+      </ul>
+      <p class="tiny all-caps title-type text-right">
+        <a href="https://funnel.hasgeek.com/jsfoo2013/#sessions">More &rarr;</a>
+      </p>
+    </div>
+  </div>
+  
+</section>

@@ -1,0 +1,21 @@
+<section id="schedule" class="page-section full-width fill-black clearfix">
+  <div class="row-fluid">
+    <h2 class="offset1 extralarge all-caps space-two-bottom">Schedule</h2>
+  </div>
+  
+  <ul class="unstyled">
+    {% with %}
+      {% from theme("data/workshop-schedule.html") import items %}
+      {% for item in items %}
+        <li class="row-fluid space-two">
+          <h3 class="offset1 span4 legible all-caps space-one-bottom">{{ item.time }}</h3>
+          <div class="offset1 span5 legible-prose prose prose-type">
+            <p class="space-half-top list-space-line list-plain link-silent">
+              {% include theme("layouts/linked-talk-speaker-single.html") %}
+            </p>
+          </div>
+        </li>
+      {% endfor %}
+    {% endwith %}
+  </ul>
+</section>

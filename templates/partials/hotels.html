@@ -1,0 +1,38 @@
+<section class="page-section fill-redgray full-width clearfix">
+
+  <div class="row-fluid">
+    <h2 class="offset1 extralarge all-caps space-two-bottom">Hotels</h2>
+  </div>
+
+  {% with %}
+    {% from theme("data/hotels.html") import types, items %}
+    {% for type in types %}
+      {% set outer = loop %}
+      {% for item in items if item.type == type.id  %}
+        {% if loop.first %}
+        <article id="{{ type.id }}-hotels" class="row-fluid">
+          <h3 class="offset1 span4 legible all-caps space-one-bottom">{{ type.title }}</h3>
+          <ul class="offset1 span5 regular-prose prose prose-type unstyled">
+        {% endif %}
+            <li>
+              <h4 class="legible-prose semibold">{{ item.title }}</h4>
+              <div class="space-three-bottom">
+                <h5 class="visuallyhidden">Address</h5>
+                <p class="space-one-bottom">{{ item.address|safe }}</p>
+                <h5 class="visuallyhidden">Contact</h5>
+                <p class="space-one-bottom link-silent">{{ item.contact|safe }}</p>
+                <h4 class="visuallyhidden">Distance</h4>
+                <p class="space-one-bottom secondary">
+                  {{ item.distance }} kms from conference venue
+                </p>
+              </div>
+            </li>
+        {% if loop.last %}
+          </ul>
+        </article>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endwith %}
+
+</section>

@@ -1,0 +1,47 @@
+<section id="schedule-day1" class="page-section full-width clearfix">
+  <div class="row-fluid">
+    <h2 class="offset1 extralarge all-caps space-two-bottom">Schedule — 20<sup class="date">th</sup> Sep</h2>
+  </div>
+  
+  <ul class="unstyled">
+    {% with %}
+      {% from theme("data/conference-schedule-day1.html") import items %}
+      {% from theme("data/conference-talks.html") import types %}
+      {% for item in items %}
+        <li class="row-fluid space-two">
+          <h3 class="offset1 span4 legible all-caps space-one-bottom">{{ item.time }}</h3>
+          <div class="offset1 span5 legible-prose prose prose-type">
+            <p class="space-half-top list-space-line list-plain link-silent">
+              {% include theme("layouts/linked-talk-speaker-single.html") %}
+            </p>
+          </div>
+        </li>
+      {% endfor %}
+    {% endwith %}
+  </ul>
+
+</section>
+
+<section id="schedule-day2" class="page-section fill-dark full-width clearfix">
+  <div class="row-fluid">
+    <h2 class="offset1 extralarge all-caps space-two-bottom">Schedule — 21<sup class="date">st</sup> Sep</h2>
+  </div>
+  
+  <ul class="unstyled">
+    {% with %}
+      {% from theme("data/conference-schedule-day2.html") import items %}
+      {% from theme("data/conference-talks.html") import types %}
+      {% for item in items %}
+        <li class="row-fluid space-two">
+          <h3 class="offset1 span4 legible all-caps space-one-bottom">{{ item.time }}</h3>
+          <div class="offset1 span5 legible-prose prose prose-type">
+            <p class="space-half-top list-space-line list-plain link-silent">
+              {% include theme("layouts/linked-talk-speaker-single.html") %}
+            </p>
+          </div>
+        </li>
+      {% endfor %}
+    {% endwith %}
+  </ul>
+
+</section>

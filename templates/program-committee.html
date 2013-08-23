@@ -4,15 +4,7 @@
 {% set description = '' %}
 
 {% block content %}
-<section class="program-committee page-section fill-red full-width clearfix">
-  <div class="row-fluid">
-    <h2 class="offset1 extralarge all-caps space-two-bottom">Program Committee</h2>
-  </div>
-  
-  {% with %}
-    {% from theme("data/program-committee.html") import items %}
-    {% include theme("layouts/title-blurb.html") %}
-  {% endwith %}
 
-</section>
+{% include theme("partials/program-committee.html") %}
+
 {% endblock %}

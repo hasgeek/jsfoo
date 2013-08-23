@@ -5,76 +5,10 @@
 
 {% block content %}
   
-  <section class="conference page-section fill-red full-width clearfix">
-    <div class="row-fluid">
-      <div class="offset1 span4 push-one-bottom">
-        <h2 class="extralarge all-caps">Workshops</h2>
-        <p class="legible">18 — 19<sup class="date">th</sup> September 2013</p>
-        <ul class="inline-on-mobile list-plain secondary prose">
-          <li><a href="workshops#sessions">Sessions</a></li>
-          <li><a href="workshops#schedule">Schedule</a></li>
-          <li><a href="workshops#venue">Venue</a></li>
-        </ul>
-      </div>
-
-      <div class="offset1 span5 space-one-top">
-        <div class="legible-prose prose-type prose">
-          <p>Workshops will cover JS frameworks – <a href="https://funnel.hasgeek.com/jsfoo2013/759-develop-your-first-multi-room-chat-with-node-js-websockets-and-mongodb">node</a>, <a href="https://funnel.hasgeek.com/jsfoo2013/835-building-your-own-express-js-framework-from-scratch">Express</a>, <a href="https://funnel.hasgeek.com/jsfoo2013/800-building-web-application-using-ember-js-requirejs-q">Ember</a>, <a href="https://funnel.hasgeek.com/jsfoo2013/800-building-web-application-using-ember-js-requirejs-q">Require</a>, <a href="https://funnel.hasgeek.com/jsfoo2013/793-rapidly-prototyping-web-applications-with-meteor-js">Meteor</a> – to help participants learn how to hack/extend these frameworks to customize something. Other workshops include how to do <a href="https://funnel.hasgeek.com/jsfoo2013/806-tdd-with-javascript">test driven development</a> with JavaScript, <a href="https://funnel.hasgeek.com/jsfoo2013/831-automating-automatic-testing">evaluating open source testing tools</a>, <a href="https://funnel.hasgeek.com/jsfoo2013/781-html5-for-a-mobile-world">applying HTML5 – responsive web design, CSS3 animations, etc – to mobile websites</a> without killing battery on mobile devices, and <a href="https://funnel.hasgeek.com/jsfoo2013/777-getting-started-with-firefox-os-and-open-web-apps">understanding Firefox OS</a> including Open Web Apps, Web APIs and possibilities on the platform.</p>
-        </div>
-        <p class="title-type secondary space-one-top">
-          <a class="button" href="http://jsfoo.doattend.com">Buy Workshop Tickets</a>
-        </p>
-      </div>
-    </div>
-  </section>
+  {% include theme("partials/workshop-intro.html") %}
   
-  <section id="talks" class="page-section full-width clearfix">
-    <div class="row-fluid">
-      <h2 class="offset1 extralarge all-caps space-two-bottom">Sessions</h2>
-    </div>
-    {% with %}
-      {% from theme("data/workshop-sessions.html") import items %}
-      {% for item in items %}
-        <div id="{{ item.id }}" class="row-fluid push-two">
-          <div class="offset1 span4 legible space-two-bottom clearfix">
-            <h3 class="all-caps">{{ item.title }}</h3>
-            <h4 class="prose-type calm italic"><span class="legible-prose">{{ item.speaker }}</span><br>{{ item.designation }}</h4>
-          </div>
-          <div class="offset1 span5 legible-prose prose prose-type">
-            <div class="prose-type regular-prose space-three-bottom">
-              {{ item.blurb|safe }}
-              <ul class="list-plain secondary prose space-one-top">
-                {% if item.funnel %}<li class="flushleft"><a href="{{ item.funnel }}">Funnel Proposal</a></li>{% endif %}
-                {% if item.preview %}<li class="flushright"><a href="{{ item.preview }}">Preview</a></li>{% endif %}
-              </ul>
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-    {% endwith %}
-  </section>
-
-  <section id="schedule" class="page-section full-width fill-black clearfix">
-    <div class="row-fluid">
-      <h2 class="offset1 extralarge all-caps space-two-bottom">Schedule</h2>
-    </div>
-    
-    <ul class="unstyled">
-      {% with %}
-        {% from theme("data/workshop-schedule.html") import items %}
-        {% for item in items %}
-          <li class="row-fluid space-two">
-            <h3 class="offset1 span4 legible all-caps space-one-bottom">{{ item.time }}</h3>
-            <div class="offset1 span5 legible-prose prose prose-type">
-              <p class="space-half-top list-space-line list-plain link-silent">
-                {% include theme("layouts/linked-talk-speaker-single.html") %}
-              </p>
-            </div>
-          </li>
-        {% endfor %}
-      {% endwith %}
-    </ul>
-
-  </section>
-
+  {% include theme("partials/workshop-sessions.html") %}
+  
+  {% include theme("partials/workshop-schedule.html") %}
+  
 {% endblock %}

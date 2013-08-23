@@ -1,0 +1,51 @@
+<section class="sponsors page-section fill-black clearfix">
+  <div class="row-fluid">
+    <div class="offset1 span4 push-one-bottom">
+      <h2 class="extralarge all-caps">Sponsors</h2>
+      <ul class="inline-on-mobile list-plain secondary prose">
+      {% with %}
+        {% from theme("data/sponsors.html") import types %}
+        {% for type in types %}
+        <li><a href="#sponsors-{{ type.id }}">{{ type.title }}</a></li>
+        {% endfor %}
+      {% endwith %}
+      </ul>
+    </div>
+    
+    <div class="offset1 span5 legible-prose prose-type space-one-top">
+      <p>
+        Showcase platforms, tools and APIs.<br>
+        Engage the best developers and designers.
+      </p>
+      
+      <p class="title-type secondary space-one-top">
+        <a class="button button-on-dark" href="http://hsgk.in/18QKTQK">Get Sponsorship Deck</a>
+      </p>
+    </div>
+  </div>
+  
+  {% with %}
+    {% from theme("data/sponsors.html") import types, items %}
+    {% for type in types %}
+      {% set outer = loop %}
+      {% for item in items if item.type == type.id  %}
+        {% if loop.first %}
+        <div id="sponsors-{{ type.id }}" class="row-fluid space-two-top">
+          <h3 class="offset1 span4 legible all-caps space-one-bottom">{{ type.title }}</h3>
+
+          <ul class="offset1 span5 nospace-bottom list-plain link-silent clearfix list-space-line sponsor-{{ type.size }}">
+        {% endif %}
+          <li>
+              <a href="{% if type.size == 'compact' %}{{ item.link }}{% else %}sponsors#{{ type.id }}-{{ item.id }}{% endif %}" class="occupy fill-white sponsor-logo contain-height">
+                <img alt="{{ item.title }}" src="{{ item.logo }}">
+              </a>
+          </li>
+        {% if loop.last %}
+          </ul>
+        </div>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endwith %}
+
+</section>

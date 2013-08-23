@@ -1,0 +1,37 @@
+<section class="conference page-section fill-red clearfix">
+  <div class="row-fluid">
+    <div class="offset1 span4 push-one-bottom">
+      <h2 class="extralarge all-caps">Conference</h2>
+      <ul class="inline-on-mobile list-plain secondary prose">
+        <li><a href="conference#talks">Talks</a></li>
+        <li><a href="conference#schedule-day1">Schedule Day 1</a></li>
+        <li><a href="conference#schedule-day2">Schedule Day 2</a></li>
+        <li><a href="conference#venue">Venue</a></li>
+      </ul>
+    </div>
+    
+    <div class="offset1 span5 legible-prose prose prose-type space-one-top">
+      <p>JSFoo 2013 will feature original creations with JavaScript. This year's edition has been themed to showcase innovations on the mobile, server and client-side, and expose participants to cutting-edge developments – <a href="https://funnel.hasgeek.com/jsfoo2013/814-programming-flying-robots">flying robots</a>, <a href="https://funnel.hasgeek.com/jsfoo2013/804-calatrava-inventing-hybrid-mobile-app-framework-with-javascript-bridges">hybrid mobile app framework</a>, <a href="https://funnel.hasgeek.com/jsfoo2013/798-interactive-physics-simulation-in-the-browser-what-i-learned">interactive physics simulation in the browser</a>, etc.</p>
+      <p>Listen to full-length talks of 40 minutes, crisp 15-minute presentations on new ideas and frameworks, and present a short talk during the flash talk session open to the audience!</p>
+    </div>
+  </div>
+  <div class="row-fluid space-three-top space-two-bottom">
+    <h3 class="offset1 span4 legible all-caps space-one-bottom">Featured Talks</h3>
+    
+    <div class="offset1 span5 legible-prose prose prose-type">
+      <ul class="space-half-top list-space-line list-plain link-silent">
+        {% with %}
+          {% from theme("data/conference-talks.html") import items, types %}
+          {% for item in items|selectattr('featured') -%}
+            <li>
+            {% include theme("layouts/linked-talk-speaker-single.html") %}
+            </li>
+          {%- endfor %}
+        {% endwith %}
+      </ul>
+      <p class="tiny all-caps title-type text-right">
+        <a href="conference#talks">More &rarr;</a>
+      </p>
+    </div>
+  </div>
+</section>

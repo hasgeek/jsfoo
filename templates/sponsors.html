@@ -4,53 +4,7 @@
 {% set description = '' %}
 
 {% block content %}
-  
-  <section class="sponsors page-section fill-red full-width clearfix nopush-bottom">
-    <div class="row-fluid">
-      <h2 class="offset1 extralarge all-caps space-two-bottom">Sponsors</h2>
-    </div>
-  </section>
-  
-  {% with fill_cycler = cycler('fill-red', 'fill-dark') %}
-    {% from theme("data/sponsors.html") import types, items %}
-    {% for type in types %}
-      {% set outer = loop %}
-      {% for item in items if item.type == type.id and type.size != 'compact'  %}
-        {% if loop.first %}
-        <section class="sponsor-platinum page-section {{ fill_cycler.next() }} full-width clearfix">
-          <div class="row-fluid">
-            <h2 class="offset1 legible all-caps space-one-bottom">{{ type.title }}</h2>
-          </div>
-        {% endif %}
-          <h3 class="visuallyhidden">{{ item.title }}</h3>
-          <div id="{{ type.id }}-{{ item.id }}" class="row-fluid push-two-top">
-            <div class="offset1 span4 legible space-two-bottom clearfix clearboth">
-              <p class="clearfix space-two-bottom">
-                <a href="#" class="occupy fill-white sponsor-logo contain-height flushleft">
-                  <img alt=" " src="{{ item.logo }}">
-                </a>
-              </p>
-              
-              {% if item.attendee %}
-              <h4 class="tiny all-caps nospace faded">Sponsor Attendee</h3>
-              <p class="regular prose-type space-half-top space-one-bottom link-silent">{{ item.attendee|safe }}</p>
-              {% endif %}
-              
-              {% if item.contact %}
-              <h4 class="tiny all-caps nospace faded">Contact</h3>
-              <p class="regular prose-type space-half-top space-one-bottom link-silent">{{ item.contact|safe }}</p>
-              {% endif %}
-              
-            </div>
-            <div class="offset1 span5 regular-prose prose prose-type space-three-bottom">
-                {{ item.blurb|safe }}
-            </div>
-          </div>
-        {% if loop.last %}
-        </section>
-        {% endif %}
-      {% endfor %}
-    {% endfor %}
-  {% endwith %}
+
+{% include theme("partials/sponsors.html") %}
 
 {% endblock %}
