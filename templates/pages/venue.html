@@ -1,14 +1,12 @@
-{% extends theme("layouts/page.html") %}
-
-{% set title = '' %}
-{% set description = '' %}
-
-{% block content %}
-  
-  {% include theme("sections/conference-venue.html") %}
-  
-  {% include theme("sections/party-venue.html") %}
-
-  {% include theme("sections/hotels.html") %}
-
-{% endblock %}
+{% extends theme('layouts/page.html') %}
+{%
+  set page = {
+      'title'       : 'Venue + Local Info'
+    , 'description' : 'Venue and Local Information for JSFoo 2013'
+    , 'sections'    : [
+        'conference-venue'
+      , 'party-venue'
+      , 'hotels'
+    ]
+  }
+%}

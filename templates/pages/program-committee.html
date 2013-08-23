@@ -1,10 +1,10 @@
-{% extends theme("layouts/page.html") %}
-
-{% set title = '' %}
-{% set description = '' %}
-
-{% block content %}
-
-{% include theme("sections/program-committee.html") %}
-
-{% endblock %}
+{% extends theme('layouts/page.html') %}
+{%
+  set page = {
+      'title'       : 'Program Committee'
+    , 'description' : 'Program Committee for JSFoo 2013'
+    , 'sections'    : [
+        'program-committee'
+    ]
+  }
+%}

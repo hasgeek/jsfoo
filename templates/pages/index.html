@@ -1,8 +1,20 @@
-{% extends theme("layouts/page.html") %}
-
-{% set title = '' %}
-{% set description = '' %}
-
+{% extends theme('layouts/page.html') %}
+{%
+  set page = {
+      'title'       : ''
+    , 'description' : ''
+    , 'sections'    : [
+        'conference-summary'
+      , 'workshop-summary'
+      , 'program-committee-summary'
+      , 'funnel-proposals'
+      , 'past-highlights'
+      , 'venue-summary'
+      , 'sponsors-summary'
+      , 'credits'
+    ]
+  }
+%}
 {% block banner %}
 <header class="banner banner-home text-center clearfix">
   <h1><a class="ir logo" href="/">JSFoo 2013</a></h1>
@@ -35,24 +47,4 @@
     <a class="button" href="http://jsfoo.doattend.com/">Buy your Ticket</a>
   </p>
 </header>
-{% endblock %}
-
-{% block content %}
-
-{% include theme("sections/conference-summary.html") %}
-
-{% include theme("sections/workshop-summary.html") %}
-
-{% include theme("sections/program-committee-summary.html") %}
-
-{% include theme("sections/funnel-proposals.html") %}
-
-{% include theme("sections/past-highlights.html") %}
-
-{% include theme("sections/venue-summary.html") %}
-
-{% include theme("sections/sponsors-summary.html") %}
-
-{% include theme("sections/credits.html") %}
-
 {% endblock %}

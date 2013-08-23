@@ -1,14 +1,12 @@
-{% extends theme("layouts/page.html") %}
-
-{% set title = '' %}
-{% set description = '' %}
-
-{% block content %}
-  
-  {% include theme("sections/workshop-intro.html") %}
-  
-  {% include theme("sections/workshop-sessions.html") %}
-  
-  {% include theme("sections/workshop-schedule.html") %}
-  
-{% endblock %}
+{% extends theme('layouts/page.html') %}
+{%
+  set page = {
+      'title'       : 'Workshops'
+    , 'description' : 'Workshops in JSFoo 2013'
+    , 'sections'    : [
+        'workshop-intro'
+      , 'workshop-sessions'
+      , 'workshop-schedule'
+    ]
+  }
+%}

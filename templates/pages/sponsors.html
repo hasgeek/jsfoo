@@ -1,10 +1,10 @@
-{% extends theme("layouts/page.html") %}
-
-{% set title = '' %}
-{% set description = '' %}
-
-{% block content %}
-
-{% include theme("sections/sponsors.html") %}
-
-{% endblock %}
+{% extends theme('layouts/page.html') %}
+{%
+  set page = {
+      'title'       : 'Sponsors'
+    , 'description' : 'Sponsors for JSFoo 2013'
+    , 'sections'    : [
+        'sponsors'
+    ]
+  }
+%}

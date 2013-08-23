@@ -1,16 +1,13 @@
-{% extends theme("layouts/page.html") %}
-
-{% set title = '' %}
-{% set description = '' %}
-
-{% block content %}
-
-  {% include theme("sections/code-of-conduct-intro.html") %}
-  
-  {% include theme("sections/code-of-conduct-body.html") %}
-  
-  {% include theme("sections/code-of-conduct-contact.html") %}
-  
-  {% include theme("sections/code-of-conduct-license.html") %}
-
-{% endblock %}
+{% extends theme('layouts/page.html') %}
+{%
+  set page = {
+      'title'       : 'Code of Conduct'
+    , 'description' : 'Code of Conduct for JSFoo 2013'
+    , 'sections'    : [
+        'code-of-conduct-intro'
+      , 'code-of-conduct-body'
+      , 'code-of-conduct-contact'
+      , 'code-of-conduct-license'
+    ]
+  }
+%}

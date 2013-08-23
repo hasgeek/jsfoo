@@ -1,14 +1,12 @@
-{% extends theme("layouts/page.html") %}
-
-{% set title = '' %}
-{% set description = '' %}
-
-{% block content %}
-  
-  {% include theme("sections/conference-intro.html") %}
-  
-  {% include theme("sections/conference-talks.html") %}
-  
-  {% include theme("sections/conference-schedule.html") %}
-  
-{% endblock %}
+{% extends theme('layouts/page.html') %}
+{%
+  set page = {
+      'title'       : 'Conference'
+    , 'description' : ''
+    , 'sections'    : [
+        'conference-intro'
+      , 'conference-talks'
+      , 'conference-schedule'
+    ]
+  }
+%}
