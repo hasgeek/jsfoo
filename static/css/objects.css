@@ -286,12 +286,16 @@
 
 .sponsor-logo       { text-align: center; border-radius: 0.25rem; height: 5.34rem; line-height: 3.35rem; padding: .84rem; }
 .sponsor-logo:hover { background-color: #E5E5E5 !important; }
+.sponsor-logo img   { max-height: 100%; max-width: 100%; }
 
 .sponsor-xl       .sponsor-logo { height: 6.67rem;  line-height: 4rem;    padding: 1.34rem; }
 .sponsor-l        .sponsor-logo { height: 5.34rem;  line-height: 3.35rem; padding: .84rem;  }
 .sponsor-m        .sponsor-logo { height: 5.34rem;  line-height: 2.68rem; padding: 1.34rem; }
 .sponsor-s        .sponsor-logo { height: 4rem;     line-height: 2rem;    padding: .84rem;  }
 .sponsor-compact  .sponsor-logo { height: 4rem;     line-height: 2rem;    padding: .84rem;  }
+
+.sponsor-xl .sponsor-logo.contain-width { padding: 1.34rem 3rem; }
+.sponsor-l  .sponsor-logo.contain-width { padding: .84rem 4rem;  }
 
 
 .credits .row-fluid .offset1 {
