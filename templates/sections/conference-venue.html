@@ -1,58 +1,50 @@
-<section id="conference-venue" class="venue fill-dark page-section clearfix">
-  
-  <div class="row-fluid space-three-bottom">
-    <h2 class="offset1 extralarge span4 all-caps">Conference</h2>
-    <h3 class="offset1 span5 large all-caps">MLR Convention Centre<span class="regular occupy">J. P. Nagar</span></h3>
-  </div>
-  <div class="full-width"><img src="{{ theme_static('img/venue.jpg') }}" class="contain-width"></div>
+{% with %}
+  {% from theme("data/conference-venue.html") import venue %}
+  <section id="{{ venue.id }}" class="venue fill-dark page-section clearfix">
 
-  <div class="row-fluid space-four-top pad-section-bleeding">
-    <h3 class="offset1 span4 legible all-caps space-one-bottom">Address</h3>
-
-    <div class="offset1 span5 legible-prose prose prose-type">
-      <div class="prose-type regular-prose space-three-bottom">
-        <p>
-          MLR Convention Centre, J.P. Nagar<br>
-          Brigade Millenium Complex, J.P. Nagar 7th Phase<br>
-          Bangalore, Karnataka  India
-        </p>
-        <p>
-          <a href="http://goo.gl/maps/pTOsq" class='tiny faded'>View on Google Maps</a>
-        </p>
-      </div>
+    <div class="row-fluid space-three-bottom">
+      <h2 class="offset1 extralarge span4 all-caps">Conference</h2>
+      <h3 class="offset1 span5 large all-caps">{{ venue.title }}<span class="regular occupy">{{ venue.subtitle }}</span></h3>
     </div>
-  </div>
+    <div class="full-width"><img src="{{ venue.poster }}" class="contain-width"></div>
 
-  <div class="no-js-hidden space-three-bottom">
-    <h3 class="visuallyhidden">Map</h3>
-    <div class="row-fluid">
-      <div class="offset6 span5 legible-prose prose prose-type clearfix">
-        <div
-          class="leaflet-map span12"
-          data-label="MLR Convention Centre, J. P. Nagar"
-          data-zoom="14"
-          data-marker="12.891476, 77.585079">
+    <div class="row-fluid space-four-top pad-section-bleeding">
+      <h3 class="offset1 span4 legible all-caps space-one-bottom">Address</h3>
+
+      <div class="offset1 span5 legible-prose prose prose-type">
+        <div class="prose-type regular-prose space-three-bottom">
+          <p>{{ venue.address|safe }}</p>
+          <p>
+            <a href="{{ venue.map.google }}" class='tiny faded'>View on Google Maps</a>
+          </p>
         </div>
       </div>
     </div>
-  </div>
-  
-  <div class="row-fluid space-three-top pad-section-bleeding">
-    <h3 class="offset1 span4 legible all-caps space-two-bottom">Directions</h3>
 
-    <div class="offset1 span5 regular-prose prose prose-type">
-      
-      <h4 class="space-one-bottom semibold legible-prose">From Airport</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-
-      <h4 class="space-two-top space-one-bottom semibold legible-prose">From Majestic</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-      
+    <div class="no-js-hidden space-three-bottom">
+      <h3 class="visuallyhidden">Map</h3>
+      <div class="row-fluid">
+        <div class="offset6 span5 legible-prose prose prose-type clearfix">
+          <div
+            class="leaflet-map span12"
+            data-label="{{ venue.map.osm.label }}"
+            data-zoom="{{ venue.map.osm.zoom }}"
+            data-marker="{{ venue.map.osm.marker }}">
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-    
-</section>
+
+    <div class="row-fluid space-three-top pad-section-bleeding">
+      <h3 class="offset1 span4 legible all-caps space-two-bottom">Directions</h3>
+
+      <div class="offset1 span5 regular-prose prose prose-type">
+        {% for item in venue.directions %}
+          <h4 class="{% if not loop.first %}space-two-top {% endif %}space-one-bottom semibold legible-prose">From {{ item.from }}</h4>
+          {{ item.route|safe }}
+        {% endfor %}
+      </div>
+    </div>
+
+  </section>
+{% endwith %}
