@@ -1,5 +1,20 @@
-<section class="conference page-section fill-red full-width clearfix nopush-bottom">
+<section class="conference page-section full-width clearfix{% if background %} fill-{{ background }}{% endif %}">
   <div class="row-fluid">
-    <h2 class="offset1 extralarge all-caps space-two-bottom">Conference</h2>
+    <div class="offset1 span4 push-one-bottom">
+      <h2 class="extralarge all-caps">Conference</h2>
+      <ul class="inline-on-mobile list-plain secondary prose">
+        <li><a href="conference#talks">Talks</a></li>
+        <li><a href="conference#schedule-day1">Schedule Day 1</a></li>
+        <li><a href="conference#schedule-day2">Schedule Day 2</a></li>
+        <li><a href="conference#venue">Venue</a></li>
+      </ul>
+    </div>
+
+    <div class="offset1 span5 space-one-top">
+      <div class="legible-prose prose-type prose">
+        <p>JSFoo 2013 will feature original creations with JavaScript. This year's edition has been themed to showcase innovations on the mobile, server and client-side, and expose participants to cutting-edge developments – <a href="https://funnel.hasgeek.com/jsfoo2013/814-programming-flying-robots">flying robots</a>, <a href="https://funnel.hasgeek.com/jsfoo2013/804-calatrava-inventing-hybrid-mobile-app-framework-with-javascript-bridges">hybrid mobile app framework</a>, <a href="https://funnel.hasgeek.com/jsfoo2013/798-interactive-physics-simulation-in-the-browser-what-i-learned">interactive physics simulation in the browser</a>, etc.</p>
+        <p>Listen to full-length talks of 40 minutes, crisp 15-minute presentations on new ideas and frameworks, and present a short talk during the flash talk session open to the audience!</p>
+      </div>
+    </div>
   </div>
 </section>
