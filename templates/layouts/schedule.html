@@ -1,0 +1,18 @@
+<section id="{{ schedule.id }}" class="page-section full-width clearfix{% if background %} fill-{{ background }}{% endif %}">
+  <div class="row-fluid">
+    <h2 class="offset1 extralarge all-caps space-two-bottom">Schedule{% if schedule.date %} — {{ schedule.date|safe }}{% endif %}</h2>
+  </div>
+  
+  <ul class="unstyled">
+    {% for item in schedule['items'] %}
+      <li class="row-fluid space-two">
+        <h3 class="offset1 span4 legible all-caps space-one-bottom">{{ item.time }}</h3>
+        <div class="offset1 span5 legible-prose prose prose-type">
+          <p class="space-half-top list-space-line list-plain link-silent">
+            {% include theme("layouts/linked-talk-speaker-single.html") %}
+          </p>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
