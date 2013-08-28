@@ -65,7 +65,8 @@
     text-align: left;
 }
 .banner.banner-home h3 { margin: 0 0 3rem; }
-.banner.banner-home h3 a {
+.banner.banner-home h3 a,
+.banner.banner-home h3 span {
     display: block;
     width: 8rem;
     margin: 0 auto 0.5rem;
@@ -95,6 +96,7 @@
     .banner.banner-home h1    { margin: 4rem auto 3rem; width: 12rem; }
     .banner.banner-home h3    { padding-left: 0; }
     .banner.banner-home h3    { text-align: center; }
+    .banner.banner-home h3 span,
     .banner.banner-home h3 a  { display: inline;  width: auto; margin: auto; }
     .banner.banner-home h3 i  { 
         position: static;
