@@ -91,8 +91,11 @@
 
 
 {% block content %}
-  {% for section in page.sections  %}
-    {% include theme('sections/'+section+'.html') %}
+  {% for item in page.sections  %}
+    {% with %}
+      {% if item is string %} {% set section = item %} {% else %} {% set section, background = item %} {% endif %}
+      {% include theme('sections/'+section+'.html') %}
+    {% endwith %}
   {% endfor %}
 {% endblock %}
 

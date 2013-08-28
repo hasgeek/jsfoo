@@ -1,17 +1,17 @@
 {% extends theme('layouts/page.html') %}
 {%
   set page = {
-      'title'       : ''
-    , 'description' : ''
-    , 'sections'    : [
-        'conference-summary'
-      , 'workshop-summary'
-      , 'program-committee-summary'
-      , 'funnel-proposals'
-      , 'past-highlights'
-      , 'venue-summary'
-      , 'sponsors-summary'
-      , 'credits'
+      'title'               : ''
+    , 'description'         : ''
+    , 'sections'            : [
+        ('conference-summary',        'red')
+      , ('workshop-summary',          '')
+      , ('program-committee-summary', 'red')
+      , ('funnel-proposals',          '')
+      , ('past-highlights',           'red')
+      , ('venue-summary',             'dark')
+      , ('sponsors-summary',          'dark')
+      , ('credits',                   'red')
     ]
   }
 %}

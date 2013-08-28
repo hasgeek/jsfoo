@@ -1,6 +1,6 @@
 {% with %}
   {% from theme("data/conference-venue.html") import venue %}
-  <section class="venue-home page-section fill-dark clearfix">
+  <section class="venue-home page-section clearfix{% if background %} fill-{{ background }}{% endif %}">
     <div class="row-fluid">
       <h2 class="offset1 span4 extralarge all-caps">Venue</h2>
       <div
