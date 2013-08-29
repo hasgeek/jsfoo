@@ -1,36 +1,4 @@
 {% with %}
-  {% from theme("data/conference.html") import event %}
-  {% 
-    set nav = [
-        {
-          'display' : 'Talks'
-        , 'link'    : 'conference#talks'
-      }
-      , {
-          'display' : 'Schedule Day 1'
-        , 'link'    : 'conference#schedule-day1'
-      }
-      , {
-          'display' : 'Schedule Day 2'
-        , 'link'    : 'conference#schedule-day2'
-      }
-      , {
-          'display' : 'Venue'
-        , 'link'    : 'conference#venue'
-      }
-    ] 
-  %}
-  {% 
-    set action = '<a class="button" href="http://jsfoo.doattend.com">Buy Workshop Tickets</a>'
-  %}
-  {% from theme("data/conference-talks.html") import items, types %}
-  {% 
-    set session = {
-        'label' : 'Talks'
-      , 'link'  : 'conference#talks'
-      , 'items' : items
-      , 'types' : types
-    }
-  %}
+  {% from theme("data/conference.html") import event, nav, session %}
   {% include theme("layouts/event-summary.html") %}
 {% endwith %}

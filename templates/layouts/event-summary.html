@@ -21,6 +21,7 @@
       {% endif %}
     </div>
   </div>
+  {% block featured %}
   {% for item in session['items']|selectattr('featured') -%}
     {% if loop.first %}
     <div class="row-fluid space-three-top space-two-bottom">
@@ -40,4 +41,5 @@
     </div>
     {% endif %}
   {%- endfor %}
+  {% endblock %}
 </section>

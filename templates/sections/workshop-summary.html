@@ -1,32 +1,4 @@
 {% with %}
-  {% from theme("data/workshops.html") import event %}
-  {% 
-    set nav = [
-        {
-          'display' : 'Sessions'
-        , 'link'    : 'workshops#sessions'
-      }
-      , {
-          'display' : 'Schedule'
-        , 'link'    : 'workshops#schedule'
-      }
-      , {
-          'display' : 'Venue'
-        , 'link'    : 'workshops#venue'
-      }
-    ] 
-  %}
-  {% 
-    set action = '<a class="button" href="http://jsfoo.doattend.com">Buy Workshop Tickets</a>'
-  %}
-  {% from theme("data/workshop-sessions.html") import items, types %}
-  {% 
-    set session = {
-        'label' : 'Sessions'
-      , 'link'  : 'workshops#sessions'
-      , 'items' : items
-      , 'types' : types
-    }
-  %}
+  {% from theme("data/workshops.html") import event, nav, action, session %}
   {% include theme("layouts/event-summary.html") %}
 {% endwith %}
