@@ -24,12 +24,13 @@
 {% 
   set action = '<a class="button" href="http://jsfoo.doattend.com">Buy Workshop Tickets</a>'
 %}
-{% from theme("data/workshop-sessions.html") import items, types %}
+{% from theme("data/workshop-sessions.html") import sessions, types %}
 {% 
   set session = {
-      'label' : 'Sessions'
+      'id'    : 'sessions'
+    , 'label' : 'Sessions'
     , 'link'  : 'workshops#sessions'
-    , 'items' : items
+    , 'list'  : sessions.values()
     , 'types' : types
   }
 %}

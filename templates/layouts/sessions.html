@@ -1,0 +1,22 @@
+<section id="{{ session.id }}" class="page-section full-width clearfix{% if background %} fill-{{ background }}{% endif %}">
+  <div class="row-fluid">
+    <h2 class="offset1 extralarge all-caps space-two-bottom">{{ session.label }}</h2>
+  </div>
+  {% for item in session.list %}
+    <div id="{{ item.id }}" class="row-fluid push-two">
+      <div class="offset1 span4 legible space-two-bottom clearfix">
+        <h3 class="all-caps">{{ item.title }}</h3>
+        <h4 class="prose-type calm italic"><span class="legible-prose">{{ item.speaker }}</span><br>{{ item.designation }}</h4>
+      </div>
+      <div class="offset1 span5 legible-prose prose prose-type">
+        <div class="prose-type regular-prose space-three-bottom">
+          {{ item.blurb|safe }}
+          <ul class="list-plain secondary prose space-one-top">
+            {% if item.funnel %}<li class="flushleft"><a href="{{ item.funnel }}">Funnel Proposal</a></li>{% endif %}
+            {% if item.preview %}<li class="flushright"><a href="{{ item.preview }}">Preview</a></li>{% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</section>

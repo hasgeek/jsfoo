@@ -22,7 +22,7 @@
     </div>
   </div>
   {% block featured %}
-  {% for item in session['items']|selectattr('featured') -%}
+  {% for item in session.list|selectattr('featured') -%}
     {% if loop.first %}
     <div class="row-fluid space-three-top space-two-bottom">
       <h3 class="offset1 span4 legible all-caps space-one-bottom">Featured {{ session.label }}</h3>

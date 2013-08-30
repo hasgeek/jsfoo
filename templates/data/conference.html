@@ -24,12 +24,13 @@
     }
   ] 
 %}
-{% from theme("data/conference-talks.html") import items, types %}
+{% from theme("data/conference-sessions.html") import sessions, types %}
 {% 
   set session = {
-      'label' : 'Talks'
+      'id'    : 'talks'
+    , 'label' : 'Talks'
     , 'link'  : 'conference#talks'
-    , 'items' : items
+    , 'list'  : sessions.values()
     , 'types' : types
   }
 %}
