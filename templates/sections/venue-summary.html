@@ -1,31 +1,4 @@
 {% with %}
   {% from theme("data/conference-venue.html") import venue %}
-  <section class="venue-home page-section clearfix{% if background %} fill-{{ background }}{% endif %}">
-    <div class="row-fluid">
-      <h2 class="offset1 span4 extralarge all-caps">Venue</h2>
-      <div
-        class="leaflet-map city-level"
-        data-label="{{ venue.map.osm.label }}"
-        data-zoom="{{ venue.map.osm.zoom }}"
-        data-marker="{{ venue.map.osm.marker }}">
-      
-        <p class="offset6 span6 legible-prose">
-          {{ venue.address|safe }}
-        </p>
-      
-      </div>
-    
-      <div
-        class="leaflet-map country-level"
-        data-zoom="{{ venue.city.map.osm.zoom }}"
-        data-label="{{ venue.city.map.osm.label }}"
-        data-marker="{{ venue.city.map.osm.marker }}">
-      
-        <p class="offset6 span6 legible-prose">
-          {{ venue.city.address|safe }}
-        </p>
-      
-      </div>
-    </div>
-  </section>
+  {% include theme("layouts/venue-summary.html") %}
 {% endwith %}
