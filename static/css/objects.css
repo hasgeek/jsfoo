@@ -15,6 +15,11 @@
 .button:focus   { text-decoration: none; }
 .button:active  { box-shadow: inset 0 0 10px #000; }
 
+.separated-links + .separated-links:before {
+    content: '•';
+    margin: 0 .4rem;
+    color: rgba(255,255,255,.6);
+}
 
 .page-section {
     padding-top:    4rem;

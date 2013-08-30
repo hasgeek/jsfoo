@@ -5,19 +5,27 @@
   
   <ul class="unstyled">
     {% for item in schedule.list %}
-      <li class="row-fluid space-two">
+      <li id="{{ item.id }}" class="row-fluid{% if not loop.last %} space-three-bottom{% endif %}">
         <h3 class="offset1 span4 legible all-caps space-one-bottom">{{ item.slot }}</h3>
-        <div class="offset1 span5 legible-prose prose prose-type">
-          <p class="space-half-top list-space-line list-plain link-silent">
-            {% if item.id %}
-              {% with %}
-                {% set item = sessions[item.id] %}
-                {% include theme("layouts/partials/linked-talk-speaker-single.html") %}
-              {% endwith %}
-            {% else %}
-              {{ item.title }}
-            {% endif %}
-          </p>
+        <div class="offset1 span5 space-half-top">
+          {% if item.id %}
+            {% with item = sessions[item.id] %}
+              <p class="space-one-bottom prose prose-type legible-prose">
+                {% if item.blurb %}<a href="#{{ item.id }}-blurb" class="expand-blurb">{{ item.title }}</a>{% else %}<span class="italic">{{ item.title }}</span>{% endif %}
+                {% if item.speaker %}<em class="occupy space-1q-top secondary">{% if types and item.type %}a {{ types[item.type].title|lower }}{% endif %} by <strong class="semibold">{{ item.speaker }}</strong>{% if item.designation %} – {{ item.designation }}{% endif %}</em>{% endif %}
+              </p>
+              {% if item.blurb %}<div id="{{ item.id }}-blurb" class="js-hidden prose prose-type regular-prose" data-toggle-link="#{{ item.id }}-toggle" data-active-text="Hide ▴" data-deactive-text="Details ▾">
+                {{ item.blurb|safe }}
+              </div>{% endif %}
+              <ul class="list-plain tiny space-one-top title-type all-caps semibold clearfix">
+                {% if item.funnel %}<li class="flushleft separated-links"><a href="{{ item.funnel }}" class="link-silent">Proposal</a></li>{% endif %}
+                {% if item.preview %}<li class="flushleft separated-links"><a href="{{ item.preview }}" class="link-silent">Preview</a></li>{% endif %}
+                <li class="flushright"><a id="{{ item.id }}-toggle" href="#{{ item.id }}-blurb" class="expand-blurb link-silent">Details ▾</a></li>
+              </ul>
+            {% endwith %}
+          {% else %}
+            <p>{{ item.title }}</p>
+          {% endif %}
         </div>
       </li>
     {% endfor %}

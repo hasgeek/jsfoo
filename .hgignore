@@ -11,3 +11,4 @@ test.db
 error.log
 fonts.css$
 .packed.css$
+.packed.js$
