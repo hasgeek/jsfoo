@@ -4,30 +4,34 @@
   </div>
   
   <ul class="unstyled">
-    {% for item in schedule.list %}
-      <li id="{{ item.id }}" class="row-fluid{% if not loop.last %} space-three-bottom{% endif %}">
-        <h3 class="offset1 span4 legible all-caps space-one-bottom">{{ item.slot }}</h3>
-        <div class="offset1 span5 space-half-top">
-          {% if item.id %}
-            {% with item = sessions[item.id] %}
-              <p class="space-one-bottom prose prose-type legible-prose">
-                {% if item.blurb %}<a href="#{{ item.id }}-blurb" class="expand-blurb">{{ item.title }}</a>{% else %}<span class="italic">{{ item.title }}</span>{% endif %}
-                {% if item.speaker %}<em class="occupy space-1q-top secondary">{% if types and item.type %}a {{ types[item.type].title|lower }}{% endif %} by <strong class="semibold">{{ item.speaker }}</strong>{% if item.designation %} – {{ item.designation }}{% endif %}</em>{% endif %}
-              </p>
-              {% if item.blurb %}<div id="{{ item.id }}-blurb" class="js-hidden prose prose-type regular-prose" data-toggle-link="#{{ item.id }}-toggle" data-active-text="Hide ▴" data-deactive-text="Details ▾">
-                {{ item.blurb|safe }}
-              </div>{% endif %}
-              <ul class="list-plain tiny space-one-top title-type all-caps semibold clearfix">
-                {% if item.funnel %}<li class="flushleft separated-links"><a href="{{ item.funnel }}" class="link-silent">Proposal</a></li>{% endif %}
-                {% if item.preview %}<li class="flushleft separated-links"><a href="{{ item.preview }}" class="link-silent">Preview</a></li>{% endif %}
-                <li class="flushright"><a id="{{ item.id }}-toggle" href="#{{ item.id }}-blurb" class="expand-blurb link-silent">Details ▾</a></li>
-              </ul>
-            {% endwith %}
-          {% else %}
-            <p class="prose prose-type legible-prose">{{ item.title }}</p>
-          {% endif %}
+  {% for item in schedule.list %}
+    <li id="{{ item.id }}" class="row-fluid push-two">
+      <div class="offset1 span1 legible space-one-bottom clearfix">
+        <h3 class="all-caps nospace-top semibold">{{ item.slot|safe }}</h3>
+      </div>
+    {% if item.id %}
+      {% with item = sessions[item.id] %}
+        <div class="offset1 span3 legible space-two-bottom clearfix">
+          <h3 class="nospace-top semibold"><span class="all-caps">{{ item.title }}</span>
+            <span class="tiny faded prose-type italic">– {% if item.duration %}{{ item.duration|safe }}{% else %}{{ types[item.type].duration|safe }}{% endif %}</span></h3>
+          {% if item.speaker or item.designation %}<h4 class="prose-type regular-prose calm italic"><span class="legible-prose">{{ item.speaker }}</span>{% if item.speaker and item.designation %}<br>{% endif %}{{ item.designation }}</h4>{% endif %}
         </div>
-      </li>
-    {% endfor %}
+        <div class="offset1 span4 legible-prose prose prose-type">
+          <div class="prose-type regular-prose space-three-bottom">
+            {{ item.blurb|safe }}
+            <ul class="list-plain secondary prose space-one-top">
+              {% if item.funnel %}<li class="flushleft"><a href="{{ item.funnel }}">Funnel Proposal</a></li>{% endif %}
+              {% if item.preview %}<li class="flushright"><a href="{{ item.preview }}">Preview</a></li>{% endif %}
+            </ul>
+          </div>
+        </div>
+      {% endwith %}
+      {% else %}
+        <div class="offset1 span4 legible-prose prose prose-type clearfix">
+          <h3 class="calm italic nospace-top">{{ item.title }} <span class="tiny faded">– {{ item.duration|safe }}</span></h3>
+        </div>
+      {% endif %}
+    </li>
+  {% endfor %}
   </ul>
 </section>
