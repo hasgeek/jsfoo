@@ -1,14 +1,5 @@
-<section class="program-committee page-section full-width clearfix{% if background %} fill-{{ background }}{% endif %}">
-  <div class="row-fluid">
-    <h2 class="offset1 span4 extralarge all-caps">Program Committee</h2>
-    
-    <div class="offset1 span5 legible-prose">
-      <ul class="list-space-line list-plain clearfix">
-        {% with %}
-          {% from theme("data/program-committee.html") import items %}
-          {% include theme("layouts/partials/linked-title.html") %}
-        {% endwith %}
-      </ul>
-    </div>
-  </div>
-</section>
+{% with %}
+  {% from theme("data/program-committee.html") import items %}
+  {% set page_link = 'program-committee' %}
+  {% include theme("layouts/program-committee-summary.html") %}
+{% endwith %}
