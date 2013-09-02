@@ -1,5 +1,6 @@
 {% with %}
   {% from theme("data/conference.html") import event %}
   {% from theme("data/conference-venue.html") import venue %}
+  {% set venue_id = 'conference-venue' %}
   {% include theme("layouts/venue.html") %}
 {% endwith %}

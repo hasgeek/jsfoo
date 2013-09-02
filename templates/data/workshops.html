@@ -5,22 +5,34 @@
     , 'blurb' : '<p>Workshops will cover JS frameworks – <a href="https://funnel.hasgeek.com/jsfoo2013/759-develop-your-first-multi-room-chat-with-node-js-websockets-and-mongodb">node</a>, <a href="https://funnel.hasgeek.com/jsfoo2013/835-building-your-own-express-js-framework-from-scratch">Express</a>, <a href="https://funnel.hasgeek.com/jsfoo2013/800-building-web-application-using-ember-js-requirejs-q">Ember</a>, <a href="https://funnel.hasgeek.com/jsfoo2013/800-building-web-application-using-ember-js-requirejs-q">Require</a>, <a href="https://funnel.hasgeek.com/jsfoo2013/793-rapidly-prototyping-web-applications-with-meteor-js">Meteor</a> – to help participants learn how to hack/extend these frameworks to customize something. Other workshops include how to do <a href="https://funnel.hasgeek.com/jsfoo2013/806-tdd-with-javascript">test driven development</a> with JavaScript, <a href="https://funnel.hasgeek.com/jsfoo2013/831-automating-automatic-testing">evaluating open source testing tools</a>, <a href="https://funnel.hasgeek.com/jsfoo2013/781-html5-for-a-mobile-world">applying HTML5 – responsive web design, CSS3 animations, etc – to mobile websites</a> without killing battery on mobile devices, and <a href="https://funnel.hasgeek.com/jsfoo2013/777-getting-started-with-firefox-os-and-open-web-apps">understanding Firefox OS</a> including Open Web Apps, Web APIs and possibilities on the platform.</p>'
   }
 %}
-{% 
-  set nav = [
-      {
-        'display' : 'Sessions'
-      , 'link'    : 'workshops#sessions'
-    }
-    , {
-        'display' : 'Schedule'
-      , 'link'    : 'workshops#schedule'
-    }
-    , {
-        'display' : 'Venue'
-      , 'link'    : 'workshops#venue'
-    }
-  ] 
-%}
+{% from theme("data/workshop-schedule.html") import schedule %}
+{% if schedule is defined and schedule %}
+  {% 
+    set nav = [
+        {
+          'display' : 'Sessions + Schedule'
+        , 'link'    : 'workshops#schedule'
+      }
+      , {
+          'display' : 'Venue'
+        , 'link'    : 'workshops#venue'
+      }
+    ] 
+  %}
+{% else %}
+  {% 
+    set nav = [
+        {
+          'display' : 'Sessions'
+        , 'link'    : 'workshops#sessions'
+      }
+      , {
+          'display' : 'Venue'
+        , 'link'    : 'workshops#venue'
+      }
+    ] 
+  %}
+{% endif %}
 {% 
   set action = '<a class="button" href="http://jsfoo.doattend.com">Buy Workshop Tickets</a>'
 %}

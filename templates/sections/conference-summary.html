@@ -1,5 +1,6 @@
 {% with %}
   {% from theme("data/conference.html") import event, nav, session %}
+  {% from theme("data/conference-sessions.html") import types %}
   {% set page_link = 'conference' %}
   {% include theme("layouts/event-summary.html") %}
 {% endwith %}

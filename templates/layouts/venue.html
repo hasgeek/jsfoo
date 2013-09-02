@@ -1,4 +1,4 @@
-<section id="{{ venue.id }}" class="page-section clearfix{% if background %} fill-{{ background }}{% endif %}">
+<section id="{{ venue_id|default('venue') }}" class="page-section clearfix{% if background %} fill-{{ background }}{% endif %}">
 
   <div class="row-fluid space-three-bottom">
     <h2 class="offset1 extralarge span4 all-caps">{{ event.title }}</h2>

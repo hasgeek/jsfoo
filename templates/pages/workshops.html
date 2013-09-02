@@ -1,12 +1,25 @@
 {% extends theme('layouts/page.html') %}
-{%
-  set page = {
-      'title'       : 'Workshops'
-    , 'description' : 'Workshops in JSFoo 2013'
-    , 'sections'    : [
-        ('workshop-intro',    'red')
-      , ('workshop-sessions', '')
-      , ('workshop-schedule', 'dark')
-    ]
-  }
-%}
+{% from theme("data/workshop-schedule.html") import schedule %}
+{% if schedule is defined %}
+  {%
+    set page = {
+        'title'       : 'Workshops'
+      , 'description' : 'Workshops in JSFoo 2013'
+      , 'sections'    : [
+          ('workshop-intro',    'red')
+        , ('workshop-schedule', 'dark')
+      ]
+    }
+  %}
+{% else %}
+  {%
+    set page = {
+        'title'       : 'Workshops'
+      , 'description' : 'Workshops in JSFoo 2013'
+      , 'sections'    : [
+          ('workshop-intro',    'red')
+        , ('workshop-sessions', '')
+      ]
+    }
+  %}
+{% endif %}
