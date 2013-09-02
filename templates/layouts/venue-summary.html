@@ -1,6 +1,6 @@
 <section class="venue-home page-section clearfix{% if background %} fill-{{ background }}{% endif %}">
   <div class="row-fluid">
-    <h2 class="offset1 span4 extralarge all-caps">Venue</h2>
+    <h2 class="offset1 span4 extralarge all-caps">{% if page_link %}<a href="{{ page_link }}" class="link-silent">{% endif %}Venue{% if page_link %}</a>{% endif %}</h2>
     <div
       class="leaflet-map city-level"
       data-label="{{ venue.map.osm.label }}"

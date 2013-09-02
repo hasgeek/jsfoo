@@ -1,7 +1,7 @@
 <section class="page-section clearfix{% if background %} fill-{{ background }}{% endif %}">
   <div class="row-fluid">
     <div class="offset1 span4 push-one-bottom">
-      <h2 class="extralarge all-caps">{{ event.title }}</h2>
+      <h2 class="extralarge all-caps">{% if page_link %}<a href="{{ page_link }}" class="link-silent">{% endif %}{{ event.title }}{% if page_link %}</a>{% endif %}</h2>
       {% if event.when %}<p class="legible">{{ event.when|safe }}</p>{% endif %}
       {% for item in nav -%}
         {% if loop.first %}<ul class="inline-on-mobile list-plain secondary prose">{% endif %}
