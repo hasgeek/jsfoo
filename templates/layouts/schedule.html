@@ -7,13 +7,13 @@
   {% for item in schedule.list %}
     <li id="{{ item.id }}" class="row-fluid push-two">
       <div class="offset1 span1 legible space-one-bottom clearfix">
-        <h3 class="all-caps nospace-top semibold">{{ item.slot|safe }}</h3>
+        <h3 class="all-caps nospace-top semibold">{{ item.slot|replace(' ', '&nbsp;')|safe }}</h3>
       </div>
     {% if item.id %}
       {% with item = sessions[item.id] %}
         <div class="offset1 span3 legible space-two-bottom clearfix">
           <h3 class="nospace-top semibold"><span class="all-caps">{{ item.title }}</span>
-            <span class="tiny faded prose-type italic">– {% if item.duration %}{{ item.duration|safe }}{% else %}{{ types[item.type].duration|safe }}{% endif %}</span></h3>
+            <span class="tiny faded prose-type italic">– {% if item.duration %}{{ item.duration|replace(' ', '&nbsp;')|safe }}{% else %}{{ types[item.type].duration|replace(' ', '&nbsp;')|safe }}{% endif %}</span></h3>
           {% if item.speaker or item.designation %}<h4 class="prose-type regular-prose calm italic"><span class="legible-prose">{{ item.speaker }}</span>{% if item.speaker and item.designation %}<br>{% endif %}{{ item.designation }}</h4>{% endif %}
         </div>
         <div class="offset1 span4 legible-prose prose prose-type">
@@ -28,7 +28,7 @@
       {% endwith %}
       {% else %}
         <div class="offset1 span4 legible-prose prose prose-type clearfix">
-          <h3 class="calm italic nospace-top">{{ item.title }} <span class="tiny faded">– {{ item.duration|safe }}</span></h3>
+          <h3 class="calm italic nospace-top">{{ item.title }} <span class="tiny faded">– {{ item.duration|replace(' ', '&nbsp;')|safe }}</span></h3>
         </div>
       {% endif %}
     </li>
