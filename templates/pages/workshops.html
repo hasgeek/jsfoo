@@ -1,13 +1,15 @@
 {% extends theme('layouts/page.html') %}
-{% from theme("data/workshop-schedule.html") import schedule %}
-{% if schedule is defined %}
+{% from theme("data/workshop-schedule-day1.html") import schedule as schedule_day1 %}
+{% from theme("data/workshop-schedule-day2.html") import schedule as schedule_day2 %}
+{% if schedule_day1 is defined and schedule_day2 is defined %}
   {%
     set page = {
         'title'       : 'Workshops'
       , 'description' : 'Workshops in JSFoo 2013'
       , 'sections'    : [
           ('workshop-intro',    'red')
-        , ('workshop-schedule', 'dark')
+        , ('workshop-schedule-day1', 'dark')
+        , ('workshop-schedule-day2', 'red')
       ]
     }
   %}

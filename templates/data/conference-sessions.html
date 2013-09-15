@@ -2,93 +2,302 @@
   set types = {
       'crisp' : {
         'title'     : 'Crisp Talk'
-      , 'duration'  : '15 mins'
+      , 'duration'  : '20 mins'
     }
     , 'long' : {
         'title' : 'Long Talk'
-      , 'duration'  : '40 mins'
+      , 'duration'  : '45 mins'
     }
   }
 %}
 {%
   set sessions = {
-      'asynchronus-javascript-and-promises' : {
-        'id'          : 'asynchronus-javascript-and-promises'
-      , 'title'       : 'Asynchronus JavaScript and Promises'
-      , 'speaker'     : 'Senthil Kumar V'
-      , 'designation' : 'Designer, HasGeek | Director, JSFoo'
-      , 'type'        : 'crisp'
-      , 'blurb'       : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-      , 'link'        : 'conference#asynchronus-javaScript-and-promises'
-      , 'photo'       : theme_static('img/speakers/viz.jpeg')
-      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/801-asynchronus-javascript-and-promises'
-      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/801-asynchronus-javascript-and-promises'
-      , 'featured'    : true
-    }
-    , 'asynchronus-javascript-and-promises-1' : {
-        'id'          : 'asynchronus-javascript-and-promises-1'
-      , 'title'       : 'Asynchronus JavaScript and Promises'
-      , 'speaker'     : 'Senthil Kumar V'
-      , 'designation' : 'Designer, HasGeek'
-      , 'type'        : 'crisp'
-      , 'blurb'       : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-      , 'link'        : 'conference#asynchronus-javaScript-and-promises-1'
-      , 'photo'       : theme_static('img/speakers/viz.jpeg')
-      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/801-asynchronus-javascript-and-promises'
-      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/801-asynchronus-javascript-and-promises'
-      , 'featured'    : true
-    }
-    , 'asynchronus-javascript-and-promises-2' : {
-        'id'          : 'asynchronus-javascript-and-promises-2'
-      , 'title'       : 'Asynchronus JavaScript and Promises'
-      , 'speaker'     : 'Senthil Kumar V'
-      , 'designation' : 'Designer, HasGeek'
+      'Bringing-the-open-web-and-apis-to-mobile-devices-with-firefox-os1' : {
+        'id'          : 'Bringing-the-open-web-and-apis-to-mobile-devices-with-firefox-os1'
+      , 'title'       : 'Bringing the open web and APIs to mobile devices with Firefox OS'
+      , 'speaker'     : 'Robert Nyman'
+      , 'designation' : 'Technical evangelist, Mozilla'
       , 'type'        : 'long'
-      , 'blurb'       : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-      , 'link'        : 'conference#asynchronus-javaScript-and-promises-2'
+      , 'blurb'       : 'Learn about the vision behind Firefox OS, and the open web technologies available for building HTML5 apps, including WebAPIs and Web Activities. This talk will help you get started with developing HTML5 apps for Firefox OS and the open web.'
+      , 'link'        : 'conference#Bringing-the-open-web-and-apis-to-mobile-devices-with-firefox-os1'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/776-bringing-the-open-web-and-apis-to-mobile-devices-with-firefox-os'
+      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/776-bringing-the-open-web-and-apis-to-mobile-devices-with-firefox-os'
+      , 'featured'    : true
+    }
+    , 'Frontend-devops1' : {
+        'id'          : 'Frontend-devops1'
+      , 'title'       : 'Frontend dev ops'
+      , 'speaker'     : 'Aditya Yadav'
+      , 'designation' : 'Developer, 6Wunderkinder GmbH'
+      , 'type'        : 'long'
+      , 'blurb'       : 'As the browsers are becoming more powerful and Webapps more complex, the way we deploy them is changing too. This talk will cover a few topics related to building and deploying rich webapps to production and automating as much as possible.'
+      , 'link'        : 'conference#Frontend-devops1'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/848-frontend-dev-ops'
+      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/848-frontend-dev-ops'
+      , 'featured'    : true
+    }
+    , 'generating-tests-from-code' : {
+        'id'          : 'generating-tests-from-code'
+      , 'title'       : 'Generating tests from code - or how to test better and faster'
+      , 'speaker'     : 'Olivier Crameri'
+      , 'designation' : 'Co-founder, BugBuster'
+      , 'type'        : 'long'
+      , 'blurb'       : 'Uncover the power of dynamic analysis to improve the coverage of your tests and find bugs before your users do. This talk will describe techniques to automatically create more tests starting from a single, simple unit test, and demonstrate how it helps JavaScript developers create better code.'
+      , 'link'        : 'conference#generating-tests-from-code'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/772-generating-tests-from-code-or-how-to-test-better-and-faster'
+      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/772-generating-tests-from-code-or-how-to-test-better-and-faster'
+      , 'featured'    : true
+    }
+    , 'Real-time-peer-to-peer-collaboration-with-JS-and-HTML5' : {
+        'id'          : 'Real-time-peer-to-peer-collaboration-with-JS-and-HTML5'
+      , 'title'       : 'Who\'s talking | Real-time peer-to-peer collaboration with JS and HTML5'
+      , 'speaker'     : 'Om Shankar'
+      , 'designation' : 'Web Development Engineer and UI Specialist, Amazon'
+      , 'type'        : 'long'
+      , 'blurb'       : 'This talk focuses on ways to use JS, HTML and CSS, with new features to build simple yet cool apps, that can replace other desktop apps and browser plugins which have dominated the communication realm on internet.'
+      , 'link'        : 'conference#Real-time-peer-to-peer-collaboration-with-JS-and-HTML5'
       , 'photo'       : theme_static('img/speakers/viz.jpeg')
       , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/801-asynchronus-javascript-and-promises'
       , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/801-asynchronus-javascript-and-promises'
       , 'featured'    : false
     }
-    , 'asynchronus-javascript-and-promises-3' : {
-        'id'          : 'asynchronus-javascript-and-promises-3'
-      , 'title'       : 'Asynchronus JavaScript and Promises'
-      , 'speaker'     : 'Senthil Kumar V'
-      , 'designation' : 'Designer, HasGeek | Director, JSFoo'
+    , 'Javascript-is-a-dj' : {
+        'id'          : 'Javascript-is-a-dj'
+      , 'title'       : 'Javascript is a DJ'
+      , 'speaker'     : 'Jaison Justus'
+      , 'designation' : 'Front-End Developer, Bang The Table'
       , 'type'        : 'crisp'
-      , 'blurb'       : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-      , 'link'        : 'conference#asynchronus-javaScript-and-promises-3'
+      , 'blurb'       : 'Add audio to your webapps and learn to make them more immersive'
+      , 'link'        : 'conference#Javascript-is-a-dj'
       , 'photo'       : theme_static('img/speakers/viz.jpeg')
-      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/801-asynchronus-javascript-and-promises'
-      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/801-asynchronus-javascript-and-promises'
-      , 'featured'    : true
-    }
-    , 'asynchronus-javascript-and-promises-4' : {
-        'id'          : 'asynchronus-javascript-and-promises-4'
-      , 'title'       : 'Asynchronus JavaScript and Promises'
-      , 'speaker'     : 'Senthil Kumar V'
-      , 'designation' : 'Designer, HasGeek'
-      , 'type'        : 'crisp'
-      , 'blurb'       : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-      , 'link'        : 'conference#asynchronus-javaScript-and-promises-4'
-      , 'photo'       : theme_static('img/speakers/viz.jpeg')
-      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/801-asynchronus-javascript-and-promises'
-      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/801-asynchronus-javascript-and-promises'
-      , 'featured'    : true
-    }
-    , 'asynchronus-javascript-and-promises-5' : {
-        'id'          : 'asynchronus-javascript-and-promises-5'
-      , 'title'       : 'Asynchronus JavaScript and Promises'
-      , 'speaker'     : 'Senthil Kumar V'
-      , 'designation' : 'Designer, HasGeek'
-      , 'type'        : 'long'
-      , 'blurb'       : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-      , 'link'        : 'conference#asynchronus-javaScript-and-promises-5'
-      , 'photo'       : theme_static('img/speakers/viz.jpeg')
-      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/801-asynchronus-javascript-and-promises'
-      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/801-asynchronus-javascript-and-promises'
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/779-javascript-is-a-dj'
+      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/779-javascript-is-a-dj'
       , 'featured'    : false
+    }
+    , 'Flying-robots' : {
+        'id'          : 'Flying-robots'
+      , 'title'       : 'Programming flying robots'
+      , 'speaker'     : 'Sreekanth Vadagiri'
+      , 'designation' : 'Developer, ActiveSphere'
+      , 'type'        : 'crisp'
+      , 'blurb'       : 'Make the ArDrone quadcopter do interesting things like fly and move, flip with a few lines of javascript.'
+      , 'link'        : 'conference#Flying-robots'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/814-programming-flying-robots'
+      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/814-programming-flying-robots'
+      , 'featured'    : true
+    }
+    , 'camera-motion-detection-in-JS' : {
+        'id'          : 'camera-motion-detection-in-JS'
+      , 'title'       : 'Using Camera Motion Detection in JS for Gestures based Interaction'
+      , 'speaker'     : 'Vinci Rufus'
+      , 'designation' : 'VP, Neev Technologies'
+      , 'type'        : 'crisp'
+      , 'blurb'       : 'Learn the concept of invoking the camera and detecting motion by using HTML5 canvas and JavaScript.'
+      , 'link'        : 'conference#camera-motion-detection-in-JS'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/834-using-camera-motion-detection-in-js-for-gestures-b'
+      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/834-using-camera-motion-detection-in-js-for-gestures-b'
+      , 'featured'    : false
+    }
+    , 'red-rapahel-graphics-library' : {
+        'id'          : 'red-rapahel-graphics-library'
+      , 'title'       : 'RedRaphael - JavaScript graphics library on steroids!'
+      , 'speaker'     : 'Sushant Sudarshan'
+      , 'designation' : 'Senior JavaScript developer, FusionCharts'
+      , 'type'        : 'long'
+      , 'blurb'       : 'This talk introduces RedRaphael, a graphics library built on top of raphaeljs that takes rendering graphics on the browser to the next level.'
+      , 'link'        : 'conference#red-rapahel-graphics-library'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/844-redraphael-javascript-graphics-library-on-steroids'
+      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/844-redraphael-javascript-graphics-library-on-steroids'
+      , 'featured'    : false
+    }
+    , 'killing-passwords' : {
+        'id'          : 'killing-passwords'
+      , 'title'       : 'Killing passwords with JavaScript'
+      , 'speaker'     : 'Francois Marier'
+      , 'designation' : 'Software engineer, Mozilla Identity Team'
+      , 'type'        : 'long'
+      , 'blurb'       : 'Attendees will understand why asking users for passwords is a bad idea. They will also learn the basics of the BrowserID protocol so that they can take advantage of Persona on their own sites or webapps.'
+      , 'link'        : 'conference#killing-passwords'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/784-killing-passwords-with-javascript'
+      , 'preview'     : 'https://hasgeek.tv/jsfoo/2013-previews/670-killing-passwords-with-javascript'
+      , 'featured'    : true
+    }
+    , 'sponsored-talk' : {
+        'id'          : 'sponsored-talk'
+      , 'title'       : 'Sponsored Talk, Microsoft'
+      , 'speaker'     : 'TBA'
+      , 'designation' : 'TBA'
+      , 'type'        : 'long'
+      , 'blurb'       : 'TBA'
+      , 'link'        : 'conference#sponsored-talk'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'TBA'
+      , 'preview'     : 'TBA'
+      , 'featured'    : false
+    }
+    , 'bot-using-nodejs-and-html5' : {
+        'id'          : 'bot-using-nodejs-and-html5'
+      , 'title'       : 'Bot using NodeJS and the HTML5 Audio API'
+      , 'speaker'     : 'Ameya Karve'
+      , 'designation' : 'Student, IIT Madras'
+      , 'type'        : 'crisp'
+      , 'blurb'       : 'The speakr will show how to build a robot that is controlled using a NodeJS server. The bot uses the HTML5 Audio API to actuate its motors.'
+      , 'link'        : 'conference#bot-using-nodejs-and-html5'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/813-bot-using-nodejs-and-the-html5-audio-api'
+      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/813-bot-using-nodejs-and-the-html5-audio-api'
+      , 'featured'    : false
+    }
+    , 'visualising-bollywood-with-javascript' : {
+        'id'          : 'visualising-bollywood-with-javascript'
+      , 'title'       : 'Visualising Bollywood with Javascript'
+      , 'speaker'     : 'Anand S.'
+      , 'designation' : 'Data scientist, Gramener'
+      , 'type'        : 'crisp'
+      , 'blurb'       : 'Scrape bollywood material from a variety of sites via server-side JS and
+      visualise these with client-side JS.'
+      , 'link'        : 'conference#visualising-bollywood-with-javascript'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/826-visualising-bollywood-with-javascript'
+      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/826-visualising-bollywood-with-javascript'
+      , 'featured'    : false
+    }
+    , 'offline-in-the-browser' : {
+        'id'          : 'offline-in-the-browser'
+      , 'title'       : 'Offline in the browser- with IndexedDB, AppCache and LocalStorage'
+      , 'speaker'     : 'Manan Bharara'
+      , 'designation' : 'Developer, ThoughtWorks'
+      , 'type'        : 'crisp'
+      , 'blurb'       : 'Learn the benefits and possibilities of storage in the browser, segregation of concerns offered by the various HTML5 APIs, how Angular JS plays with HTML5 offline and browser support.'
+      , 'link'        : 'conference#offline-in-the-browser'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/821-offline-in-the-browser-with-indexeddb-appcache-localstorage'
+      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/821-offline-in-the-browser-with-indexeddb-appcache-localstorage'
+      , 'featured'    : false
+    }
+    , 'html5-for-the-masses' : {
+        'id'          : 'html5-for-the-masses'
+      , 'title'       : 'HTML5 for the masses - making the future the now'
+      , 'speaker'     : 'Christian Heilmann'
+      , 'designation' : 'Principal Developer Evangelist, Mozilla'
+      , 'type'        : 'long'
+      , 'blurb'       : 'This talk explains how to use HTML5 right here, right now, to create products that are ready for a market where people consume on low-end mobile devices.'
+      , 'link'        : 'conference#html5-for-the-masses'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/780-html5-for-the-masses-making-the-future-the-now'
+      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/780-html5-for-the-masses-making-the-future-the-now'
+      , 'featured'    : true
+    }
+    , 'webapps-should-not-just-talk' : {
+        'id'          : 'webapps-should-not-just-talk'
+      , 'title'       : 'Your webapps should talk not just in English, but in español, Kiswahili, 廣州話 and অসমীয়া too.'
+      , 'speaker'     : 'Sucheta Ghoshal'
+      , 'designation' : 'Wikimedia Foundation'
+      , 'type'        : 'long'
+      , 'blurb'       : 'This talk will help web developers understand what localization is and why it is important. The speaker will explain how MediaWiki / Wikipedia handles internationalization and how you can do it for your own apps, via jQuery.i18n (or other frameworks).'
+      , 'link'        : 'conference#webapps-should-not-just-talk'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/856-your-webapps-should-talk-not-just-in-english-but-in-espa%C3%B1ol-kiswahili-%E5%BB%A3%E5%B7%9E%E8%A9%B1-and-%E0%A6%85%E0%A6%B8%E0%A6%AE%E0%A7%80%E0%A6%AF%E0%A6%BC%E0%A6%BE-too'
+      , 'preview'     : 'https://hasgeek.tv/jsfoo/2013-previews/651-your-webapps-should-talk-not-just-in-english-but-in-espanol-kiswahili-%E5%BB%A3%E5%B7%9E%E8%A9%B1-and-%E0%A6%85%E0%A6%B8%E0%A6%AE%E0%A7%80%E0%A6%AF%E0%A6%BC%E0%A6%BE-too'
+      , 'featured'    : false
+    }
+    , 'flat-surface' : {
+        'id'          : 'flat-surface'
+      , 'title'       : 'FlatSurface: build a quality API faster'
+      , 'speaker'     : 'Jonathan Maim'
+      , 'designation' : 'Co-founder, Minsh and BangaloreJS'
+      , 'type'        : 'crisp'
+      , 'blurb'       : 'Learn about ways to build a quality API faster.'
+      , 'link'        : 'conference#flat-surface'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/764-flatsurface-build-a-quality-api-faster'
+      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/764-flatsurface-build-a-quality-api-faster'
+      , 'featured'    : false
+    }
+    , 'gif-animations' : {
+        'id'          : 'gif-animations'
+      , 'title'       : 'GIF animations - Now with sound!'
+      , 'speaker'     : 'Hage Yaapa'
+      , 'designation' : 'Architect, Sourcebits'
+      , 'type'        : 'crisp'
+      , 'blurb'       : 'Introduction to talking image, the JavaScript library to \'unmute\' GIF animations.'
+      , 'link'        : 'conference#gif-animations'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/840-gif-animations-now-with-sound'
+      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/840-gif-animations-now-with-sound'
+      , 'featured'    : false
+    }
+    , 'potential-gotchas' : {
+        'id'          : 'potential-gotchas'
+      , 'title'       : 'Potential gotchas in making a Backbone app'
+      , 'speaker'     : 'Vignesh Nandha Kumar'
+      , 'designation' : 'Front-end engineer, Recruiterbox'
+      , 'type'        : 'crisp'
+      , 'blurb'       : 'The talk would cover zombie views, extending routes and default error handlers for ajax calls.'
+      , 'link'        : 'conference#potential-gotchas'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/787-potential-gotchas-in-making-a-backbone-app'
+      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/787-potential-gotchas-in-making-a-backbone-app'
+      , 'featured'    : false
+    }
+    , 'complex-web-app-in-angularjs' : {
+        'id'          : 'complex-web-app-in-angularjs'
+      , 'title'       : 'First un-learn and then more to learn: Our experience building a complex web app entirely in AngularJS'
+      , 'speaker'     : 'Adhil Azeez NV and Praneet Koppula'
+      , 'designation' : 'Bang The Table'
+      , 'type'        : 'long'
+      , 'blurb'       : 'In this talk, the speakers will share their experiences of building a complex web app for mobile devices using AngularJS. Attendees can learn from these experiences on what to look out for while starting to build your AngularJS app and how to embrace this new framework which is fast becoming the default way of building apps.'
+      , 'link'        : 'conference#complex-web-apps-in-angularjs'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/775-first-un-learn-and-then-more-to-learn-our-experience-building-a-complex-web-app-entirely-in-angularjs'
+      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/775-first-un-learn-and-then-more-to-learn-our-experience-building-a-complex-web-app-entirely-in-angularjs'
+      , 'featured'    : false
+    }
+    , 'point-of-sale-system-using-google-apps-script' : {
+        'id'          : 'point-of-sale-system-using-google-apps-script'
+      , 'title'       : 'Distributed, offline-enabled point-of-sale system using Google Apps Script'
+      , 'speaker'     : 'Kingsley Jegan Joseph'
+      , 'designation' : 'Co-founder, TripThirsty'
+      , 'type'        : 'long'
+      , 'blurb'       : 'This talk will cover design and usability of POS systems in general and how the speaker created a minimal, elegant UI that requires little to no training, how the offline-enabled system syncs with Google Spreadsheets, operational deployment and future possibilities.'
+      , 'link'        : 'conference#point-of-sale-system-using-google-apps-script'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/765-distributed-offline-enabled-point-of-sale-system-using-google-apps-script'
+      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/765-distributed-offline-enabled-point-of-sale-system-using-google-apps-script'
+      , 'featured'    : true
+    }
+    , 'memory-profile-your-javascript-applications' : {
+        'id'          : 'memory-profile-your-javascript-applications'
+      , 'title'       : 'Memory profile your JavaScript applications for high performance'
+      , 'speaker'     : 'Jaideep Singh'
+      , 'designation' : 'Front-end developer and UX engineer, ThoughtWorks'
+      , 'type'        : 'long'
+      , 'blurb'       : 'This session will help developers to understand javascript garbage collector, analyze memory usage of their applications, various factors which affect memory usage and performance, detecting memory leaks and dealing with them, and some best practices for writing memory efficient javascript.'
+      , 'link'        : 'conference#memory-profile-your-javascript-applications'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/822-memory-profile-your-javascript-applications-for-high-performance'
+      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/822-memory-profile-your-javascript-applications-for-high-performance'
+      , 'featured'    : false
+    }
+    , 'node-robo' : {
+        'id'          : 'node-robo'
+      , 'title'       : 'Node Robo - Robo powered by Raspberry Pi, Node, Arduino, Firebase and Phonegap'
+      , 'speaker'     : 'Sreejesh Karunakaran'
+      , 'designation' : 'Manager / Specialist Interactive Development, Sapient Global Markets'
+      , 'type'        : 'long'
+      , 'blurb'       : 'This talk shows the power and reach of JavaScript which spreads across platforms. It is on mobile (phonegap), controlling hardware (johnny five) and running as a server platform (node).'
+      , 'link'        : 'conference#node-robo'
+      , 'photo'       : theme_static('img/speakers/viz.jpeg')
+      , 'funnel'      : 'https://funnel.hasgeek.com/jsfoo2013/809-node-robo-robo-powered-by-raspberry-pi-node-arduino-firebase-and-phonegap'
+      , 'preview'     : 'https://funnel.hasgeek.com/jsfoo2013/809-node-robo-robo-powered-by-raspberry-pi-node-arduino-firebase-and-phonegap'
+      , 'featured'    : true
     }
   }
 %}
