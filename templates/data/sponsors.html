@@ -1,16 +1,18 @@
-{%
-  set types = [
+{#
       {
         'id'    : 'platinum'
       , 'title' : 'Platinum'
       , 'size'  : 'xl'
     }
-    , {
+    {
         'id'    : 'gold'
       , 'title' : 'Gold'
       , 'size'  : 'l'
     }
-    , {
+-#}
+{%
+  set types = [
+    {
         'id'    : 'silver'
       , 'title' : 'Silver'
       , 'size'  : 'm'
@@ -26,6 +28,11 @@
       , 'size'  : 's'
     }
     , {
+        'id'    : 'speaker-travel'
+      , 'title' : 'Speaker Travel Support'
+      , 'size'  : 'compact'
+    }
+    , {
         'id'    : 'corporate'
       , 'title' : 'Corporate Tickets'
       , 'size'  : 'compact'
@@ -33,112 +40,107 @@
   ]
 %}  
 {# Logo Orientation can be either 'landscape' or 'portrait' #}
+{#
+    {
+        'title'       : 'Microsoft'
+      , 'id'          : 'microsoft'
+      , 'logo'        : 'https://images.hasgeek.com/embed/file/08f54a653f8648728f0cf8ef7bf01c95?size=640'
+      , 'orientation' : 'portrait'
+      , 'link'        : 'http://www.microsoft.com'
+      , 'type'        : 'gold'
+      , 'blurb'       : '<p>Coming soon</p>'
+      , 'attendee'    : 'Raj Vengalil<br>Kavita Makdani'
+    }
+-#}
 {%
   set items = [
-      {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-1'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
+    {
+        'name'        : 'GrapeCity'
+      , 'id'          : 'grapecity'
+      , 'logo'        : 'https://images.hasgeek.com/embed/file/5b8285d98d644eb1aa84352e00b2eec4?size=320'
       , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
-      , 'type'        : 'platinum'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
-      , 'attendee'    : '<a href="http://twitter.com/jackerhack">Kiran Jonnalagadda</a>'
-      , 'contact'     : '<a href="mailto:you@example.com">you@example.com</a>'
-    }
-    , {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-2'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
-      , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
-      , 'type'        : 'platinum'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
-      , 'attendee'    : 'Kiran Jonnalagadda'
-      , 'contact'     : 'you@example.com'
-    }
-    , {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-3'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
-      , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
-      , 'type'        : 'gold'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
-      , 'attendee'    : 'Mr. Kiran Jonnalagadda'
-    }
-    , {
-        'name'        : 'HasGeek'
-      , 'id'          : 'hasgeek-3'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
-      , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
+      , 'link'        : 'http://www.componentone.co.in/'
       , 'type'        : 'silver'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
-      , 'contact'     : 'you@example.com'
+      , 'blurb'       : '<p>ComponentOne, a division of GrapeCity is the headquarters of its Developer Tools business. A leader in component industry with focus on recognising and designing controls to meet Microsoft Visual Studio developers and designers’ needs globally is now looking to make some footprints in the field of Javascript.</p><p>GrapeCity India is proud to bring Wijmo, a complete suite of UI widgets for mobile and web application development. These widgets are based on jQuery and supports AngularJS as well. Every widget is hand-crafted and includes premium themes.</p>'
+      , 'attendee'    : 'Nitin Gupta<br>Ashish Jindal<br>Subodh Sinha'
+      , 'contact'     : 'nitin.gupta@grapecity.com'
     }
     , {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-4'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
+        'title'       : 'Active Sphere'
+      , 'id'          : 'activesphere'
+      , 'logo'        : 'https://images.hasgeek.com/embed/file/046ea16883f34dba8f6983103f9351a7?size=320'
       , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
+      , 'link'        : 'http://www.activesphere.com/'
+      , 'type'        : 'silver'
+      , 'blurb'       : "<p>ActiveSphere is a software development company based out of Bangalore. We specialize in scaling web apps to millions of users as well as requests. Our technology development stack includes Rails and Node.js.</p><p>Active Sphere’s iterative design and development model combined with high customer collaboration ensures that customers get value. We cater to startups and are interested in distributed systems, analytics and NoSql databases.</p><p>Over the years, Active Sphere has built a number of projects which we'd like to share with programmers.</p>"
+      , 'attendee'    : 'Sreekanth Vadagiri<br>Ciju Cherian'
+    }
+    , {
+        'title'       : 'Adobe'
+      , 'id'          : 'adobe'
+      , 'logo'        : 'https://images.hasgeek.com/embed/file/095ab25762d3462c8911dfa896e20f66?size=320x240'
+      , 'orientation' : 'portrait'
+      , 'link'        : 'http://www.adobe.com/'
+      , 'type'        : 'silver'
+      , 'blurb'       : '<p>Adobe is a proud sponsor of the JSFoo 2013 party for JSFoo participants, speakers and supporters. We take pride in moving the web forward by giving web designers and developers the best tools and services to share their creativity.</p><p>We’re excited to introduce the new <a href="http://html.adobe.com/edge/">Adobe Edge Tools & Services</a> to help you create beautiful mobile-ready content and apps with HTML, CSS, and JavaScript. Focused on specific tasks, Edge Tools and Services work well together, individually, or with other tools to design, animate, code, package, and deliver content and apps. Get started with all the Edge Tools & Services by signing up for a free or paid <a href="https://creative.adobe.com/plans">Creative Cloud</a> membership today!</p>'
+    }
+    , {
+        'title'       : 'Tizen'
+      , 'id'          : 'tizen'
+      , 'logo'        : 'https://images.hasgeek.com/embed/file/0902f77a27a347d9820bcbf4c6fceac0?size=320'
+      , 'orientation' : 'portrait'
+      , 'link'        : 'https://www.tizen.org/'
+      , 'type'        : 'silver'
+      , 'blurb'       : '<p>Coming soon.</p>'
+    }
+    , {
+        'title'       : 'FusionCharts'
+      , 'id'          : 'fusioncharts'
+      , 'logo'        : 'https://images.hasgeek.com/embed/file/852582360d3d481fad9d899bee0b9a13?size=320'
+      , 'orientation' : 'portrait'
+      , 'link'        : 'http://www.fusioncharts.com/'
       , 'type'        : 'bronze'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
+      , 'blurb'       : '<p>We are releasing RedRaphael at JSFoo – a graphics library built on top of Raphaeljs that takes rendering graphics on the browser to the next level. We are coming to JSFoo to talk to developers, designers and product managers about RedRaphael and see what can come of it.</p>'
+      , 'attendee'    : 'Sushant Sudarshan<br>Shamasis Bhattacharya<br>Pallav Nadhani<br>Anirudh Sanjeev'
+      , 'contact'     : 'fundefined@fusioncharts.com'
     }
     , {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-5'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
+        'title'       : 'ThoughtWorks'
+      , 'id'          : 'thoughtworks'
+      , 'logo'        : 'https://images.hasgeek.com/embed/file/5477a52996cf46d78b038a36947c0e4d?size=320'
       , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
+      , 'link'        : 'http://www.thoughtworks.com/'
+      , 'type'        : 'bronze'
+      , 'blurb'       : '<p>ThoughtWorks - the custom software experts. A company wholly devoted to the art and science of custom software. We make it, and we make our clients better at it. Our bottom line is to design and deliver software fast and predictably.</p><p>Doing enterprise-scale software is tough, but the returns to those organizations that can deliver - on target - are tremendous. Our products division, ThoughtWorks Studios, makes pioneering tools for software teams who aspire to be great. Its products, Mingle ®, Go™ and Twist® help organizations better collaborate and deliver quality software. ThoughtWorks employs over 2,000 professionals to serve clients from offices in Australia, Brazil, Canada, China, Germany, India, Singapore, South Africa, Uganda, the United Kingdom and the United States.</p>'
+    }
+    , {
+        'title'       : 'Icicle Technologies'
+      , 'id'          : 'icicle'
+      , 'logo'        : 'https://images.hasgeek.com/embed/file/4cd5e6891be947b496540e014743a75d'
+      , 'orientation' : 'portrait'
+      , 'link'        : 'http://www.icicletech.com/'
       , 'type'        : 'community'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
+      , 'blurb'       : '<p>Icicle is focussed on Web and Mobile product development for Startups and Enterprises across the world using open and advanced technologies. In nearly a decade of our development experience, we have seen JavaScript grow from a simple language hidden in the browser to a full blown development language, powering complex applications.</p><p>This change excites us, and we are part of this change. We work with host of JavaScript technologies like Node.js, Ember, Angular, Backbone etc. We design & build products, toolkits, modules, apps both in commercial and open-source domain.</p><p>If all this excites you, apply for a position at icicletech.com.</p><p>Have a product idea? talk to us - <a href="mailto:marketing@icicletech.com">marketing@icicletech.com</a></p>'
+      , 'attendee'    : 'Sanjay Patel, Director'
+      , 'contact'     : 'marketing@icicletech.com'
     }
     , {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-6'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
+        'title'       : 'Mozilla'
+      , 'id'          : 'mozilla'
+      , 'logo'        : 'https://images.hasgeek.com/embed/file/dd8165022fba4757a97fe7c2e903609f?size=320'
       , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
-      , 'type'        : 'corporate'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
+      , 'link'        : '#'
+      , 'type'        : 'speaker-travel'
+      , 'blurb'       : '<p>Coming soon.</p>'
     }
     , {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-7'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
+        'title'       : 'swissnex India'
+      , 'id'          : 'swissnex'
+      , 'logo'        : 'https://images.hasgeek.com/embed/file/513e4ef2eb4547ac8b7ef8d09916c05e?size=320'
       , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
-      , 'type'        : 'corporate'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
-    }
-    , {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-8'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
-      , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
-      , 'type'        : 'corporate'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
-    }
-    , {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-9'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
-      , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
-      , 'type'        : 'corporate'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
-    }
-    , {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-10'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
-      , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
-      , 'type'        : 'corporate'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
+      , 'link'        : '#'
+      , 'type'        : 'speaker-travel'
+      , 'blurb'       : '<p>Coming soon.</p>'
     }
   ]
 %}
