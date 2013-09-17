@@ -1,17 +1,20 @@
 {% extends theme('layouts/page.html') %}
-{% from theme("data/workshop-schedule-day1.html") import schedule as schedule_day1 %}
-{% from theme("data/workshop-schedule-day2.html") import schedule as schedule_day2 %}
-{% if schedule_day1 is defined and schedule_day2 is defined %}
+{% from theme("data/workshop-schedule-day1.html") import schedule as schedule18 %}
+{% from theme("data/workshop-schedule-day2.html") import schedule as schedule19 %}
+{% from theme("data/workshop-schedule-day3.html") import schedule as schedule21 %}
+{% if schedule18 is defined and schedule19 is defined and schedule21 is defined %}
   {%
     set page = {
         'title'       : 'Workshops'
       , 'description' : 'Workshops in JSFoo 2013'
       , 'sections'    : [
-          ('workshop-intro',    'red')
+          ('workshop-intro',         'red')
         , ('workshop-schedule-day1', 'dark')
         , ('workshop-schedule-day2', 'red')
-        , ('workshop-venue1',         'dark')
-        , ('workshop-venue2',         'red')
+        , ('workshop-schedule-day3', 'dark')
+        , ('workshop-venue1',        'red')
+        , ('workshop-venue2',        'dark')
+        , ('conference-venue',       'red')
       ]
     }
   %}
@@ -25,6 +28,7 @@
         , ('workshop-sessions', '')
         , ('workshop-venue1',   'dark')
         , ('workshop-venue2',   'red')
+        , ('conference-venue',  'dark')
       ]
     }
   %}

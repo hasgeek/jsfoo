@@ -1,8 +1,8 @@
 {% 
   set event = {
       'title' : 'Workshops'
-    , 'when'  : '18 — 19<sup class="date">th</sup> September 2013'
-    , 'blurb' : '<p>Workshops will cover JS frameworks such as <a href="http://expressjsworkshop.doattend.com/">Express</a> and <a href="http://meteorjsworkshop.doattend.com/">Meteor</a> – to help participants learn how to hack/extend these frameworks to customize something. Other workshops include how to <a href="http://testingworkshop.doattend.com/">evaluate open source testing tools</a>, <a href="http://mobilewebworkshop.doattend.com/">applying HTML5 to mobile websites</a> without killing battery on mobile devices and <a href="http://firefoxosworkshop.doattend.com/">understanding Firefox OS</a> including Open Web Apps, Web APIs and possibilities on the platform.</p><p>All workshops except Automating Automatic Testing will be held at the Microsoft Accelerator Ventures, no. 9, Lavelle Road. The testing workshop will be held at swissnex India, ground floor, No. 26, Rest House Crescent Road.</p>'
+    , 'when'  : '18<sup class="date">th</sup>, 19<sup class="date">th</sup> &amp; 21<sup class="date">st</sup> September 2013'
+    , 'blurb' : '<p>Workshops will cover JS frameworks such as <a href="http://expressjsworkshop.doattend.com/">Express</a> and <a href="http://meteorjsworkshop.doattend.com/">Meteor</a> – to help participants learn how to hack/extend these frameworks to customize something. Other workshops include how to <a href="http://testingworkshop.doattend.com/">evaluate open source testing tools</a>, <a href="http://mobilewebworkshop.doattend.com/">applying HTML5 to mobile websites</a> without killing battery on mobile devices and <a href="http://firefoxosworkshop.doattend.com/">understanding Firefox OS</a> including Open Web Apps, Web APIs and possibilities on the platform.</p><p>On 21st September we have workshops on Tizen in parallel with the main conference.</p><p>Workshops will be held across three venues over the three days. Details below.</p>'
   }
 %}
 {% from theme("data/workshop-schedule-day1.html") import schedule %}
@@ -10,8 +10,16 @@
   {% 
     set nav = [
         {
-          'display' : 'Sessions + Schedule'
-        , 'link'    : 'workshops#schedule'
+          'display' : 'Schedule: 18th'
+        , 'link'    : 'workshops#schedule18'
+      }
+      , {
+          'display' : 'Schedule: 19th'
+        , 'link'    : 'workshops#schedule19'
+      }
+      , {
+          'display' : 'Schedule: 21th'
+        , 'link'    : 'workshops#schedule21'
       }
       , {
           'display' : 'Venue'
