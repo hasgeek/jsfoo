@@ -4,15 +4,15 @@
       , 'title' : 'Platinum'
       , 'size'  : 'xl'
     }
+-#}
+{%
+  set types = [
     {
         'id'    : 'gold'
       , 'title' : 'Gold'
       , 'size'  : 'l'
     }
--#}
-{%
-  set types = [
-    {
+    , {
         'id'    : 'silver'
       , 'title' : 'Silver'
       , 'size'  : 'm'
@@ -38,9 +38,10 @@
       , 'size'  : 'compact'
     }
   ]
-%}  
+%}
 {# Logo Orientation can be either 'landscape' or 'portrait' #}
-{#
+{%
+  set items = [
     {
         'title'       : 'Microsoft'
       , 'id'          : 'microsoft'
@@ -51,10 +52,7 @@
       , 'blurb'       : '<p>Coming soon</p>'
       , 'attendee'    : 'Raj Vengalil<br>Kavita Makdani'
     }
--#}
-{%
-  set items = [
-    {
+    , {
         'name'        : 'GrapeCity'
       , 'id'          : 'grapecity'
       , 'logo'        : 'https://images.hasgeek.com/embed/file/5b8285d98d644eb1aa84352e00b2eec4?size=320'
@@ -82,7 +80,7 @@
       , 'orientation' : 'portrait'
       , 'link'        : 'http://www.adobe.com/'
       , 'type'        : 'silver'
-      , 'blurb'       : '<p>Adobe is a proud sponsor of the JSFoo 2013 party for JSFoo participants, speakers and supporters. We take pride in moving the web forward by giving web designers and developers the best tools and services to share their creativity.</p><p>We’re excited to introduce the new <a href="http://html.adobe.com/edge/">Adobe Edge Tools & Services</a> to help you create beautiful mobile-ready content and apps with HTML, CSS, and JavaScript. Focused on specific tasks, Edge Tools and Services work well together, individually, or with other tools to design, animate, code, package, and deliver content and apps. Get started with all the Edge Tools & Services by signing up for a free or paid <a href="https://creative.adobe.com/plans">Creative Cloud</a> membership today!</p>'
+      , 'blurb'       : '<p>Adobe is a proud sponsor of JSFoo 2013.  We are moving the web forward by enabling web designers and developers to create beautiful mobile-ready and desktop content and apps with HTML, CSS, JavaScript.  Adobe’s contributions to web standards and <a href="http://html.adobe.com/edge/">Adobe Edge Tools & Services</a> empower our customers to share their creativity.  Transforming inspiration to reality! Learn more at <a href="http://html.adobe.com">html.adobe.com</a>.</p>'
     }
     , {
         'title'       : 'Tizen'
@@ -118,10 +116,10 @@
       , 'id'          : 'icicle'
       , 'logo'        : 'https://images.hasgeek.com/embed/file/bf8c444ffe58470e987e5ec5eb895177?size=320'
       , 'orientation' : 'portrait'
-      , 'link'        : 'http://www.icicletech.com/'
+      , 'link'        : 'http://www.icicletech.com/jsfoo-javascript-conf-2013'
       , 'type'        : 'community'
-      , 'blurb'       : '<p>Icicle is focussed on Web and Mobile product development for Startups and Enterprises across the world using open and advanced technologies. In nearly a decade of our development experience, we have seen JavaScript grow from a simple language hidden in the browser to a full blown development language, powering complex applications.</p><p>This change excites us, and we are part of this change. We work with host of JavaScript technologies like Node.js, Ember, Angular, Backbone etc. We design & build products, toolkits, modules, apps both in commercial and open-source domain.</p><p>If all this excites you, apply for a position at icicletech.com.</p><p>Have a product idea? talk to us - <a href="mailto:marketing@icicletech.com">marketing@icicletech.com</a></p>'
-      , 'attendee'    : 'Sanjay Patel, Director'
+      , 'blurb'       : '<p>Icicle is focussed on Web and Mobile <a href="http://www.icicletech.com/jsfoo-javascript-conf-2013">product development for Startups</a> and Enterprises across the world using open and advanced technologies. In nearly a decade of our development experience, we have seen JavaScript grow from a simple language hidden in the browser to a full blown development language, powering complex applications.</p><p>This change excites us, and we are part of this change. We work with host of JavaScript technologies like Node.js, Ember, Angular, Backbone etc. We design & build products, toolkits, modules, apps both in commercial and open-source domain.</p><p>If all this excites you, apply for a position at <a href="http://www.icicletech.com/">icicletech.com</a>.</p><p>Have a product idea? talk to us - <a href="mailto:marketing@icicletech.com">marketing@icicletech.com</a></p>'
+      , 'attendee'    : 'Praveen Wicliff, Director'
       , 'contact'     : 'marketing@icicletech.com'
     }
     , {
