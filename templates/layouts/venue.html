@@ -4,15 +4,18 @@
     <h2 class="offset1 extralarge span4 all-caps">{% if node.name == 'venue' %}{{ event.title }}{% else %}Venue{% endif %}</h2>
     <h3 class="offset1 span5 large all-caps">{{ venue.title }}<span class="regular occupy">{{ venue.subtitle }}</span></h3>
   </div>
+  
+  {% if venue.poster %}
   <div class="full-width"><img src="{{ venue.poster }}" class="contain-width"></div>
+  {% endif %}
   
   {% if event.when %}
   <div class="row-fluid space-four-top space-two-bottom">
-    <h3 class="offset1 span4 legible all-caps space-one-bottom">When</h3>
+    <h3 class="offset1 span4 legible all-caps nospace-bottom">When</h3>
   
     <div class="offset1 span5 prose prose-type">
-      <p class="legible-prose space-line-bottom">{{ event.when|safe }}</p>
-      {% if event.instructions %}<div class="regular-prose">{{ event.instructions|safe }}</div>{% endif %}
+      <p class="legible-prose">{{ event.when|safe }}</p>
+      {% if event.instructions %}<div class="regular-prose space-line-top">{{ event.instructions|safe }}</div>{% endif %}
     </div>
   </div>
   {% endif %}
