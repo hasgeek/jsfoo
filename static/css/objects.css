@@ -179,7 +179,7 @@
 @media (max-width: 767px) {
     .program-committee ul                     { margin: 2rem 0 0; }
     .program-committee ul li                  { width: 49%; }
-    .program-committee ul li:nth-child(odd)   { float: left;  }
+    .program-committee ul li:nth-child(odd)   { float: left;  clear: both;  }
     .program-committee ul li:nth-child(even)  { float: right; }
 }
 .program-committee a {
