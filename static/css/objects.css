@@ -53,72 +53,19 @@
 @media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
 
 
-.banner h1    { float: left; width: 4.5rem; margin: .5rem auto 0 -.5rem; }
-.banner .logo {
-    background: url(../img/logo.png) no-repeat scroll center center;
-    background-size: contain;
-    height: 0;
-    width: 100%;
-    padding-top: 100%;
-}
-.banner .logo:hover { background-color: transparent; }
-.banner.banner-home h1 { width: 10rem; float: none; margin: 3rem auto; }
-.banner.banner-home h2 span + span { display: inline-block; margin-left: 0.5rem; }
-.banner sup, sup.date { top: 0; font-size: 65%; }
-.banner.banner-home h3 {
-    padding-left: 3rem;
-    text-align: left;
-}
-.banner.banner-home h3 { margin: 0 0 3rem; }
-.banner.banner-home h3 a,
-.banner.banner-home h3 span {
-    display: block;
-    width: 8rem;
-    margin: 0 auto 0.5rem;
-}
-.banner.banner-home h3 i {
-    position: absolute;
-    left: 50%;
-    width: 2rem;
-    text-align: right;
-    font-size: 90%;
-    line-height: 40px;
-    padding-top: .3rem;
-    margin-left: -5.75rem;
-}
-.banner h3 i.amp    { font-style: italic; line-height: inherit; font-size: inherit; margin-top: 0.3rem; }
-.banner .intro {
-    margin: 4rem auto 3rem;
-    max-width: 28rem;
-}
-.banner .button               { width: 13rem; }
-@media (min-width: 560px) {
-    .banner h1                { width: 5rem; margin: .5rem auto; }
+.banner { 
+    background-color: #000 !important;
+    background-image: url(../img/2012-stage.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding-bottom: 36%;
 }
 @media (min-width: 768px) {
-    .banner h1                { margin: 1.25rem auto .5rem; }
-    .banner .logo             { height: 4rem;}
-    .banner.banner-home h1    { margin: 4rem auto 3rem; width: 12rem; }
-    .banner.banner-home h3    { padding-left: 0; }
-    .banner.banner-home h3    { text-align: center; }
-    .banner.banner-home h3 span,
-    .banner.banner-home h3 a  { display: inline;  width: auto; margin: auto; }
-    .banner.banner-home h3 i  { 
-        position: static;
-        width: auto;
-        left: 0;
-        font-family: inherit;
-        font-style: normal !important;
-        margin: 0 0.5rem;
-        padding-top: 0;
-    }
-    .banner .intro {
-        margin: 5rem 0 3rem;
-        max-width: 100%;
-    }
+
 }
 
-.banner-internal .logo {
+.header .logo {
     background: url(../img/logo.png) no-repeat scroll center center;
     background-size: contain;
     height: 0;
@@ -129,8 +76,8 @@
          -o-transition: all 0.5s;
             transition: all 0.5s;
 }
-.banner-internal .logo:hover,
-.banner-internal .logo:focus {
+.header .logo:hover,
+.header .logo:focus {
     -webkit-transform: rotate(360deg);
        -moz-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
@@ -138,15 +85,15 @@
             transform: rotate(360deg);
 }
 @media (max-width:767px) {
-    .banner-internal        { padding: 1rem 0 !important; }
-    .banner-internal .logo  { margin: 0 auto; }
-    .banner-internal nav    {
+    .header        { padding: 1rem 0 !important; }
+    .header .logo  { margin: 0 auto; }
+    .header nav    {
         margin-top: 1rem !important;
         text-align: center;
         text-transform: lowercase;
     }
-    .banner-internal nav ul { font-size: 1rem; }
-    .banner-internal h3 {
+    .header nav ul { font-size: 1rem; }
+    .header h3 {
         position: absolute;
         margin: 0;
         top:    2.4rem;
@@ -163,8 +110,8 @@
     .ticket-link-container .button { padding: 0.2em 0.6em; }
 }
 @media (min-width: 768px) {
-    .banner-internal nav    { margin-top: -0.5rem; }
-    .banner-internal h3     { margin-top: 1rem; }
+    .header nav    { margin-top: -0.5rem; }
+    .header h3     { margin-top: 1rem; }
 }
 
 
@@ -332,11 +279,6 @@
 
 .page-footer {
     background-color: #000 !important;
-    background-image: url(../img/2012-stage.jpg);
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    padding-bottom: 36%;
 }
 .hasgeek-logo {
     background: url(../img/hasgeek-logo.png) no-repeat scroll center center;

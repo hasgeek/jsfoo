@@ -45,9 +45,9 @@
 {%- endif %}
 
 </head>
-<body class="fill-redgray">
+<body>
 
-<div class="bleed-section fill-silver">
+<div class="bleed-section">
   {% block networkbar %}
     {{ networkbar(siteid='events', login=false) }}
   {% endblock %}
@@ -55,37 +55,26 @@
   
 <div id="page">
 
-{% block banner %}
-<header class="banner-internal row-fluid push-two resetcoords clearfix">
-  <div class="offset1 span2">
-    <h1 class="nospace">
-      <a class="ir logo" href="/2013">
-        JSFoo 2013
-      </a>
-    </h1>
-  </div>
-  <nav class="span3 secondary">
-    <ul class="inline-on-mobile list-plain red prose">
-      <li><a href="/2013">Home</a></li>
-      <li><a href="/2013/conference">Conference</a></li>
-      <li><a href="/2013/workshops">Workshops</a></li>
-      <li><a href="/2013/venue">Venue</a></li>
-      <li><a href="/2013/sponsors">Sponsors</a></li>
-    </ul>
-  </nav>
-  <h3 class="calm tiny nospace-bottom all-caps span2">
-    20<span class="hidden-phone"> </span>—<span class="hidden-phone"> </span>21<sup class="date">st</sup>
-    Sep<span class="hidden-phone">tember</span>&nbsp;2013
-    <br>
-    Bangalore
-  </h3>
-  <div class="ticket-link-container span3">
-    <p class="text-right space-line">
-      <a class="button" href="http://jsfoo.doattend.com/">
-        <span class="hidden-phone">Buy Your</span>
-        Ticket<span class="visible-phone">s</span>
-      </a>
-    </p>
+{% block header %}
+<header class="header container push-two resetcoords clearfix">
+  <div class="row">
+    <div class="span2">
+      <h1 class="nospace">
+        <a class="ir logo" href="/2013">
+          JSFoo 2013
+        </a>
+      </h1>
+    </div>
+    <div class="span10 secondary">
+      <ul class="inline list-plain red prose pull-right">
+        <li><a href="/2013">Home</a></li>
+        <li><a href="/2013/conference">Conference</a></li>
+        <li><a href="/2013/workshops">Workshops</a></li>
+        <li><a href="/2013/venue">Venue</a></li>
+        <li><a href="/2013/sponsors">Sponsors</a></li>
+        <li><a href="http://jsfoo.doattend.com/">Tickets</a></li>
+      </ul>
+    </div>
   </div>
 </header>
 {% endblock %}
