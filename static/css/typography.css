@@ -6,11 +6,11 @@
 /*  Families  */
 
 body,
-.title-type     { font-family: brandon-grotesque, "Brandon Grotesque", "Gill Sans", "Gill Sans MT", sans-serif; }
+.title-type     { font-family: "Open Sans", brandon-grotesque, "Brandon Grotesque", "Gill Sans", "Gill Sans MT", sans-serif; }
 
 i,
 em,
-.prose-type     { font-family: adobe-caslon-pro, "Adobe Caslon Pro", serif; }
+.prose-type     { font-family: "Open Sans", adobe-caslon-pro, "Adobe Caslon Pro", serif; font-weight: 300; }
 
 
 /*  Scale  */
@@ -26,7 +26,7 @@ html                    { font-size: 16px;     line-height: 1.5; }
 .legible-prose          { font-size: 1.125rem; line-height: 1.40; }
 .regular                { font-size: 1.000rem; line-height: 1.50; }
 .regular-prose          { font-size: 1.125rem; line-height: 1.45; }
-.secondary              { font-size: 0.875rem; line-height: 1.90; }
+.secondary              { font-size: 0.875rem; line-height: 1.50; }
 .secondary-prose        { font-size: 0.950rem; line-height: 1.40; }
 .tiny                   { font-size: 0.750rem; line-height: 1.60; }
 
