@@ -1,7 +1,7 @@
 
 .button {
     display: inline-block;
-    background: #3A3;
+    background: #F46353;
     color: white;
     line-height: 1.4;
     padding: 1em 2em 1em;
@@ -10,6 +10,7 @@
     border-radius: 0.25em;
     border: 0;
 }
+.button:hover   { color: #FFFFFF; }
 .button-mini    { padding: 0.2em 0.6em; }
 .button-on-dark { background: #BB3311; }
 .button:focus   { text-decoration: none; }
@@ -60,6 +61,7 @@
     background-repeat: no-repeat;
     background-size: 100% auto;
     padding-bottom: 36%;
+    border-radius: 10px;
 }
 @media (min-width: 768px) {
 
@@ -288,3 +290,12 @@
             border-radius: 30px 30px 30px 0;
 }
 a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+    background-color: rgba(223, 221, 213, 0.33);
+    color: #F46353;
+}
+.nav-tabs>li>a:hover, .nav-tabs>li>a:focus{
+    background-color: rgba(223, 221, 213, 0.33);
+    color: #F46353;
+}

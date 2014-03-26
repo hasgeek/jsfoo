@@ -14,9 +14,9 @@
       <div class="secondary prose-type prose">
         {{ event.blurb|safe }}
       </div>
-      {% if action %}
-      <p class="title-type secondary space-one-top">
-        {{ action|safe }}
+      {% if event.ticket %}
+      <p class="tiny space-line-top text-center">
+        <a href="{{ event.ticket }}" class="button">Get your ticket!</a>
       </p>
       {% endif %}
     </div>

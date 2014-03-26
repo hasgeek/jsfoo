@@ -15,6 +15,7 @@ a:hover,
 a:focus {
     text-decoration: none;
     border-color: transparent;
+    color: #F46353;
 }
 .link-silent a,
 a.link-silent   { border-bottom: none; }
@@ -29,6 +30,7 @@ a.link-silent   { border-bottom: none; }
 .gray           { color: #AAAAAA !important; }
 .light          { color: #EEEEEE !important; }
 .red            { color: #FF3333 !important; }
+.orange         { color: #F46353 !important; }
 .white          { color: #FFFFFF !important; }
 .faded          { color: rgba(255,255,255,.8) !important; }
 
