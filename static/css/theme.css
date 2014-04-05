@@ -3,8 +3,8 @@
 /* ========= */
 
 body{
-    background-color: #EFEFE7 !important; 
-    background-image: url(../img/body.jpg); 
+    /*background-color: #EFEFE7 !important; 
+    background-image: url(../img/body.jpg); */
     color: #333;
 }
 a {
@@ -15,7 +15,7 @@ a:hover,
 a:focus {
     text-decoration: none;
     border-color: transparent;
-    color: #F46353;
+    color: #FBA832;
 }
 .link-silent a,
 a.link-silent   { border-bottom: none; }
@@ -35,13 +35,22 @@ a.link-silent   { border-bottom: none; }
 .faded          { color: rgba(255,255,255,.8) !important; }
 
 .fill-white     { background-color: #FFFFFF !important; color: #444; }
-.fill-dark      { background-color: #121212 !important; color: #EEE; }
+.fill-dark      { background-color: #DED6C2 !important; color: #333; }
 .fill-dark-hud  { background-color: rgba(0,0,0,0.65) !important; color: #EEE; }
 .fill-black     { background-color: #000000 !important; color: #EEE; }
 .fill-silver    { background-color: #EFEFE7 !important; color: #333; }
 .fill-silver-hud{ background-color: rgba(255,255,255,0.65) !important; color: #222; }
 .fill-red       { background-color: #BB3311 !important; color: #FCF3F3; }
 .fill-redgray   { background-color: #EFE7E6 !important; color: #222020; }
+.fill-yellow    { background-color: #FBA832 !important; color: #000; }
+.fill-darkblue  { background-color: #353F67 !important; color: #FFF; }
+.fill-blue      { background-color: #43609E !important; color: #000; }
+.fill-lightblue { background-color: #6086C4 !important; color: #000; }
+.fill-blueprint { 
+    background-image: url(https://imgee.s3.amazonaws.com/imgee/c596bb6fe5954b74b870e777dceecb1a.png);
+    background-repeat: repeat;
+    background-size: 10px; 
+}
 
 .fade-red-to-dark {
     background-image: -webkit-linear-gradient(top,       #BB3311 20%, #121212);

@@ -1,13 +1,13 @@
 <section id="{{ schedule.id }}" class="page-section clearfix{% if background %} fill-{{ background }}{% endif %}">
-  <div class="row">
+  <!-- <div class="row">
     <h2 class="text-center large space-two-bottom">Schedule{% if schedule.date %} — {{ schedule.date|safe }}{% endif %}</h2>
-  </div>
+  </div> -->
   <div class="row">
     <div class="col-lg-12">
   <ul class="unstyled list-plain">
   {% for item in schedule.list %}
     <li id="{{ item.id }}" class="row push-1q">
-      <div class="col-lg-2 tiny space-one-bottom clearfix">
+      <div class="col-lg-2 text-right tiny space-one-bottom clearfix">
         <h3 class="all-caps nospace-top semibold">{{ item.slot|replace(' ', '&nbsp;')|safe }}</h3>
       </div>
     {% if item.id %}

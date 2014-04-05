@@ -33,6 +33,8 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.ie.css" />
 <![endif]-->
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,400,600" />
+<link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Syncopate:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="/_baseframe/css/networkbar.css">
 
 <script src="{{ theme_static('js/vendor/modernizr-2.6.2.js') }}"></script>
@@ -48,50 +50,62 @@
 
 <div class="bleed-section">
   {% block networkbar %}
-    {{ networkbar(siteid='events', login=false) }}
+    {{ networkbar(siteid='events', login=true) }}
   {% endblock %}
 </div>
   
 <div id="page">
-
 {% block header %}
-<header class="header container push-two resetcoords clearfix">
-  <div class="row">
-    <div class="col-lg-2">
-      <h1 class="nospace">
-        <a class="ir logo" href="/2013">
-          JSFoo 2013
-        </a>
-      </h1>
-    </div>
-    <div class="col-lg-10 secondary">
-      <div class="row">
-        <div class="col-lg-12">
-          <ul class="list-plain orange prose pull-right">
-            <li class="inline-block"><a href="/2014">Home</a></li>
-            <li class="pad-half-left inline-block"><a href="/2014/conference">Conference</a></li>
-            <li class="pad-half-left inline-block"><a href="/2014/workshops">Workshops</a></li>
-            <li class="pad-half-left inline-block"><a href="/2014/venue">Venue</a></li>
-            <li class="pad-half-left inline-block"><a href="/2014/sponsors">Sponsors</a></li>
-            <li class="pad-half-left inline-block"><a href="http://jsfoo.doattend.com/">Tickets</a></li>
-          </ul>
-        </div>
+<header class="fill-blueprint">
+  <div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+        <h1 class="nospace">
+          <a class="ir logo" href="/2014">
+            JSFoo 2013
+          </a>
+        </h1>
       </div>
-      <div class="row space-one-top">
-        <div class="col-lg-12">
-          <div class="dropdown pull-right link-silent">
-            <a data-toggle="dropdown" href="#">Bangalore 2014 <i class="tiny fa fa-caret-down"></i></a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-              <li><a class="push-1q" href="https://jsfoo.in/2013/">Bangalore 2013</a></li>
-              <li><a class="push-1q" href="https://jsfoo.in/2012/">Bangalore 2012</a></li>
-              <li><a class="push-1q" href="https://jsfoo.in/chennai2012/">Chennai 2012</a></li>
-              <li><a class="push-1q" class="push-1q" href="https://jsfoo.in/pune2012/">Pune 2012</a></li>
-              <li><a class="push-1q" href="https://jsfoo.in/bangalore2011/">Bangalore 2011</a></li>
+      <div class="col-lg-10 secondary">
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="list-plain orange prose pull-right">
+              <li class="inline-block"><a href="/2014">Home</a></li>
+              <li class="pad-half-left inline-block"><a href="/2014/conference">Conference</a></li>
+              <li class="pad-half-left inline-block"><a href="/2014/workshops">Workshops</a></li>
+              <li class="pad-half-left inline-block"><a href="/2014/venue">Venue</a></li>
+              <li class="pad-half-left inline-block"><a href="/2014/sponsors">Sponsors</a></li>
+              <li class="pad-half-left inline-block"><a href="http://jsfoo.doattend.com/">Tickets</a></li>
             </ul>
+          </div>
+        </div>
+        <div class="row space-one-top">
+          <div class="col-lg-12">
+            <div class="dropdown pull-right link-silent">
+              <a data-toggle="dropdown" href="#">Bangalore 2014 <i class="tiny fa fa-caret-down"></i></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li><a class="push-1q" href="https://jsfoo.in/2013/">Bangalore 2013</a></li>
+                <li><a class="push-1q" href="https://jsfoo.in/2012/">Bangalore 2012</a></li>
+                <li><a class="push-1q" href="https://jsfoo.in/chennai2012/">Chennai 2012</a></li>
+                <li><a class="push-1q" class="push-1q" href="https://jsfoo.in/pune2012/">Pune 2012</a></li>
+                <li><a class="push-1q" href="https://jsfoo.in/bangalore2011/">Bangalore 2011</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="nospace pull-right">
+              <a class="ir logo" href="/2013">
+                JSFoo 2013
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
 </header>
 {% endblock %}
@@ -107,7 +121,7 @@
 {% endblock %}
 
 
-<footer class="page-footer page-section fill-dark clearfix">
+<footer class="page-footer page-section fill-blueprint clearfix">
   <div class="text-center tiny">
     <p class="regular-prose space-three-bottom">The <a href="code-of-conduct">code of conduct</a> applies to everyone&nbsp;at&nbsp;the&nbsp;conference.</p>
     <p class="gray">Copyright &copy; 2010–13. All rights reserved.</p>

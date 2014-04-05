@@ -5,8 +5,8 @@
 
 /*  Families  */
 
-body,
-.title-type     { font-family: "Open Sans", brandon-grotesque, "Brandon Grotesque", "Gill Sans", "Gill Sans MT", sans-serif; }
+body { font-family: "Open Sans", brandon-grotesque, "Brandon Grotesque", "Gill Sans", "Gill Sans MT", sans-serif; }
+.title-type     { font-family: 'Syncopate', "Open Sans Condensed", brandon-grotesque, "Brandon Grotesque", sans-serif; }
 
 i,
 em,

@@ -1,47 +1,54 @@
 <section class="page-section">
 	
-<div class="container">
-	<div class="col-lg-10 col-lg-offset-1">
-		<!-- Nav tabs -->
-		<ul class="nav nav-tabs all-caps text-center tiny">
-		  <li><a href="#home" data-toggle="tab">Sept 18 - Workshops<br>Day 1</a></li>
-		  <li><a href="#profile" data-toggle="tab">Sept 19 - Workshops<br>Day 2</a></li>
-		  <li class="active"><a href="#messages" data-toggle="tab">Sept 20 - Conference<br>Day 3</a></li>
-		  <li><a href="#settings" data-toggle="tab">Sept 21 - Conference<br>Day 4</a></li>
-		</ul>
+	<div class="container">
+		<div class="row">
+	    <div class="col-lg-12 push-one-bottom text-center">
+	      <h4 class="large">Schedule</h4>
+	    </div>
+	  </div>
+	  <div class="row">
+			<div class="col-lg-10 col-lg-offset-1">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs all-caps text-center tiny">
+				  <li><a href="#home" data-toggle="tab">Sept 18 - Workshops<br>Day 1</a></li>
+				  <li><a href="#profile" data-toggle="tab">Sept 19 - Workshops<br>Day 2</a></li>
+				  <li class="active"><a href="#messages" data-toggle="tab">Sept 20 - Conference<br>Day 3</a></li>
+				  <li><a href="#settings" data-toggle="tab">Sept 21 - Conference<br>Day 4</a></li>
+				</ul>
 
-		<!-- Tab panes -->
-		<div class="tab-content">
-		  <div class="tab-pane" id="home">
-		  	{% with %}
-				  {% from theme("data/workshop-schedule-day1.html") import schedule %}
-				  {% from theme("data/workshop-sessions.html") import sessions, types %}
-				  {% include theme("layouts/schedule.html") %}
-				{% endwith %}
-		  </div>
-		  <div class="tab-pane" id="profile">
-		  	{% with %}
-				  {% from theme("data/workshop-schedule-day2.html") import schedule %}
-				  {% from theme("data/workshop-sessions.html") import sessions, types %}
-				  {% include theme("layouts/schedule.html") %}
-				{% endwith %}
-		  </div>
-		  <div class="tab-pane active" id="messages">
-		  	{% with %}
-				  {% from theme("data/conference-schedule-day1.html") import schedule %}
-				  {% from theme("data/conference-sessions.html") import sessions, types %}
-				  {% include theme("layouts/schedule.html") %}
-				{% endwith %}
-		  </div>
-		  <div class="tab-pane" id="settings">
-		  	{% with %}
-				  {% from theme("data/conference-schedule-day2.html") import schedule %}
-				  {% from theme("data/conference-sessions.html") import sessions, types %}
-				  {% include theme("layouts/schedule.html") %}
-				{% endwith %}
-		  </div>
+				<!-- Tab panes -->
+				<div class="tab-content">
+				  <div class="tab-pane" id="home">
+				  	{% with %}
+						  {% from theme("data/workshop-schedule-day1.html") import schedule %}
+						  {% from theme("data/workshop-sessions.html") import sessions, types %}
+						  {% include theme("layouts/schedule.html") %}
+						{% endwith %}
+				  </div>
+				  <div class="tab-pane" id="profile">
+				  	{% with %}
+						  {% from theme("data/workshop-schedule-day2.html") import schedule %}
+						  {% from theme("data/workshop-sessions.html") import sessions, types %}
+						  {% include theme("layouts/schedule.html") %}
+						{% endwith %}
+				  </div>
+				  <div class="tab-pane active" id="messages">
+				  	{% with %}
+						  {% from theme("data/conference-schedule-day1.html") import schedule %}
+						  {% from theme("data/conference-sessions.html") import sessions, types %}
+						  {% include theme("layouts/schedule.html") %}
+						{% endwith %}
+				  </div>
+				  <div class="tab-pane" id="settings">
+				  	{% with %}
+						  {% from theme("data/conference-schedule-day2.html") import schedule %}
+						  {% from theme("data/conference-sessions.html") import sessions, types %}
+						  {% include theme("layouts/schedule.html") %}
+						{% endwith %}
+				  </div>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
 </section>
 

@@ -1,7 +1,7 @@
 
 .button {
     display: inline-block;
-    background: #F46353;
+    background: #FBA832;
     color: white;
     line-height: 1.4;
     padding: 1em 2em 1em;
@@ -52,23 +52,70 @@
 
 
 @media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
+#hg-bar { background-color: #FFF !important; border-bottom: none;}
 
-
+html, body, #page, header, section { 
+    height: 100%; 
+}
+footer, header{
+    background-attachment: fixed;
+}
 .banner { 
-    background-color: #000 !important;
-    background-image: url(../img/2012-stage.jpg);
-    background-position: bottom center;
+    position: relative;
+    background-position: top center;
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
+    background-attachment: fixed;
+    display: block;
+    background-image: url(../img/masthead1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 90% auto;
     padding-bottom: 36%;
-    border-radius: 10px;
+    height: 100%;
+}
+section{
+    height: auto;
+    overflow: hidden;
+}
+
+.separator { 
+    position: relative;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: block;
+    background-position: center center;
+    width: 100%;
+    background-color: red;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 36%;
+}
+.separator-1{
+    /*background-image: url(https://imgee.s3.amazonaws.com/imgee/7384c593d2a944fe9ea6b61d6387de55.png);*/
+    background-image: url(../img/splash/0.jpg);
+}
+.separator-2{
+    /*background-image: url(https://imgee.s3.amazonaws.com/imgee/7384c593d2a944fe9ea6b61d6387de55.png);*/
+    background-image: url(../img/splash/10.jpg);
+}
+.hex-separator{
+    height: 1px;
+    width: 100%;
+    background-color: #FFF;
+
+}
+svg{
+    overflow: hidden;
 }
 @media (min-width: 768px) {
 
 }
 
 .header .logo {
-    background: url(../img/logo.png) no-repeat scroll center center;
+    background: url(../img/logo1.png) no-repeat scroll center center;
     background-size: contain;
     height: 0;
     width:       5.5rem;
@@ -279,9 +326,6 @@
     .credits .row-fluid .offset1 { margin-left: 0; }
 }
 
-.page-footer {
-    background-color: #000 !important;
-}
 .hasgeek-logo {
     background: url(../img/hasgeek-logo.png) no-repeat scroll center center;
     width:  130px;
