@@ -2,7 +2,7 @@
 .button {
     display: inline-block;
     background: rgb(240, 219, 79);
-    color: white;
+    color: #000;
     line-height: 1.4;
     padding: 1em 2em 1em;
     text-transform: uppercase;
@@ -88,7 +88,6 @@ section{
     display: block;
     background-position: center center;
     width: 100%;
-    background-color: red;
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 36%;
@@ -96,11 +95,11 @@ section{
 }
 
 .separator-0{
-    background-image: url(../img/2012-stage.jpg);
+    background-image: url(../img/splash/2.jpg);
 }
 .separator-1{
     /*background-image: url(https://imgee.s3.amazonaws.com/imgee/7384c593d2a944fe9ea6b61d6387de55.png);*/
-    background-image: url(../img/splash/0.jpg);
+    background-image: url(../img/splash/2.jpg);
 }
 .separator-2{
     background-image: url(../img/splash/10.jpg);
@@ -346,13 +345,16 @@ header .logo:focus {
 a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 .nav-tabs>li>a, .nav-tabs>li>a:hover{
     background-color: #537ABD;
-    color: #F46353;
+    color: #FFF;
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
-    background-color: #6A8CC6;
-    color: #F46353;
+    background-color: #FFFFFF;
+    color: #537ABD;
 }
 .nav-tabs>li>a:hover, .nav-tabs>li>a:focus{
-    background-color: rgba(223, 221, 213, 0.33);
-    color: #F46353;
+    background-color: #FFFFFF;
+    color: #537ABD;
+}
+#schedule .nav.nav-tabs>li{
+    width: 25%;
 }
