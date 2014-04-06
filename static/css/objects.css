@@ -1,7 +1,7 @@
 
 .button {
     display: inline-block;
-    background: #FBA832;
+    background: rgb(240, 219, 79);
     color: white;
     line-height: 1.4;
     padding: 1em 2em 1em;
@@ -67,7 +67,7 @@ footer, header{
     background-size: cover;
     background-attachment: fixed;
     display: block;
-    background-image: url(../img/masthead1.png);
+    background-image: url(../img/masthead2.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 90% auto;
@@ -92,13 +92,17 @@ section{
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 36%;
+    height: 90%;
+}
+
+.separator-0{
+    background-image: url(../img/2012-stage.jpg);
 }
 .separator-1{
     /*background-image: url(https://imgee.s3.amazonaws.com/imgee/7384c593d2a944fe9ea6b61d6387de55.png);*/
     background-image: url(../img/splash/0.jpg);
 }
 .separator-2{
-    /*background-image: url(https://imgee.s3.amazonaws.com/imgee/7384c593d2a944fe9ea6b61d6387de55.png);*/
     background-image: url(../img/splash/10.jpg);
 }
 .hex-separator{
@@ -113,20 +117,26 @@ svg{
 @media (min-width: 768px) {
 
 }
-
-.header .logo {
+.logo-wrapper{
+    height: 100%;
+    line-height: 100%;
+}
+header .logo {
     background: url(../img/logo1.png) no-repeat scroll center center;
     background-size: contain;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
     height: 0;
-    width:       5.5rem;
-    padding-top: 5.5rem;
+    width:       8.5rem;
+    padding-top: 8.5rem;
     -webkit-transition: all 0.5s;
        -moz-transition: all 0.5s;
          -o-transition: all 0.5s;
             transition: all 0.5s;
 }
-.header .logo:hover,
-.header .logo:focus {
+header .logo:hover,
+header .logo:focus {
     -webkit-transform: rotate(360deg);
        -moz-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
@@ -334,9 +344,12 @@ svg{
             border-radius: 30px 30px 30px 0;
 }
 a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
-
+.nav-tabs>li>a, .nav-tabs>li>a:hover{
+    background-color: #537ABD;
+    color: #F46353;
+}
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
-    background-color: rgba(223, 221, 213, 0.33);
+    background-color: #6A8CC6;
     color: #F46353;
 }
 .nav-tabs>li>a:hover, .nav-tabs>li>a:focus{

@@ -15,8 +15,21 @@ a:hover,
 a:focus {
     text-decoration: none;
     border-color: transparent;
-    color: #FBA832;
+    color: #537ABD;
 }
+a#editions:hover, a#editions:focus {
+    color: #000;
+}
+a#editions{
+    background-color: #F0DB4F;
+    padding: 0.3em 0.555em;
+    border-radius: 3px;
+    font-size: 0.65rem;
+}
+a#editions>i{
+    padding-left: 0.2em;
+}
+
 .link-silent a,
 a.link-silent   { border-bottom: none; }
 
@@ -31,6 +44,7 @@ a.link-silent   { border-bottom: none; }
 .light          { color: #EEEEEE !important; }
 .red            { color: #FF3333 !important; }
 .orange         { color: #F46353 !important; }
+.yellow    { color: rgb(240, 219, 79) !important; }
 .white          { color: #FFFFFF !important; }
 .faded          { color: rgba(255,255,255,.8) !important; }
 
@@ -42,7 +56,8 @@ a.link-silent   { border-bottom: none; }
 .fill-silver-hud{ background-color: rgba(255,255,255,0.65) !important; color: #222; }
 .fill-red       { background-color: #BB3311 !important; color: #FCF3F3; }
 .fill-redgray   { background-color: #EFE7E6 !important; color: #222020; }
-.fill-yellow    { background-color: #FBA832 !important; color: #000; }
+.fill-yellow    { background-color: rgb(240, 219, 79) !important; color: #000; }
+.fill-lightyellow    { background-color: #EBEB7E !important; color: #000; }
 .fill-darkblue  { background-color: #353F67 !important; color: #FFF; }
 .fill-blue      { background-color: #43609E !important; color: #000; }
 .fill-lightblue { background-color: #6086C4 !important; color: #000; }
