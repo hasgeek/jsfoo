@@ -358,3 +358,10 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 #schedule .nav.nav-tabs>li{
     width: 25%;
 }
+
+.img-wrapper img{
+    width: 100%;
+}
+.speaker-meta{
+    height: 150px;
+}
