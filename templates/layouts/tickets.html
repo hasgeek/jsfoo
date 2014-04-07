@@ -10,7 +10,7 @@
         <table class="table">
           <tbody>
             {% for ticket in items -%}
-              <tr class="{% if ticket.open==true %}fill-white{% endif %}">
+              <tr class="{% if ticket.open==true %}fill-silver{% endif %}">
                 <td class="bold regular-prose">{{ ticket.type }}</td>
                 <td class="hidden-xs">{{ ticket.package | safe }}</td>
                 <td class="bold regular-prose">&#8377;{{ ticket.price }}</td>
