@@ -1,0 +1,25 @@
+<section class="blog push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
+  <div class="container">
+    <div class="row space-two-bottom">
+      <h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">News</h2>
+    </div>
+    {% set exists = [] %}
+    {% for post in feed() -%}
+      {% if node.folder.name == 'blog' or node.folder == post.folder %}
+        {% if exists.append(1) %}{% endif %}
+        <div class="row">
+          <div class="col-lg-2 tiny">{{ post.published_at|datetime }}</div>
+          <div class="col-lg-10 secondary">
+            <a class="link-silent green space-1q-bottom" href="{{ url_for('node', folder=post.folder.name, node=post.name) }}">{{ post.title }}</a>
+          </div>
+        </div>
+           <hr>
+      {% endif %}
+    {%- endfor %}
+    {% if not exists %}
+      <div class="row-fluid container text-center">
+        <p>(No blog entries have been written so far)</p>    
+      </div>
+    {% endif %}
+  </div>  
+</section>
