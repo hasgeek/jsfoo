@@ -10,9 +10,18 @@
     border-radius: 0.25em;
     border: 0;
 }
-.button:hover   { color: #FFFFFF; }
+.button:hover   { color: #000; }
 .button-mini    { padding: 0.2em 0.6em; }
-.button-on-dark { background: #BB3311; }
+.button-on-dark { 
+    background: #537ABD;
+    border: 3px solid #FFF; 
+    color: #FFFFFF;
+}
+.button-on-dark:hover { 
+    background: #FFF;
+    border: 3px solid #FFF; 
+    color: #537ABD !important;
+}
 .button:focus   { text-decoration: none; }
 .button:active  { box-shadow: inset 0 0 10px #000; }
 
@@ -102,7 +111,7 @@ section{
     background-image: url(../img/splash/2.jpg);
 }
 .separator-2{
-    background-image: url(../img/splash/10.jpg);
+    background-image: url(../img/splash/0.jpg);
 }
 .hex-separator{
     height: 1px;
@@ -273,26 +282,34 @@ header .logo:focus {
 
 
 
-.sponsor-m > li {
+.sponsor-l > li {
     float: left !important;
     width: 48.5% !important;
     margin-left: 3%;
 }
-.sponsor-m > li:nth-child(odd) { margin-left: 0; }
+.sponsor-l > li:nth-child(odd) { margin-left: 0; }
 
-.sponsor-s > li {
+.sponsor-m > li {
     float: left !important;
     width: 32% !important;
     margin-left: 2%;
 }
-.sponsor-s > li:nth-child(3n+1) { margin-left: 0; }
+.sponsor-m > li:nth-child(3n+1) { margin-left: 0; }
+
+.sponsor-s > li {
+    float: left !important;
+    width: 24.25% !important;
+    margin-left: 1%;
+}
+.sponsor-s > li:nth-child(4n+1) { margin-left: 0; }
+
 
 .sponsor-compact { border-radius: 0.25em; background-color: white; }
 .sponsor-compact > li {
     float: left !important;
     margin-bottom: 0 !important;
-    width: 33.3333% !important;
-    width: calc(100/3)% !important;
+    width: 24.25% !important;
+    width: calc(100/4)% !important;
 }
 .sponsor-compact > li:nth-child(3n+1) { margin-left: 0; }
 
@@ -405,3 +422,53 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
     margin: -80px 0 0 0px;
     }
 
+
+.team-hasgeek-caption { color: #888; text-transform: uppercase; margin-top: 2rem; font-size: .8rem; font-weight: normal; }
+@media only screen and (min-width: 35em) {
+    .team-hasgeek-caption {
+        text-transform: capitalize;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        font-size: 1.250rem;
+        color: #999;
+    }
+}
+.team-hasgeek { max-width: 60em; margin: auto; }
+.team-hasgeek a {
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    border-radius: 100%;
+    -webkit-box-shadow: 0 0 0 2px #EEE;
+            box-shadow: 0 0 0 2px #EEE;
+    background-repeat: no-repeat;
+    background-size: auto 300%;
+    background-image: url(../img/team.jpg);
+    background-clip: padding-box;
+    overflow: hidden;
+}
+.team-hasgeek.fill-dark a {
+    -webkit-box-shadow: 0 0 0 2px #222;
+            box-shadow: 0 0 0 2px #222;
+}
+.team-hasgeek a > span {
+    display: block;
+    width: 100%;
+    margin-top: -25%;
+    background-color: rgba(0,0,0,.7);
+    text-align: center;
+    color: white;
+    font-size: .8rem;
+    text-transform: uppercase;
+    padding: .2rem 0;
+}
+@media only screen and (min-width: 30em) { .team-hasgeek a > span { font-size: .45rem; } }
+
+.team-hasgeek .jamna a      { background-position: top center; }
+.team-hasgeek .kiran a      { background-position: top right; }
+.team-hasgeek .mitesh a      { background-position: center left; }
+.team-hasgeek .praseetha a  { background-position: center right; }
+.team-hasgeek .radha a      { background-position: bottom left; }
+.team-hasgeek .tony a   { background-position: bottom center; }
+.team-hasgeek .zainab a     { background-position: bottom right; }

@@ -17,6 +17,12 @@ a:focus {
     border-color: transparent;
     color: #537ABD;
 }
+.fill-blue a:hover,
+.fill-blue a:focus,
+.fill-blueprint a:hover,
+.fill-blueprint a:focus {
+    color: #FFF;
+}
 a#editions:hover, a#editions:focus {
     color: #000;
 }
