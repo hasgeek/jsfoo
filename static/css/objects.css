@@ -303,25 +303,23 @@ header .logo:focus {
 }
 .sponsor-s > li:nth-child(4n+1) { margin-left: 0; }
 
-
-.sponsor-compact { border-radius: 0.25em; background-color: white; }
 .sponsor-compact > li {
     float: left !important;
     margin-bottom: 0 !important;
-    width: 24.25% !important;
-    width: calc(100/4)% !important;
+    width: 19.2% !important;
+    margin-left: 1%;
 }
-.sponsor-compact > li:nth-child(3n+1) { margin-left: 0; }
+.sponsor-compact > li:nth-child(5n+1) { margin-left: 0; }
 
 .sponsor-logo       { text-align: center; border-radius: 0.25rem; height: 5.34rem; line-height: 3.35rem; padding: .84rem; }
 .sponsor-logo:hover { background-color: #E5E5E5 !important; }
 .sponsor-logo img   { max-height: 100%; max-width: 100%; }
 
 .sponsor-xl       .sponsor-logo { height: 6.67rem;  line-height: 4rem;    padding: 1.34rem; }
-.sponsor-l        .sponsor-logo { height: 5.34rem;  line-height: 3.35rem; padding: .84rem;  }
-.sponsor-m        .sponsor-logo { height: 5.34rem;  line-height: 2.68rem; padding: 1.34rem; }
-.sponsor-s        .sponsor-logo { height: 4rem;     line-height: 2rem;    padding: .84rem;  }
-.sponsor-compact  .sponsor-logo { height: 4rem;     line-height: 2rem;    padding: .84rem;  }
+.sponsor-l        .sponsor-logo { height: 4.34rem;  line-height: 2.35rem; padding: .5rem;  }
+.sponsor-m        .sponsor-logo { height: 3.50rem;  line-height: 0.18rem; padding: 0.9rem; }
+.sponsor-s        .sponsor-logo { height: 3rem;     line-height: 0.5rem;    padding: .84rem;  }
+.sponsor-compact  .sponsor-logo { height: 3rem;     line-height: 0.7rem;    padding: .74rem;  }
 
 .sponsor-xl .sponsor-logo.contain-width { padding: 1.34rem 3rem; }
 .sponsor-l  .sponsor-logo.contain-width { padding: .84rem 4rem;  }
@@ -336,7 +334,7 @@ header .logo:focus {
     .credits .row-fluid .offset1 {
         margin-left: 8.547008547008547%;
         *margin-left: 8.440625568285142%;
-    }
+    }   
 }
 @media (min-width: 768px) and (max-width: 979px) {
     .credits .row-fluid .offset1 {

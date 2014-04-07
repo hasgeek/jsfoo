@@ -73,6 +73,7 @@
 .nospace,    .nospace-bottom    { margin-bottom: 0       !important; }
 
 .list-space-line li             { margin-bottom: 1.50rem !important; }
+.sponsors .list-space-line li   { margin-bottom: 0.60rem !important; }
 
 .pad-six,    .pad-six-left      { padding-left:  6.00rem !important; }
 .pad-six,    .pad-six-right     { padding-right: 6.00rem !important; }
@@ -147,11 +148,10 @@
 
 
 /* Flexible thumbnail columns */
-.thumbnail-columns { padding: 0 1rem; }
 .thumbnail-columns > li {
     float: left;
     width: 50%;
-    padding: 0 3% 0 0;
+    padding: 0 0 0 2%;
     margin: 1rem 0;
 }
 /*.thumbnail-columns > li:nth-of-type(odd) { clear: both; }*/
@@ -211,7 +211,7 @@
     .thumbnail-columns-five > li:nth-of-type(odd)  { clear: none; }
     .thumbnail-columns-five > li:nth-of-type(3n+2) { margin-right: 3%; }
     .thumbnail-columns-five > li:nth-of-type(3n+1) { margin-right: 3%; clear: both; }
-    
+
     .thumbnail-columns-three h3,
     .thumbnail-columns-four h3,
     .thumbnail-columns-four-narrow h3,
