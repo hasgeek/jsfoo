@@ -75,7 +75,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-12 fill-white">
+          <div class="col-lg-12 fill-white nav-menu">
             <ul class="list-plain yellow prose pull-right push-one pad-two-right">
                 <li class="inline-block"><a href="/2014">Home</a></li>
                 <li class="pad-half-left inline-block"><a href="/2014/conference">Conference</a></li>
@@ -187,6 +187,30 @@
     <script src="{{ ASSET_URL }}"></script>
   {% endassets -%}
 {%- endif %}
+
+<script>
+  $(window).scroll(function () {
+    var currentScroll = $(this).scrollTop();
+    var checkPoint;
+    if(Modernizr.mq('only screen and (max-width: 45em)')){
+      checkPoint = 728;
+    } else if(Modernizr.mq('only screen and (min-width: 45em) and (max-width: 767px)')){
+      checkPoint = 620;
+    } else {
+      checkPoint = 895;
+    }
+    if( currentScroll > checkPoint){
+      $('.nav-menu').addClass('navbar-fixed-top').switchClass("col-lg-12", "col-lg-6");
+    } else {
+      $('.nav-menu').removeClass('navbar-fixed-top');
+    }
+    if( currentScroll > 248){
+      $('.nav-menu').addClass('navbar-fixed-top');
+    } else {
+      $('.nav-menu').removeClass('navbar-fixed-top');
+    }
+  });
+</script>
 
 <script>
 // Google Analytics

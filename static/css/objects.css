@@ -470,3 +470,10 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 .team-hasgeek .radha a      { background-position: bottom left; }
 .team-hasgeek .tony a   { background-position: bottom center; }
 .team-hasgeek .zainab a     { background-position: bottom right; }
+
+
+.navbar-fixed-top{
+    width: 50%;
+    right: 0;
+    left: auto;
+}

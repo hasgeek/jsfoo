@@ -1,19 +1,22 @@
-<section class="{% if background %} fill-{{ background }}{% endif %}">
-  <div class="page-section container">
-  <div class="row">
-    <div class="col-lg-6 col-lg-offset-2 nospace-bottom">
+<section>
+  <div class="page-section">
+    <div class="col-lg-6 nospace-bottom fill-silver">
       <!-- <h4 class="large bold all-caps">{{ event.subtitle }}</h4> -->
       <!-- {% if event.when %}<p class="legible">{{ event.when|safe }}</p>{% endif %} -->
-      <div class="regular calm prose-type prose">
+      <div class="regular calm prose-type prose pad-three push-three">
+        {{ event.blurb|safe }}
+
+        {% if event.ticket %}
+        <p class="tiny space-line-top">
+          <a href="{{ event.ticket }}" class="button">Purchase tickets</a>
+        </p>
+        {% endif %}
+      </div>
+      <div class="regular calm prose-type prose pad-three push-three">
         {{ event.blurb|safe }}
       </div>
-      {% if event.ticket %}
-      <p class="tiny space-line-top">
-        <a href="{{ event.ticket }}" class="button">Purchase tickets</a>
-      </p>
-      {% endif %}
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-6 fill-blue">
       <div class="banner"></div>
     </div>
   </div>
