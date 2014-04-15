@@ -24,9 +24,11 @@
                 <div class="legible">{{ item.speaker }}</div>
                 <h5>{{ item.designation|safe }}</h5>
                 <h5 class="all-caps">{{ item.place }}</h5>
-                {% if item.twitter %}<h4 class="brown link-silent"><a target="_blank" href="https://twitter.com/{{ item.twitter }}">@{{ item.twitter }}</a></h4>{% endif %}
-                {% if item.sponsor %}<h5 class="link-silent dark">Sponsored by <a target="_blank" href="{{ item.sponsor_link }}">{{ item.sponsor }}</a></h5>{% endif %}
-                {% if item.preview %}<h5 class="link-silent orange"><a target="_blank" href="{{ item.preview }}"><i class="icon-youtube-play"></i> preview video</a></h5>{% endif %}
+                <h5>{% if item.sponsor %}Sponsored by <a target="_blank" href="{{ item.sponsor_link }}">{{ item.sponsor }}</a>{% endif %}</h5>
+                <h5 class="link-silent">
+                 {% if item.preview %}<a target="_blank" href="{{ item.preview }}"><i class="fa fa-youtube-play"></i></a>{% endif %}{% if item.funnel %}&nbsp;<a target="_blank" href="{{ item.funnel }}"><i class="fa fa-filter"></i></a>{% endif %}
+                {% if item.twitter %}&nbsp;<a target="_blank" href="https://twitter.com/{{ item.twitter }}"><i class="fa fa-twitter"></i></a>{% endif %}
+                </h5>
               </div>
             </li>
       {% if loop.last %}

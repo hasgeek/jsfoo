@@ -4,20 +4,25 @@
     background: #E6A813;
     color: #000;
     line-height: 1.4;
-    padding: 1em 2em 1em;
+    padding: 0.8em 2em 0.7em;
     text-transform: uppercase;
     text-align: center;
     border-radius: 0.25em;
     border: 0;
+    border-bottom: 4px solid #CE9611;
 }
-.button:hover   { color: #000; }
+.button:hover   { color: #000; background-color: #CE9611; border-color: #B78510; }
 .button-mini    { padding: 0.2em 0.6em; }
+.button-dark { 
+    background: #68CFFF;
+}
 .button-on-dark { 
     background: #68CFFF;
+    border-bottom: none;
 }
 .button-on-dark:hover { 
     background: #FFF; 
-    color: #68CFFF !important;
+    color: #4487A6 !important;
 }
 .button:focus   { text-decoration: none; }
 .button:active  { box-shadow: inset 0 0 10px #000; }
@@ -60,32 +65,32 @@
 @media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
 #hg-bar { background-color: #FFF !important; border-bottom: none;}
 
-html, body, #page, header, section { 
+/*html, body, #page, header, section { 
     height: 100%; 
 }
-footer, header{
+footer .no-touch, header .no-touch{
     background-attachment: fixed;
-}
+}*/
 .banner { 
-    position: relative;
+    /*position: relative;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed;*/
     display: block;
-    background-image: url(../img/masthead2.png);
+    background-image: url(../img/hexil.png);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 90% auto;
-    padding-bottom: 36%;
+    background-size: 60% auto;
+    padding-bottom: 100%;
     height: 100%;
 }
-section{
+/*section{
     height: auto;
     overflow: hidden;
-}
+}*/
 
-.separator { 
+/*.separator { 
     position: relative;
     background-position: top center;
     background-repeat: no-repeat;
@@ -98,18 +103,17 @@ section{
     background-size: cover;
     padding-bottom: 36%;
     height: 90%;
-}
+}*/
 
 .separator-0{
     background-image: url(../img/splash/2.jpg);
 }
-.separator-1{
-    /*background-image: url(https://imgee.s3.amazonaws.com/imgee/7384c593d2a944fe9ea6b61d6387de55.png);*/
+/*.separator-1{
     background-image: url(../img/splash/2.jpg);
 }
 .separator-2{
     background-image: url(../img/splash/0.jpg);
-}
+}*/
 .hex-separator{
     height: 1px;
     width: 100%;
@@ -129,9 +133,7 @@ svg{
 header .logo {
     background: url(../img/logo1.png) no-repeat scroll center center;
     background-size: contain;
-    background-position: center;
-    margin-left: auto;
-    margin-right: auto;
+    background-position: left;
     height: 0;
     width:       8.5rem;
     padding-top: 8.5rem;
@@ -142,11 +144,11 @@ header .logo {
 }
 header .logo:hover,
 header .logo:focus {
-    -webkit-transform: rotate(360deg);
+/*    -webkit-transform: rotate(360deg);
        -moz-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
          -o-transform: rotate(360deg);
-            transform: rotate(360deg);
+            transform: rotate(360deg);*/
 }
 @media (max-width:767px) {
     .header        { padding: 1rem 0 !important; }

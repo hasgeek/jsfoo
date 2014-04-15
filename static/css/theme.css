@@ -15,19 +15,12 @@ a:hover,
 a:focus {
     text-decoration: none;
     border-color: transparent;
-    color: #537ABD;
+    color: #E6A813;
 }
-.fill-blue a:hover,
-.fill-blue a:focus,
-.fill-blueprint a:hover,
-.fill-blueprint a:focus {
-    color: #FFF;
-}
-a#editions:hover, a#editions:focus {
-    color: #000;
-}
+
 a#editions{
-    background-color: #F0DB4F;
+    background-color: #CF6F01;
+    color: #CFE2E0;
     padding: 0.3em 0.555em;
     border-radius: 3px;
     font-size: 0.65rem;
@@ -49,10 +42,14 @@ a.link-silent   { border-bottom: none; }
 .gray           { color: #AAAAAA !important; }
 .light          { color: #EEEEEE !important; }
 .red            { color: #FF3333 !important; }
-.orange         { color: #F46353 !important; }
-.yellow    { color: rgb(240, 219, 79) !important; }
 .white          { color: #FFFFFF !important; }
 .faded          { color: rgba(255,255,255,.8) !important; }
+
+.blue           { color: #4487A6 !important; }
+.skyblue        { color: #68CFFF !important; }
+.silver         { color: #CFE2E0 !important; }
+.orange         { color: #CF6F01 !important; }
+.yellow         { color: #E6A813 !important; }
 
 .fill-white     { background-color: #FFFFFF !important; color: #444; }
 .fill-dark      { background-color: #DED6C2 !important; color: #333; }
@@ -64,15 +61,17 @@ a.link-silent   { border-bottom: none; }
 .fill-lightyellow    { background-color: #EBEB7E !important; color: #000; }
 .fill-darkblue  { background-color: #353F67 !important; color: #FFF; }
 .fill-blue      { background-color: #43609E !important; color: #000; }
-.fill-lightblue { background-color: #6086C4 !important; color: #000; }
+.fill-lightblue { background-color: #6086C4 !important; color: #000; }*/
 .fill-blueprint { 
-    background-image: url(https://imgee.s3.amazonaws.com/imgee/c596bb6fe5954b74b870e777dceecb1a.png);
     background-repeat: repeat;
-    background-size: 10px; 
-}*/
+    background-size: 12px; 
+    background-color: #4487A6 !important; 
+    background-image: url(../img/blueprint_mesh.png);
+    color: #FFF;
+}
 .fill-cream     { background-color: #F6F7BD !important; color: #000; }
 .fill-green     { background-color: #80BCA3 !important; color: #000; }
-.fill-red       { background-color: #BF4D28 !important; color: #FFF; }
+.fill-brown       { background-color: #241C1B !important; color: #FFF; }
 .fill-orange    { background-color: #E6AC27 !important; color: #000; }
 .fill-brown     { background-color: #655643 !important; color: #FFF; }
 

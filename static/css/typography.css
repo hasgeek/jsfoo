@@ -5,26 +5,26 @@
 
 /*  Families  */
 
-body { font-family: "Open Sans", brandon-grotesque, "Brandon Grotesque", "Gill Sans", "Gill Sans MT", sans-serif; }
-.title-type     { font-family: 'Syncopate', "Open Sans Condensed", brandon-grotesque, "Brandon Grotesque", sans-serif; }
+body { font-family: 'Lato', "Open Sans", sans-serif; }
+.title-type     { font-family: 'Syncopate', "Open Sans Condensed", sans-serif; }
 
 i,
 em,
-.prose-type     { font-family: "Open Sans", adobe-caslon-pro, "Adobe Caslon Pro", serif; font-weight: 300; }
+.prose-type     { font-family: 'Lato', "Open Sans", serif; font-weight: 300; }
 
 
 /*  Scale  */
 
-html                    { font-size: 16px;     line-height: 1.5; }
+html                    { font-size: 20px;     line-height: 1.4; }
 
 .huge                   { font-size: 3.000rem; line-height: 1.10; }
 .huge.body-type         { font-size: 2.125rem; line-height: 1.10; }
 .extralarge             { font-size: 1.750rem; line-height: 1.30; }
-.large                  { font-size: 1.500rem; line-height: 1.15; }
+.large                  { font-size: 1.050rem; line-height: 1.22; }
 .large-prose            { font-size: 1.250rem; line-height: 1.40; }
-.legible                { font-size: 1.125rem; line-height: 1.15; }
+.legible                { font-size: 0.900rem; line-height: 1.30; }
 .legible-prose          { font-size: 1.125rem; line-height: 1.40; }
-.regular                { font-size: 1.000rem; line-height: 1.50; }
+.regular                { font-size: 0.630rem; line-height: 1.53; }
 .regular-prose          { font-size: 1.125rem; line-height: 1.45; }
 .secondary              { font-size: 0.875rem; line-height: 1.50; }
 .secondary-prose        { font-size: 0.950rem; line-height: 1.40; }
