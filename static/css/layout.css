@@ -77,6 +77,10 @@
 
 .pad-six,    .pad-six-left      { padding-left:  6.00rem !important; }
 .pad-six,    .pad-six-right     { padding-right: 6.00rem !important; }
+.pad-five,  .pad-five-left      { padding-left:  5.00rem !important; }
+.pad-five,  .pad-five-right     { padding-right: 5.00rem !important; }
+.pad-four,  .pad-four-left      { padding-left:  4.00rem !important; }
+.pad-four,  .pad-four-right     { padding-right: 4.00rem !important; }
 .pad-three,  .pad-three-left    { padding-left:  3.00rem !important; }
 .pad-three,  .pad-three-right   { padding-right: 3.00rem !important; }
 .pad-two,    .pad-two-left      { padding-left:  2.00rem !important; }

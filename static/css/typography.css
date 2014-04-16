@@ -24,11 +24,11 @@ html                    { font-size: 20px;     line-height: 1.4; }
 .large-prose            { font-size: 1.250rem; line-height: 1.40; }
 .legible                { font-size: 0.900rem; line-height: 1.30; }
 .legible-prose          { font-size: 1.125rem; line-height: 1.40; }
-.regular                { font-size: 0.630rem; line-height: 1.53; }
+.regular                { font-size: 0.750rem; line-height: 1.60; }
 .regular-prose          { font-size: 1.125rem; line-height: 1.45; }
 .secondary              { font-size: 0.875rem; line-height: 1.50; }
 .secondary-prose        { font-size: 0.950rem; line-height: 1.40; }
-.tiny                   { font-size: 0.750rem; line-height: 1.60; }
+.tiny                   { font-size: 0.630rem; line-height: 1.53; }
 
 @media only screen and (min-width: 30em) {
     html                { font-size: 18px; }

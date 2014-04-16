@@ -78,32 +78,32 @@ footer .no-touch, header .no-touch{
     background-size: cover;
     background-attachment: fixed;*/
     display: block;
-    background-image: url(../img/hexil.png);
+    background-image: url(../img/2012-stage.jpg);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 60% auto;
-    padding-bottom: 100%;
-    height: 100%;
+    background-size: 100% auto;
+    height: 400px;
+    border-radius: 10px;
 }
 /*section{
     height: auto;
     overflow: hidden;
 }*/
 
-/*.separator { 
-    position: relative;
+.separator { 
+   /* position: relative;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    display: block;
+    display: block;*/
     background-position: center center;
-    width: 100%;
+    width: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 36%;
-    height: 90%;
-}*/
+    padding-bottom: 14%;
+    height: 50%;
+}
 
 .separator-0{
     background-image: url(../img/splash/2.jpg);
@@ -131,12 +131,12 @@ svg{
     line-height: 100%;
 }
 header .logo {
-    background: url(../img/logo1.png) no-repeat scroll center center;
+    background: url(../img/logo.png) no-repeat scroll center center;
     background-size: contain;
     background-position: left;
     height: 0;
-    width:       8.5rem;
-    padding-top: 8.5rem;
+    width:       6rem;
+    padding-top: 6rem;
     -webkit-transition: all 0.5s;
        -moz-transition: all 0.5s;
          -o-transition: all 0.5s;
@@ -362,7 +362,7 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
     color: #FFF;
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
-    background-color: #CFE2E0;
+    background-color: #FFF;
     color: #CF6F01;
 }
 .nav-tabs>li>a:hover, .nav-tabs>li>a:focus{

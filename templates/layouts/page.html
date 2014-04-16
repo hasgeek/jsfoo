@@ -58,42 +58,21 @@
   
 <div id="page">
 {% block header %}
-<header class="">
-  <div class="col-lg-12 fill-orange">
+<header class="container">
+  <div class="col-lg-12">
     <div class="row">
-      <div class="col-lg-6">
-        <div class="pad-three-left push-two-top">
+      <div class="col-lg-2">
+        <div class="push-one">
           <a class="ir logo" href="/2013">
             JSFoo 2014
           </a>
         </div>
       </div>
-      <div class="col-lg-6">
-        <div class="row">
-          <div class="col-lg-12 text-right legible space-two-bottom space-three-top pad-two-right">
-            JSFoo is India's only national JavaScript conference. Join us on September 17 - 20, 2014 at the MLR Convention Centre, JP Nagar, Bangalore for the sixth edition of JSFoo. Let’s bring together the javascript ninjas creating the future of the web.
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12 fill-white nav-menu">
-            <ul class="list-plain yellow prose pull-right push-one pad-two-right">
-                <li class="inline-block"><a href="/2014">Home</a></li>
-                <li class="pad-half-left inline-block"><a href="/2014/conference">Conference</a></li>
-                <li class="pad-half-left inline-block"><a href="/2014/workshops">Workshops</a></li>
-                <li class="pad-half-left inline-block"><a href="/2014/venue">Venue</a></li>
-                <li class="pad-half-left inline-block"><a href="/2014/sponsors">Sponsors</a></li>
-                <li class="pad-half-left inline-block"><a href="http://jsfoo.doattend.com/">Tickets</a></li>
-              </ul>
-          </div>
-        </div>
-      </div>
 
-
-
-      <!-- <div class="col-lg-12 secondary">
+      <div class="col-lg-10 secondary">
         <div class="row">
           <div class="col-lg-12">
-            <ul class="list-plain yellow prose pull-right">
+            <ul class="list-plain yellow prose pull-right push-two-top">
               <li class="inline-block"><a href="/2014">Home</a></li>
               <li class="pad-half-left inline-block"><a href="/2014/conference">Conference</a></li>
               <li class="pad-half-left inline-block"><a href="/2014/workshops">Workshops</a></li>
@@ -104,10 +83,7 @@
           </div>
         </div>
         <div class="row space-line-top">
-          <div class="col-lg-6">
-            
-          </div>
-          <div class="col-lg-6">
+          <div class="col-lg-12">
             <div class="dropdown pull-right link-silent tiny ">
               <a id="editions" data-toggle="dropdown" href="#">&nbsp;Bangalore 2014 <i class="fa fa-caret-down"></i>&nbsp;</a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
@@ -120,11 +96,17 @@
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
   </div>
 </header>
+
+<div class="col-lg-12">
+  <div class="pad-four">
+    <div class="banner"></div>
+  </div>
+</div>
 {% endblock %}
 
 
@@ -138,17 +120,14 @@
 {% endblock %}
 
 
-<footer class="page-footer page-section fill-orange clearfix">
+<footer class="page-footer page-section clearfix">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center large space-two-bottom">Contact Us</div>
-    </div>
-    <div class="row space-two-bottom">
+    <!-- <div class="row space-two">
       <div class="col-lg-4"><a href="" class="button button-on-dark full-width tiny">Email</a></div>
       <div class="col-lg-4"><a href="" class="button button-on-dark full-width tiny">Twitter</a></div>
       <div class="col-lg-4"><a href="" class="button button-on-dark full-width tiny">Lanyard</a></div>
-    </div>
-    <div class="row text-center tiny white space-four-bottom">
+    </div> -->
+    <div class="row text-center tiny space-four-bottom">
       <p class="tiny">All organisers, sponsors and attendees are required to follow the conference <a href="code-of-conduct">code of conduct</a>.</p>
       <p class="tiny">JSFoo is a conference by HasGeek. Copyright &copy; 2010–13. All rights reserved.</p>
       <p><script type="text/javascript">
@@ -188,7 +167,7 @@
   {% endassets -%}
 {%- endif %}
 
-<script>
+<!-- <script>
   $(window).scroll(function () {
     var currentScroll = $(this).scrollTop();
     var checkPoint;
@@ -210,7 +189,7 @@
       $('.nav-menu').removeClass('navbar-fixed-top');
     }
   });
-</script>
+</script> -->
 
 <script>
 // Google Analytics
