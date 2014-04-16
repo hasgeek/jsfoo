@@ -208,7 +208,6 @@ header .logo:focus {
     .venue-home .country-level p { margin-top: 0; }
 }
 .js .venue-home {
-    border-top:    1px solid #833;
 /*    border-bottom: 1px solid #000;*/
     position: relative;
     padding: 0;
@@ -227,7 +226,7 @@ header .logo:focus {
 }
 .js .leaflet-map {
     float: right;
-    height: 555px;
+    height: 400px;
     color: black;
 }
 .js .leaflet-map a { border-bottom: none; }
@@ -244,13 +243,13 @@ header .logo:focus {
     .js .venue-home .city-level    { width: 100%; }
     .js .venue-home .country-level { display: none; }
 }
-@media (min-height: 300px) { .js .leaflet-map { height: 250px; } }
+/*@media (min-height: 300px) { .js .leaflet-map { height: 250px; } }
 @media (min-height: 450px) { .js .leaflet-map { height: 425px; } }
 @media (min-height: 550px) { .js .venue-home .leaflet-map { height: 535px; } }
 @media (min-height: 630px) { .js .venue-home .leaflet-map { height: 620px; } }
 @media (min-height: 725px) { .js .venue-home .leaflet-map { height: 725px; } }
 @media (min-height: 800px) { .js .venue-home .leaflet-map { height: 800px; } }
-
+*/
 .video-thumbnail h4 {
     font-weight: normal;
     margin: 0.75rem 0 0.25rem;
