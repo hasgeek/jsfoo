@@ -150,6 +150,11 @@ header .logo:focus {
          -o-transform: rotate(360deg);
             transform: rotate(360deg);*/
 }
+
+header nav ul>li>a:hover{
+    border-top: 10px solid #CF6F01;
+    color: #000;
+}
 @media (max-width:767px) {
     .header        { padding: 1rem 0 !important; }
     .header .logo  { margin: 0 auto; }
@@ -157,6 +162,7 @@ header .logo:focus {
         margin-top: 1rem !important;
         text-align: center;
         text-transform: lowercase;
+        background-color: red;
     }
     .header nav ul { font-size: 1rem; }
     .header h3 {

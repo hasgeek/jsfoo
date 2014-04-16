@@ -20,8 +20,8 @@ a:focus {
 
 a#editions{
     background-color: #CF6F01;
-    color: #CFE2E0;
-    padding: 0.3em 0.555em;
+    color: #FFFFFF;
+    padding: 0.3em 0.9em 0.45em;
     border-radius: 3px;
     font-size: 0.65rem;
 }
