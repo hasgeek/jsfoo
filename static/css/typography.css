@@ -20,8 +20,8 @@ html                    { font-size: 20px;     line-height: 1.4; }
 .huge                   { font-size: 3.000rem; line-height: 1.10; }
 .huge.body-type         { font-size: 2.125rem; line-height: 1.10; }
 .extralarge             { font-size: 1.750rem; line-height: 1.30; }
-.large                  { font-size: 1.250rem; line-height: 1.40; }
-.large-prose            { font-size: 1.050rem; line-height: 1.22; }
+.large                  { font-size: 1.250rem; line-height: 1.22; }
+.large-prose            { font-size: 0.600rem; line-height: 1.22; }
 .legible                { font-size: 0.900rem; line-height: 1.30; }
 .legible-prose          { font-size: 1.125rem; line-height: 1.40; }
 .regular                { font-size: 0.750rem; line-height: 1.60; }
@@ -40,7 +40,7 @@ html                    { font-size: 20px;     line-height: 1.4; }
     html                { font-size: 21px; }
     .huge.body-type     { font-size: 2.500rem; line-height: 1.05; }
     .extralarge         { font-size: 2.000rem; line-height: 1.30; }
-    .large-prose        { font-size: 1.500rem; line-height: 1.44; }
+    .large-prose        { font-size: 1.000rem; line-height: 1.22; }
     .regular-prose      { font-size: 1.000rem; line-height: 1.50; }
     .secondary-prose    { font-size: 0.800rem; line-height: 1.49; }
     .tiny               { font-size: 0.750rem; line-height: 1.49; }

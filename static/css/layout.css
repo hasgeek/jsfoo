@@ -323,3 +323,11 @@ a.block-link:hover { color: #D44 !important; outline: none; }
 
 .fixed{ position: fixed; }
 
+.border-bottom-line{
+    border-bottom: 1px solid #000;
+}
+h2.border-bottom-line>span{
+    margin: 0;
+    padding: 0;
+}
+

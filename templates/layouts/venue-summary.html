@@ -1,12 +1,19 @@
 <section class="venue-home page-section clearfix{% if background %} fill-{{ background }}{% endif %}">
   <div class="container">
-    <div class="row space-one-bottom">      
+    
+    <div class="row">     
       <div class="col-lg-12">
-        <h2 class="extralarge all-caps text-center">Venue</h2>
+          <h2 class="large-prose all-caps text-center border-bottom-line space-one-bottom"><span class="fill-black pad-one">Venue</span></h2>
+      </div>
+    </div>
+
+    <div class="row space-two-bottom space-one-top">      
+      <div class="col-lg-12">
+        <p class="legible text-center">{{ venue.address|safe }}</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-12 pad-two">
+      <div class="col-lg-12 pad-two-bottom">
         <!-- <h2 class="offset1 span4 extralarge all-caps">{% if page_link %}<a href="{{ page_link }}" class="link-silent">{% endif %}Venue{% if page_link %}</a>{% endif %}</h2> -->
         <div
           class="leaflet-map city-level"
@@ -31,11 +38,6 @@
           </p>
         
         </div>
-      </div>
-    </div>
-    <div class="row space-one-bottom">      
-      <div class="col-lg-12">
-        <p class="legible text-center space-two-top">{{ venue.address|safe }}</p>
       </div>
     </div>
   </div>
