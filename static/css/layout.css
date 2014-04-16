@@ -330,4 +330,7 @@ h2.border-bottom-line>span{
     margin: 0;
     padding: 0;
 }
-
+.lean-left{
+    transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
+}
