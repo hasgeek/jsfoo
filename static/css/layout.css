@@ -99,6 +99,8 @@
 .nopad,      .nopad-right       { padding-right: 0       !important; }
 
 
+.push-eight,  .push-eight-top     { padding-top:    8.00rem !important; }
+.push-eight,  .push-eight-bottom  { padding-bottom: 8.00rem !important; }
 .push-four,  .push-four-top     { padding-top:    4.00rem !important; }
 .push-four,  .push-four-bottom  { padding-bottom: 4.00rem !important; }
 .push-three, .push-three-top    { padding-top:    3.00rem !important; }

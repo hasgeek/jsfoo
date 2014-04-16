@@ -316,7 +316,7 @@ header nav ul>li>a:hover{
 .sponsor-compact > li:nth-child(5n+1) { margin-left: 0; }
 
 .sponsor-logo       { text-align: center; border-radius: 0.25rem; height: 5.34rem; line-height: 3.35rem; padding: .84rem; }
-.sponsor-logo:hover { background-color: #E5E5E5 !important; }
+.sponsor-logo:hover { background-color: rgba(222, 214, 194, 0.2) !important; }
 .sponsor-logo img   { max-height: 100%; max-width: 100%; }
 
 .sponsor-xl       .sponsor-logo { height: 6.67rem;  line-height: 4rem;    padding: 1.34rem; }
@@ -367,8 +367,12 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
     color: #FFF;
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
-    background-color: #FFF;
+    background-color: #DED6C2;
+    border-color: #DED6C2;
     color: #CF6F01;
+}
+.nav-tabs>li:last-child>a{
+    margin-right: 0;
 }
 .nav-tabs>li>a:hover, .nav-tabs>li>a:focus{
     background-color: #E6A813;
