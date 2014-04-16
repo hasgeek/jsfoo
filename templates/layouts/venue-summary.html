@@ -1,31 +1,43 @@
 <section class="venue-home page-section clearfix{% if background %} fill-{{ background }}{% endif %}">
-<div class="container">
-  <div class="row">
-  <div class="col-lg-12 pad-two">
-    <!-- <h2 class="offset1 span4 extralarge all-caps">{% if page_link %}<a href="{{ page_link }}" class="link-silent">{% endif %}Venue{% if page_link %}</a>{% endif %}</h2> -->
-    <div
-      class="leaflet-map city-level"
-      data-label="{{ venue.map.osm.label }}"
-      data-zoom="{{ venue.map.osm.zoom }}"
-      data-marker="{{ venue.map.osm.marker }}">
-    
-      <p class="offset6 span6 legible-prose">
-        {{ venue.address|safe }}
-      </p>
-    
+  <div class="container">
+    <div class="row space-one-bottom">      
+      <div class="col-lg-12">
+        <h2 class="extralarge all-caps text-center">Venue</h2>
+      </div>
     </div>
-  
-    <div
-      class="leaflet-map country-level"
-      data-zoom="{{ venue.city.map.osm.zoom }}"
-      data-label="{{ venue.city.map.osm.label }}"
-      data-marker="{{ venue.city.map.osm.marker }}">
-    
-      <p class="offset6 span6 legible-prose">
-        {{ venue.city.address|safe }}
-      </p>
-    
-    </div></div>
-  </div>
+    <div class="row">
+      <div class="col-lg-12 pad-two">
+        <!-- <h2 class="offset1 span4 extralarge all-caps">{% if page_link %}<a href="{{ page_link }}" class="link-silent">{% endif %}Venue{% if page_link %}</a>{% endif %}</h2> -->
+        <div
+          class="leaflet-map city-level"
+          data-label="{{ venue.map.osm.label }}"
+          data-zoom="{{ venue.map.osm.zoom }}"
+          data-marker="{{ venue.map.osm.marker }}">
+        
+          <p class="offset6 span6 legible-prose">
+            {{ venue.address|safe }}
+          </p>
+        
+        </div>
+      
+        <div
+          class="leaflet-map country-level"
+          data-zoom="{{ venue.city.map.osm.zoom }}"
+          data-label="{{ venue.city.map.osm.label }}"
+          data-marker="{{ venue.city.map.osm.marker }}">
+        
+          <p class="offset6 span6 legible-prose">
+            {{ venue.city.address|safe }}
+          </p>
+        
+        </div>
+      </div>
+    </div>
+    <div class="row space-one-bottom">      
+      <div class="col-lg-12">
+        <p class="legible text-center space-two-top">{{ venue.address|safe }}</p>
+      </div>
+    </div>
   </div>
 </section>
+<hr>

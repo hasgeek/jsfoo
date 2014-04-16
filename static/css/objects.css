@@ -1,15 +1,15 @@
 
 .button {
     display: inline-block;
-    background: #E6A813;
+    background: #CF6F01;
     color: #000;
     line-height: 1.4;
     padding: 0.8em 2em 0.7em;
     text-transform: uppercase;
     text-align: center;
-    border-radius: 0.25em;
+    border-radius: 2em;
     border: 0;
-    border-bottom: 4px solid #CE9611;
+    border: 4px solid #DED6C2;
 }
 .button:hover   { color: #000; background-color: #CE9611; border-color: #B78510; }
 .button-mini    { padding: 0.2em 0.6em; }
@@ -219,17 +219,7 @@ header nav ul>li>a:hover{
     padding: 0;
 /*    padding: 1.5rem;*/
 }
-.js .venue-home h2 {
-    position: absolute;
-    z-index: 100;
-    color: black;
-    width: auto;
-    margin: 0;
-    padding:0;
-    font-size: 3rem;
-    right: 1.2rem;
-    top:   0.55rem;
-}
+
 .js .leaflet-map {
     float: right;
     height: 400px;
@@ -316,7 +306,7 @@ header nav ul>li>a:hover{
 .sponsor-compact > li:nth-child(5n+1) { margin-left: 0; }
 
 .sponsor-logo       { text-align: center; border-radius: 0.25rem; height: 5.34rem; line-height: 3.35rem; padding: .84rem; }
-.sponsor-logo:hover { background-color: rgba(222, 214, 194, 0.2) !important; }
+.sponsor-logo:hover { background-color: rgba(222, 214, 194, 0.25) !important; }
 .sponsor-logo img   { max-height: 100%; max-width: 100%; }
 
 .sponsor-xl       .sponsor-logo { height: 6.67rem;  line-height: 4rem;    padding: 1.34rem; }
@@ -363,21 +353,20 @@ header nav ul>li>a:hover{
 }
 a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 .nav-tabs>li>a, .nav-tabs>li>a:hover{
-    background-color: #CF6F01;
-    color: #FFF;
+    background-color: rgba(222, 214, 194, 0.4);
+    color: #333;
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
-    background-color: #DED6C2;
-    border-color: #DED6C2;
+    background-color: rgba(222, 214, 194, 0.15);
+    border-color: rgba(222, 214, 194, 0.15);
     color: #CF6F01;
 }
 .nav-tabs>li:last-child>a{
     margin-right: 0;
 }
 .nav-tabs>li>a:hover, .nav-tabs>li>a:focus{
-    background-color: #E6A813;
+    background-color: rgba(222, 214, 194, 0.15);
     color: #CF6F01;
-    border-color: #E6A813;
 }
 #schedule .nav.nav-tabs>li{
     width: 25%;

@@ -80,7 +80,7 @@ a.link-silent   { border-bottom: none; }
 .fill-silver    { background-color: #CFE2E0 !important; color: #333; }
 .fill-orange    { background-color: #CF6F01 !important; color: #000; }
 .fill-yellow     { background-color: #E6A813 !important; color: #FFF; }
-.fill-gray     { background-color: rgba(222, 214, 194, 0.1) !important; color: #000; }
+.fill-gray     { background-color: rgba(222, 214, 194, 0.15) !important; color: #000; }
 
 
 .fade-red-to-dark {
