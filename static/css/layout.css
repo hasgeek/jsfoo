@@ -334,3 +334,12 @@ h2.border-bottom-line>span{
     transform: rotate(-25deg);
     -webkit-transform: rotate(-25deg);
 }
+@media screen and (max-width:767px){
+    .center-xs{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .center-xs .pull-right{
+        float: none;
+    }
+}
