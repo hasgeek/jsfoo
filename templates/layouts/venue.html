@@ -1,44 +1,33 @@
 <section id="{{ venue_id|default('venue') }}" class="page-section clearfix{% if background %} fill-{{ background }}{% endif %}">
-
-  <div class="row-fluid space-three-bottom">
-    <h2 class="offset1 extralarge span4 all-caps">{% if node.name == 'venue' %}{{ event.title }}{% else %}Venue{% endif %}</h2>
-    <h3 class="offset1 span5 large all-caps">{{ venue.title }}<span class="regular occupy">{{ venue.subtitle }}</span></h3>
+<div class="container">
+  <div class="row">     
+    <div class="col-lg-12">
+        <h2 class="large-prose all-caps text-center border-bottom-line space-one-bottom"><span class="fill-black pad-one">{% if node.name == 'venue' %}{{ event.title }}{% else %}Venue{% endif %}</span></h2>
+    </div>
+  </div>
+  <div class="row space-two-bottom space-one-top">      
+    <div class="col-lg-12">
+      <p class="legible semibold text-center">{{ venue.title|safe }}, {{ venue.subtitle|safe }}</p>
+      <p class="legible text-center">{{ venue.address|safe }}</p>
+      <p class="tiny text-center"><a href="{{ venue.map.google }}">View on Google Maps</a></p>
+    </div>
   </div>
   
   {% if venue.poster %}
-  <div class="full-width"><img src="{{ venue.poster }}" class="contain-width"></div>
-  {% endif %}
-  
-  {% if event.when %}
-  <div class="row-fluid space-four-top space-two-bottom">
-    <h3 class="offset1 span4 legible all-caps nospace-bottom">When</h3>
-  
-    <div class="offset1 span5 prose prose-type">
-      <p class="legible-prose">{{ event.when|safe }}</p>
-      {% if event.instructions %}<div class="regular-prose space-line-top">{{ event.instructions|safe }}</div>{% endif %}
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="full-width"><img src="{{ venue.poster }}" class="contain-width"></div>
     </div>
   </div>
   {% endif %}
   
-  <div class="row-fluid space-four-top">
-    <h3 class="offset1 span4 legible all-caps space-one-bottom">Address</h3>
-
-    <div class="offset1 span5 legible-prose prose prose-type">
-      <div class="prose-type regular-prose space-three-bottom">
-        <p>{{ venue.address|safe }}</p>
-        <p>
-          <a href="{{ venue.map.google }}" class='tiny faded'>View on Google Maps</a>
-        </p>
-      </div>
-    </div>
-  </div>
 
   <div class="no-js-hidden space-three-bottom">
     <h3 class="visuallyhidden">Map</h3>
-    <div class="row-fluid">
-      <div class="offset6 span5 legible-prose prose prose-type clearfix">
+    <div class="row">
+      <div class="col-lg-12 legible-prose prose prose-type clearfix">
         <div
-          class="leaflet-map span12"
+          class="leaflet-map col-lg-12"
           data-label="{{ venue.map.osm.label }}"
           data-zoom="{{ venue.map.osm.zoom }}"
           data-marker="{{ venue.map.osm.marker }}">
@@ -47,15 +36,15 @@
     </div>
   </div>
 
-  <div class="row-fluid space-three-top">
-    <h3 class="offset1 span4 legible all-caps space-two-bottom">Directions</h3>
+  <div class="row space-three-top">
+    <h3 class="col-lg-12 legible all-caps space-two-bottom">Directions</h3>
 
-    <div class="offset1 span5 regular-prose prose prose-type">
+    <div class="col-lg-12 regular thin">
       {% for item in venue.directions %}
-        <h4 class="{% if not loop.first %}space-two-top {% endif %}space-one-bottom semibold legible-prose">From {{ item.from }}</h4>
+        <h4 class="{% if not loop.first %}space-two-top {% endif %}space-one-bottom semibold legible">From {{ item.from }}</h4>
         {{ item.route|safe }}
       {% endfor %}
     </div>
   </div>
-
+</div>
 </section>

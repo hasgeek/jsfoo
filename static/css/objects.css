@@ -320,7 +320,7 @@ header nav ul>li>a:hover{
 .sponsor-logo img   { max-height: 100%; max-width: 100%; }
 
 .sponsor-xl       .sponsor-logo { height: 6.67rem;  line-height: 4rem;    padding: 1.34rem; }
-.sponsor-l        .sponsor-logo { height: 4.34rem;  line-height: 2.35rem; padding: .5rem;  }
+.sponsor-l        .sponsor-logo { height: 4.34rem;  line-height: 3.35rem; padding: .5rem;  }
 .sponsor-m        .sponsor-logo { height: 3.50rem;  line-height: 0.18rem; padding: 0.9rem; }
 .sponsor-s        .sponsor-logo { height: 3rem;     line-height: 0.5rem;    padding: .84rem;  }
 .sponsor-compact  .sponsor-logo { height: 3rem;     line-height: 0.7rem;    padding: .74rem;  }

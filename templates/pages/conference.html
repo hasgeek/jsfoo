@@ -1,29 +1,13 @@
 {% extends theme('layouts/page.html') %}
-{% from theme("data/conference-schedule-day1.html") import schedule as schedule_day1 %}
-{% from theme("data/conference-schedule-day2.html") import schedule as schedule_day2 %}
-{% if schedule_day1 is defined and schedule_day2 is defined %}
-  {%
-    set page = {
-        'title'       : 'Conference'
-      , 'description' : ''
-      , 'sections'    : [
-          ('conference-intro',          'red')
-        , ('conference-schedule-day1',  'dark')
-        , ('conference-schedule-day2',  'red')
-        , ('conference-venue',          'dark')
-      ]
-    }
-  %}
-{% else %}
-  {%
-    set page = {
-        'title'       : 'Conference'
-      , 'description' : ''
-      , 'sections'    : [
-          ('conference-intro',          'red')
-        , ('conference-sessions',       '')
-        , ('conference-venue',          'dark')
-      ]
-    }
-  %}
-{% endif %}
+{%
+  set page = {
+      'title'       : 'Conference'
+    , 'description' : ''
+    , 'sections'    : [
+        ('conference-intro',          'red')
+      , ('conference-sessions',       '')
+      , ('schedule',  'dark')
+      , ('conference-venue',          '')
+    ]
+  }
+%}

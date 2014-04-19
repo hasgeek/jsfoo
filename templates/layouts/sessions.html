@@ -1,14 +1,17 @@
-<section id="{{ session.id }}" class="page-section full-width clearfix{% if background %} fill-{{ background }}{% endif %}">
-  <div class="row-fluid">
-    <h2 class="offset1 extralarge all-caps space-two-bottom">{{ session.label }}</h2>
+<section id="{{ session.id }}" class="page-section clearfix{% if background %} fill-{{ background }}{% endif %}">
+<div class="container">
+  <div class="row">     
+    <div class="col-lg-12">
+        <h2 class="large-prose all-caps text-center border-bottom-line space-one-bottom"><span class="fill-black pad-one">{{ session.label }}</span></h2>
+    </div>
   </div>
   {% for item in session.list %}
-    <div id="{{ item.id }}" class="row-fluid push-two">
-      <div class="offset1 span4 legible space-two-bottom clearfix">
+    <div id="{{ item.id }}" class="row push-two">
+      <div class="col-lg-offset-1 col-lg-4 legible space-two-bottom clearfix">
         <h3 class="all-caps nospace-top semibold">{{ item.title }}</h3>
         <h4 class="prose-type calm italic"><span class="legible-prose">{{ item.speaker }}</span><br>{{ item.designation }}</h4>
       </div>
-      <div class="offset1 span5 legible-prose prose prose-type">
+      <div class="col-lg-offset-1 col-lg-5 legible-prose prose prose-type">
         <div class="prose-type regular-prose space-three-bottom">
           {{ item.blurb|safe }}
           <ul class="list-plain secondary prose space-one-top">
@@ -19,4 +22,5 @@
       </div>
     </div>
   {% endfor %}
+  </div>
 </section>
