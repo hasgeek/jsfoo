@@ -1,0 +1,109 @@
+<section class="funnel push-two-bottom clearfix{% if background %} fill-{{ background }}{% endif %}">
+  <div class="container">
+  <div class="row">     
+    <div class="col-lg-12 space-one-bottom">
+        <h2 class="large-prose all-caps text-center border-bottom-line space-one-bottom"><span class="fill-black pad-one">Proposals</span></h2>
+        <div class="pad-one text-center space-two-bottom">
+          <p class="secondary-prose space-two-top">Anyone is welcome to propose a session. Participants who have purchased conference tickets will vote on session proposals. The Programme Committee steering Droidcon India will also vote on submissions and balance the community voting.</p>
+          <p class="tiny all-caps gray space-one-bottom space-one-top">Status:&nbsp;&nbsp;<span class="blue">Accepting proposal submissions</span></p>
+          <a href="https://funnel.hasgeek.com/droidcon2013/" class="button regular">Propose a talk on Funnel</a>
+        </div>
+    </div>
+  </div>
+
+    <div id="funnel-links">
+      <table id="funnel-listing" class="table table-bordered list-space-line list-plain link-silent fill-gray">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>By</th>
+            <th>Type</th>
+            <th>Date</th>
+            <th><i class="fa fa-comments"></i></th>
+            <th>+1</th>
+          </tr>
+        </thead>
+        <tbody>              
+        {% for proposal in node.proposals() -%}
+          {% if not proposal['section_name'] == 'workshops' %}
+            <tr data-section="{{ proposal['section_name'] }}" class="fill-lightgray dark">
+              <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
+              <td>{{ proposal['proposer'] }}</td>
+              <td>{{ proposal['section_name'] }}</td>
+              <td>{{ proposal['submitted']|shortdate }}</td>
+              <td>{{ proposal['comments'] }}</td>
+              <td>{{ proposal['votes'] }}</td>
+            </tr>
+          {% endif %}
+        {%- else -%}
+          <tr>
+            <td colspan="6"><em>(No proposals found)</em></td>
+          </tr>  
+        {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+    <h1 class="legible bold space-two-top space-one-bottom">Confirmed Sessions</h1>
+    <table id="funnel-listing" class="table table-bordered list-space-line list-plain link-silent fill-gray">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>By</th>
+          <th>Type</th>
+          <th>Date</th>
+          <th><i class="fa fa-comments"></i></th>
+          <th>+1</th>
+        </tr>
+      </thead>
+      <tbody>        
+      {% for proposal in node.proposals() -%}
+        {% if proposal['confirmed'] and not proposal['section_name'] == 'workshops' %}
+          <tr data-section="{{ proposal['section_name'] }}" class="{% if proposal['section_name'] == 'business' %}theme-blue-light{% elif proposal['section_name'] == 'systems' %}theme-red-light{% elif proposal['section_name'] == 'games' %}theme-orange-light{% elif proposal['section_name'] == 'design' %}theme-violet-light{% elif proposal['section_name'] == 'app-demos' %}theme-green-light{% elif proposal['section_name'] == 'workshops' %}fill-lightgray dark{% endif %}">           
+            <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
+            <td>{{ proposal['proposer'] }}</td>
+            <td>{{ proposal['section_name'] }}</td>
+            <td>{{ proposal['submitted']|shortdate }}</td>
+            <td>{{ proposal['comments'] }}</td>
+            <td>{{ proposal['votes'] }}</td>
+          </tr>
+        {% endif %}
+      {%- else -%}
+        <tr>
+          <td colspan="6"><em>(No proposals found)</em></td>
+        </tr>  
+      {%- endfor %}
+      </tbody>
+    </table>
+
+  </div>  
+</section>
+
+{% block footerscripts %}
+<script type="text/javascript">
+  $(function() {
+
+    var matchtab = function() {
+      var url = document.location.toString();
+      if (url.match('#/')) {
+        $('.nav-tabs a[href="#'+url.split('#/')[1]+'"]').tab('show');
+      } else if (url.match('#')) {
+        $('.nav-tabs a[href="#'+url.split('#')[1]+'"]').tab('show');
+      }
+    };
+
+    // Load correct tab when fragment identifier changes
+    $(window).bind('hashchange', matchtab);
+    // Load correct tab when the page loads
+    matchtab();
+    // Change hash for tab click
+    $('.nav-tabs a').on('shown', function (e) {
+      window.location.hash = '#/' + e.target.hash.slice(1);
+    });
+    var url = document.location.toString();
+    if (!url.match('#')) {
+      // Activate the first tab if none are active
+      $('.nav-tabs a').filter(':first').tab('show');
+    }
+  });
+</script>
+{% endblock %}

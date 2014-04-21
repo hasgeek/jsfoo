@@ -6,18 +6,24 @@
     </div>
   </div>
   {% for item in session.list %}
-    <div id="{{ item.id }}" class="row push-two">
-      <div class="col-lg-offset-1 col-lg-4 legible space-two-bottom clearfix">
-        <h3 class="all-caps nospace-top semibold">{{ item.title }}</h3>
-        <h4 class="prose-type calm italic"><span class="legible-prose">{{ item.speaker }}</span><br>{{ item.designation }}</h4>
-      </div>
-      <div class="col-lg-offset-1 col-lg-5 legible-prose prose prose-type">
-        <div class="prose-type regular-prose space-three-bottom">
-          {{ item.blurb|safe }}
-          <ul class="list-plain secondary prose space-one-top">
-            {% if item.funnel %}<li class="flushleft"><a href="{{ item.funnel }}">Funnel Proposal</a></li>{% endif %}
-            {% if item.preview %}<li class="flushright"><a href="{{ item.preview }}">Preview</a></li>{% endif %}
-          </ul>
+    <div id="{{ item.id }}" class="row push-one-bottom pad-3q">
+      <div class="col-lg-12 fill-gray">
+        <div class="row">
+          <div class="col-lg-9 space-two-bottom clearfix">
+            <h3 class="regular all-caps nospace-top semibold push-one-top pad-half">{{ item.title }}</h3>
+            <div class="prose-type regular space-three-bottom pad-half">
+              {{ item.blurb|safe }}
+              <ul class="list-plain secondary prose space-one-top">
+                {% if item.funnel %}<li class="flushleft"><a href="{{ item.funnel }}">Funnel Proposal</a></li>{% endif %}
+                {% if item.preview %}<li class="flushright"><a href="{{ item.preview }}">Preview</a></li>{% endif %}
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 legible-prose prose prose-type">
+            <h4 class="regular calm all-caps push-half-top">{{ item.speaker }}</h4>
+            <p class="img-wrapper"><img src="{{item.photo}}" alt=""></p>
+            <p class="tiny italic push-half-bottom">{{ item.designation }}</p>
+          </div>
         </div>
       </div>
     </div>

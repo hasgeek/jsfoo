@@ -1,38 +1,39 @@
-<section id="hotels" class="page-section full-width clearfix{% if background %} fill-{{ background }}{% endif %}">
-
-  <div class="row-fluid">
-    <h2 class="offset1 extralarge all-caps space-two-bottom">Hotels</h2>
+<section id="hotels" class="push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
+<div class="container">
+  <div class="row">     
+    <div class="col-lg-12">
+        <h2 class="large-prose all-caps text-center border-bottom-line space-one-bottom"><span class="fill-black pad-one">Hotels</span></h2>
+    </div>
   </div>
+  <div class="row">
+    {% with %}
+      {% from theme("data/hotels.html") import types, items %}
 
-  {% with %}
-    {% from theme("data/hotels.html") import types, items %}
-    {% for type in types %}
-      {% set outer = loop %}
-      {% for item in items if item.type == type.id  %}
-        {% if loop.first %}
-        <article id="{{ type.id }}-hotels" class="row-fluid">
-          <h3 class="offset1 span4 legible all-caps space-one-bottom">{{ type.title }}</h3>
-          <ul class="offset1 span5 regular-prose prose prose-type unstyled">
-        {% endif %}
-            <li>
-              <h4 class="legible-prose semibold">{{ item.title }}</h4>
-              <div class="space-three-bottom">
-                <h5 class="visuallyhidden">Address</h5>
-                <p class="space-one-bottom">{{ item.address|safe }}</p>
-                <h5 class="visuallyhidden">Contact</h5>
-                <p class="space-one-bottom link-silent">{{ item.contact|safe }}</p>
-                <h4 class="visuallyhidden">Distance</h4>
-                <p class="space-one-bottom secondary">
-                  {{ item.distance }} kms from conference venue
-                </p>
-              </div>
-            </li>
-        {% if loop.last %}
-          </ul>
-        </article>
-        {% endif %}
-      {% endfor %}
-    {% endfor %}
-  {% endwith %}
-
+      <div class="table-responsive pad-3q space-half-top">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th colspan="4">Hotel Name</th>
+              <th>Address &amp; Website</th>
+              <th>Contact</th>
+              <th>Distance from Venue</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody class="tiny prose prose-type semibold unstyled">
+            {% for item in items  %}         
+                <tr class="fill-gray">             
+                  <td class="bold secondary-prose semibold" colspan="4">{{ item.title }}</td>
+                  <td>{{ item.address|safe }}</td>
+                  <td>{{ item.contact|safe }}</td>              
+                  <td>{{ item.distance }} km</td>
+                  <td>{% for t in types %}{% if item.type == t.id %}{{ t.title|safe }}{% endif %}{% endfor %}</td>
+                </tr>        
+            {% endfor %}
+          </tbody>
+        </table>    
+      </div>    
+    {% endwith %}
+  </div>
+  </div>
 </section>

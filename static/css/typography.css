@@ -43,7 +43,7 @@ html                    { font-size: 20px;     line-height: 1.4; }
     .large-prose        { font-size: 1.000rem; line-height: 1.22; }
     .regular-prose      { font-size: 1.000rem; line-height: 1.50; }
     .secondary-prose    { font-size: 0.800rem; line-height: 1.49; }
-    .tiny               { font-size: 0.750rem; line-height: 1.49; }
+    .tiny               { font-size: 0.550rem; line-height: 1.49; }
 }
 @media only screen and (min-width: 55em) {
 /*    .huge.body-type     { font-size: 3.500rem; line-height: 0.95; }*/

@@ -3,11 +3,11 @@
     <div class="col-lg-12 nospace-bottom space-one-top">
       <h4 class="large bold text-center">{{ event.title }}</h4>
       <!-- {% if event.when %}<p class="legible">{{ event.when|safe }}</p>{% endif %} -->
-      <div class="tiny calm pad-three space-three-bottom space-one-top">
+      <div class="regular calm pad-three space-three-bottom space-one-top">
         {{ event.blurb|safe }}
 
         {% if event.ticket %}
-        <p class="tiny thin space-line-top text-center">
+        <p class="regular thin space-line-top text-center">
           <a href="{{ event.ticket }}" class="button">Purchase tickets</a>
         </p>
         {% endif %}

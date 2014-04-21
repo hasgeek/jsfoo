@@ -388,8 +388,8 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
     width: 25%;
 }
 
-.img-wrapper .hexagon-in2{
-    width: 100%;
+.img-wrapper{
+    width: 60%;
 }
 .speaker-meta{
     height: 150px;
