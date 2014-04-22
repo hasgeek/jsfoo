@@ -7,24 +7,20 @@
     padding: 0.5em 1.5em 0.5em;
     text-transform: uppercase;
     text-align: center;
-    border-radius: 1em;
+    border-radius: 0em;
     border: 0;
-    border: 4px solid #DED6C2;
-    box-shadow: inset 2px 2px 3px #89500F;
+    /*border-bottom: 3px solid #DED6C2;*/
 }
 .button:hover   { 
-    box-shadow: none;
-    border: 4px solid #DED6C2; 
+    box-shadow: none; 
     color: #F0F0E8;
-    background: #cf6f01; /* Old browsers */
-    background: -moz-linear-gradient(top,  #cf6f01 0%, #cf7002 97%, #af5d00 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cf6f01), color-stop(97%,#cf7002), color-stop(100%,#af5d00)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #cf6f01 0%,#cf7002 97%,#af5d00 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #cf6f01 0%,#cf7002 97%,#af5d00 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #cf6f01 0%,#cf7002 97%,#af5d00 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #cf6f01 0%,#cf7002 97%,#af5d00 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf6f01', endColorstr='#af5d00',GradientType=0 ); /* IE6-9 */
+    background: #cf6f01;
+    /*border-bottom: 3px solid #DED6C2;*/
 }
+.button:active{
+    box-shadow: inset 1px 1px 2px #89500F;
+}
+
 
 .button-mini    { padding: 0.2em 0.6em; }
 .button-dark { 

@@ -1,28 +1,39 @@
 <section class="sponsors page-section full-width clearfix nopush-bottom{% if background %} fill-{{ background }}{% endif %}">
-  <div class="row-fluid">
-    <h2 class="offset1 extralarge all-caps space-two-bottom">Sponsors</h2>
+  <div class="container">
+    <div class="row">     
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h2 class="large-prose all-caps text-center border-bottom-line"><span class="fill-black pad-one">Schedule</span></h2>
+      </div>
+    </div>
   </div>
 </section>
+<div class="container">
 
-{% with fill_cycler = cycler('fill-red', 'fill-dark') %}
+{% with fill_cycler = cycler('fill-', 'fill-gray') %}
   {% from theme("data/sponsors.html") import types, items %}
   {% for type in types %}
     {% set outer = loop %}
     {% for item in items if item.type == type.id and type.size != 'compact'  %}
       {% if loop.first %}
       <section class="sponsor-platinum page-section {{ fill_cycler.next() }} full-width clearfix">
-        <div class="row-fluid">
-          <h2 class="offset1 legible all-caps space-one-bottom">{{ type.title }}</h2>
+        <div class="">
+          <h2 class="legible all-caps space-one-bottom">{{ type.title }}</h2>
         </div>
       {% endif %}
         <h3 class="visuallyhidden">{{ item.title }}</h3>
         <div id="{{ type.id }}-{{ item.id }}" class="row-fluid push-two-top">
-          <div class="offset1 span4 legible space-two-bottom clearfix clearboth">
+          <div class="col-lg-3 regular space-two-bottom clearfix clearboth">
             <p class="clearfix space-two-bottom">
               <a href="{{ item.link }}" target="_blank" class="occupy fill-white sponsor-logo contain-height flushleft">
                 <img alt="{{ item.name }}" src="{{ item.logo }}">
               </a>
             </p>
+          </div>
+
+          <div class="col-lg-6 regular space-three-bottom">
+              {{ item.blurb|safe }}
+          </div>
+          <div class="col-lg-3">
             
             {% if item.attendee %}
             <h4 class="tiny all-caps nospace faded">Sponsor Attendees</h3>
@@ -35,13 +46,12 @@
             {% endif %}
             
           </div>
-          <div class="offset1 span5 regular-prose prose prose-type space-three-bottom">
-              {{ item.blurb|safe }}
-          </div>
         </div>
+        <div class="col-lg-12"><hr></div>
       {% if loop.last %}
       </section>
       {% endif %}
     {% endfor %}
   {% endfor %}
 {% endwith %}
+</div>

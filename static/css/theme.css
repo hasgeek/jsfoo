@@ -32,6 +32,10 @@ a#editions>i{
 .link-silent a,
 a.link-silent   { border-bottom: none; }
 
+hr{
+    border-top: 1px solid #000;
+}
+
 .prose.prose-type a { border-bottom: none; text-decoration: underline; }
 
 
