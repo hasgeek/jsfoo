@@ -8,8 +8,8 @@
 	  	</div>
 	  	<div class="row">	    
 		 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-	      		{% if event.funnel %}<p class="regular pad-four space-one-top">We are working on the schedule. Meanwhile get updates on <a href="https://funnel.hasgeek.com">funnel</a> or <a href="https://twitter.com/jsfooindia">@jsfooindia</a>. If you are interested in talking at JSFoo, feel free to propose a session at <a href="https://funnel.hasgeek.com">funnel</a>.</p>
-	      		<p class="regular thin text-center space-one"><a href="{{event.funnel}}" class="button">Propose a talk</a></p>{% else %}<p class="regular pad-four space-one-top text-center">Follow <a href="https://twitter.com/jsfooindia">@jsfooindia</a> for the updates.</p><p class="regular thin text-center space-one"><a href="{{event.funnel}}" class="button"><i class="fa fa-youtube-play pad-1q-right"></i>Watch videos</a></p>{% endif %}
+	      		{% if event.funnel %}<p class="regular pad-four space-one-top">We are working on the schedule. Meanwhile get updates on <a href="https://funnel.hasgeek.com">funnel</a> or <a href="https://twitter.com/jsfooindia">@jsfooindia</a>. If you are interested in talking at JSFoo, feel free to propose a session at <a href="{{event.funnel}}">funnel</a>.</p>
+	      		<p class="regular thin text-center space-one"><a href="{{event.funnel}}" class="button">Propose a talk</a></p>{% else %}<p class="regular pad-four space-one-top text-center">Follow <a href="https://twitter.com/jsfooindia">@jsfooindia</a> for the updates.</p><p class="regular thin text-center space-one"><a href="{{event.videos}}" class="button"><i class="fa fa-youtube-play pad-1q-right"></i>Watch videos</a></p>{% endif %}
 	    	</div>
 	  	</div>
 	  	<div class="row">
