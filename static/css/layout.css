@@ -346,3 +346,8 @@ h2.border-bottom-line>span{
         float: none;
     }
 }
+
+.border-dark-1{
+    border: 1em solid rgba(222,214,194,0.15);
+    border-radius: 1em;
+}

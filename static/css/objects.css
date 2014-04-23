@@ -50,10 +50,6 @@
 @media (max-width: 767px) {
     .page-section {
         padding: 3rem 0;
-        margin-left:  -20px;
-        margin-right: -20px;
-        padding-left:  20px;
-        padding-right: 20px;
     }
 }
 .bleed-section {}
@@ -152,18 +148,20 @@ header .logo {
          -o-transition: all 0.5s;
             transition: all 0.5s;
 }
-header .logo:hover,
-header .logo:focus {
-/*    -webkit-transform: rotate(360deg);
-       -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-         -o-transform: rotate(360deg);
-            transform: rotate(360deg);*/
-}
+@media screen and (min-width: 768px){
+    .no-touch header .logo:hover,
+    .no-touch header .logo:focus {
+        -webkit-transform: rotate(360deg);
+           -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+             -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
 
-header nav ul>li>a:hover{
-    border-top: 10px solid #CF6F01;
-    color: #000;
+    .no-touch header nav ul>li>a:hover{
+        border-top: 10px solid #CF6F01;
+        color: #000;
+    }
 }
 @media (max-width:767px) {
     .header        { padding: 1rem 0 !important; }
@@ -486,4 +484,22 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
     width: 50%;
     right: 0;
     left: auto;
+}
+
+@media screen and (max-width:30em){
+    nav.navbar>ul>li.inline-block{
+        display: block;
+    }
+    nav.navbar>ul>li.space-two-top{
+        margin-top: 0;
+    }
+    nav.navbar>ul>li.gap-3q-left{
+        margin-left: 0 !important;
+    }
+    nav.navbar>ul>li{
+        margin-top: 1em !important;
+    }
+    header .pull-right{
+       float: left !important; 
+    }
 }
