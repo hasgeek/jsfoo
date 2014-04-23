@@ -5,12 +5,15 @@
 
 /*  Families  */
 
-body { font-family: 'Lato', "Open Sans", sans-serif; }
-.title-type     { font-family: 'Syncopate', "Open Sans Condensed", sans-serif; }
+body { font-family: "Lato", "Open Sans", sans-serif; }
 
 i,
 em,
-.prose-type     { font-family: 'Lato', "Open Sans", serif; font-weight: 300; }
+.prose-type     { font-family: "Lato", "Open Sans", serif; font-weight: 300; }
+
+.leaflet-container {
+    font: 12px/1.5 "Lato", "Open Sans", sans-serif !important;
+}
 
 
 /*  Scale  */
@@ -22,7 +25,7 @@ html                    { font-size: 20px;     line-height: 1.4; }
 .extralarge             { font-size: 1.750rem; line-height: 1.30; }
 .large                  { font-size: 1.250rem; line-height: 1.22; }
 .large-prose            { font-size: 0.600rem; line-height: 1.22; }
-.legible                { font-size: 0.900rem; line-height: 1.30; }
+.legible                { font-size: 0.900rem; line-height: 1.50; }
 .legible-prose          { font-size: 1.125rem; line-height: 1.40; }
 .regular                { font-size: 0.750rem; line-height: 1.60; }
 .regular-prose          { font-size: 1.125rem; line-height: 1.45; }

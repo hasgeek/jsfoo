@@ -83,8 +83,8 @@ footer .no-touch, header .no-touch{
     background-size: cover;
     background-attachment: fixed;*/
     display: block;
-    background-image: url(../img/2012-stage.jpg);
-    background-position: 50% 70%;
+    background-image: url(../img/masthead.jpg);
+    background-position: 50% 41%;
     background-repeat: no-repeat;
     background-size: 100% auto;
     height: 400px;
@@ -158,7 +158,7 @@ header .logo {
     }
 
     .no-touch header nav ul>li>a:hover{
-        border-top: 10px solid #CF6F01;
+        border-bottom: 5px solid #CF6F01;
         color: #000;
     }
 }
@@ -232,7 +232,8 @@ header .logo {
 .js .venue-home .city-level    { width: 65%; }
 .js .venue-home .country-level { width: 35%; float: left; }
 @media (max-width: 767px) {
-    .js .venue-home { padding: 0; }}
+    .js .venue-home { padding: 0; }
+    
     .js .venue-home .city-level    { width: 100%; }
     .js .venue-home .country-level { display: none; }
 }
@@ -378,100 +379,6 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 .img-wrapper{
     width: 60%;
 }
-.speaker-meta{
-    height: 150px;
-    margin-top: -40px;
-}
-
-
-.hexagon {
-    overflow: hidden;
-    visibility: hidden;
-    -webkit-transform: rotate(120deg);
-       -moz-transform: rotate(120deg);
-         -o-transform: rotate(120deg);
-            transform: rotate(120deg);
-    cursor: pointer;
-    }
-.hexagon-in1 {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: rotate(-60deg);
-       -moz-transform: rotate(-60deg);
-         -o-transform: rotate(-60deg);
-            transform: rotate(-60deg);
-    }
-.hexagon-in2 {
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: 115%;
-    /*background-image: url(http://placekitten.com/240/240);*/
-    visibility: visible;
-    -webkit-transform: rotate(-60deg);
-       -moz-transform: rotate(-60deg);
-         -o-transform: rotate(-60deg);
-            transform: rotate(-60deg);
-    }
-.hexagon2 {
-    width: 100%;
-    height: 400px;
-    margin: -80px 0 0 0px;
-    }
-
-
-.team-hasgeek-caption { color: #888; text-transform: uppercase; margin-top: 2rem; font-size: .8rem; font-weight: normal; }
-@media only screen and (min-width: 35em) {
-    .team-hasgeek-caption {
-        text-transform: capitalize;
-        margin-top: 4rem;
-        margin-bottom: 2rem;
-        font-size: 1.250rem;
-        color: #999;
-    }
-}
-.team-hasgeek { max-width: 60em; margin: auto; }
-.team-hasgeek a {
-    display: block;
-    width: 100%;
-    height: 0;
-    padding-top: 100%;
-    border-radius: 100%;
-    -webkit-box-shadow: 0 0 0 2px #EEE;
-            box-shadow: 0 0 0 2px #EEE;
-    background-repeat: no-repeat;
-    background-size: auto 300%;
-    background-image: url(../img/team.jpg);
-    background-clip: padding-box;
-    overflow: hidden;
-}
-.team-hasgeek.fill-dark a {
-    -webkit-box-shadow: 0 0 0 2px #222;
-            box-shadow: 0 0 0 2px #222;
-}
-.team-hasgeek a > span {
-    display: block;
-    width: 100%;
-    margin-top: -25%;
-    background-color: rgba(0,0,0,.7);
-    text-align: center;
-    color: white;
-    font-size: .8rem;
-    text-transform: uppercase;
-    padding: .2rem 0;
-}
-@media only screen and (min-width: 30em) { .team-hasgeek a > span { font-size: .45rem; } }
-
-.team-hasgeek .jamna a      { background-position: top center; }
-.team-hasgeek .kiran a      { background-position: top right; }
-.team-hasgeek .mitesh a      { background-position: center left; }
-.team-hasgeek .praseetha a  { background-position: center right; }
-.team-hasgeek .radha a      { background-position: bottom left; }
-.team-hasgeek .tony a   { background-position: bottom center; }
-.team-hasgeek .zainab a     { background-position: bottom right; }
-
 
 .navbar-fixed-top{
     width: 50%;
@@ -498,4 +405,7 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
     .nav-tabs>li>a, .nav-tabs>li>a:hover{
         font-size: 10px;
     }
+}
+.dropdown-menu{
+    margin: 5px 0 0;
 }
