@@ -502,4 +502,7 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
     header .pull-right{
        float: left !important; 
     }
+    .nav-tabs>li>a, .nav-tabs>li>a:hover{
+        font-size: 10px;
+    }
 }
