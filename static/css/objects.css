@@ -44,8 +44,8 @@
 }
 
 .page-section {
-    padding-top:    2rem;
-    padding-bottom: 2rem;
+    padding-top:    1rem;
+    padding-bottom: 1rem;
 }
 @media (max-width: 767px) {
     .page-section {
@@ -85,7 +85,7 @@ footer .no-touch, header .no-touch{
     background-attachment: fixed;*/
     display: block;
     background-image: url(../img/2012-stage.jpg);
-    background-position: center center;
+    background-position: 50% 70%;
     background-repeat: no-repeat;
     background-size: 100% auto;
     height: 400px;

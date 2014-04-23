@@ -33,7 +33,7 @@ a#editions>i{
 a.link-silent   { border-bottom: none; }
 
 hr{
-    border-top: 1px solid #000;
+    border-top: 1px solid #DAD6D0;
 }
 
 .prose.prose-type a { border-bottom: none; text-decoration: underline; }
@@ -86,7 +86,7 @@ hr{
 .fill-yellow     { background-color: #E6A813 !important; color: #FFF; }
 .fill-gray     { background-color: rgba(222, 214, 194, 0.15) !important; color: #000; }
 
-
+.shadow-orange{ text-shadow: 0.1em 0.1em #E6AC27;}
 .fade-red-to-dark {
     background-image: -webkit-linear-gradient(top,       #BB3311 20%, #121212);
     background-image:    -moz-linear-gradient(top,       #BB3311 20%, #121212);
