@@ -4,18 +4,17 @@
     background: #CF6F01;
     color: #F0F0E8;
     line-height: 1.4;
-    padding: 0.5em 1.5em 0.5em;
+    padding: .3em 1.5em .26em;
     text-transform: uppercase;
     text-align: center;
-    border-radius: 0em;
+    border-radius: 1em;
     border: 0;
-    /*border-bottom: 3px solid #DED6C2;*/
+    font-size: .9em !important;
 }
 .button:hover   { 
     box-shadow: none; 
     color: #F0F0E8;
-    background: #cf6f01;
-    /*border-bottom: 3px solid #DED6C2;*/
+    background: #C16700;
 }
 .button:active{
     box-shadow: inset 1px 1px 2px #89500F;
@@ -233,13 +232,7 @@ header .logo {
 .js .venue-home .city-level    { width: 65%; }
 .js .venue-home .country-level { width: 35%; float: left; }
 @media (max-width: 767px) {
-    .js .venue-home { padding: 0; }
-    .js .venue-home h2 {
-        right: 5%;
-        top:   5%;
-        font-size: 2rem;
-        text-shadow: rgba(0,0,0,0.5) 0 0 1px;
-    }
+    .js .venue-home { padding: 0; }}
     .js .venue-home .city-level    { width: 100%; }
     .js .venue-home .country-level { display: none; }
 }

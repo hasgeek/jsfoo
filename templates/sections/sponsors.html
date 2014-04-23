@@ -1,4 +1,4 @@
-<section class="sponsors page-section full-width clearfix nopush-bottom{% if background %} fill-{{ background }}{% endif %}">
+<section class="sponsors page-section clearfix nopush-bottom{% if background %} fill-{{ background }}{% endif %}">
   <div class="container">
     <div class="row">     
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -6,34 +6,32 @@
       </div>
     </div>
   </div>
-</section>
 <div class="container">
-
 {% with %}
   {% from theme("data/sponsors.html") import types, items %}
   {% for type in types %}
     {% set outer = loop %}
     {% for item in items if item.type == type.id and type.size != 'compact'  %}
       {% if loop.first %}
-      <section class="sponsor-platinum page-section full-width clearfix">
+      <section class="sponsor-platinum page-section clearfix">
         <div class="">
           <h2 class="legible all-caps space-one-bottom">{{ type.title }}</h2>
         </div>
       {% endif %}
         <div id="{{ type.id }}-{{ item.id }}" class="row space-two-top">
-          <div class="col-lg-3 regular nospace-bottom clearfix clearboth">
-            <p class="clearfix nospace-bottom">
+          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 regular nospace-bottom clearfix clearboth">
+            <p class="clearfix space-half-bottom">
               <a href="{{ item.link }}" target="_blank" class="occupy fill-gray sponsor-logo contain-height flushleft link-silent">
                 <img alt="{{ item.name }}" src="{{ item.logo }}">
               </a>
             </p>
           </div>
 
-          <div class="col-lg-6 regular nospace-bottom">
+          <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 regular space-half-bottom">
               <div class="legible semi-bold space-half-bottom visuallyhidden">{{ item.title }}</div>
               {{ item.blurb|safe }}
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
             
             {% if item.attendee %}
             <h4 class="tiny all-caps nospace">Sponsor Attendees</h3>
@@ -47,7 +45,7 @@
             
           </div>
         </div>
-        <div class="col-lg-12"><hr></div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><hr></div>
       {% if loop.last %}
       </section>
       {% endif %}
@@ -55,3 +53,5 @@
   {% endfor %}
 {% endwith %}
 </div>
+
+</section>

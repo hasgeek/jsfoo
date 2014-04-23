@@ -28,6 +28,13 @@ a#editions{
 a#editions>i{
     padding-left: 0.2em;
 }
+#editions + .dropdown-menu{
+    margin: 5px 0 0;
+    background-color: #EBE9DE;  
+}
+#editions + .dropdown-menu>li>a:hover{
+    background-color: #EAE0CE;
+}
 
 .link-silent a,
 a.link-silent   { border-bottom: none; }
@@ -92,4 +99,8 @@ hr{
     background-image:    -moz-linear-gradient(top,       #BB3311 20%, #121212);
     background-image:      -o-linear-gradient(top,       #BB3311 20%, #121212);
     background-image:         linear-gradient(top bottom,#BB3311 20%, #121212);
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    background: #EEEDE3 !important; 
 }

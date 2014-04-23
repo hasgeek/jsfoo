@@ -33,7 +33,7 @@ html                    { font-size: 20px;     line-height: 1.4; }
 @media only screen and (min-width: 30em) {
     html                { font-size: 18px; }
     .huge.body-type     { font-size: 2.500rem; line-height: 1.05; }
-    .large-prose        { font-size: 1.250rem; line-height: 1.42; }
+    .large-prose        { font-size: 1.250rem; line-height: 1.22; }
     .regular-prose      { font-size: 1.000rem; line-height: 1.47; }
 }
 @media only screen and (min-width: 45em) {
