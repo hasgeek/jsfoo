@@ -70,67 +70,16 @@
 @media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
 #hg-bar { background-color: #FFF !important; border-bottom: none;}
 
-/*html, body, #page, header, section { 
-    height: 100%; 
-}
-footer .no-touch, header .no-touch{
-    background-attachment: fixed;
-}*/
 .banner { 
-    /*position: relative;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;*/
     display: block;
-    background-image: url(../img/masthead.jpg);
+    background-image: url(https://imgee.s3.amazonaws.com/imgee/d2e749d9ec5347f994550b9ed24e8ec3.jpeg);
     background-position: 50% 41%;
     background-repeat: no-repeat;
     background-size: 100% auto;
     height: 400px;
     border-radius: 10px;
 }
-/*section{
-    height: auto;
-    overflow: hidden;
-}*/
 
-.separator { 
-   /* position: relative;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    display: block;*/
-    background-position: center center;
-    width: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 14%;
-    height: 50%;
-}
-
-.separator-0{
-    background-image: url(../img/splash/2.jpg);
-}
-/*.separator-1{
-    background-image: url(../img/splash/2.jpg);
-}
-.separator-2{
-    background-image: url(../img/splash/0.jpg);
-}*/
-.hex-separator{
-    height: 1px;
-    width: 100%;
-    background-color: #FFF;
-
-}
-svg{
-    overflow: hidden;
-}
-@media (min-width: 768px) {
-
-}
 .logo-wrapper{
     height: 100%;
     line-height: 100%;
