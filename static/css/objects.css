@@ -91,21 +91,8 @@ header .logo {
     height: 0;
     width:       6rem;
     padding-top: 6rem;
-    -webkit-transition: all 0.5s;
-       -moz-transition: all 0.5s;
-         -o-transition: all 0.5s;
-            transition: all 0.5s;
 }
 @media screen and (min-width: 768px){
-    .no-touch header .logo:hover,
-    .no-touch header .logo:focus {
-        -webkit-transform: rotate(360deg);
-           -moz-transform: rotate(360deg);
-            -ms-transform: rotate(360deg);
-             -o-transform: rotate(360deg);
-                transform: rotate(360deg);
-    }
-
     .no-touch header nav ul>li>a:hover{
         border-bottom: 5px solid #CF6F01;
         color: #000;
