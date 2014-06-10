@@ -251,7 +251,7 @@ header .logo {
 
 .sponsor-logo       { text-align: center; border-radius: 0.25rem; height: 5.34rem; line-height: 3.35rem; padding: .84rem; }
 .sponsor-logo:hover { background-color: rgba(222, 214, 194, 0.25) !important; }
-.sponsor-logo img   { max-height: 100%; max-width: 100%; }
+.sponsor-logo img   { max-height: 5em; max-width: auto; }
 
 .sponsor-xl       .sponsor-logo { height: 6.67rem;  line-height: 4rem;    padding: 1.34rem; }
 .sponsor-l        .sponsor-logo { height: 4.34rem;  line-height: 3.35rem; padding: .5rem;  }
