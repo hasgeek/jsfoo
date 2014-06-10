@@ -41,9 +41,11 @@ img{
 .truncate           { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
 .forcewrap          { word-wrap: break-word; }
 
-.contain-width  img { max-width:  100%; height: auto; }
-.contain-height img { max-height: 100%; width:  auto; }
-
+.contain-width  img { width:  100%; height: auto; }
+.contain-height img { height: 100%; width:  auto; }
+@media screen and (max-width: 767px){
+    .contain-width  img { width:  auto; height: auto; }
+}
 .js .js-hidden      { display: none; }
 .no-js .no-js-hidden{ display: none; }
 
