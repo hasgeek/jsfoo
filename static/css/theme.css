@@ -3,7 +3,8 @@
 /* ========= */
 
 body{
-    background-color: #DFDFDF !important;  
+    background-color: #EFEFE7 !important; 
+    background-image: url(../img/body.jpg); 
     color: #333;
 }
 a {
