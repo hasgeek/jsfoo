@@ -68,10 +68,19 @@
 
 
 @media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
-#hg-bar { background: #283593 !important; background-image: none; border-bottom: none;}
+#hg-bar { 
+    background: $primary-dark !important; 
+    border-bottom-color: $primary-dark !important; 
+    background-image: none;
+}
+#hg-bar, #hg-bar ul#hg-barlinks > li a, #hg-bar ul#hg-usertools > li a, #hg-bar ul#hg-barlinks > li a:visited, #hg-bar ul#hg-usertools > li a:visited { 
+    color: $primary-dark-text !important;
+}
 
 header {
-    background-color: #3F51B5;
+    background-color: $primary;
+    color: $primary-text;
+    height: 80vh;
 }
 .banner { 
     display: block;

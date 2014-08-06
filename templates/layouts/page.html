@@ -59,42 +59,41 @@
 <div id="page">
 {% block header %}
   <header class="container-fluid">
+    <div class="row-fluid space-half-bottom">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <nav class="navbar center-xs">
+          <ul class="list-plain link-silent legible">
+            <li class="inline-block"><a class="push-two-top" href="#"><i class="fa fa-bars"></i></a></li>
+            <li class="gap-3q-left space-two-top inline-block"><a class="push-two-top" href="/2014/#about">About</a></li>
+            <li class="gap-3q-left space-two-top inline-block"><a class="push-two-top" href="/2014/#schedule">Schedule</a></li>
+            <li class="gap-3q-left space-two-top inline-block"><a class="push-two-top" href="/2014/#venue">Venue</a></li>
+            <li class="gap-3q-left inline-block"><a class="push-two-top" href="/2014/#sponsors">Sponsors</a></li>
+            <li class="gap-3q-left inline-block"><div class="dropdown link-silent tiny">
+            <a id="editions" data-toggle="dropdown" href="#">&nbsp;Bangalore 2014 <i class="fa fa-caret-down"></i>&nbsp;</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+              <li><a class="push-1q" href="https://jsfoo.in/2013/">Bangalore 2013</a></li>
+              <li><a class="push-1q" href="https://jsfoo.in/2012/">Bangalore 2012</a></li>
+              <li><a class="push-1q" href="https://jsfoo.in/chennai2012/">Chennai 2012</a></li>
+              <li><a class="push-1q" class="push-1q" href="https://jsfoo.in/pune2012/">Pune 2012</a></li>
+              <li><a class="push-1q" href="https://jsfoo.in/bangalore2011/">Bangalore 2011</a></li>
+            </ul>
+          </div></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
     <div class="row-fluid">
-      <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">
+      <div class="col-lg-12 col-md-2 col-sm-3 col-xs-12">
         <div class="push-one">
           <a class="ir logo" href="/2014">
             JSFoo 2014
           </a>
         </div>
       </div>
-
-      <div class="col-lg-10 col-md-10 col-sm-9 col-xs-7 regular">
-        <div class="row space-half-bottom">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <nav class="navbar center-xs">
-              <ul class="list-plain link-silent pull-right">
-                <li class="inline-block"><a class="push-two-top" href="/2014/#about">About</a></li>
-                <li class="gap-3q-left space-two-top inline-block"><a class="push-two-top" href="/2014/#schedule">Schedule</a></li>
-                <li class="gap-3q-left space-two-top inline-block"><a class="push-two-top" href="/2014/#venue">Venue</a></li>
-                <li class="gap-3q-left inline-block"><a class="push-two-top" href="/2014/#sponsors">Sponsors</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <div class="row space-line-bottom">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center-xs">
-            <div class="dropdown pull-right link-silent tiny">
-              <a id="editions" data-toggle="dropdown" href="#">&nbsp;Bangalore 2014 <i class="fa fa-caret-down"></i>&nbsp;</a>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                <li><a class="push-1q" href="https://jsfoo.in/2013/">Bangalore 2013</a></li>
-                <li><a class="push-1q" href="https://jsfoo.in/2012/">Bangalore 2012</a></li>
-                <li><a class="push-1q" href="https://jsfoo.in/chennai2012/">Chennai 2012</a></li>
-                <li><a class="push-1q" class="push-1q" href="https://jsfoo.in/pune2012/">Pune 2012</a></li>
-                <li><a class="push-1q" href="https://jsfoo.in/bangalore2011/">Bangalore 2011</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <div class="row-fluid space-line-bottom">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center-xs">
+          
+        </div>      
       </div>
     </div>
   {% block banner %}{% endblock %}
