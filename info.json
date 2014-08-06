@@ -10,10 +10,7 @@
         "assets_css": [
             "css/vendor/bootstrap.min.css",
             "css/font-awesome.css",
-            "css/typography.css",
-            "css/layout.css",
-            "css/theme.css",
-            "css/objects.css"
+            "css/main.css"
         ],
         "assets_js": [
             "js/vendor/bootstrap.min.js",

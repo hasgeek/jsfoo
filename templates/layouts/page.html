@@ -58,9 +58,8 @@
   
 <div id="page">
 {% block header %}
-<header class="container">
-  <div class="">
-    <div class="row">
+  <header class="container-fluid">
+    <div class="row-fluid">
       <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">
         <div class="push-one">
           <a class="ir logo" href="/2014">
@@ -70,20 +69,6 @@
       </div>
 
       <div class="col-lg-10 col-md-10 col-sm-9 col-xs-7 regular">
-        <!-- <div class="row space-half-bottom">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <nav class="navbar center-xs">
-              <ul class="list-plain link-silent pull-right">
-                <li class="inline-block"><a class="push-two-top" href="/2014">Home</a></li>
-                <li class="gap-3q-left space-two-top inline-block"><a class="push-two-top" href="/2014/conference">Conference</a></li>
-                <li class="gap-3q-left inline-block"><a class="push-two-top" href="/2014/workshops">Workshops</a></li>
-                <li class="gap-3q-left inline-block"><a class="push-two-top" class="push-two-top" href="/2014/venue">Venue</a></li>
-                <li class="gap-3q-left inline-block"><a class="push-two-top" href="/2014/sponsors">Sponsors</a></li>
-                <li class="gap-3q-left inline-block"><a class="push-two-top" href="http://jsfoo.doattend.com/">Tickets</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div> -->
         <div class="row space-half-bottom">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <nav class="navbar center-xs">
@@ -112,11 +97,9 @@
         </div>
       </div>
     </div>
-  </div>
-  </div>
-</header>
+  {% block banner %}{% endblock %}
+  </header>
 {% endblock %}
-{% block banner %}{% endblock %}
 
 
 {% block content %}

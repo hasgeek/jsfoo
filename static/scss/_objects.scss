@@ -68,8 +68,11 @@
 
 
 @media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
-#hg-bar { background-color: #FFF !important; border-bottom: none;}
+#hg-bar { background: #283593 !important; background-image: none; border-bottom: none;}
 
+header {
+    background-color: #3F51B5;
+}
 .banner { 
     display: block;
     background-image: url(https://imgee.s3.amazonaws.com/imgee/d2e749d9ec5347f994550b9ed24e8ec3.jpeg);
