@@ -76,11 +76,19 @@
 #hg-bar, #hg-bar ul#hg-barlinks > li a, #hg-bar ul#hg-usertools > li a, #hg-bar ul#hg-barlinks > li a:visited, #hg-bar ul#hg-usertools > li a:visited { 
     color: $primary-dark-text !important;
 }
+#hg-bar .container {
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
 
 header {
     background-color: $primary;
     color: $primary-text;
     height: 80vh;
+    // background: url(../img/bg1.svg);
 }
 .banner { 
     display: block;
@@ -101,8 +109,8 @@ header .logo {
     background-size: contain;
     background-position: left;
     height: 0;
-    width:       6rem;
-    padding-top: 6rem;
+    width:       12rem;
+    padding-top: 12rem;
 }
 @media screen and (min-width: 768px){
     .no-touch header nav ul>li>a:hover{
