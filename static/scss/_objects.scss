@@ -83,11 +83,14 @@
     padding-left: 30px;
     padding-right: 30px;
 }
+.masthead{
+    background-color: $primary;
+}
 
 header {
-    background-color: $primary;
     color: $primary-text;
     height: 80vh;
+    margin-top: -50%;
     // background: url(../img/bg1.svg);
 }
 .banner { 

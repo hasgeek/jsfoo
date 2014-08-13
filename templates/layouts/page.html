@@ -58,9 +58,11 @@
   
 <div id="page">
 {% block header %}
+  <div class="masthead">
+    {% include theme("layouts/masthead.html") %}
+  </div>
   <header class="container-fluid">
-      {% include theme("layouts/masthead.html") %}
-    <div class="row-fluid space-half-bottom" style="margin-top: -40%">
+    <div class="row-fluid space-half-bottom">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <nav class="navbar center-xs">
           <ul class="list-plain link-silent legible">
