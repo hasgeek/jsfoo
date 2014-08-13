@@ -83,15 +83,23 @@
     padding-left: 30px;
     padding-right: 30px;
 }
-.masthead{
-    background-color: $primary;
+#site-nav li{
+    margin-right: 1em;
 }
 
 header {
+    background-color: $primary;
     color: $primary-text;
     height: 80vh;
-    margin-top: -50%;
+    min-height: 600px;
+    position: relative;
     // background: url(../img/bg1.svg);
+}
+.masthead {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
 }
 .banner { 
     display: block;

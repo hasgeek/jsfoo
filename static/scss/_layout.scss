@@ -37,7 +37,7 @@ html, body, header{
 
 .occupy             { display: block;  }
 .inline             { display: inline; }
-.inline-block       { display: inline-block; }
+.inline-block, .inline-block li { display: inline-block; }
 .center-block       { margin-left: auto; margin-right: auto; }
 .right-block        { margin-left: auto; margin-right: 0;    }
 
