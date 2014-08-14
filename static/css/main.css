@@ -1396,15 +1396,15 @@ hr {
 /* ============== */
 /*  Families  */
 /* line 8, ../scss/_typography.scss */
-body {
-  font-family: Futura PT, sans-serif;
+body, .body-type {
+  font-family: "freight-sans-pro", sans-serif;
 }
 
 /* line 12, ../scss/_typography.scss */
 i,
 em,
 .prose-type {
-  font-family: "Lato", "Open Sans", serif;
+  font-family: "museo-sans", serif;
   font-weight: 300;
 }
 
@@ -1452,7 +1452,7 @@ html {
 
 /* line 28, ../scss/_typography.scss */
 .legible {
-  font-size: 0.900rem;
+  font-size: 1.200rem;
   line-height: 1.50;
 }
 
@@ -1464,7 +1464,7 @@ html {
 
 /* line 30, ../scss/_typography.scss */
 .regular {
-  font-size: 0.750rem;
+  font-size: 1.000rem;
   line-height: 1.60;
 }
 
@@ -1591,61 +1591,66 @@ abbr {
 }
 
 /* line 71, ../scss/_typography.scss */
+.medium {
+  font-weight: 500;
+}
+
+/* line 72, ../scss/_typography.scss */
 .semibold {
   font-weight: 600;
 }
 
-/* line 72, ../scss/_typography.scss */
+/* line 73, ../scss/_typography.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 73, ../scss/_typography.scss */
+/* line 74, ../scss/_typography.scss */
 .extrabold {
   font-weight: 900;
 }
 
-/* line 74, ../scss/_typography.scss */
+/* line 75, ../scss/_typography.scss */
 .italic {
   font-style: italic;
 }
 
-/* line 75, ../scss/_typography.scss */
+/* line 76, ../scss/_typography.scss */
 .no-italic {
   font-style: normal;
 }
 
-/* line 77, ../scss/_typography.scss */
+/* line 78, ../scss/_typography.scss */
 .all-caps {
   text-transform: uppercase;
 }
 
-/* line 78, ../scss/_typography.scss */
+/* line 79, ../scss/_typography.scss */
 .all-lower {
   text-transform: lowercase;
 }
 
-/* line 79, ../scss/_typography.scss */
+/* line 80, ../scss/_typography.scss */
 .small-caps {
   font-variant: small-caps;
 }
 
-/* line 80, ../scss/_typography.scss */
+/* line 81, ../scss/_typography.scss */
 .strike {
   text-decoration: line-through;
 }
 
-/* line 81, ../scss/_typography.scss */
+/* line 82, ../scss/_typography.scss */
 .no-underline {
   text-decoration: none;
 }
 
-/* line 83, ../scss/_typography.scss */
+/* line 84, ../scss/_typography.scss */
 .unordered {
   list-style-type: none;
 }
 
-/* line 85, ../scss/_typography.scss */
+/* line 86, ../scss/_typography.scss */
 .amp {
   font-family: 'Hoefler Text', Baskerville, Palatino, 'Book Antiqua', Constantia, 'URW Palladio L';
   font-style: italic;
@@ -1653,53 +1658,53 @@ abbr {
   line-height: 0.5em;
 }
 
-/* line 91, ../scss/_typography.scss */
+/* line 92, ../scss/_typography.scss */
 .quo {
   margin-left: -0.24em;
 }
 
-/* line 92, ../scss/_typography.scss */
+/* line 93, ../scss/_typography.scss */
 .dquo {
   margin-left: -0.44em;
 }
 
-/* line 93, ../scss/_typography.scss */
+/* line 94, ../scss/_typography.scss */
 .tquo {
   margin-left: -0.68em;
 }
 
-/* line 96, ../scss/_typography.scss */
+/* line 97, ../scss/_typography.scss */
 .list-plain {
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
 }
 
-/* line 97, ../scss/_typography.scss */
+/* line 98, ../scss/_typography.scss */
 .dl-plain dd {
   margin-left: 0;
   line-height: inherit;
 }
 
-/* line 98, ../scss/_typography.scss */
+/* line 99, ../scss/_typography.scss */
 .dl-plain dd + dt {
   margin-top: 2rem;
 }
 
 @media (max-width: 767px) {
-  /* line 100, ../scss/_typography.scss */
+  /* line 101, ../scss/_typography.scss */
   .inline-on-mobile li {
     display: inline;
     margin-right: 0.5rem;
   }
 
-  /* line 101, ../scss/_typography.scss */
+  /* line 102, ../scss/_typography.scss */
   .inline-on-mobile dd {
     display: inline;
     margin-right: 0.5rem;
   }
 }
-/* line 103, ../scss/_typography.scss */
+/* line 104, ../scss/_typography.scss */
 .prose li {
   line-height: inherit;
 }
