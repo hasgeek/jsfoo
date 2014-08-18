@@ -89,7 +89,12 @@ hr{
 .fill-silver    { background-color: #CFE2E0 !important; color: #333; }
 .fill-orange    { background-color: #CF6F01 !important; color: #000; }
 .fill-yellow     { background-color: #E6A813 !important; color: #FFF; }
-.fill-gray     { background-color: rgba(222, 214, 194, 0.15) !important; color: #000; }
+.fill-gray     { background-color: #EFEFEF !important; color: #000; }
+
+.fill-lightblue {  background-color: $lightblue !important; color: $dark; }
+.fill-darkblue {  background-color: $darkblue !important; color: $dark; }
+.fill-lightyellow {  background-color: $lightyellow !important; color: $dark; }
+.fill-darkyellow {  background-color: $darkyellow !important; color: $dark; }
 
 .shadow-orange{ text-shadow: 0.1em 0.1em #E6AC27;}
 .fade-red-to-dark {

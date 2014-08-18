@@ -7,7 +7,7 @@
     padding: .3em 1.5em .26em;
     text-transform: uppercase;
     text-align: center;
-    border-radius: 1em;
+    border-radius: 0.2em;
     border: 0;
     font-size: .9em !important;
 }
@@ -19,14 +19,31 @@
 .button:active{
     box-shadow: inset 1px 1px 2px #89500F;
 }
-
+.button-ghost-light {
+    border: 3px solid $white;
+    color: $white;
+    text-transform: uppercase;
+    background-color: transparent;
+}
+.button-ghost-dark {
+    border: 3px solid $dark;
+    color: $dark;
+    text-transform: uppercase;
+    background-color: transparent;
+}
+.button-ghost-dark:hover {
+    border: 3px solid $darkyellow;
+    color: $dark;
+    text-transform: uppercase;
+    background-color: $darkyellow;
+}
 
 .button-mini    { padding: 0.2em 0.6em; }
 .button-dark { 
     background: #68CFFF;
 }
 .button-on-dark { 
-    background: #68CFFF;
+    background: $darkyellow;
     border-bottom: none;
 }
 .button-on-dark:hover { 
@@ -40,6 +57,13 @@
     content: '•';
     margin: 0 .4rem;
     color: rgba(255,255,255,.6);
+}
+
+.divider-line {
+    height: 2px;
+    width: 40px;
+    background-color: $dark;
+    margin: 30px auto 10px;
 }
 
 .page-section {
@@ -122,6 +146,18 @@ header .logo {
     height: 0;
     width:       12rem;
     padding-top: 12rem;
+}
+#cog {
+    position: fixed;
+}
+.logo-small {
+    background: url(../img/logo.png) no-repeat scroll center center;
+    background-size: contain;
+    background-position: left;
+    height: 0;
+    width: 3rem;
+    height: 3rem;
+    z-index: 999;
 }
 @media screen and (min-width: 768px){
     .no-touch header nav ul>li>a:hover{
@@ -344,7 +380,9 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 }
 
 .img-wrapper{
-    width: 60%;
+    width: 100%;
+    overflow: hidden;
+    height: 250px;
 }
 
 .navbar-fixed-top{
@@ -375,4 +413,22 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 }
 .dropdown-menu{
     margin: 5px 0 0;
+}
+
+.featured-speakers {
+    .img-wrapper {
+        height: 280px;
+        width: 100%;
+        position: relative;
+        background-size: 100%;
+    }
+    .speaker-meta {
+        background-color: rgba(0,0,0,0.5);
+        color: $white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
 }

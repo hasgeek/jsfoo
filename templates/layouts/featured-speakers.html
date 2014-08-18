@@ -7,29 +7,26 @@
     {% if item.featured %}
       {% if loop.first %}
       <div class="row-fluid space-three-top">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 legible-prose">
+        <div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 legible-prose">
           <ul class="space-half-top list-space-line list-plain list-silent row">
       {% endif %}
-            <li class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-center">
+            <li class="col-lg-4 col-md-3 col-sm-4 col-xs-12 text-center">
               <a href="/2014/conference#{{ item.id }}">
-                <div class="img-wrapper">
-                  <div class="hexagon hexagon2">
-                    <div class="hexagon-in1">
-                      <div class="hexagon-in2" style="background-image: url({{ item.photo }})"></div>
-                    </div>
+                <div class="img-wrapper" style="background-image: url({{ item.photo }})">
+                  <div class="speaker-meta">
+                    <div class="legible">{{ item.speaker }}</div>
+                    <h5>{{ item.designation|safe }}</h5>
+                    <!-- <h5 class="all-caps">{{ item.place }}</h5>
+                    <h5>{% if item.sponsor %}Sponsored by <a target="_blank" href="{{ item.sponsor_link }}">{{ item.sponsor }}</a>{% endif %}</h5>
+                    <h5 class="link-silent">
+                     {% if item.preview %}<a target="_blank" href="{{ item.preview }}"><i class="fa fa-youtube-play"></i></a>{% endif %}{% if item.funnel %}&nbsp;<a target="_blank" href="{{ item.funnel }}"><i class="fa fa-filter"></i></a>{% endif %}
+                    {% if item.twitter %}&nbsp;<a target="_blank" href="https://twitter.com/{{ item.twitter }}"><i class="fa fa-twitter"></i></a>{% endif %}
+                    </h5> -->
                   </div>
                 </div>
+
               </a>
-              <div class="speaker-meta">
-                <div class="legible">{{ item.speaker }}</div>
-                <h5>{{ item.designation|safe }}</h5>
-                <h5 class="all-caps">{{ item.place }}</h5>
-                <h5>{% if item.sponsor %}Sponsored by <a target="_blank" href="{{ item.sponsor_link }}">{{ item.sponsor }}</a>{% endif %}</h5>
-                <h5 class="link-silent">
-                 {% if item.preview %}<a target="_blank" href="{{ item.preview }}"><i class="fa fa-youtube-play"></i></a>{% endif %}{% if item.funnel %}&nbsp;<a target="_blank" href="{{ item.funnel }}"><i class="fa fa-filter"></i></a>{% endif %}
-                {% if item.twitter %}&nbsp;<a target="_blank" href="https://twitter.com/{{ item.twitter }}"><i class="fa fa-twitter"></i></a>{% endif %}
-                </h5>
-              </div>
+              
             </li>
       {% if loop.last %}
           </ul>
