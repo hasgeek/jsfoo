@@ -27,7 +27,7 @@
         {% endif %}
           <li>
               <a href="{% if type.size == 'compact' %}{{ item.link }}{% else %}sponsors#{{ type.id }}-{{ item.id }}{% endif %}" class="occupy fill-gray sponsor-logo {% if item.orientation == 'portrait' %}contain-height{% elif item.orientation == 'landscape' %}contain-width{% endif %}">
-                <img alt="{{ item.title }}" src="{{ item.logo }}">
+                <img alt="{{ item.title }}" src="{{ item.logo }}" {% if item.id == 'logo' %}style="opacity: 0.3"{% endif %}>
               </a>
           </li>
         {% if loop.last %}
