@@ -4,12 +4,11 @@
     background: #CF6F01;
     color: #F0F0E8;
     line-height: 1.4;
-    padding: .3em 1.5em .26em;
+    padding: .3em 1.5em .15em;
     text-transform: uppercase;
     text-align: center;
     border-radius: 0.2em;
     border: 0;
-    font-size: .9em !important;
 }
 .button:hover   { 
     box-shadow: none; 
@@ -110,18 +109,21 @@
 #site-nav li{
     margin-right: 1em;
 }
+html, body, #page {
+    height: 100%;
+    margin: 0px;
+}
 
 header {
     background-color: $primary;
     color: $primary-text;
-    height: 80vh;
-    min-height: 600px;
-    position: relative;
+    height: 100%;
+    top: 0;
     // background: url(../img/bg1.svg);
 }
 .masthead {
     position: absolute;
-    bottom: -10px;
+    bottom: -40px;
     left: 0;
     right: 0;
 }
@@ -142,10 +144,10 @@ header {
 header .logo {
     background: url(../img/logo.png) no-repeat scroll center center;
     background-size: contain;
-    background-position: left;
     height: 0;
     width:       12rem;
     padding-top: 12rem;
+    display: block;
 }
 #cog {
     position: fixed;
