@@ -224,6 +224,22 @@ header .logo {
     .header h3     { margin-top: 1rem; }
 }
 
+#content-box {
+    width: 10em;
+    margin: 0 auto;
+}
+
+#past-editions-json {
+    width: 26em;
+    margin: 0 auto;
+    code {
+        background-color: transparent;
+        color: $primary-text;
+    }
+    a > code {
+        margin: auto -7px;
+    }
+}
 
 .program-committee h2 {
     line-height: 1.2;
@@ -298,7 +314,7 @@ header .logo {
 }
 
 @media (min-width: 768px) {
-    .video-thumbnails > li { width: 25% !important; margin: 0 !important; }
+    .video-thumbnails > li { width: 20% !important; margin: 0 !important; }
     .video-thumbnail h4,
     .video-thumbnail h5 { padding: 0 1rem 0 1rem; max-width: 300px; }
 }
