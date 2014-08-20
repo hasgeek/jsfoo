@@ -1,7 +1,6 @@
-<section id="about" class="page-section">
+<!-- <section id="about" class="page-section">
   <div class="container-fluid">
     <div class="col-lg-8 col-lg-offset-2">
-      <!-- {% if event.when %}<p class="legible">{{ event.when|safe }}</p>{% endif %} -->
       <div class="legible-prose calm pad-three space-three link-silent">
         <span>{{ event.blurb|safe }}</span>
         <span id="event-desc" class="always-hidden secondary occupy push-one-top">{{ event.desc|safe }}</span>
@@ -9,4 +8,20 @@
       </div>
     </div>
   </div>
-</section>    
+</section>  -->   
+
+<section id="about" class="page-section">
+  <div class="container-fluid">
+    <div class="col-lg-6">
+      <div class="pad-three-left space-three-top huge all-caps prose-type bold"><span class="darkblue">Conference</span> <span class="darkyellow">&amp;</span><br><span class="darkblue">Workshops</span></div>
+      <div class="pad-three-left extralarge darkyellow">on javascript</div>
+    </div>
+    <div class="col-lg-6">
+      <div class="legible-prose calm pad-three-right space-three link-silent">
+        <span>{{ event.blurb|safe }}</span>
+        <span id="event-desc" class="always-hidden secondary occupy push-one-top">{{ event.desc|safe }}</span>
+        <span><i id="show-more" class="fa fa-chevron-circle-down lightgray"></i></span>
+      </div>
+    </div>
+  </div>
+</section> 

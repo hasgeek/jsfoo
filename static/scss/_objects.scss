@@ -64,6 +64,29 @@
     background-color: $dark;
     margin: 1.1em auto 0.5em;
 }
+.divider-line-dotted {
+    text-align: center;
+    height: 4px;
+    width: 4px;
+    background-color: $dark;
+    margin: 1.1em auto 0.5em;
+    border-radius: 50%;
+    &:before, &:after {
+        content: '';
+        display: block;
+        background-color: inherit;
+        float: left;
+        border-radius: 50%;
+        height: 4px;
+        width: 4px;
+    }
+    &:before {
+        margin-left: -15px;
+    }
+    &:after {
+        margin-left: 15px;
+    }
+}
 #feature-boxes .box {
     height: 24em;
 }

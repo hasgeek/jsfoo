@@ -55,6 +55,26 @@ html, body, header{
 .flushleft          { float: left; }
 .flushright         { float: right; }
 
+.table-cell{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    & > li {
+        display: table-cell;
+        width: auto;
+    }
+}
+.buttons {
+    li {
+        text-align: center;
+        & > a {
+            width: 80%;
+            padding: 0.5em 1em;
+            border: 1px solid $primary-text;
+            display: block;
+        }
+    }
+}
 /*  Margins  */
 
 .space-eight,.space-eight-top   { margin-top:    8.00rem !important; }

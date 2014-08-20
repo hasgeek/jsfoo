@@ -61,10 +61,16 @@ hr{
 .orange         { color: #CF6F01 !important; }
 .yellow         { color: #E6A813 !important; }
 
+.darkblue       { color: $darkblue !important; }
+.darkyellow     { color: $darkyellow !important; }
+.lightblue      { color: $lightblue !important; }
+.lightyellow    { color: $lightyellow !important; }   
+
 .fill-white     { background-color: #FFFFFF !important; color: #444; }
 .fill-dark      { background-color: #DED6C2 !important; color: #333; }
 .fill-dark-hud  { background-color: rgba(0,0,0,0.1) !important; color: #000; }
-.fill-black     { background-color: #000000 !important; color: #EEE; }
+.fill-dark      { background-color: #DED6C2 !important; color: #333; }
+.fill-primary   { background-color: $primary !important; color: $primary-text; }
 .fill-silver-hud{ background-color: rgba(255,255,255,0.65) !important; color: #222; }
 .fill-redgray   { background-color: #EFE7E6 !important; color: #222020; }
 /*.fill-yellow    { background-color: rgb(240, 219, 79) !important; color: #000; }
