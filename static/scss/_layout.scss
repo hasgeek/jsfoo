@@ -47,7 +47,7 @@ html, body, header{
 .contain-width  img { width:  100%; height: auto; }
 .contain-height img { height: 100%; width:  auto; }
 @media screen and (max-width: 767px){
-    .contain-width  img { width:  auto; height: auto; }
+    .contain-width  img { height: auto; }
 }
 .js .js-hidden      { display: none; }
 .no-js .no-js-hidden{ display: none; }
@@ -125,6 +125,7 @@ html, body, header{
 .pad-1q,     .pad-1q-right      { padding-right: 0.25rem !important; }
 .nopad,      .nopad-left        { padding-left:  0       !important; }
 .nopad,      .nopad-right       { padding-right: 0       !important; }
+@media (max-width: 767px) { .nopad-xs { padding-left: 0 !important; padding-right: 0 !important; } }
 
 
 .push-eight,  .push-eight-top     { padding-top:    8.00rem !important; }

@@ -20,7 +20,7 @@ em, .button,
 
 html                    { font-size: 20px;     line-height: 1.4; }
 
-.huge                   { font-size: 3.000rem; line-height: 1.10; }
+.huge                   { font-size: 2.000rem; line-height: 1.10; }
 .huge.body-type         { font-size: 2.125rem; line-height: 1.10; }
 .extralarge             { font-size: 1.750rem; line-height: 1.30; }
 .large                  { font-size: 1.250rem; line-height: 1.22; }
@@ -35,6 +35,7 @@ html                    { font-size: 20px;     line-height: 1.4; }
 
 @media only screen and (min-width: 30em) {
     html                { font-size: 18px; }
+    .huge               { font-size: 3.000rem; line-height: 1.10; }
     .huge.body-type     { font-size: 2.500rem; line-height: 1.05; }
     .large-prose        { font-size: 1.250rem; line-height: 1.22; }
     .regular-prose      { font-size: 1.000rem; line-height: 1.47; }

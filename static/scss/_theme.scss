@@ -13,8 +13,8 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    border-color: $secondary;
-    color: $secondary;
+    border-color: $darkyellow;
+    color: $darkyellow;
 }
 
 a#editions{
@@ -71,7 +71,7 @@ hr{
 .fill-dark-hud  { background-color: rgba(0,0,0,0.1) !important; color: #000; }
 .fill-dark      { background-color: #DED6C2 !important; color: #333; }
 .fill-primary   { background-color: $primary !important; color: $primary-text; }
-.fill-silver-hud{ background-color: rgba(255,255,255,0.65) !important; color: #222; }
+.fill-silver-hud{ background-color: rgba(255,255,255,0.2) !important; color: #222; }
 .fill-redgray   { background-color: #EFE7E6 !important; color: #222020; }
 /*.fill-yellow    { background-color: rgb(240, 219, 79) !important; color: #000; }
 .fill-lightyellow    { background-color: #EBEB7E !important; color: #000; }

@@ -1,25 +1,24 @@
 <section class="sponsors page-section clearfix nopush-bottom{% if background %} fill-{{ background }}{% endif %}">
-  <div class="container">
-    <div class="row">     
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <h2 class="large-prose all-caps text-center border-bottom-line"><span class="fill-black pad-one">Sponsors</span></h2>
+  <div class="container-fluid space-one">
+    <div class="row-fluid text-center">    
+      <div class="col-lg-12">
+          <h3 class="offset1 span4 legible medium text-center prose-type all-caps space-one-bottom">Sponsors</h3>
       </div>
     </div>
   </div>
-<div class="container">
-{% with %}
+{% with fill_cycler = cycler('fill-lightblue', 'fill-darkblue') %}
   {% from theme("data/sponsors.html") import types, items %}
   {% for type in types %}
     {% set outer = loop %}
     {% for item in items if item.type == type.id and type.size != 'compact'  %}
       {% if loop.first %}
-      <section class="sponsor-platinum page-section clearfix">
-        <div class="">
+      <section class="sponsor-platinum page-section {{ fill_cycler.next() }} clearfix">
+        <div class="prose-type pad-three">
           <h2 class="legible all-caps space-one-bottom">{{ type.title }}</h2>
         </div>
       {% endif %}
-        <div id="{{ type.id }}-{{ item.id }}" class="row space-two-top">
-          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 regular nospace-bottom clearfix clearboth">
+        <div id="{{ type.id }}-{{ item.id }}" class="row-fluid space-two pad-two">
+          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 regular space-half-top nospace-bottom clearfix clearboth">
             <p class="clearfix space-half-bottom">
               <a href="{{ item.link }}" target="_blank" class="occupy fill-gray sponsor-logo contain-width flushleft link-silent">
                 <img alt="{{ item.name }}" src="{{ item.logo }}">
@@ -27,11 +26,11 @@
             </p>
           </div>
 
-          <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 regular space-half-bottom">
+          <div class="col-lg-7 col-md-6 col-sm-4 col-xs-12 regular space-two-bottom">
               <div class="legible semi-bold space-half-bottom visuallyhidden">{{ item.title }}</div>
               {{ item.blurb|safe }}
           </div>
-          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+          <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
 
             {% if item.display %}
             <h4 class="tiny all-caps nospace">Website</h3>
@@ -50,13 +49,11 @@
             
           </div>
         </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><hr></div>
       {% if loop.last %}
       </section>
       {% endif %}
     {% endfor %}
   {% endfor %}
 {% endwith %}
-</div>
 
 </section>
