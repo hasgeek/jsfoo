@@ -59,10 +59,13 @@
 }
 
 .divider-line {
-    height: 2px;
-    width: 40px;
+    height: 0.12em;
+    width: 2.5em;
     background-color: $dark;
-    margin: 30px auto 10px;
+    margin: 1.1em auto 0.5em;
+}
+#feature-boxes .box {
+    height: 24em;
 }
 
 .page-section {
@@ -425,7 +428,7 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
         background-size: 100%;
     }
     .speaker-meta {
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(84, 158, 175, 0.7);
         color: $white;
         position: absolute;
         bottom: 0;
