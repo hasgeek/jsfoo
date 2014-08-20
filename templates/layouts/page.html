@@ -184,6 +184,12 @@ if (location.hostname == 'jsfoo.in') {
   <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
   <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 <![endif]-->
-
+<script>
+  $('#show-more').click(function() {
+    $(this).toggleClass('fa-chevron-circle-down');
+    $(this).toggleClass('fa-chevron-circle-up');
+    $('#event-desc').toggleClass('always-hidden');
+  });
+</script>
 </body>
 </html>

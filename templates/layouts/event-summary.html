@@ -3,7 +3,9 @@
     <div class="col-lg-8 col-lg-offset-2">
       <!-- {% if event.when %}<p class="legible">{{ event.when|safe }}</p>{% endif %} -->
       <div class="legible-prose calm pad-three space-three link-silent">
-        {{ event.blurb|safe }}
+        <span>{{ event.blurb|safe }}</span>
+        <span id="event-desc" class="always-hidden secondary occupy push-one-top">{{ event.desc|safe }}</span>
+        <span><i id="show-more" class="fa fa-chevron-circle-down lightgray"></i></span>
       </div>
     </div>
   </div>

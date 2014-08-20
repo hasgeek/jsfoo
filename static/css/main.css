@@ -1213,81 +1213,86 @@ hr {
 }
 
 /* line 52, ../scss/_theme.scss */
+.lightgray {
+  color: #CCCCCC !important;
+}
+
+/* line 53, ../scss/_theme.scss */
 .light {
   color: #EEEEEE !important;
 }
 
-/* line 53, ../scss/_theme.scss */
+/* line 54, ../scss/_theme.scss */
 .red {
   color: #FF3333 !important;
 }
 
-/* line 54, ../scss/_theme.scss */
+/* line 55, ../scss/_theme.scss */
 .white {
   color: #FFFFFF !important;
 }
 
-/* line 55, ../scss/_theme.scss */
+/* line 56, ../scss/_theme.scss */
 .faded {
   color: rgba(255, 255, 255, 0.8) !important;
 }
 
-/* line 57, ../scss/_theme.scss */
+/* line 58, ../scss/_theme.scss */
 .blue {
   color: #4487A6 !important;
 }
 
-/* line 58, ../scss/_theme.scss */
+/* line 59, ../scss/_theme.scss */
 .skyblue {
   color: #68CFFF !important;
 }
 
-/* line 59, ../scss/_theme.scss */
+/* line 60, ../scss/_theme.scss */
 .silver {
   color: #CFE2E0 !important;
 }
 
-/* line 60, ../scss/_theme.scss */
+/* line 61, ../scss/_theme.scss */
 .orange {
   color: #CF6F01 !important;
 }
 
-/* line 61, ../scss/_theme.scss */
+/* line 62, ../scss/_theme.scss */
 .yellow {
   color: #E6A813 !important;
 }
 
-/* line 63, ../scss/_theme.scss */
+/* line 64, ../scss/_theme.scss */
 .fill-white {
   background-color: #FFFFFF !important;
   color: #444;
 }
 
-/* line 64, ../scss/_theme.scss */
+/* line 65, ../scss/_theme.scss */
 .fill-dark {
   background-color: #DED6C2 !important;
   color: #333;
 }
 
-/* line 65, ../scss/_theme.scss */
+/* line 66, ../scss/_theme.scss */
 .fill-dark-hud {
   background-color: rgba(0, 0, 0, 0.1) !important;
   color: #000;
 }
 
-/* line 66, ../scss/_theme.scss */
+/* line 67, ../scss/_theme.scss */
 .fill-black {
   background-color: #000000 !important;
   color: #EEE;
 }
 
-/* line 67, ../scss/_theme.scss */
+/* line 68, ../scss/_theme.scss */
 .fill-silver-hud {
   background-color: rgba(255, 255, 255, 0.65) !important;
   color: #222;
 }
 
-/* line 68, ../scss/_theme.scss */
+/* line 69, ../scss/_theme.scss */
 .fill-redgray {
   background-color: #EFE7E6 !important;
   color: #222020;
@@ -1298,7 +1303,7 @@ hr {
 .fill-darkblue  { background-color: #353F67 !important; color: #FFF; }
 .fill-blue      { background-color: #43609E !important; color: #000; }
 .fill-lightblue { background-color: #6086C4 !important; color: #000; }*/
-/* line 74, ../scss/_theme.scss */
+/* line 75, ../scss/_theme.scss */
 .fill-blueprint {
   background-repeat: repeat;
   background-size: 12px;
@@ -1307,102 +1312,102 @@ hr {
   color: #FFF;
 }
 
-/* line 81, ../scss/_theme.scss */
+/* line 82, ../scss/_theme.scss */
 .fill-cream {
   background-color: #F6F7BD !important;
   color: #000;
 }
 
-/* line 82, ../scss/_theme.scss */
+/* line 83, ../scss/_theme.scss */
 .fill-green {
   background-color: #80BCA3 !important;
   color: #000;
 }
 
-/* line 83, ../scss/_theme.scss */
+/* line 84, ../scss/_theme.scss */
 .fill-brown {
   background-color: #241C1B !important;
   color: #FFF;
 }
 
-/* line 84, ../scss/_theme.scss */
+/* line 85, ../scss/_theme.scss */
 .fill-orange {
   background-color: #E6AC27 !important;
   color: #000;
 }
 
-/* line 85, ../scss/_theme.scss */
+/* line 86, ../scss/_theme.scss */
 .fill-brown {
   background-color: #655643 !important;
   color: #FFF;
 }
 
-/* line 87, ../scss/_theme.scss */
+/* line 88, ../scss/_theme.scss */
 .fill-blue {
   background-color: #4487A6 !important;
   color: #FFF;
 }
 
-/* line 88, ../scss/_theme.scss */
+/* line 89, ../scss/_theme.scss */
 .fill-skyblue {
   background-color: #68CFFF !important;
   color: #000;
 }
 
-/* line 89, ../scss/_theme.scss */
+/* line 90, ../scss/_theme.scss */
 .fill-silver {
   background-color: #CFE2E0 !important;
   color: #333;
 }
 
-/* line 90, ../scss/_theme.scss */
+/* line 91, ../scss/_theme.scss */
 .fill-orange {
   background-color: #CF6F01 !important;
   color: #000;
 }
 
-/* line 91, ../scss/_theme.scss */
+/* line 92, ../scss/_theme.scss */
 .fill-yellow {
   background-color: #E6A813 !important;
   color: #FFF;
 }
 
-/* line 92, ../scss/_theme.scss */
+/* line 93, ../scss/_theme.scss */
 .fill-gray {
   background-color: #EFEFEF !important;
   color: #000;
 }
 
-/* line 94, ../scss/_theme.scss */
+/* line 95, ../scss/_theme.scss */
 .fill-lightblue {
   background-color: #a1dadb !important;
   color: #333333;
 }
 
-/* line 95, ../scss/_theme.scss */
+/* line 96, ../scss/_theme.scss */
 .fill-darkblue {
   background-color: #549eaf !important;
   color: #333333;
 }
 
-/* line 96, ../scss/_theme.scss */
+/* line 97, ../scss/_theme.scss */
 .fill-lightyellow {
   background-color: #f0cf9a !important;
   color: #333333;
 }
 
-/* line 97, ../scss/_theme.scss */
+/* line 98, ../scss/_theme.scss */
 .fill-darkyellow {
   background-color: #faa51a !important;
   color: #333333;
 }
 
-/* line 99, ../scss/_theme.scss */
+/* line 100, ../scss/_theme.scss */
 .shadow-orange {
   text-shadow: 0.1em 0.1em #E6AC27;
 }
 
-/* line 100, ../scss/_theme.scss */
+/* line 101, ../scss/_theme.scss */
 .fade-red-to-dark {
   background-image: -webkit-linear-gradient(top, #bb3311 20%, #121212);
   background-image: -moz-linear-gradient(top, #bb3311 20%, #121212);
@@ -1410,7 +1415,7 @@ hr {
   background-image: linear-gradient(top bottom, #bb3311 20%, #121212);
 }
 
-/* line 107, ../scss/_theme.scss */
+/* line 108, ../scss/_theme.scss */
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
   background: #EEEDE3 !important;
 }
