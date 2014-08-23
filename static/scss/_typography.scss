@@ -77,7 +77,7 @@ abbr {
 .no-italic      { font-style: normal;  }
 
 .all-caps       { text-transform: uppercase;    }
-.all-lower      { text-transform: lowercase;    }
+.all-lower      { text-transform: lowercase !important;    }
 .small-caps     { font-variant: small-caps;     }
 .strike         { text-decoration: line-through;}
 .no-underline   { text-decoration: none;        }

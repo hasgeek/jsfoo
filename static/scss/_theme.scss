@@ -16,6 +16,12 @@ a:focus {
     border-color: $darkyellow;
     color: $darkyellow;
 }
+.fill-darkyellow a:hover,
+.fill-darkyellow a:focus {
+    text-decoration: none;
+    border-color: $dark;
+    color: $dark;
+}
 
 a#editions{
     background-color: $primary-dark;

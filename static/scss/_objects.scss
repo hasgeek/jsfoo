@@ -49,6 +49,10 @@
     background: #FFF; 
     color: #4487A6 !important;
 }
+.fill-white .button-on-dark:hover { 
+    background: $darkyellow; 
+    color: $dark!important;
+}
 .button:focus   { text-decoration: none; }
 .button:active  { box-shadow: inset 0 0 10px #000; }
 
