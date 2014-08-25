@@ -10,7 +10,7 @@
   {% from theme("data/sponsors.html") import types, items %}
   {% for type in types %}
     {% set outer = loop %}
-    {% for item in items if item.type == type.id and type.size != 'compact'  %}
+    {% for item in items if item.type == type.id and type.size != 'compact' and item.id != 'logo'  %}
       {% if loop.first %}
       <section class="sponsor-platinum page-section {{ fill_cycler.next() }} clearfix">
         <div class="prose-type pad-three">
