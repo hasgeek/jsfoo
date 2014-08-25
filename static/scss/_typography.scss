@@ -5,11 +5,11 @@
 
 /*  Families  */
 
-body { font-family: "Lato", "Open Sans", sans-serif; }
+body, .body-type { font-family: "minion-pro", serif; }
 
 i,
-em,
-.prose-type     { font-family: "Lato", "Open Sans", serif; font-weight: 300; }
+em, .button,
+.prose-type     { font-family: "brandon-grotesque", sans-serif; font-weight: 300; }
 
 .leaflet-container {
     font: 12px/1.5 "Lato", "Open Sans", sans-serif !important;
@@ -20,21 +20,22 @@ em,
 
 html                    { font-size: 20px;     line-height: 1.4; }
 
-.huge                   { font-size: 3.000rem; line-height: 1.10; }
+.huge                   { font-size: 2.000rem; line-height: 1.10; }
 .huge.body-type         { font-size: 2.125rem; line-height: 1.10; }
 .extralarge             { font-size: 1.750rem; line-height: 1.30; }
 .large                  { font-size: 1.250rem; line-height: 1.22; }
 .large-prose            { font-size: 0.600rem; line-height: 1.22; }
-.legible                { font-size: 0.900rem; line-height: 1.50; }
+.legible                { font-size: 1.300rem; line-height: 1.50; }
 .legible-prose          { font-size: 1.125rem; line-height: 1.40; }
-.regular                { font-size: 0.750rem; line-height: 1.60; }
-.regular-prose          { font-size: 1.125rem; line-height: 1.45; }
+.regular                { font-size: 1.000rem; line-height: 1.60; }
+.regular-prose          { font-size: 0.095rem; line-height: 1.40; }
 .secondary              { font-size: 0.875rem; line-height: 1.50; }
-.secondary-prose        { font-size: 0.950rem; line-height: 1.40; }
+.secondary-prose        { font-size: 0.650rem; line-height: 1.40; }
 .tiny                   { font-size: 0.630rem; line-height: 1.53; }
 
 @media only screen and (min-width: 30em) {
     html                { font-size: 18px; }
+    .huge               { font-size: 3.000rem; line-height: 1.10; }
     .huge.body-type     { font-size: 2.500rem; line-height: 1.05; }
     .large-prose        { font-size: 1.250rem; line-height: 1.22; }
     .regular-prose      { font-size: 1.000rem; line-height: 1.47; }
@@ -45,7 +46,7 @@ html                    { font-size: 20px;     line-height: 1.4; }
     .extralarge         { font-size: 2.000rem; line-height: 1.30; }
     .large-prose        { font-size: 1.000rem; line-height: 1.22; }
     .regular-prose      { font-size: 1.000rem; line-height: 1.50; }
-    .secondary-prose    { font-size: 0.800rem; line-height: 1.49; }
+    .secondary-prose    { font-size: 0.650rem; line-height: 1.49; }
     .tiny               { font-size: 0.550rem; line-height: 1.49; }
 }
 @media only screen and (min-width: 55em) {
@@ -68,6 +69,7 @@ abbr {
 
 .thin           { font-weight: 300;    }
 .calm           { font-weight: normal; }
+.medium         { font-weight: 500; }
 .semibold       { font-weight: 600;    }
 .bold           { font-weight: bold;   }
 .extrabold      { font-weight: 900;    }
@@ -75,7 +77,7 @@ abbr {
 .no-italic      { font-style: normal;  }
 
 .all-caps       { text-transform: uppercase;    }
-.all-lower      { text-transform: lowercase;    }
+.all-lower      { text-transform: lowercase !important;    }
 .small-caps     { font-variant: small-caps;     }
 .strike         { text-decoration: line-through;}
 .no-underline   { text-decoration: none;        }

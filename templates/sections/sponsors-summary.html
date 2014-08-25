@@ -1,15 +1,15 @@
 <section id="sponsors" class="sponsors page-section clearfix{% if background %} fill-{{ background }}{% endif %}">
-<div class="container space-one">
-  <div class="row text-center">    
+<div class="container-fluid space-one">
+  <div class="row-fluid text-center">    
     <div class="col-lg-12">
-        <h2 class="large-prose all-caps text-center border-bottom-line"><span class="fill-black pad-one">Sponsors</span></h2>
+        <h3 class="offset1 span4 legible medium text-center prose-type all-caps space-one-bottom">Sponsors</h3>
     </div>
     
     <div class="col-lg-12 regular space-one-top">
       <p>Showcase your APIs, tools and products. Engage with JavaScript developers, JS communities and front-end engineers.</p>
       
-      <p class="regular space-line-top space-two-bottom">
-        <a class="button" href="http://hsgk.in/jsfoo2014-sponsorship-deck">Get Sponsorship Deck</a>
+      <p class="secondary space-line-top space-three-bottom">
+        <a class="button button-ghost-dark medium" href="http://hsgk.in/jsfoo2014-sponsorship-deck">$.Get Sponsorship Deck</a>
       </p>
     </div>
   </div>
@@ -20,14 +20,14 @@
       {% set outer = loop %}
       {% for item in items if item.type == type.id  %}
         {% if loop.first %}
-        <div id="sponsors-{{ type.id }}" class="row nospace">
-          <div class="col-lg-12 regular all-caps space-half">{{ type.title }}</div>
+        <div id="sponsors-{{ type.id }}" class="row-fluid container-fluid  pad-three space-two-top">
+          <h3 class="col-lg-5 col-md-5 col-sm-4 col-xs-12 legible-prose all-caps space-one-bottom prose-type medium">{{ type.title }}</h3>
 
-          <ul class="col-lg-12 nospace-bottom list-plain link-silent clearfix list-space-line sponsor-{{ type.size }}">
+          <ul class="col-lg-7 col-md-7 col-sm-8 col-xs-12 nospace-bottom list-plain link-silent clearfix list-space-line sponsor-{{ type.size }}">
         {% endif %}
           <li>
-              <a href="{% if type.size == 'compact' %}{{ item.link }}{% else %}sponsors#{{ type.id }}-{{ item.id }}{% endif %}" class="occupy fill-gray sponsor-logo {% if item.orientation == 'portrait' %}contain-height{% elif item.orientation == 'landscape' %}contain-width{% endif %}">
-                <img alt="{{ item.title }}" src="{{ item.logo }}" {% if item.id == 'logo' %}style="opacity: 0.3"{% endif %}>
+              <a href="{% if type.size == 'compact' %}{{ item.link }}{% else %}sponsors#{{ type.id }}-{{ item.id }}{% endif %}" class="occupy fill-silver-hud sponsor-logo {% if item.orientation == 'portrait' %}contain-height{% elif item.orientation == 'landscape' %}contain-width{% endif %}">
+                <img alt="{{ item.title }}" src="{{ item.logo }}">
               </a>
           </li>
         {% if loop.last %}
