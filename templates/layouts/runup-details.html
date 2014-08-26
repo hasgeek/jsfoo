@@ -1,0 +1,15 @@
+{% set event = items[node.properties['event_id']|int] %}
+{% with %}
+	{% if node.content %}
+  <section class="runup-event push-two-top push-four-bottom clearfix{% if background %} fill-{{ background }}{% endif %}">
+    <div class="container">      
+    	<div class="row">
+        <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 all-caps space-three-top space-two-bottom large bold prose-type text-center">Schedule</h3>
+      </div>
+      <div class="row regular">
+      	{{ node.content|safe }}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+{% endwith %}

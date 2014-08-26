@@ -179,9 +179,9 @@ header .logo {
     padding-top: 12rem;
     display: block;
 }
-#cog {
-    position: fixed;
-}
+// #cog {
+//     position: fixed;
+// }
 .logo-small {
     background: url(../img/logo.png) no-repeat scroll center center;
     background-size: contain;
@@ -250,7 +250,7 @@ header .logo {
 }
 @media (min-width: 768px){
     #past-editions-json {
-        width: 26em;
+        width: 40em;
         margin: 0 auto;
         transform: none;
     }
@@ -486,4 +486,46 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
         right: 0;
     }
 
+}
+#runup-events-cards {
+    padding: 0;
+    float: none;
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+}
+.event-node {
+    display: block;
+    border: 2px solid #333;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 0.8em;
+    position: relative;
+}
+.runup-event table {
+    th:first-child {
+        width: 230px
+    }
+    td {
+        padding-left: 1em;
+        padding-right: 1em;
+        h3 {
+            color: $darkblue;
+            padding-top: 0.8em;
+        }
+        h5 {
+            font-size: 1em;
+            padding: 0.3em;
+            a {
+                border-bottom: none;
+            }
+        }
+        p, ul, ol {
+            font-size: 0.8em;
+            padding-bottom: 1em;
+        }
+        ul, ol {
+            text-align: left;
+        }
+    }
 }

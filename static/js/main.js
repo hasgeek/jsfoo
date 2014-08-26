@@ -1,8 +1,8 @@
-var $cog = $('#cog'),
-$body = $(document.body);
+	// var $cog = $('#cog'),
+	// $body = $(document.body);
 
-$(window).scroll(function() {
-	$cog.css({
-		'transform': 'rotate(' + $body.scrollTop() + 'deg)'
-	});
-});
+	// $(window).scroll(function() {
+	// 	$cog.css({
+	// 		'transform': 'rotate(' + $body.scrollTop() + 'deg)'
+	// 	});
+	// });

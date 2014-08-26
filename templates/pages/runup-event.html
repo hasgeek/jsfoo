@@ -1,0 +1,19 @@
+{% extends theme('layouts/page.html') %}
+{%
+  set page = {
+      'title'       : 'Runup Event',
+      'description' : 'Runup Event — Rootconf 2014',
+      'sections'    : [
+        ('runup-event-intro', ''),
+        ('runup-details', 'lightblue'),
+        ('runup-rsvp', 'darkyellow'),
+        ('runup-venue', 'primary')
+    ]
+  }
+%}
+{% if not node.content %}
+  {% if page['sections'].pop(2) %}{% endif %}
+{% endif %}
+
+
+{% block pagetitle %}Run-up Event{% endblock %}

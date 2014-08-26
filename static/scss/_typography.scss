@@ -28,7 +28,7 @@ html                    { font-size: 20px;     line-height: 1.4; }
 .legible                { font-size: 1.300rem; line-height: 1.50; }
 .legible-prose          { font-size: 1.125rem; line-height: 1.40; }
 .regular                { font-size: 1.000rem; line-height: 1.60; }
-.regular-prose          { font-size: 0.095rem; line-height: 1.40; }
+.regular-prose          { font-size: 1.000rem; line-height: 1.40; }
 .secondary              { font-size: 0.875rem; line-height: 1.50; }
 .secondary-prose        { font-size: 0.650rem; line-height: 1.40; }
 .tiny                   { font-size: 0.630rem; line-height: 1.53; }
@@ -37,7 +37,7 @@ html                    { font-size: 20px;     line-height: 1.4; }
     html                { font-size: 18px; }
     .huge               { font-size: 3.000rem; line-height: 1.10; }
     .huge.body-type     { font-size: 2.500rem; line-height: 1.05; }
-    .large-prose        { font-size: 1.250rem; line-height: 1.22; }
+    .regular-prose          { font-size: 0.095rem; line-height: 1.40; }
     .regular-prose      { font-size: 1.000rem; line-height: 1.47; }
 }
 @media only screen and (min-width: 45em) {

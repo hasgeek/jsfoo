@@ -1,0 +1,90 @@
+{% macro rsvp_form(node, form, waitlist=False, hascapacity=True, status='U') %}
+  <form id="rsvp" action="{{ node.url_for('rsvp') }}" class="form-inline" method="POST">
+    {{ form.hidden_tag() }}
+    <p class="centered space-three-top">
+      {%- if waitlist %}
+        {%- if status in ['Y', 'M', 'W'] %}
+          <button name="status" value="N" class="button">Withdraw</button>
+        {%- endif %}
+        {%- if status in ['N', 'M', 'U'] %}
+          <button name="status" value="Y" class="button">Add to waiting list</button>
+        {%- endif %}
+      {%- else %}
+        {%- if hascapacity %}
+          <button name="status" value="Y" class="button semibold button-blue">Yes</button>
+        {%- endif %}
+          <button name="status" value="N" class="button semibold">No</button>
+        {%- if node.allow_maybe %}
+          <button name="status" value="M" class="button semibold button-white">Maybe</button>
+        {%- endif %}
+      {%- endif %}
+      <span class="loading hidden">&nbsp;</span>
+    </p>
+    {%- if status != 'U' %}
+      <p class="centered">
+        <span class="ultrafaded">Your status:</span>
+        {%- if status == 'Y' %} <span class="green">Attending</span>
+        {%- elif status == 'N' %} <span class="red">Not attending</span>
+        {%- elif status == 'M' %} <span class="blue">Maybe attending</span>
+        {%- elif status == 'W' %} <span class="orange">Wait-listed</span>
+        {% else %} Unknown {%- endif %}
+      </p>
+    {%- endif %}
+  </form>
+{% endmacro %}
+
+{% set event = items[node.properties['event_id']|int] %}
+{% set timeline = items[node.properties['timeline']|int] %}
+{% with %}
+  {% if node.properties.timeline == '0' %}
+    <section id="runup-event-{{ node.properties['event_id'] }}-rsvp" class="push-two-top push-three-bottom clearfix{% if background %} fill-{{ background }}{% endif %}">
+      <div class="container">
+        <div class="row-fluid">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h2 class="large all-caps text-center prose-type bold space-one-bottom">RSVP</h2>
+            <div class="regular text-center">
+              {%- if g.user %}            
+                {%- if node.can_rsvp(g.user) %}
+                  {%- with status = node.get_status(g.user) %}
+                    {%- if node.has_capacity() %}
+                      <p>
+                        Will you be attending "<span class="semibold">{{ node.title }}</span>"?
+                      {{ rsvp_form(node, form, status=status) }}
+                    {%- else %}
+                      {%- if node.allow_waitlisting %}
+                        <p>
+                          This session is fully booked, but you can place yourself in the wait list in case someone drops out.
+                        </p>
+                        {{ rsvp_form(node, form, waitlist=True, status=status) }}
+                      {%- else %}
+                        <p>This session is fully booked.</p>
+                        {%- if status in ['N', 'M'] %}
+                          {{ rsvp_form(node, form, hascapacity=False, status=status) }}
+                        {%- endif %}
+                      {%- endif %}
+                    {%- endif %}
+                  {%- endwith %}
+                {%- else %}
+                  <p>
+                    We don’t have an email address on your profile matching your ticket.
+                    Please <a href="https://auth.hasgeek.com/profile/email/new" target="_blank">add the email address</a>
+                    you used when buying your ticket, <a href="{{ url_for('logout') }}">logout</a>
+                    and <a href="{{ url_for('login') }}">login</a> again.
+                  </p>
+                {%- endif %}
+              {%- else %}
+                <p>
+                  {#{% if node.capacity > 0 -%} The venue has limited capacity. {% endif -%}#}
+                  Will you be attending "{{ event.title }}"? Please login. You can use your existing Twitter or Google account, and if you have previously voted on a session proposal or attended a hacknight, you already have a HasGeek account.
+                </p>
+                <p class="centered space-two-top">
+                  <a href="{{ url_for('login') }}" class="button button-ghost-dark medium">Login with Twitter, Google or HasGeek id</a>
+                </p>
+              {%- endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endif %}
+{% endwith %}

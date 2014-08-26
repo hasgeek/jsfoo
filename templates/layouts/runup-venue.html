@@ -1,0 +1,49 @@
+{% set event = items[node.properties['event_id']|int] %}
+{% with %}
+    {% if node.properties.map_marker %}
+        <section id="{{ node.location_name }} venue" class="venue push-two-top push-four-bottom clearfix{% if background %} fill-{{ background }}{% endif %}">
+            <div class="container">
+                <div class="row">
+                    <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 large all-caps text-center prose-type bold">Venue</h3>
+                </div>
+                <div class="row">
+                    <div class="pad-line">
+                        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 fill-darkgray col-xs-12 legible-prose text-center">
+                          <div class="regular-prose space-three-bottom space-two-top">
+                            <p class="legible">{{ node.location_address|safe }}</p>
+                            <p>
+                              <a href="{{ node.mapmarker }}" target="_blank" class="regular button button-on-dark prose-type space-one-top'\">View on Google Maps</a>
+                            </p>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="no-js-hidden space-three-bottom">
+                        <h3 class="visuallyhidden">Map</h3>
+                        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12 legible-prose prose prose-type clearfix">
+                            <div
+                              class="border-one leaflet-map col-lg-12 col-md-12 col-sm-12 col-xs-12" id="toner" class="map"
+                              data-label="{{ node.properties.get('map_label') }}"
+                              data-zoom="{{ node.properties.get('map_zoom') }}"
+                              data-marker="{{ node.properties.get('map_marker') }}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        {% if node.properties.venue_sponsor %}
+        <section class="push-two-bottom clearfix fill-darkblue">
+            <div class="row-fluid space-two container text-center">
+                <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 large all-caps prose-type bold">Venue Sponsor</h3>
+            </div>
+            <div class="row-fluid space-three-bottom container text-center">
+                <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
+                <a href="{{ node.properties.venue_sponsor_link }}" class="occupy sponsor-logo contain-width link-silent">
+                    <img src="{{ node.properties.venue_sponsor_logo }}" alt="{{ node.properties.venue_sponsor }}" width="200">
+                </a>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+{% endwith %}

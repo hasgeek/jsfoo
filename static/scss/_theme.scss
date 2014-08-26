@@ -34,10 +34,17 @@ a#editions>i{
 }
 #editions + .dropdown-menu{
     margin: 5px 0 0;
-    background-color: #EBE9DE;  
+    background-color: $primary; 
 }
-#editions + .dropdown-menu>li>a:hover{
-    background-color: #EAE0CE;
+#editions + .dropdown-menu>li {
+    width: 100%;
+    & > a {
+        color: $primary-text;
+    }
+    & > a:hover{
+        background-color: $primary-dark;
+        color: $darkyellow;
+    }
 }
 
 .link-silent a,

@@ -1,0 +1,24 @@
+<section class="runup-events clearfix{% if background %} fill-{{ background }}{% endif %}">
+  	<div class="container-fluid">
+	   {{ runup_list }}
+	    <div class="row-fluid pad-three-left pad-four-right">
+	    	<ul id="runup-events-cards">
+	    		{% for item in items -%}
+	    			<li class="col-md-4 list-silent link-silent text-center space-two-bottom">
+		    			{% if item.link %}<a href="{{ item.link }}">{% endif %}
+		    				<div class="event-node push-half-top">
+				    			<div class="legible-prose">{{ item.title }}</div>
+				    			<div class="fixed-bottom">
+				    				<h4 class="date all-caps regular-prose prose-type">{{ item.when }}</h4>
+				    				<div class="fill-blue">
+							    		<div class="secondary push-1q">{{ item.venue }}</div>
+							    	</div>
+				    			</div>
+					    	</div>
+					    {% if item.link %}</a>{% endif %}
+			  		</li>
+				{%- endfor %}
+			</ul>    
+		</div>
+  	</div>
+</section>

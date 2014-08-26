@@ -377,3 +377,10 @@ h2.border-bottom-line>span{
     border: 1em solid rgba(222,214,194,0.15);
     border-radius: 1em;
 }
+
+.fixed-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

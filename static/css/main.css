@@ -1162,6 +1162,14 @@ h2.border-bottom-line > span {
   border-radius: 1em;
 }
 
+/* line 381, ../scss/_layout.scss */
+.fixed-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 /* ========= */
 /* = Theme = */
 /* ========= */
@@ -1209,154 +1217,163 @@ a#editions > i {
 /* line 35, ../scss/_theme.scss */
 #editions + .dropdown-menu {
   margin: 5px 0 0;
-  background-color: #EBE9DE;
+  background-color: #2e3661;
 }
 
 /* line 39, ../scss/_theme.scss */
+#editions + .dropdown-menu > li {
+  width: 100%;
+}
+/* line 41, ../scss/_theme.scss */
+#editions + .dropdown-menu > li > a {
+  color: #9699b3;
+}
+/* line 44, ../scss/_theme.scss */
 #editions + .dropdown-menu > li > a:hover {
-  background-color: #EAE0CE;
+  background-color: #252c52;
+  color: #faa51a;
 }
 
-/* line 44, ../scss/_theme.scss */
+/* line 51, ../scss/_theme.scss */
 .link-silent a,
 a.link-silent {
   border-bottom: none;
 }
 
-/* line 46, ../scss/_theme.scss */
+/* line 53, ../scss/_theme.scss */
 hr {
   border-top: 1px solid #DAD6D0;
 }
 
-/* line 50, ../scss/_theme.scss */
+/* line 57, ../scss/_theme.scss */
 .prose.prose-type a {
   border-bottom: none;
   text-decoration: underline;
 }
 
 /*  Colours  */
-/* line 55, ../scss/_theme.scss */
+/* line 62, ../scss/_theme.scss */
 .black {
   color: #000000 !important;
 }
 
-/* line 56, ../scss/_theme.scss */
+/* line 63, ../scss/_theme.scss */
 .dark {
   color: #444444 !important;
 }
 
-/* line 57, ../scss/_theme.scss */
+/* line 64, ../scss/_theme.scss */
 .gray {
   color: #AAAAAA !important;
 }
 
-/* line 58, ../scss/_theme.scss */
+/* line 65, ../scss/_theme.scss */
 .lightgray {
   color: #CCCCCC !important;
 }
 
-/* line 59, ../scss/_theme.scss */
+/* line 66, ../scss/_theme.scss */
 .light {
   color: #EEEEEE !important;
 }
 
-/* line 60, ../scss/_theme.scss */
+/* line 67, ../scss/_theme.scss */
 .red {
   color: #FF3333 !important;
 }
 
-/* line 61, ../scss/_theme.scss */
+/* line 68, ../scss/_theme.scss */
 .white {
   color: #FFFFFF !important;
 }
 
-/* line 62, ../scss/_theme.scss */
+/* line 69, ../scss/_theme.scss */
 .faded {
   color: rgba(255, 255, 255, 0.8) !important;
 }
 
-/* line 64, ../scss/_theme.scss */
+/* line 71, ../scss/_theme.scss */
 .blue {
   color: #4487A6 !important;
 }
 
-/* line 65, ../scss/_theme.scss */
+/* line 72, ../scss/_theme.scss */
 .skyblue {
   color: #68CFFF !important;
 }
 
-/* line 66, ../scss/_theme.scss */
+/* line 73, ../scss/_theme.scss */
 .silver {
   color: #CFE2E0 !important;
 }
 
-/* line 67, ../scss/_theme.scss */
+/* line 74, ../scss/_theme.scss */
 .orange {
   color: #CF6F01 !important;
 }
 
-/* line 68, ../scss/_theme.scss */
+/* line 75, ../scss/_theme.scss */
 .yellow {
   color: #E6A813 !important;
 }
 
-/* line 70, ../scss/_theme.scss */
+/* line 77, ../scss/_theme.scss */
 .darkblue {
   color: #549eaf !important;
 }
 
-/* line 71, ../scss/_theme.scss */
+/* line 78, ../scss/_theme.scss */
 .darkyellow {
   color: #faa51a !important;
 }
 
-/* line 72, ../scss/_theme.scss */
+/* line 79, ../scss/_theme.scss */
 .lightblue {
   color: #a1dadb !important;
 }
 
-/* line 73, ../scss/_theme.scss */
+/* line 80, ../scss/_theme.scss */
 .lightyellow {
   color: #f0cf9a !important;
 }
 
-/* line 75, ../scss/_theme.scss */
+/* line 82, ../scss/_theme.scss */
 .fill-white {
   background-color: #FFFFFF !important;
   color: #444;
 }
 
-/* line 76, ../scss/_theme.scss */
+/* line 83, ../scss/_theme.scss */
 .fill-dark {
   background-color: #DED6C2 !important;
   color: #333;
 }
 
-/* line 77, ../scss/_theme.scss */
+/* line 84, ../scss/_theme.scss */
 .fill-dark-hud {
   background-color: rgba(0, 0, 0, 0.1) !important;
   color: #000;
 }
 
-/* line 78, ../scss/_theme.scss */
+/* line 85, ../scss/_theme.scss */
 .fill-dark {
   background-color: #DED6C2 !important;
   color: #333;
 }
 
-/* line 79, ../scss/_theme.scss */
+/* line 86, ../scss/_theme.scss */
 .fill-primary {
   background-color: #2e3661 !important;
   color: #9699b3;
 }
 
-/* line 80, ../scss/_theme.scss */
+/* line 87, ../scss/_theme.scss */
 .fill-silver-hud {
   background-color: rgba(255, 255, 255, 0.2) !important;
   color: #222;
 }
 
-/* line 81, ../scss/_theme.scss */
+/* line 88, ../scss/_theme.scss */
 .fill-redgray {
   background-color: #EFE7E6 !important;
   color: #222020;
@@ -1367,7 +1384,7 @@ hr {
 .fill-darkblue  { background-color: #353F67 !important; color: #FFF; }
 .fill-blue      { background-color: #43609E !important; color: #000; }
 .fill-lightblue { background-color: #6086C4 !important; color: #000; }*/
-/* line 87, ../scss/_theme.scss */
+/* line 94, ../scss/_theme.scss */
 .fill-blueprint {
   background-repeat: repeat;
   background-size: 12px;
@@ -1376,102 +1393,102 @@ hr {
   color: #FFF;
 }
 
-/* line 94, ../scss/_theme.scss */
+/* line 101, ../scss/_theme.scss */
 .fill-cream {
   background-color: #F6F7BD !important;
   color: #000;
 }
 
-/* line 95, ../scss/_theme.scss */
+/* line 102, ../scss/_theme.scss */
 .fill-green {
   background-color: #80BCA3 !important;
   color: #000;
 }
 
-/* line 96, ../scss/_theme.scss */
+/* line 103, ../scss/_theme.scss */
 .fill-brown {
   background-color: #241C1B !important;
   color: #FFF;
 }
 
-/* line 97, ../scss/_theme.scss */
+/* line 104, ../scss/_theme.scss */
 .fill-orange {
   background-color: #E6AC27 !important;
   color: #000;
 }
 
-/* line 98, ../scss/_theme.scss */
+/* line 105, ../scss/_theme.scss */
 .fill-brown {
   background-color: #655643 !important;
   color: #FFF;
 }
 
-/* line 100, ../scss/_theme.scss */
+/* line 107, ../scss/_theme.scss */
 .fill-blue {
   background-color: #4487A6 !important;
   color: #FFF;
 }
 
-/* line 101, ../scss/_theme.scss */
+/* line 108, ../scss/_theme.scss */
 .fill-skyblue {
   background-color: #68CFFF !important;
   color: #000;
 }
 
-/* line 102, ../scss/_theme.scss */
+/* line 109, ../scss/_theme.scss */
 .fill-silver {
   background-color: #CFE2E0 !important;
   color: #333;
 }
 
-/* line 103, ../scss/_theme.scss */
+/* line 110, ../scss/_theme.scss */
 .fill-orange {
   background-color: #CF6F01 !important;
   color: #000;
 }
 
-/* line 104, ../scss/_theme.scss */
+/* line 111, ../scss/_theme.scss */
 .fill-yellow {
   background-color: #E6A813 !important;
   color: #FFF;
 }
 
-/* line 105, ../scss/_theme.scss */
+/* line 112, ../scss/_theme.scss */
 .fill-gray {
   background-color: #EFEFEF !important;
   color: #000;
 }
 
-/* line 107, ../scss/_theme.scss */
+/* line 114, ../scss/_theme.scss */
 .fill-lightblue {
   background-color: #a1dadb !important;
   color: #333333;
 }
 
-/* line 108, ../scss/_theme.scss */
+/* line 115, ../scss/_theme.scss */
 .fill-darkblue {
   background-color: #549eaf !important;
   color: #333333;
 }
 
-/* line 109, ../scss/_theme.scss */
+/* line 116, ../scss/_theme.scss */
 .fill-lightyellow {
   background-color: #f0cf9a !important;
   color: #333333;
 }
 
-/* line 110, ../scss/_theme.scss */
+/* line 117, ../scss/_theme.scss */
 .fill-darkyellow {
   background-color: #faa51a !important;
   color: #333333;
 }
 
-/* line 112, ../scss/_theme.scss */
+/* line 119, ../scss/_theme.scss */
 .shadow-orange {
   text-shadow: 0.1em 0.1em #E6AC27;
 }
 
-/* line 113, ../scss/_theme.scss */
+/* line 120, ../scss/_theme.scss */
 .fade-red-to-dark {
   background-image: -webkit-linear-gradient(top, #bb3311 20%, #121212);
   background-image: -moz-linear-gradient(top, #bb3311 20%, #121212);
@@ -1479,7 +1496,7 @@ hr {
   background-image: linear-gradient(top bottom, #bb3311 20%, #121212);
 }
 
-/* line 120, ../scss/_theme.scss */
+/* line 127, ../scss/_theme.scss */
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
   background: #EEEDE3 !important;
 }
@@ -1563,7 +1580,7 @@ html {
 
 /* line 31, ../scss/_typography.scss */
 .regular-prose {
-  font-size: 0.095rem;
+  font-size: 1.000rem;
   line-height: 1.40;
 }
 
@@ -1604,9 +1621,9 @@ html {
   }
 
   /* line 40, ../scss/_typography.scss */
-  .large-prose {
-    font-size: 1.250rem;
-    line-height: 1.22;
+  .regular-prose {
+    font-size: 0.095rem;
+    line-height: 1.40;
   }
 
   /* line 41, ../scss/_typography.scss */
@@ -2050,11 +2067,6 @@ header .logo {
   display: block;
 }
 
-/* line 182, ../scss/_objects.scss */
-#cog {
-  position: fixed;
-}
-
 /* line 185, ../scss/_objects.scss */
 .logo-small {
   background: url(../img/logo.png) no-repeat scroll center center;
@@ -2158,7 +2170,7 @@ header .logo {
 @media (min-width: 768px) {
   /* line 252, ../scss/_objects.scss */
   #past-editions-json {
-    width: 26em;
+    width: 40em;
     margin: 0 auto;
     transform: none;
   }
@@ -2577,4 +2589,56 @@ a.hasgeek-logo:hover {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+/* line 490, ../scss/_objects.scss */
+#runup-events-cards {
+  padding: 0;
+  float: none;
+  margin: 0 auto;
+  display: block;
+  width: 90%;
+}
+
+/* line 497, ../scss/_objects.scss */
+.event-node {
+  display: block;
+  border: 2px solid #333;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 0.8em;
+  position: relative;
+}
+
+/* line 506, ../scss/_objects.scss */
+.runup-event table th:first-child {
+  width: 230px;
+}
+/* line 509, ../scss/_objects.scss */
+.runup-event table td {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+/* line 512, ../scss/_objects.scss */
+.runup-event table td h3 {
+  color: #549eaf;
+  padding-top: 0.8em;
+}
+/* line 516, ../scss/_objects.scss */
+.runup-event table td h5 {
+  font-size: 1em;
+  padding: 0.3em;
+}
+/* line 519, ../scss/_objects.scss */
+.runup-event table td h5 a {
+  border-bottom: none;
+}
+/* line 523, ../scss/_objects.scss */
+.runup-event table td p, .runup-event table td ul, .runup-event table td ol {
+  font-size: 0.8em;
+  padding-bottom: 1em;
+}
+/* line 527, ../scss/_objects.scss */
+.runup-event table td ul, .runup-event table td ol {
+  text-align: left;
 }

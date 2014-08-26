@@ -1,0 +1,5 @@
+{% with %}
+  {% from theme("data/runup-events.html") import items %}
+  {% set event = items[node.properties['event_id']|int] %}
+  {% include theme("layouts/runup-venue.html") %}
+{% endwith %}
