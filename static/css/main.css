@@ -2603,47 +2603,46 @@ a.hasgeek-logo:hover {
 /* line 497, ../scss/_objects.scss */
 .event-node {
   display: block;
-  border: 2px solid #333;
+  border: 2px solid #faa51a;
   height: 200px;
   overflow: hidden;
-  border-radius: 0.8em;
   position: relative;
 }
 
-/* line 506, ../scss/_objects.scss */
+/* line 505, ../scss/_objects.scss */
 #workshops table th:first-child, .runup-event table th:first-child {
   width: 230px;
 }
-/* line 509, ../scss/_objects.scss */
+/* line 508, ../scss/_objects.scss */
 #workshops table td, .runup-event table td {
   padding-left: 1em;
   padding-right: 1em;
 }
-/* line 512, ../scss/_objects.scss */
+/* line 511, ../scss/_objects.scss */
 #workshops table td h3, .runup-event table td h3 {
   color: #549eaf;
   padding-top: 0.8em;
 }
-/* line 516, ../scss/_objects.scss */
+/* line 515, ../scss/_objects.scss */
 #workshops table td h5, .runup-event table td h5 {
   font-size: 1em;
   padding: 0.3em;
 }
-/* line 519, ../scss/_objects.scss */
+/* line 518, ../scss/_objects.scss */
 #workshops table td h5 a, .runup-event table td h5 a {
   border-bottom: none;
 }
-/* line 523, ../scss/_objects.scss */
+/* line 522, ../scss/_objects.scss */
 #workshops table td p, #workshops table td ul, #workshops table td ol, .runup-event table td p, .runup-event table td ul, .runup-event table td ol {
   font-size: 0.8em;
   padding-bottom: 1em;
 }
-/* line 527, ../scss/_objects.scss */
+/* line 526, ../scss/_objects.scss */
 #workshops table td ul, #workshops table td ol, .runup-event table td ul, .runup-event table td ol {
   text-align: left;
 }
 
-/* line 532, ../scss/_objects.scss */
+/* line 531, ../scss/_objects.scss */
 .fill-primary.table-bordered > thead > tr > th, .fill-primary.table-bordered > tbody > tr > th, .fill-primary.table-bordered > tfoot > tr > th, .fill-primary.table-bordered > thead > tr > td, .fill-primary.table-bordered > tbody > tr > td, .fill-primary.table-bordered > tfoot > tr > td {
   border: 1px solid #549eaf;
 }
