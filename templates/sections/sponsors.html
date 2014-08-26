@@ -6,50 +6,52 @@
       </div>
     </div>
   </div>
-{% with fill_cycler = cycler('fill-lightblue', 'fill-darkblue') %}
+{% with fill_cycler = cycler('fill-darkblue', 'fill-primary') %}
   {% from theme("data/sponsors.html") import types, items %}
   {% for type in types %}
     {% set outer = loop %}
-    {% for item in items if item.type == type.id and type.size != 'compact' and item.id != 'logo'  %}
+    {% for item in items if item.type == type.id and type.size != 'compact'  %}
       {% if loop.first %}
-      <section class="sponsor-platinum page-section {{ fill_cycler.next() }} clearfix">
+      <section id="sponsor-{{ type.id }}" class="page-section {{ fill_cycler.next() }} clearfix">
+      <div class="container-fluid">
         <div class="prose-type pad-three">
           <h2 class="legible all-caps space-one-bottom">{{ type.title }}</h2>
         </div>
       {% endif %}
-        <div id="{{ type.id }}-{{ item.id }}" class="row-fluid space-two pad-two">
+        <h3 class="visuallyhidden">{{ item.title }}</h3>
+        <div id="{{ type.id }}-{{ item.id }}" class="row space-two pad-two-left pad-three-right">
           <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 regular space-half-top nospace-bottom clearfix clearboth">
-            <p class="clearfix space-half-bottom">
+            <p class="clearfix space-two-bottom">
               <a href="{{ item.link }}" target="_blank" class="occupy fill-gray sponsor-logo contain-width flushleft link-silent">
                 <img alt="{{ item.name }}" src="{{ item.logo }}">
               </a>
             </p>
           </div>
 
-          <div class="col-lg-7 col-md-6 col-sm-4 col-xs-12 regular space-two-bottom">
+          <div class="col-lg-7 col-md-6 col-sm-4 col-xs-12 pad-two-right pad-one-left regular space-two-bottom">
               <div class="legible semi-bold space-half-bottom visuallyhidden">{{ item.title }}</div>
               {{ item.blurb|safe }}
           </div>
           <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
 
             {% if item.display %}
-            <h4 class="tiny all-caps nospace">Website</h3>
-            <p class="regular prose-type space-half-top space-one-bottom link-silent"><a href="{{ item.link }}">{{ item.display }}</a></p>
+              <h4 class="tiny all-caps nospace">Website</h4>
+              <p class="regular prose-type space-half-top space-one-bottom link-silent"><a href="{{ item.link }}" class="white">{{ item.display }}</a></p>
             {% endif %}
             
             {% if item.attendee %}
-            <h4 class="tiny all-caps nospace">Sponsor Attendees</h3>
-            <p class="regular prose-type space-half-top space-one-bottom link-silent">{{ item.attendee|safe }}</p>
+              <h4 class="tiny all-caps nospace">Sponsor Attendees</h4>
+              <p class="regular prose-type space-half-top space-one-bottom link-silent">{{ item.attendee|safe }}</p>
             {% endif %}
             
             {% if item.contact %}
-            <h4 class="tiny all-caps nospace">Contact</h3>
-            <p class="regular prose-type space-half-top space-one-bottom link-silent">{{ item.contact|safe }}</p>
+              <h4 class="tiny all-caps nospace">Contact</h4>
+              <p class="regular prose-type space-half-top space-one-bottom link-silent"><a href="mailto:{{ item.contact|safe }}" class="white">{{ item.contact|safe }}</a></p>
             {% endif %}
-            
           </div>
         </div>
       {% if loop.last %}
+      </div>
       </section>
       {% endif %}
     {% endfor %}
