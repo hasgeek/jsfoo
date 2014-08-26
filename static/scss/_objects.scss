@@ -502,7 +502,7 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
     border-radius: 0.8em;
     position: relative;
 }
-.runup-event table {
+#workshops table, .runup-event table {
     th:first-child {
         width: 230px
     }
@@ -528,4 +528,7 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
             text-align: left;
         }
     }
+}
+.fill-primary.table-bordered>thead>tr>th, .fill-primary.table-bordered>tbody>tr>th, .fill-primary.table-bordered>tfoot>tr>th, .fill-primary.table-bordered>thead>tr>td, .fill-primary.table-bordered>tbody>tr>td, .fill-primary.table-bordered>tfoot>tr>td {
+    border: 1px solid $darkblue;
 }
