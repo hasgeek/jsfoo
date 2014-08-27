@@ -256,21 +256,21 @@ header .logo {
     }
 }
 
-.program-committee h2 {
+.editorial-panel h2 {
     line-height: 1.2;
     margin-top: 1rem;
 }
-.program-committee ul {
+.editorial-panel ul {
     list-style-type: none;
     margin: 1rem 0 0;
 }
 @media (max-width: 767px) {
-    .program-committee ul                     { margin: 2rem 0 0; }
-    .program-committee ul li                  { width: 49%; }
-    .program-committee ul li:nth-child(odd)   { float: left;  clear: both;  }
-    .program-committee ul li:nth-child(even)  { float: right; }
+    .editorial-panel ul                     { margin: 2rem 0 0; }
+    .editorial-panel ul li                  { width: 49%; }
+    .editorial-panel ul li:nth-child(odd)   { float: left;  clear: both;  }
+    .editorial-panel ul li:nth-child(even)  { float: right; }
 }
-.program-committee a {
+.editorial-panel a {
     border-bottom: none;
 }
 
