@@ -13,14 +13,14 @@
       </p>
     </div>
   </div>
-  <div class="pad-half">
+  <div class="pad-half nopad-xs">
   {% with %}
     {% from theme("data/sponsors.html") import types, items %}
     {% for type in types %}
       {% set outer = loop %}
       {% for item in items if item.type == type.id  %}
         {% if loop.first %}
-        <div id="sponsors-{{ type.id }}" class="row-fluid container-fluid  pad-three space-two-top">
+        <div id="sponsors-{{ type.id }}" class="row-fluid container-fluid  pad-three  nopad-xs space-two-top">
           <h3 class="col-lg-5 col-md-5 col-sm-4 col-xs-12 legible-prose all-caps space-one-bottom prose-type medium">{{ type.title }}</h3>
 
           <ul class="col-lg-7 col-md-7 col-sm-8 col-xs-12 nospace-bottom list-plain link-silent clearfix list-space-line sponsor-{{ type.size }}">

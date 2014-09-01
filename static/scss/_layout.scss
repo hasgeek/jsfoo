@@ -365,10 +365,10 @@ h2.border-bottom-line>span{
 }
 @media screen and (max-width:767px){
     .center-xs{
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
-    .center-xs .pull-right{
+    .center-xs .pull-right, .center-xs.flushright{
         float: none;
     }
 }

@@ -150,10 +150,16 @@ header {
 }
 .masthead {
     position: absolute;
-    bottom: -40px;
+    bottom: -37px;
     left: 0;
     right: 0;
 }
+@media (max-width: 683px) {
+    .masthead {
+        bottom: -67px;
+    }
+}
+
 .banner { 
     display: block;
     background-image: url(https://imgee.s3.amazonaws.com/imgee/d2e749d9ec5347f994550b9ed24e8ec3.jpeg);
