@@ -1,8 +1,8 @@
 
 .button {
     display: inline-block;
-    background: #CF6F01;
-    color: #F0F0E8;
+    background: $darkyellow;
+    color: $white;
     line-height: 1.4;
     padding: .3em 1.5em .20em;
     text-transform: uppercase;
@@ -12,11 +12,8 @@
 }
 .button:hover   { 
     box-shadow: none; 
-    color: #F0F0E8;
-    background: #C16700;
-}
-.button:active{
-    box-shadow: inset 1px 1px 2px #89500F;
+    color: $white;
+    background: #EB9812;
 }
 .button-ghost-light {
     border: 3px solid $white;
