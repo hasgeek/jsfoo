@@ -2612,7 +2612,7 @@ a.hasgeek-logo:hover {
 
 /* line 508, ../scss/_objects.scss */
 #workshops table th:first-child, .runup-event table th:first-child {
-  width: 230px;
+  width: 12em;
 }
 /* line 511, ../scss/_objects.scss */
 #workshops table td, .runup-event table td {
