@@ -16,6 +16,7 @@
               </div>
               <div class="col-xs-12">
                 <h4 class="regular prose-type calm all-caps push-half-top nospace-bottom white">{{ item.speaker|safe }}</h4>
+                {% if item.twitter %}<div class="link-silent regular-prose"><a href="">@{{ item.twitter }}</a></div>{% endif %}
                 <p class="secondary italic push-half-bottom darkyellow">{{ item.designation|safe }}</p>
               </div>
             </div>
