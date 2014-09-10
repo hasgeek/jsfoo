@@ -7,11 +7,11 @@
 	    			<li class="list-silent link-silent text-center space-two-bottom" style="width: 20%; padding: 3px">
 		    			{% if item.link %}<a href="{{ item.link }}">{% endif %}
 		    				<div class="event-node fill-primary push-half-top">
-				    			<div class="regular white">{{ item.title }}</div>
+				    			<div class="regular white">{{ item.title|safe }}</div>
 				    			<div class="fixed-bottom">
-				    				<h4 class="date all-caps secondary prose-type">{{ item.when }}</h4>
+				    				<h4 class="date all-caps secondary prose-type">{{ item.when|safe }}</h4>
 				    				<div class="fill-primary">
-							    		<div class="secondary push-1q fill-darkyellow">{{ item.venue }}</div>
+							    		<div class="secondary push-1q fill-darkyellow">{{ item.venue|safe }}</div>
 							    	</div>
 				    			</div>
 					    	</div>

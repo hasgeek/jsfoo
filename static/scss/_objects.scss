@@ -504,6 +504,21 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
     overflow: hidden;
     position: relative;
 }
+@media (max-width:767px) {
+    .event-node {
+        height: 150px;
+    }
+}
+@media (min-width:768px) and (max-width:991px) {
+    .event-node {
+        height: 300px;
+    }
+}
+@media (min-width:992px) and (max-width:1199px) {
+    .event-node {
+        height: 250px;
+    }
+}
 #workshops table, .runup-event table {
     th:first-child {
         width: 12em;

@@ -64,6 +64,15 @@ html, body, header{
         width: auto;
     }
 }
+@media (max-width:767px) {
+    #runup-events-cards.table-cell {
+        display: block;
+        & > li {
+            display: block;
+            width: 100% !important;
+        }
+    }
+}
 .buttons {
     li {
         text-align: center;
