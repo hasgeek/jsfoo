@@ -27,7 +27,7 @@
                             <img src="{{ item.photo }}" alt="">
                           </div>
                           <div class="col-md-9 col-sm-12 col-xs-9 nopad-left">
-                            <div><a href="" class="darkblue regular">{{ item.title|safe }}</a></div>
+                            <div><a href="{% if talks %}conference{% elif workshops %}workshops{% endif %}#{{ item.id }}" class="darkblue regular">{{ item.title|safe }}{{ schedule.type }}</a></div>
                             <div><em>by</em> {{ item.speaker | safe }}</div>
                           </div>
                         </div>
@@ -63,7 +63,7 @@
                             <img src="{{ item.photo }}" alt="">
                           </div>
                           <div class="col-md-9 col-sm-12 col-xs-9 nopad-left">
-                            <div><a href="" class="darkblue regular">{{ item.title|safe }}</a></div>
+                            <div><a href="{% if talks %}conference{% elif workshops %}workshops{% endif %}#{{ item.id }}" class="darkblue regular">{{ item.title|safe }}</a></div>
                             <div><em>by</em> {{ item.speaker | safe }}</div>
                           </div>
                         </div>

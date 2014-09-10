@@ -15,17 +15,17 @@
                 <img src="{{item.photo}}" alt="">
               </div>
               <div class="col-xs-12">
-                <h4 class="regular prose-type calm all-caps push-half-top nospace-bottom white">{{ item.speaker }}</h4>
-                <p class="secondary italic push-half-bottom darkyellow">{{ item.designation }}</p>
+                <h4 class="regular prose-type calm all-caps push-half-top nospace-bottom white">{{ item.speaker|safe }}</h4>
+                <p class="secondary italic push-half-bottom darkyellow">{{ item.designation|safe }}</p>
               </div>
             </div>
           </div>
           <div class="col-md-9 col-sm-8 col-xs-12 space-two-bottom clearfix">
-            <h3 class="legible nospace-top medium push-one-top pad-half darkblue">{{ item.title }}</h3>
+            <h3 class="legible nospace-top medium push-one-top pad-half darkblue">{{ item.title|safe }}</h3>
             <div class="secondary space-three-bottom pad-half">
               {{ item.blurb|safe }}
               <ul class="list-plain secondary space-one-top">
-                {% if item.funnel %}<li class="flushleft"><a href="{{ item.funnel }}">Funnel Proposal</a></li>{% endif %}
+                <li class="flushleft"><a target="_blank" href="https://funnel.hasgeek.com/jsfoo2014/{{ item.id }}">Funnel Proposal</a></li>
                 {% if item.preview %}<li class="flushright"><a href="{{ item.preview }}">Preview</a></li>{% endif %}
               </ul>
             </div>
