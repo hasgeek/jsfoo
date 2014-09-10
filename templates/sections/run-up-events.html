@@ -1,16 +1,11 @@
-<section id="run-up-events" class="page-section">
-  <div class="container-fluid">
-    <div class="col-lg-12">
-      <div class="pad-three nopad-xs space-three-top extralarge all-caps prose-type bold"><span class="darkyellow">4.1</span> <span class="darkblue">Run-up events</span></div>
-    </div>
-    <div class="col-lg-12">
-      <div class="legible-prose calm pad-six nopad-xs space-one link-silent">
-        We are organizing run-up events in different cities across India.
-      </div>
-    </div>
+<section id="run-up-events" class="push-four-bottom {% if background %} fill-{{ background }}{% endif %}">
+  <div class="fill-lightblue">
+    <div class="pad-line nopad-xs space-three-top extralarge all-caps prose-type bold"><span class="darkyellow">4.1</span> <span class="darkblue">Run-up events</span></div>
   </div>
-</section> 
+<div class="push-three-top">
 {% with %}
   {% from theme("data/runup-events.html") import items %}
   {% include theme("layouts/runup-events.html") %}
 {% endwith %}
+</div>
+</section> 

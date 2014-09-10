@@ -495,11 +495,11 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
     float: none;
     margin: 0 auto;
     display: block;
-    width: 90%;
+    width: 96%;
 }
 .event-node {
     display: block;
-    border: 2px solid $darkyellow;
+    border: 1px solid $lightblue;
     height: 200px;
     overflow: hidden;
     position: relative;
@@ -534,3 +534,138 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 .fill-primary.table-bordered>thead>tr>th, .fill-primary.table-bordered>tbody>tr>th, .fill-primary.table-bordered>tfoot>tr>th, .fill-primary.table-bordered>thead>tr>td, .fill-primary.table-bordered>tbody>tr>td, .fill-primary.table-bordered>tfoot>tr>td {
     border: 1px solid $darkblue;
 }
+
+
+
+.cbp_tmtimeline {
+    margin: 30px 0 0 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+} 
+
+.cbp_tmtimeline img {
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid $darkyellow;
+}
+
+/* The line */
+.cbp_tmtimeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    background: $lightblue;
+    left: 5%;
+    margin-left: -8px;
+}
+.fill-primary .cbp_tmtimeline:before{
+    background: $primary-dark;
+}
+
+/* The date/time */
+.cbp_tmtimeline > li .cbp_tmtime {
+    display: block;
+    width: 20%;
+    padding-right: 33px;
+    position: absolute;
+    left: 60px;
+    padding-top: 3px;
+}
+
+.cbp_tmtimeline > li .cbp_tmtime span {
+    text-align: right;
+}
+
+.cbp_tmtimeline > li .cbp_tmtime span:last-child {
+    font-size: 0.9em;
+    color: #bdd0db;
+}
+
+.cbp_tmtimeline > li .cbp_tmtime span:first-child {
+    font-size: 1.5em;
+    // color: #3594cb;
+}
+
+
+/* Right content */
+.cbp_tmtimeline > li .cbp_tmlabel {
+    margin: 0 0 15px 20%;
+    // background: #3594cb;
+    // color: #fff;
+    padding: 0.5em 2em;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.4;
+    position: relative;
+    border-radius: 5px;
+}
+
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
+    // background: #6cbfee;
+}
+
+.cbp_tmtimeline > li .cbp_tmlabel h2 { 
+    margin-top: 0px;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+/* The triangle */
+// .cbp_tmtimeline > li .cbp_tmlabel:after {
+//     right: 100%;
+//     border: solid transparent;
+//     content: " ";
+//     height: 0;
+//     width: 0;
+//     position: absolute;
+//     pointer-events: none;
+//     border-right-color: #3594cb;
+//     border-width: 10px;
+//     top: 10px;
+// }
+
+// .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
+//     border-right-color: #6cbfee;
+// }
+
+/* The icons */
+.cbp_tmtimeline > li .cbp_tmicon {
+    width: 12px;
+    height: 12px;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    font-size: 1.4em;
+    line-height: 12px;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    color: #fff;
+    background: $white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px $lightblue;
+    text-align: center;
+    left: 5%;
+    // top: 0;
+    margin: 12px 0 0 -10px;
+}
+.fill-primary .cbp_tmtimeline > li .cbp_tmicon {
+    background: $primary;
+    box-shadow: 0 0 0 5px $primary-dark;
+}
+
+/* Example Media Queries */
+@media screen and (max-width: 991px) {
+
+    .cbp_tmtimeline > li .cbp_tmtime span:first-child {
+        font-size: 1.4em;
+    }
+    .cbp_tmtimeline > li .cbp_tmtime {
+        left: 40px;
+    }
+}
+

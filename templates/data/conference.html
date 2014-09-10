@@ -4,50 +4,14 @@
     , 'blurb' : '<p>JSFoo 2013 will feature original creations with JavaScript. This year’s edition has been themed to showcase innovations on the mobile, server and client-side, and expose participants to cutting-edge developments – <a href="https://funnel.hasgeek.com/jsfoo2013/814-programming-flying-robots">flying robots</a>, <a href="https://funnel.hasgeek.com/jsfoo2013/804-calatrava-inventing-hybrid-mobile-app-framework-with-javascript-bridges">hybrid mobile app framework</a>, <a href="https://funnel.hasgeek.com/jsfoo2013/798-interactive-physics-simulation-in-the-browser-what-i-learned">interactive physics simulation in the browser</a>, etc.</p><p>Listen to full-length talks of 40 minutes, crisp 15-minute presentations on new ideas and frameworks, and present a short talk during the flash talk session open to the audience!</p>'
   }
 %}
-{% from theme("data/conference-schedule-day1.html") import schedule as schedule_day1 %}
-{% from theme("data/conference-schedule-day2.html") import schedule as schedule_day2 %}
-{% if schedule_day1 is defined and schedule_day2 is defined %}
-  {% 
-    set nav = [
-        {
-          'display' : 'Talks + Schedule – Day 1'
-        , 'link'    : 'conference#schedule-day1'
-      }
-      , {
-          'display' : 'Talks + Schedule – Day 2'
-        , 'link'    : 'conference#schedule-day2'
-      }
-      , {
-          'display' : 'Venue'
-        , 'link'    : 'conference#conference-venue'
-      }
-      , {
-          'display' : 'Party + Venue'
-        , 'link'    : 'venue#party-venue'
-      }
-    ] 
-  %}
-{% else %}
-  {% 
-    set nav = [
-        {
-          'display' : 'Talks'
-        , 'link'    : 'conference#talks'
-      }
-      , {
-          'display' : 'Venue'
-        , 'link'    : 'conference#conference-venue'
-      }
-    ] 
-  %}
-{% endif %}
-{% from theme("data/conference-sessions.html") import sessions, types %}
+
+{% from theme("data/sessions.html") import talks, types %}
 {% 
   set session = {
       'id'    : 'talks'
     , 'label' : 'Talks'
     , 'link'  : 'conference#talks'
-    , 'list'  : sessions.values()
+    , 'list'  : talks.values()
     , 'types' : types
   }
 %}

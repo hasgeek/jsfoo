@@ -1,0 +1,5 @@
+{% with %}
+  {% from theme("data/workshop-schedule.html") import schedule %}
+  {% from theme("data/sessions.html") import workshops, types %}
+  {% include theme("layouts/schedule.html") %}
+{% endwith %}

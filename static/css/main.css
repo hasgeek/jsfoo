@@ -1510,165 +1510,164 @@ body, .body-type {
   font-family: "minion-pro", serif;
 }
 
-/* line 12, ../scss/_typography.scss */
-i,
-em, .button,
+/* line 11, ../scss/_typography.scss */
+i, .button,
 .prose-type {
   font-family: "brandon-grotesque", sans-serif;
   font-weight: 300;
 }
 
-/* line 14, ../scss/_typography.scss */
+/* line 13, ../scss/_typography.scss */
 .leaflet-container {
   font: 12px/1.5 "Lato", "Open Sans", sans-serif !important;
 }
 
 /*  Scale  */
-/* line 21, ../scss/_typography.scss */
+/* line 20, ../scss/_typography.scss */
 html {
   font-size: 20px;
   line-height: 1.4;
 }
 
-/* line 23, ../scss/_typography.scss */
+/* line 22, ../scss/_typography.scss */
 .huge {
   font-size: 2.000rem;
   line-height: 1.10;
 }
 
-/* line 24, ../scss/_typography.scss */
+/* line 23, ../scss/_typography.scss */
 .huge.body-type {
   font-size: 2.125rem;
   line-height: 1.10;
 }
 
-/* line 25, ../scss/_typography.scss */
+/* line 24, ../scss/_typography.scss */
 .extralarge {
   font-size: 1.750rem;
   line-height: 1.30;
 }
 
-/* line 26, ../scss/_typography.scss */
+/* line 25, ../scss/_typography.scss */
 .large {
   font-size: 1.250rem;
   line-height: 1.22;
 }
 
-/* line 27, ../scss/_typography.scss */
+/* line 26, ../scss/_typography.scss */
 .large-prose {
   font-size: 0.600rem;
   line-height: 1.22;
 }
 
-/* line 28, ../scss/_typography.scss */
+/* line 27, ../scss/_typography.scss */
 .legible {
   font-size: 1.300rem;
   line-height: 1.50;
 }
 
-/* line 29, ../scss/_typography.scss */
+/* line 28, ../scss/_typography.scss */
 .legible-prose {
   font-size: 1.125rem;
   line-height: 1.40;
 }
 
-/* line 30, ../scss/_typography.scss */
+/* line 29, ../scss/_typography.scss */
 .regular {
   font-size: 1.000rem;
   line-height: 1.60;
 }
 
-/* line 31, ../scss/_typography.scss */
+/* line 30, ../scss/_typography.scss */
 .regular-prose {
   font-size: 1.000rem;
   line-height: 1.40;
 }
 
-/* line 32, ../scss/_typography.scss */
+/* line 31, ../scss/_typography.scss */
 .secondary {
   font-size: 0.875rem;
   line-height: 1.50;
 }
 
-/* line 33, ../scss/_typography.scss */
+/* line 32, ../scss/_typography.scss */
 .secondary-prose {
   font-size: 0.650rem;
   line-height: 1.40;
 }
 
-/* line 34, ../scss/_typography.scss */
+/* line 33, ../scss/_typography.scss */
 .tiny {
   font-size: 0.630rem;
   line-height: 1.53;
 }
 
 @media only screen and (min-width: 30em) {
-  /* line 37, ../scss/_typography.scss */
+  /* line 36, ../scss/_typography.scss */
   html {
     font-size: 18px;
   }
 
-  /* line 38, ../scss/_typography.scss */
+  /* line 37, ../scss/_typography.scss */
   .huge {
     font-size: 3.000rem;
     line-height: 1.10;
   }
 
-  /* line 39, ../scss/_typography.scss */
+  /* line 38, ../scss/_typography.scss */
   .huge.body-type {
     font-size: 2.500rem;
     line-height: 1.05;
   }
 
-  /* line 40, ../scss/_typography.scss */
+  /* line 39, ../scss/_typography.scss */
   .regular-prose {
     font-size: 0.095rem;
     line-height: 1.40;
   }
 
-  /* line 41, ../scss/_typography.scss */
+  /* line 40, ../scss/_typography.scss */
   .regular-prose {
     font-size: 1.000rem;
     line-height: 1.47;
   }
 }
 @media only screen and (min-width: 45em) {
-  /* line 44, ../scss/_typography.scss */
+  /* line 43, ../scss/_typography.scss */
   html {
     font-size: 21px;
   }
 
-  /* line 45, ../scss/_typography.scss */
+  /* line 44, ../scss/_typography.scss */
   .huge.body-type {
     font-size: 2.500rem;
     line-height: 1.05;
   }
 
-  /* line 46, ../scss/_typography.scss */
+  /* line 45, ../scss/_typography.scss */
   .extralarge {
     font-size: 2.000rem;
     line-height: 1.30;
   }
 
-  /* line 47, ../scss/_typography.scss */
+  /* line 46, ../scss/_typography.scss */
   .large-prose {
     font-size: 1.000rem;
     line-height: 1.22;
   }
 
-  /* line 48, ../scss/_typography.scss */
+  /* line 47, ../scss/_typography.scss */
   .regular-prose {
     font-size: 1.000rem;
     line-height: 1.50;
   }
 
-  /* line 49, ../scss/_typography.scss */
+  /* line 48, ../scss/_typography.scss */
   .secondary-prose {
     font-size: 0.650rem;
     line-height: 1.49;
   }
 
-  /* line 50, ../scss/_typography.scss */
+  /* line 49, ../scss/_typography.scss */
   .tiny {
     font-size: 0.550rem;
     line-height: 1.49;
@@ -1676,97 +1675,97 @@ html {
 }
 @media only screen and (min-width: 55em) {
   /*    .huge.body-type     { font-size: 3.500rem; line-height: 0.95; }*/
-  /* line 54, ../scss/_typography.scss */
+  /* line 53, ../scss/_typography.scss */
   .regular-prose {
     font-size: 1.000rem;
     line-height: 1.60;
   }
 }
 @media only screen and (min-width: 85em) {
-  /* line 57, ../scss/_typography.scss */
+  /* line 56, ../scss/_typography.scss */
   html {
     font-size: 24px;
   }
 }
 /*  Helpers  */
-/* line 64, ../scss/_typography.scss */
+/* line 63, ../scss/_typography.scss */
 abbr {
   font-size: 0.9em;
   font-variant: small-caps;
   border-bottom: none;
 }
 
-/* line 70, ../scss/_typography.scss */
+/* line 69, ../scss/_typography.scss */
 .thin {
   font-weight: 300;
 }
 
-/* line 71, ../scss/_typography.scss */
+/* line 70, ../scss/_typography.scss */
 .calm {
   font-weight: normal;
 }
 
-/* line 72, ../scss/_typography.scss */
+/* line 71, ../scss/_typography.scss */
 .medium {
   font-weight: 500;
 }
 
-/* line 73, ../scss/_typography.scss */
+/* line 72, ../scss/_typography.scss */
 .semibold {
   font-weight: 600;
 }
 
-/* line 74, ../scss/_typography.scss */
+/* line 73, ../scss/_typography.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 75, ../scss/_typography.scss */
+/* line 74, ../scss/_typography.scss */
 .extrabold {
   font-weight: 900;
 }
 
-/* line 76, ../scss/_typography.scss */
+/* line 75, ../scss/_typography.scss */
 .italic {
   font-style: italic;
 }
 
-/* line 77, ../scss/_typography.scss */
+/* line 76, ../scss/_typography.scss */
 .no-italic {
   font-style: normal;
 }
 
-/* line 79, ../scss/_typography.scss */
+/* line 78, ../scss/_typography.scss */
 .all-caps {
   text-transform: uppercase;
 }
 
-/* line 80, ../scss/_typography.scss */
+/* line 79, ../scss/_typography.scss */
 .all-lower {
   text-transform: lowercase !important;
 }
 
-/* line 81, ../scss/_typography.scss */
+/* line 80, ../scss/_typography.scss */
 .small-caps {
   font-variant: small-caps;
 }
 
-/* line 82, ../scss/_typography.scss */
+/* line 81, ../scss/_typography.scss */
 .strike {
   text-decoration: line-through;
 }
 
-/* line 83, ../scss/_typography.scss */
+/* line 82, ../scss/_typography.scss */
 .no-underline {
   text-decoration: none;
 }
 
-/* line 85, ../scss/_typography.scss */
+/* line 84, ../scss/_typography.scss */
 .unordered {
   list-style-type: none;
 }
 
-/* line 87, ../scss/_typography.scss */
+/* line 86, ../scss/_typography.scss */
 .amp {
   font-family: 'Hoefler Text', Baskerville, Palatino, 'Book Antiqua', Constantia, 'URW Palladio L';
   font-style: italic;
@@ -1774,53 +1773,53 @@ abbr {
   line-height: 0.5em;
 }
 
-/* line 93, ../scss/_typography.scss */
+/* line 92, ../scss/_typography.scss */
 .quo {
   margin-left: -0.24em;
 }
 
-/* line 94, ../scss/_typography.scss */
+/* line 93, ../scss/_typography.scss */
 .dquo {
   margin-left: -0.44em;
 }
 
-/* line 95, ../scss/_typography.scss */
+/* line 94, ../scss/_typography.scss */
 .tquo {
   margin-left: -0.68em;
 }
 
-/* line 98, ../scss/_typography.scss */
+/* line 97, ../scss/_typography.scss */
 .list-plain {
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
 }
 
-/* line 99, ../scss/_typography.scss */
+/* line 98, ../scss/_typography.scss */
 .dl-plain dd {
   margin-left: 0;
   line-height: inherit;
 }
 
-/* line 100, ../scss/_typography.scss */
+/* line 99, ../scss/_typography.scss */
 .dl-plain dd + dt {
   margin-top: 2rem;
 }
 
 @media (max-width: 767px) {
-  /* line 102, ../scss/_typography.scss */
+  /* line 101, ../scss/_typography.scss */
   .inline-on-mobile li {
     display: inline;
     margin-right: 0.5rem;
   }
 
-  /* line 103, ../scss/_typography.scss */
+  /* line 102, ../scss/_typography.scss */
   .inline-on-mobile dd {
     display: inline;
     margin-right: 0.5rem;
   }
 }
-/* line 105, ../scss/_typography.scss */
+/* line 104, ../scss/_typography.scss */
 .prose li {
   line-height: inherit;
 }
@@ -2598,13 +2597,13 @@ a.hasgeek-logo:hover {
   float: none;
   margin: 0 auto;
   display: block;
-  width: 90%;
+  width: 96%;
 }
 
 /* line 500, ../scss/_objects.scss */
 .event-node {
   display: block;
-  border: 2px solid #faa51a;
+  border: 1px solid #a1dadb;
   height: 200px;
   overflow: hidden;
   position: relative;
@@ -2646,4 +2645,126 @@ a.hasgeek-logo:hover {
 /* line 534, ../scss/_objects.scss */
 .fill-primary.table-bordered > thead > tr > th, .fill-primary.table-bordered > tbody > tr > th, .fill-primary.table-bordered > tfoot > tr > th, .fill-primary.table-bordered > thead > tr > td, .fill-primary.table-bordered > tbody > tr > td, .fill-primary.table-bordered > tfoot > tr > td {
   border: 1px solid #549eaf;
+}
+
+/* line 540, ../scss/_objects.scss */
+.cbp_tmtimeline {
+  margin: 30px 0 0 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+
+/* line 547, ../scss/_objects.scss */
+.cbp_tmtimeline img {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #faa51a;
+}
+
+/* The line */
+/* line 554, ../scss/_objects.scss */
+.cbp_tmtimeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  background: #a1dadb;
+  left: 5%;
+  margin-left: -8px;
+}
+
+/* line 564, ../scss/_objects.scss */
+.fill-primary .cbp_tmtimeline:before {
+  background: #252c52;
+}
+
+/* The date/time */
+/* line 569, ../scss/_objects.scss */
+.cbp_tmtimeline > li .cbp_tmtime {
+  display: block;
+  width: 20%;
+  padding-right: 33px;
+  position: absolute;
+  left: 60px;
+  padding-top: 3px;
+}
+
+/* line 578, ../scss/_objects.scss */
+.cbp_tmtimeline > li .cbp_tmtime span {
+  text-align: right;
+}
+
+/* line 582, ../scss/_objects.scss */
+.cbp_tmtimeline > li .cbp_tmtime span:last-child {
+  font-size: 0.9em;
+  color: #bdd0db;
+}
+
+/* line 587, ../scss/_objects.scss */
+.cbp_tmtimeline > li .cbp_tmtime span:first-child {
+  font-size: 1.5em;
+}
+
+/* Right content */
+/* line 594, ../scss/_objects.scss */
+.cbp_tmtimeline > li .cbp_tmlabel {
+  margin: 0 0 15px 20%;
+  padding: 0.5em 2em;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.4;
+  position: relative;
+  border-radius: 5px;
+}
+
+/* line 610, ../scss/_objects.scss */
+.cbp_tmtimeline > li .cbp_tmlabel h2 {
+  margin-top: 0px;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* The triangle */
+/* The icons */
+/* line 635, ../scss/_objects.scss */
+.cbp_tmtimeline > li .cbp_tmicon {
+  width: 12px;
+  height: 12px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  font-size: 1.4em;
+  line-height: 12px;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  color: #fff;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #a1dadb;
+  text-align: center;
+  left: 5%;
+  margin: 12px 0 0 -10px;
+}
+
+/* line 656, ../scss/_objects.scss */
+.fill-primary .cbp_tmtimeline > li .cbp_tmicon {
+  background: #2e3661;
+  box-shadow: 0 0 0 5px #252c52;
+}
+
+/* Example Media Queries */
+@media screen and (max-width: 991px) {
+  /* line 664, ../scss/_objects.scss */
+  .cbp_tmtimeline > li .cbp_tmtime span:first-child {
+    font-size: 1.4em;
+  }
+
+  /* line 667, ../scss/_objects.scss */
+  .cbp_tmtimeline > li .cbp_tmtime {
+    left: 40px;
+  }
 }
