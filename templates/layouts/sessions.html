@@ -18,6 +18,7 @@
                 <h4 class="regular prose-type calm all-caps push-half-top nospace-bottom white">{{ item.speaker|safe }}</h4>
                 {% if item.twitter %}<div class="link-silent regular-prose"><a href="">@{{ item.twitter }}</a></div>{% endif %}
                 <p class="secondary italic push-half-bottom darkyellow">{{ item.designation|safe }}</p>
+                {% if item.sponsor %}<div class="lightblue secondary-prose link-silent"><em>Sponsored session by <a href="{{ item.sponsor_link }}" target="_blank">{{ item.sponsor }}</a></em></div>{% endif %}
               </div>
             </div>
           </div>

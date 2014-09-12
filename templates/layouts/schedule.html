@@ -29,6 +29,7 @@
                           <div class="col-md-9 col-sm-12 col-xs-9 nopad-left">
                             <div><a href="{% if talks %}conference{% elif workshops %}workshops{% endif %}#{{ item.id }}" class="darkblue regular">{{ item.title|safe }}{{ schedule.type }}</a></div>
                             <div><em>by</em> {{ item.speaker | safe }}</div>
+                            {% if item.sponsor %}<div class="lightblue"><em>Sponsored session by <a href="{{ item.sponsor_link }}" target="_blank">{{ item.sponsor }}</a></em></div>{% endif %}
                           </div>
                         </div>
                       {% else %}
@@ -65,6 +66,7 @@
                           <div class="col-md-9 col-sm-12 col-xs-9 nopad-left">
                             <div><a href="{% if talks %}conference{% elif workshops %}workshops{% endif %}#{{ item.id }}" class="darkblue regular">{{ item.title|safe }}</a></div>
                             <div><em>by</em> {{ item.speaker | safe }}</div>
+                            {% if item.sponsor %}<div class="lightblue"><em>Sponsored session by <a href="{{ item.sponsor_link }}" target="_blank">{{ item.sponsor }}</a></em></div>{% endif %}
                           </div>
                         </div>
                       {% else %}
