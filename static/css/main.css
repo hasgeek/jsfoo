@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* ========== */
 /* = Layout = */
 /* ========== */
@@ -2685,7 +2684,7 @@ a.hasgeek-logo:hover {
 }
 
 /* line 562, ../scss/_objects.scss */
-.cbp_tmtimeline img {
+.cbp_tmtimeline .col-md-3 img {
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid #faa51a;
