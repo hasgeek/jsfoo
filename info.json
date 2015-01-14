@@ -1,9 +1,9 @@
 {
     "application": "eventframe",
-    "identifier": "jsfoo2014",
-    "name": "JSFoo 2014",
-    "author": "Miranj",
-    "description": "JSFoo Bangalore 2014 website template",
+    "identifier": "jsfoo2015",
+    "name": "JSFoo 2015",
+    "author": "Rudi MK",
+    "description": "JSFoo Bangalore 2015 website template",
     "license": "All rights reserved",
     "doctype": "html5",
     "options": {
