@@ -154,13 +154,21 @@ header {
     left: 0;
     right: 0;
 }
-@media (max-width: 683px) {
+@media (max-width: 599px) {
 header {
-    height: 130%;
+    height: 120%;
     }
     .masthead {
         bottom: -67px;
         display: none;
+    }
+}
+@media (max-width: 767px) {
+header {
+    height: 140%;
+    }
+    .masthead {
+        bottom: -163px;
     }
 }
 
