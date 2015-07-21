@@ -1,13 +1,14 @@
 {% extends theme('layouts/page.html') %}
 {%
   set page = {
-      'title'               : ''
-    , 'description'         : ''
-    , 'sections'            : [
-        ('event-summary',       '')
-      , ('past-highlights',   'primary')
-      , ('sponsors-summary',  'darkblue')
-        
+    'title'               : '' ,
+    'description'         : '' ,
+    'sections'            : [
+      ('event-summary',       '') ,
+      ('featured-speakers',  'darkblue') ,
+      ('venue-summary',  'primary') ,
+      ('past-highlights',   '') ,
+      ('sponsors-summary',  'darkblue')
     ]
   }
 %}
@@ -36,7 +37,7 @@
           </a>
         </h1>
         <div class="text-center">
-          <h2>Conference and Workshops on JavaScript</h2>
+          <h2 class="large">Conference and Workshops on JavaScript</h2>
           <h3 class="prose-type all-caps secondary">18 - 19 September 2015, Bangalore</h3>
           <!--<a href="http://jsfoo.doattend.com/" class="space-one-top button button-on-dark regular dark">Buy Ticket</a>-->
         </div>

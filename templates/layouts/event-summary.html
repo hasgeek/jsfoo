@@ -1,6 +1,6 @@
 <section id="about" class="page-section{% if background %} fill-{{ background }}{% endif %}">
   <div class="container-fluid">
-    <div class="col-lg-6">
+    <div class="col-lg-6 col-xs-12">
       <div class="pad-three-left space-three-top huge nopad-xs all-caps prose-type bold darkblue">{{ event.title|safe }}</div>
       {% if event.subtitle %}<div class="pad-three-left extralarge darkyellow">{{ event.subtitle|safe }}</div>{% endif %}
       {% if nav %}
@@ -11,14 +11,14 @@
         {%- endfor %}
       {% endif %}
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-6 col-xs-12">
       <div class="legible-prose calm pad-three-right nopad-xs space-three link-silent">
         <span>{{ event.blurb|safe }}</span>
         {% if event.desc %}
           <span id="event-desc" class="always-hidden secondary occupy push-one-top">{{ event.desc|safe }}</span>
           <span><i id="show-more" class="fa fa-chevron-circle-down lightgray"></i></span>
         {% endif %}
-         <p class="space-one-top">We are working on the schedule. Meanwhile get updates on <a href="https://jsfoo.talkfunnel.com/2015/">funnel</a> or <a href="https://twitter.com/jsfooindia">@jsfooindia</a>. If you are interested in talking at JSFoo, feel free to propose a session at <a href="https://jsfoo.talkfunnel.com/2015/">funnel</a>.</p>
+         <p class="space-one-top">We are working on the schedule. Meanwhile get updates on <a class="darkyellow" href="https://jsfoo.talkfunnel.com/2015/">funnel</a> or <a class="darkyellow" href="https://twitter.com/jsfooindia">@jsfooindia</a>. If you are interested in talking at JSFoo, feel free to propose a session at <a href="https://jsfoo.talkfunnel.com/2015/">funnel</a>.</p>
          <p class="space-one-top text-center"><a href="https://jsfoo.talkfunnel.com/2015/new" class="button regular-prose dark" target="_blank">Propose a talk</a></p>
       </div>
     </div>

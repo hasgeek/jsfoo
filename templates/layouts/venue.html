@@ -9,19 +9,19 @@
                 <div class="regular-prose space-three-bottom space-two-top">
                   <p class="legible semibold">{{ venue.title|safe }}</p>
                   <p class="legible">{{ venue.address|safe }}</p>
-                  <p>
+<!--                   <p>
                     <a href="{{ venue.map.google }}" target="_blank" class="regular button button-on-dark prose-type space-one-top'\">View on Google Maps</a>
-                  </p>
+                  </p> -->
                 </div>
               </div>
           </div>
-          {% if venue.poster %}
+<!--           {% if venue.poster %}
             <div class="row">
               <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
                 <div class="pad-half"><img src="{{ venue.poster }}" class="contain-width"></div>
               </div>
             </div>
-          {% endif %}
+          {% endif %} -->
           <div class="no-js-hidden space-three-bottom">
               <h3 class="visuallyhidden">Map</h3>
               <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12 legible-prose prose prose-type clearfix">
@@ -33,7 +33,7 @@
                   </div>
               </div>
           </div>
-          <div class="row space-three-top">
+          <!-- <div class="row space-three-top">
             <h3 class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12 legible all-caps space-two-bottom">Directions</h3>
 
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12 regular thin">
@@ -42,7 +42,7 @@
                 {{ item.route|safe }}
               {% endfor %}
             </div>
-          </div>
+          </div> -->
       </div>
   </div>
 </section>

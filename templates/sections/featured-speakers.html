@@ -1,4 +1,13 @@
 {% with %}
-  {% from theme("data/conference.html") import session %}
+  {% from theme("data/sessions.html") import talks %}
+	{% 
+	  set session = {
+	      'id'    : 'talks'
+	    , 'label' : 'Talks'
+	    , 'link'  : 'conference#talks'
+	    , 'list'  : talks.values()
+	    , 'types' : types
+	  }
+	%}
   {% include theme("layouts/featured-speakers.html") %}
 {% endwith %}

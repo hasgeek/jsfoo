@@ -1,230 +1,28 @@
 {%
   set talks = {
-    '1256-amplify-your-stack-deux': {
-        'id'          : '1256-amplify-your-stack-deux'
-      , 'speaker'     : 'Sunil Pai'
-      , 'title'       : 'Amplify your stack - Deux'
-      , 'designation' : 'Architect at Myntra'
-      , 'place'       : 'Bangalore'
-      , 'twitter'     : 'threepointone'
-      , 'blurb'       : '<p>Things have changed! Front end developers now mess with servers! Immutable data has gone from being a fad to a Very Good Thing™!</p><p>And we’re still not writing unit tests!</p><p>Time for another roundup of what frameworks and libraries and concepts (oh my) are the rage, which ones are actually useful, and what you should be investing in for your stack and your mind.</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/11ca3a3c1e6e42958bb2fe28d75a7cf9.jpeg'
+    '1251-an-introduction-to-search-index': {
+        'id'          : '1251-an-introduction-to-search-index',
+       'speaker'     : ' Mats Olsen'
+      , 'title'       : 'An introduction to search-index.js'
+      , 'designation' : 'Mathematician working with search engines at Comperio'
+      , 'place'       : 'Oslo'
+      , 'twitter'     : 'mewwts'
+      , 'blurb'       : '<p>The talk should serve as a jumping off point for engineers looking to use search-index, and creative types who want to create new concepts around “Small Data”. The obvious benefit is knowing a technology that lets you put a search index in the browser. It opens up for some fascinating stuff.</p>'
+      , 'photo'       : 'img/speakers/mats.jpg'
       , 'featured'    : true
+      , 'funnel'      : 'https://jsfoo.talkfunnel.com/2015/3-an-introduction-to-search-index-js'
     }
-    , '1251-test-driving-your-javascript-code': {
-        'id'          : '1251-test-driving-your-javascript-code'
-      , 'speaker'     : 'Prateek Dayal'
-      , 'title'       : 'Test Driving Your JavaScript Code'
-      , 'designation' : 'CEO and co-founder of SupportBee'
-      , 'place'       : 'Bangalore'
-      , 'twitter'     : 'prateekdayal'
-      , 'blurb'       : '<p>While JavaScript is mainstream in 2014, JavaScript testing is not. Many developers have heard of Jasmine, Sinon and other libraries but very few have tried it out. Let’s change this!</p><p>This talk will show you how to not just test your javascript code but test drive it. Using Jasmine, Sinon and a few helpers, you can write specs (behavior definitions) easily and use them to write clean and maintainable code. The safety net provided by these specs is an added bonus. Increased development speed is another one.</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/2f7f82a5f0d14ba1958b07f5ecc8d694.jpeg'
+    , '1252-regexp-prototype-unicode': {
+        'id'          : '1251-regexp-prototype-unicode',
+       'speaker'     : 'Mathias Bynens'
+      , 'title'       : 'RegExp.prototype.unicode'
+      , 'designation' : 'Web standards enthusiast'
+      , 'place'       : 'Belgium'
+      , 'twitter'     : 'mathias'
+      , 'blurb'       : '<p>User input and string manipulation are central to development, but many engineers and even popular libraries struggle with Unicode. And ECMAScript 5 doesn’t help, with many built-in string manipulation functions offering puzzling results. Security and the need for internationalization both throw these issues into stark relief. This talk highlights the many problems related to Unicode in JavaScript regular expressions, demonstrates how ES6 (aka. ECMAScript 2015) helps solve these issues, and explains how to polyfill in the mean time.</p>'
+      , 'photo'       : 'img/speakers/mathias.jpg'
       , 'featured'    : true
-    }
-    , '1245-securing-your-nodejs-deployments-while-you-sleep': {
-        'id'          : '11245-securing-your-nodejs-deployments-while-you-sleep'
-      , 'speaker'     : 'Ahamed Nafeez'
-      , 'title'       : 'Securing your nodejs deployments while you sleep'
-      , 'designation' : 'Product Security Engineer'
-      , 'place'       : 'Bangalore'
-      , 'twitter'     : 'skeptic_fx'
-      , 'blurb'       : '<p>Developers push code at a much faster rate, that your security engineers don’t have enough time to take a look at them. Most of the vulnerabilites like XSS &amp; CSRF comes in to existence when developers try to bring the next uber feature live, by not giving much attention to security or one of them is simply not aware of writing secure code. It has been a problem which is worrying most of the startups and organizations recently. In spite of having a secure framework which inherently takes care of most common security issues, it becomes a nightmare for security engineers / testers to take a look at every code commit for a vulnerability in their code. This talk is about automating the process of finding insecure code pushes for Nodejs deployments.</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/14a41ae557d148aeb8018c75ada48e39.jpeg'
-      , 'featured'    : true
-    }
-    , '1265-node-on-microsoft-azure-real-world-scenarios': {
-        'id'          : '1265-node-on-microsoft-azure-real-world-scenarios'
-      , 'speaker'     : 'Tulika Chaudharie'
-      , 'title'       : 'Node on Microsoft Azure – Real world scenarios'
-      , 'designation' : 'Escalation Engineer at Microsoft Developer Support'
-      , 'place'       : 'Bangalore'
-      , 'blurb'       : '<p>This is a talk about real world Node applications that can be hosted on Microsoft Azure. We will start with a simple deployment and then talk about real scenarios.</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/496707cb76de4c49afb844d50f5a7203.jpeg'
-      , 'sponsor'     : 'Microsoft'
-      , 'sponsor_link' : 'http://msdn.microsoft.com/en-in'
-      , 'featured'    : true
-    }
-    , '1237-managing-api-resources-and-their-relationships-on-': {
-        'id'          : '1237-managing-api-resources-and-their-relationships-on-'
-      , 'speaker'     : 'Himanshu Kapoor'
-      , 'title'       : 'Managing API Resources and Their Relationships on the Front-end'
-      , 'designation' : 'Front-end engineer at Wingify'
-      , 'place'       : 'Bangalore'
-      , 'twitter'     : 'himkp'
-      , 'blurb'       : '<p>With the advent of Single Page Apps, a lot has changed in the world of web development. The days of server-side rendering are waning away, and the world is moving towards static HTML apps that communicate with a back-end API to drive the user experience.</p><p>Such transformation requires rapid communication between the Single Page App (front-end) and an API (back-end). This exchange of information brings about various challenges like maintaining consistency, optimizing for performance and scalability.</p><p>This talk would go over the challenges, we at Wingify, faced while making our Angular.js based Single Page App – Visual Website Optimizer. One of the core challenges is efficiently communicating with a back-end service. Finally, the talk would conclude with the solutions we came up with to tackle these problems.</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/8bf1371b59124119bf943e711ca00bc8.jpeg'
-      , 'featured'    : true
-    }
-    , '1220-a-crisp-talk-on-tessel-io': {
-        'id'          : '1220-a-crisp-talk-on-tessel-io'
-      , 'speaker'     : 'Arjunkumar'
-      , 'title'       : 'A Crisp talk on Tessel.io'
-      , 'designation' : 'Principal Engineer at Causeway Technologies'
-      , 'place'       : 'Bangalore'
-      , 'twitter'     : 'arjunkumartk'
-      , 'blurb'       : '<p>Tessel is a microcontroller that runs JavaScript. It\'s Node-compatible and ships with Wifi built in. </p><p>We can use it to easily make physical devices that connect to the web.Tessel runs JavaScript—no server necessary. Just like web or mobile development, we can use our own IDE and libraries to program physical applications.</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/eb82fd877f9548ff812959cff426f524.jpeg'
-      , 'featured'    : true
-    }
-    , '1200-event-based-architecture-at-scrollback': {
-        'id'          : '1220-a-crisp-talk-on-tessel-io'
-      , 'speaker'     : 'Aravind R S'
-      , 'title'       : 'Event-based architecture at Scrollback'
-      , 'designation' : 'Co-founder and Chief hacker at Scrollback'
-      , 'place'       : 'Bangalore'
-      , 'twitter'     : '_aravind'
-      , 'blurb'       : '<p>Understand when event-based architectures can help to make your app easier to grok.</p><p>Learn how to apply this pattern to server-side Node.js applications and to client-side single page apps. This talk will be illustrated with a lot of examples from the 2-year evolution of Scrollback\'s codebase.</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/65fd4e39a360472bbfb85b8c490d1fda.jpeg'
-      , 'featured'    : true
-    }
-    , '1211-a-curated-tour-of-awesome-javascript-sources-backb': {
-        'id'          : '1211-a-curated-tour-of-awesome-javascript-sources-backb'
-      , 'speaker'     : 'Gaurav Dadhania'
-      , 'title'       : 'A curated tour of awesome JavaScript sources: Backbone edition'
-      , 'designation' : 'Code connoisseur at CommonCode'
-      , 'place'       : 'Bangalore'
-      , 'twitter'     : 'GVRV'
-      , 'blurb'       : '<p>In the extremely fast-paced world of JavaScript development, it\'s easy for a developer to lose their way amidst the plethora of frameworks and libraries being stuffed in their face. While moving from grunt to gulp, from jquery to backbone to angular to react, from animations in the browser to ORMs on the server to sensors on a board, and all that in the scope of a few years, the developer often loses focus of the bare bones language in question — the small, powerful, quirky JavaScript, they once fell in love with.</p><p>Let\'s take a step back, and focus on what makes great JavaScript code, great! No wrangling with a library, no introductory tutorial on framework, we\'ll just look at plain old vanilla.js code from one of the most popular JavaScript libraries in existence, to learn a thing or two about writing good code: what design patterns to use, what to avoid, how to avoid the quirks of language, how to work with them, how do the seasoned devs code?</p><p>Let\'s learn from the collective intelligence of hundreds of contributors to take home at least a few coding lessons we can put to use immediately. Let\'s focus on the language again and rekindle that romance!</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/f2a9f09f4ba14cf6882a7db56acf7025_w250_h250.jpeg'
-      , 'featured'    : true
-    }
-    , '1258-famo-us-javascripts-comeback-story-on-mobile': {
-        'id'          : '1258-famo-us-build-native-quality-apps-using-html5-with'
-      , 'speaker'     : 'Debnath Sinha'
-      , 'title'       : 'Famo.us: Javascript\'s comeback story on Mobile'
-      , 'designation' : 'Co-founder at CoSight.io'
-      , 'place'       : 'Palo Alto, CA'
-      , 'twitter'     : 'd3bnath'
-      , 'blurb'       : '<p>This talk is about Famo.us, a new Javascript framework with its own performant rendering engine. Its much more performant than normal Javascript in WebView because its rendering engine uses concepts like physics engines borrowed from the video game industry. At the same time, the programming style is imperative rather than declarative which makes it much easier for beginners to pick it up.</p><p>The talk gives details about why we at CoSight.io decided to bet our current startup on Famo.us.</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/30167f2a7846445990db34c5d13d96f4.jpeg'
-      , 'featured'    : true
-    }
-    , '1144-the-road-to-ember-data-1-0': {
-        'id'          : '1144-the-road-to-ember-data-1-0'
-      , 'speaker'     : 'Abhimanyu Chakravarty'
-      , 'title'       : 'The road to Ember-Data 1.0'
-      , 'designation' : 'Software Developer with Equal Experts'
-      , 'place'       : 'Pune'
-      , 'twitter'     : 'abhimanyu_c'
-      , 'blurb'       : '<p>The objective of this talk will be to to familiarize the audience with the problems related to handling data from the services and how Ember-Data aims to solve these problems. I will talk over the core concepts of Ember-Data, the philosophy behind it and how to use it using a sample application.</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/b42d81e698344325828d2c8817e39ec2.jpeg'
-      , 'featured'    : true
-    }
-    , '1201-building-a-real-ambitious-application-using-ember-': {
-        'id'          : '1201-building-a-real-ambitious-application-using-ember-'
-      , 'speaker'     : 'Kaushik Bhat'
-      , 'title'       : 'Building a real ambitious application using Ember, Node &amp; CouchDB'
-      , 'designation' : 'Web Engineer, Artoo'
-      , 'place'       : 'Bangalore'
-      , 'twitter'     : 'kaushikb9'
-      , 'blurb'       : '<p>There has been a lot of talk about Ember helping you build an ambitious web application. Other than the usual examples of Zendesk, Vimeo, etc there hasn\'t been an example closer to home. We have been using Ember since its beta / rc days. We have found Ember to be an absolute pleasure to work with (even though there are days when we tear our hair) and hope that our works gives you an insight into Ember and its tools.</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/a5179cffdade4925927ce5eeb0922615.jpeg'
-      , 'featured'    : true
-    }
-    , '1216-home-brewing-r-u-m-analyzing-application-performan': {
-        'id'          : '1216-home-brewing-r-u-m-analyzing-application-performan'
-      , 'speaker'     : 'Ankit Rastogi'
-      , 'title'       : 'Home Brewing R.U.M - Analyzing application performance with real user monitoring'
-      , 'designation' : 'Consultant at Xebia'
-      , 'place'       : 'Delhi'
-      , 'blurb'       : '<p>The objective of this session is to discuss the tools and techniques through which we can continuously monitor the performance experienced by the real end users instead of scripted test cases.</p><p>By continuously monitoring the performance bottlenecks, which may be Janks, slow page load, application errors, Ajax request performance &amp; custom performance metrics, that user are encountering we can enrich their experience and hence our retention and conversion rates. It will also help in identifying the issues/errors that even a single user is encountering. In this session we will also discuss how to make such real user monitoring (R.U.M) system in-house using open source tools.</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/58981bc4936244009310ed82ce7fbb58.jpeg'
-      , 'featured'    : true
-    }
-    , '1257-fml-the-no-format-content-format': {
-        'id'          : '1257-fml-the-no-format-content-format'
-      , 'speaker'     : 'Sunil Pai'
-      , 'title'       : 'FML - the no-format content format (?!)'
-      , 'designation' : 'Architect at Myntra'
-      , 'place'       : 'Bangalore'
-      , 'twitter'     : 'threepointone'
-      , 'blurb'       : '<p>A small library to deal with content, for shops who don\’t want a full blown CMS. By leveraging frontmatter, node, and elasticsearch, you can get a top notch api that decouples your data store, furtureproofs your content decisions, and keeps management happy. Bonus - a free admin UI for all your content with almost zero work.</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/11ca3a3c1e6e42958bb2fe28d75a7cf9.jpeg'
-      , 'featured'    : true
-    }
-    , '1163-introduction-to-kendo-ui-core-open-source-javascri': {
-        'id'          : '1163-introduction-to-kendo-ui-core-open-source-javascri'
-      , 'speaker'     : 'Lohith'
-      , 'title'       : 'Introduction to Kendo UI Core - Open Source JavaScript UI Framework with full Angular support'
-      , 'designation' : 'Technical Evangelist for Telerik'
-      , 'place'       : 'Bangalore'
-      , 'twitter'     : 'kashyapa'
-      , 'blurb'       : '<p>Kendo UI Core is a free open source HTML5 based Client Side JavaScript UI framework. In this talk we will take a look at theintegration between Angular JS framework and Kendo UI Widgets. Kendo UI provide you with nearly 25 UI widgets which are completely HTML5 compliant. They support IE7, FF ESR, Chrome to name a few browsers. So if you are looking to make your Angular JS app pretty - let me show you how to do it. Kendo UI Core is completely open source and released under Apache licensing so can be used for your hobby project or for your commercial projects.</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/4f0cdc24b7dd43b18341cf6da75af7f8.jpeg'
-      , 'featured'    : true
-    }
-    , '1248-ui-flipkart-a-node-direction': {
-        'id'          : '1248-ui-flipkart-a-node-direction'
-      , 'speaker'     : 'Abhinav Rastogi'
-      , 'title'       : 'UI @ Flipkart: A Node Direction'
-      , 'designation' : 'UI engineer at Flipkart'
-      , 'place'       : 'Bangalore'
-      , 'twitter'     : '_abhinavrastogi'
-      , 'blurb'       : '<p>In this session, we talk about how we came up with a new framework for serving front-end content efficiently and effectively at Flipkart. Using a good mix of new technologies like Node, Express and ReactJS, we are creating a way to serve content in a beautiful manner to the user without compromising on developer comfort.</p><p>Specifically, amongst other things, we talk about isomorphic javascript, profiling node code and an efficient css delivery mechanism which balances code optimization and delivery optimization.</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/f85727925552444a93d9795a0a177522.jpeg'
-      , 'featured'    : true
-    }
-    , '1221-safety-not-guaranteed': {
-        'id'          : '1221-safety-not-guaranteed'
-      , 'speaker'     : 'Akash Mahajan'
-      , 'title'       : 'Safety Not Guaranteed'
-      , 'designation' : 'Web Application Security Guy at The App Sec Lab'
-      , 'place'       : 'Bangalore'
-      , 'twitter'     : 'makash'
-      , 'blurb'       : '<p>There is a lot of talk about how it makes sense to move Business Logic to the browser using one of the new JavaScript MVC frameworks. The question is how safe are these? How do they think about security? Have they had to face security issues, if yes how did they deal with them in the past.</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/64e8861eac5e4520a7cc5067fc580ab7.jpeg'
-      , 'featured'    : true
-    }
-    , '1231-javascript-and-mathematical-computing-across-serve': {
-        'id'          : '1231-javascript-and-mathematical-computing-across-serve'
-      , 'speaker'     : 'Rudraksh MK'
-      , 'title'       : 'JavaScript and mathematical computing across servers and clients'
-      , 'designation' : 'Specialize in computational math, work at MathHarbor'
-      , 'place'       : 'New Delhi'
-      , 'twitter'     : 'RudiMK'
-      , 'blurb'       : '<p>The primary objective of this session is to showcase JavaScript as a viable language for mathematical and scientific computing. We\’re going to explore some of the best libraries out there for symbolic math, statistics, set theory, as well as machine and deep learning, as well as talk about how tools like NaCl and d3.js, can be used for mathematical models that can run in the browser, and on the server.</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/d9ca555995b241b4a49f9636b24a87b6.jpeg'
-      , 'featured'    : true
-    }
-    
-  }
-%}
-
-{%
-  set workshops = {
-    '1234-getting-up-running-with-angularjs':{
-        'id'          : '1234-getting-up-running-with-angularjs'
-      , 'title'       : 'Getting Up &amp; Running with AngularJS'
-      , 'speaker'     : 'Shyam Seshadri'
-      , 'designation' : 'CEO &amp; Director at Fundoo Solutions Pvt Ltd'
-      , 'place'       : 'Mumbai'
-      , 'twitter'     : 'omniscient1'
-      , 'blurb'       : '<p>The aim is to get developers up, running and comfortable with AngularJS within a day. To break it down further:<ul><li>Expose developers to the major benefits of AngularJS</li><li>Familiarize developers with the terminologies used in AngularJS, and associate it with existing nomenclature</li><li>Develop an End to End AngularJS application (as much as possible) from scratch</li><li>Understand what are controllers, services, factories, promises, directives and filters, and know how to use and create each!</li><li>Also realize the importance of testing, and how to unit test AngularJS applications!</li></ul></p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/ef1df74a3c734363a3d2badd86a092ed.jpeg'
-      , 'featured'    : true
-    },
-    '1157-meteor-developing-teamsync-real-time-collaboration':{
-        'id'          : '1157-meteor-developing-teamsync-real-time-collaboration'
-      , 'title'       : 'Meteor | Developing TeamSync (Real Time Collaboration Tool) Using Meteor'
-      , 'speaker'     : 'Febin John James'
-      , 'designation' : 'Co-founder at Boutline'
-      , 'place'       : 'Bangalore'
-      , 'twitter'     : 'heyfebin'
-      , 'blurb'       : '<p>This workshop will teach you to develop a full-fledged web app on Meteor.</p><p>We will be developing TeamSync (Realtime Collaboration Tool)</p><p>TeamSync is a realtime collaboration tool which allows the users to collaborate with their team members realtime. Team members can update their status on what they are upto ,add missions, assign tasks , track productivity &amp; chat with the team.</p><p>The best thing is you only need basic knownledge of javascript to build this full-fledged app. Meteor makes it so simple for you.</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/09de5d4fafac4ec2b515c8ef6e243192.jpeg'
-      , 'featured'    : true
-    },
-    '1259-building-single-page-apps-with-react-js':{
-        'id'          : '1259-building-single-page-apps-with-react-js'
-      , 'title'       : 'Building single page apps with React.JS'
-      , 'speaker'     : 'Vagmi Mudumbai'
-      , 'designation' : 'CTO at TarkaLabs'
-      , 'place'       : 'Chennai'
-      , 'twitter'     : 'vagmi'
-      , 'blurb'       : '<p>Participants would understand how ReactJS works and how to build a single page app with ReactJS. We will also briefly touch upon the Flux application architecture and see how we can architect applications with the Flux architecture</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/33fffa8daa3e4245a4dbb9e56c0ac104.jpeg'
-      , 'featured'    : true
+      , 'funnel'      : 'https://jsfoo.talkfunnel.com/2015/6-regexp-prototype-unicode'
     }
   }
 %}  
