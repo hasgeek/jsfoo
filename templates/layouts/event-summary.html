@@ -1,6 +1,6 @@
 <section id="about" class="page-section{% if background %} fill-{{ background }}{% endif %}">
   <div class="container-fluid">
-    <div class="col-lg-6 col-xs-12">
+    <div class="col-lg-6 col-xs-12 section-title">
       <div class="pad-three-left space-three-top huge nopad-xs all-caps prose-type bold darkblue">{{ event.title|safe }}</div>
       {% if event.subtitle %}<div class="pad-three-left extralarge darkyellow">{{ event.subtitle|safe }}</div>{% endif %}
       {% if nav %}
@@ -12,7 +12,7 @@
       {% endif %}
     </div>
     <div class="col-lg-6 col-xs-12">
-      <div class="legible-prose calm pad-three-right nopad-xs space-three link-silent">
+      <div class="legible-prose calm nopad-xs space-three link-silent">
         <span>{{ event.blurb|safe }}</span>
         {% if event.desc %}
           <span id="event-desc" class="always-hidden secondary occupy push-one-top">{{ event.desc|safe }}</span>

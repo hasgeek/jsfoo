@@ -101,6 +101,11 @@
         padding: 3rem 0;
     }
 }
+@media (max-width: 1199px) {
+    .page-section .section-title{
+        text-align: center;
+    }
+}
 .bleed-section {}
 @media (max-width: 767px) {
     .bleed-section {
@@ -144,31 +149,18 @@ html, body, #page {
 header {
     background-color: $primary;
     color: $primary-text;
-    height: 100%;
-    top: 0;
-    // background: url(../img/bg1.svg);
+    height: auto;
+    position: relative;
 }
 .masthead {
     position: absolute;
-    bottom: -37px;
+    bottom: -5px;
     left: 0;
     right: 0;
 }
-@media (max-width: 599px) {
-header {
-    height: 120%;
-    }
-    .masthead {
-        bottom: -67px;
-        display: none;
-    }
-}
-@media (max-width: 767px) {
-header {
-    height: 140%;
-    }
-    .masthead {
-        bottom: -163px;
+@media (min-width: 1200px) {
+    header {
+        height: 100%;
     }
 }
 
@@ -252,15 +244,23 @@ header .logo {
 #past-editions-json {
     width: 100%;
     margin: 0 auto 0 -2em;
-    transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    -webkit-transform: scale(0.8);
+    transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    -webkit-transform: scale(0.6);
     code {
         background-color: transparent;
         color: $primary-text;
     }
     a > code {
         margin: auto -7px;
+    }
+}
+@media (min-width: 480px){
+    #past-editions-json {
+        margin: 0 auto;
+        transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        -webkit-transform: scale(0.8);
     }
 }
 @media (min-width: 768px){
