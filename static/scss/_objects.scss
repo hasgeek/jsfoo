@@ -371,22 +371,22 @@ header .logo {
 }
 .sponsor-compact > li:nth-child(3n+1) { margin-left: 0; }
 
-.sponsor-logo       { text-align: center; border-radius: 0.25rem; height: 5.34rem; line-height: 3.35rem; padding: .84rem; }
-.sponsor-logo:hover { background-color: #FFF !important; }
-.sponsor-logo img   { max-height: 100%; width: auto; }
-.sponsors .sponsor-logo   { 
+.sponsorlogo       { text-align: center; border-radius: 0.25rem; height: 5.34rem; line-height: 3.35rem; padding: .84rem; }
+.sponsorlogo:hover { background-color: #FFF !important; }
+.sponsorlogo img   { max-height: 100%; width: auto; }
+.sponsors .sponsorlogo   { 
     width: 100%; 
     img { height: auto; max-width: 100%; }
 }
 
-.sponsor-xl       .sponsor-logo { height: 6.67rem;  line-height: 4rem;    padding: 1.34rem; }
-.sponsor-l        .sponsor-logo { height: 5.34rem;  line-height: 3.35rem; padding: .84rem;  }
-.sponsor-m        .sponsor-logo { height: 5.34rem;  line-height: 2.68rem; padding: 1.34rem; }
-.sponsor-s        .sponsor-logo { height: 4rem;     line-height: 2rem;    padding: .84rem;  }
-.sponsor-compact  .sponsor-logo { height: 4rem;     line-height: 2rem;    padding: .84rem;  }
+.sponsor-xl       .sponsorlogo { height: 6.67rem;  line-height: 4rem;    padding: 1.34rem; }
+.sponsor-l        .sponsorlogo { height: 5.34rem;  line-height: 3.35rem; padding: .84rem;  }
+.sponsor-m        .sponsorlogo { height: 5.34rem;  line-height: 2.68rem; padding: 1.34rem; }
+.sponsor-s        .sponsorlogo { height: 4rem;     line-height: 2rem;    padding: .84rem;  }
+.sponsor-compact  .sponsorlogo { height: 4rem;     line-height: 2rem;    padding: .84rem;  }
 
-.sponsor-xl .sponsor-logo.contain-width { padding: 1.34rem 3rem; }
-.sponsor-l  .sponsor-logo.contain-width { padding: .84rem 4rem;  }
+.sponsor-xl .sponsorlogo.contain-width { padding: 1.34rem 3rem; }
+.sponsor-l  .sponsorlogo.contain-width { padding: .84rem 4rem;  }
 
 
 

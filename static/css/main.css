@@ -2396,7 +2396,7 @@ header .logo {
 }
 
 /* line 374, ../scss/_objects.scss */
-.sponsor-logo {
+.sponsorlogo {
   text-align: center;
   border-radius: 0.25rem;
   height: 5.34rem;
@@ -2405,68 +2405,68 @@ header .logo {
 }
 
 /* line 375, ../scss/_objects.scss */
-.sponsor-logo:hover {
+.sponsorlogo:hover {
   background-color: #FFF !important;
 }
 
 /* line 376, ../scss/_objects.scss */
-.sponsor-logo img {
+.sponsorlogo img {
   max-height: 100%;
   width: auto;
 }
 
 /* line 377, ../scss/_objects.scss */
-.sponsors .sponsor-logo {
+.sponsors .sponsorlogo {
   width: 100%;
 }
 /* line 379, ../scss/_objects.scss */
-.sponsors .sponsor-logo img {
+.sponsors .sponsorlogo img {
   height: auto;
   max-width: 100%;
 }
 
 /* line 382, ../scss/_objects.scss */
-.sponsor-xl .sponsor-logo {
+.sponsor-xl .sponsorlogo {
   height: 6.67rem;
   line-height: 4rem;
   padding: 1.34rem;
 }
 
 /* line 383, ../scss/_objects.scss */
-.sponsor-l .sponsor-logo {
+.sponsor-l .sponsorlogo {
   height: 5.34rem;
   line-height: 3.35rem;
   padding: .84rem;
 }
 
 /* line 384, ../scss/_objects.scss */
-.sponsor-m .sponsor-logo {
+.sponsor-m .sponsorlogo {
   height: 5.34rem;
   line-height: 2.68rem;
   padding: 1.34rem;
 }
 
 /* line 385, ../scss/_objects.scss */
-.sponsor-s .sponsor-logo {
+.sponsor-s .sponsorlogo {
   height: 4rem;
   line-height: 2rem;
   padding: .84rem;
 }
 
 /* line 386, ../scss/_objects.scss */
-.sponsor-compact .sponsor-logo {
+.sponsor-compact .sponsorlogo {
   height: 4rem;
   line-height: 2rem;
   padding: .84rem;
 }
 
 /* line 388, ../scss/_objects.scss */
-.sponsor-xl .sponsor-logo.contain-width {
+.sponsor-xl .sponsorlogo.contain-width {
   padding: 1.34rem 3rem;
 }
 
 /* line 389, ../scss/_objects.scss */
-.sponsor-l .sponsor-logo.contain-width {
+.sponsor-l .sponsorlogo.contain-width {
   padding: .84rem 4rem;
 }
 
