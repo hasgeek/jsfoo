@@ -1961,8 +1961,10 @@ abbr {
 }
 
 /* line 91, ../scss/_objects.scss */
-#feature-boxes .box {
-  height: 24em;
+@media (min-width: 992px) {
+  #feature-boxes .box {
+    height: 24em;
+  }
 }
 
 /* line 95, ../scss/_objects.scss */
