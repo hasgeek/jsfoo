@@ -1,0 +1,25 @@
+/*******************************
+    File : style.css
+********************************/
+
+    
+
+
+
+.parent {
+  display: table;
+  background: #ccc;
+  height: 50%;
+  width: 100%;
+  padding: 1%;
+  text-align: center;
+}
+
+.child {
+  display: table-cell;
+  background: orange;
+  vertical-align: middle;
+  height: 45%;
+  padding: 5%;
+  text-align: center;
+}

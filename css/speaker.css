@@ -1,0 +1,174 @@
+ /*new speaker CSS*/
+
+
+
+
+
+
+.spbody {
+  width:100%;
+   
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+img {
+    vertical-align: middle;
+}
+
+
+
+
+
+
+a, a:visited {
+    color:#EC2E52;
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h3 {
+    font-size:26px;
+    /*font-weight:400;*/
+}
+
+h4 {
+    font-size:20px;
+}
+
+
+
+.spcontent h2 {
+    margin:40px 0 50px;
+    text-align:center;
+    font-size:40px;
+    letter-spacing: -1px;
+}
+
+.spcontent h2 span{
+    letter-spacing:0;
+}
+
+.spcontent h2 span {
+    font-size:22px;
+    font-weight:300;
+    display:block;
+}
+
+.speakers,  .speakers-details,  {
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+.speakers h3, {
+    margin:1em auto 1.8em;
+    width:90%;
+    font-weight:300;
+}
+
+
+.speakers .speaker {
+    text-align:center;
+    text-transform:uppercase;
+    line-height:1.2;
+    font-weight:400;
+}
+
+.speakers .speaker img {
+    margin-bottom:20px;
+    width:80%;
+    border-radius:50%;
+    max-width:204px;
+    border:1px solid #f4f4f4;
+    padding:8px;
+    transition:all 0.2s ease-out;
+    -webkit-transition:all 0.2s ease-out;
+    -moz-transition:all 0.2s ease-out;
+}
+
+.speakers .speaker a:hover img {
+    border:8px solid rgba(115,220,255,0.4);
+}
+
+.speakers .speaker-link,.speakers .speaker-company  {
+    font-size:0.9em;
+    color:#666;
+    font-weight:400;
+    word-wrap:break-word;
+    padding-top:5px;
+}
+
+.speakers .tba {
+    background:url(../img/bk_tba.png);
+    line-height:100%;
+    color:#fff;
+    text-shadow:0 -1px #666;
+    height:100%;
+}
+
+.speakers-details article:first-of-type {
+    border-top:1px solid #D9DCDE;
+    padding-top:40px;
+}
+
+.speaker-details, {
+    border-bottom:1px solid #D9DCDE;
+    padding-bottom:30px;
+    margin-bottom:40px;
+    text-align:left;
+}
+
+.speaker-details .image,  .image {
+    float:left;
+    width:20%;
+    margin-right:5%;
+    text-align:center;
+}
+
+.speaker-details .details,  {
+    float:left;
+    width:75%;
+}
+
+.speaker-details .url, .speaker-details  {
+    display:inline-block;
+    text-transform: uppercase;
+    color:#666;
+    font-size:0.8em;
+    padding:15px 27px;
+    font-weight:700;
+}
+
+
+
+.speaker-details .image img{
+    max-width:80%;
+    border-radius: 50%;
+
+}
+
+.speaker-details h3 {
+    text-transform: uppercase;
+    margin:0;
+    color:#EC2E52;
+    font-size:22px;
+}
+
+.speaker-details h4 {
+    text-transform: uppercase;
+    font-size:17px;
+}
+
+

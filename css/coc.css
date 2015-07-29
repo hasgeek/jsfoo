@@ -1,0 +1,91 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab);
+
+body {
+  font-family: "Droid Sans", sans-serif;
+  overflow-y: scroll;
+}
+
+body > header, body > main {
+  max-width: 740px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.618em;
+}
+
+body > header {
+  text-align: center;
+  margin-top: 40px;
+}
+body > header h1, body > header h2 {
+  font-style: italic;
+}
+body > header h1 {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  font-style: normal;
+  word-spacing: .65rem;
+  display: inline-block;
+}
+body > header h2 {
+  font-family: "Josefin Slab", serif;
+  font-size: 1.15em;
+  margin: 20px 0;
+  color: #888;
+}
+
+.thecode{
+  font-size: 1.9em;
+  color: #312c32;
+  font-family: "Alegreya Sans";
+  margin-top: -8%;
+}
+body > header hr {
+  border-color: #0a6fd6;
+  border-top-width: 2px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e1effe;
+}
+.thankyou{
+  text-align: center;
+  color: #312c32;
+  font-size: 1.8em;
+
+}
+
+article {
+  padding: 60px 0;
+  color: #3a3a3a;
+}
+article header {
+  padding-bottom: 20px;
+}
+article header h1 {
+  font-family: "Alegreya", serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #111;
+}
+article header aside {
+  font-size: .75rem;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+}
+article > p {
+  line-height: 1.92em;
+  margin-bottom: 40px;
+}
+article a {
+  color: #222;
+  text-decoration: none;
+  padding: 0 2px;
+  border-bottom: 1px solid #aaa;
+}
+

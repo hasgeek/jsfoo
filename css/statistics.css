@@ -1,0 +1,67 @@
+/* #--4--# Section - Statistics ########################################### */
+
+.statistics-section {
+	background-image: url("images/JSFOO.png");
+	padding: 54px 0;
+	background-size: auto 100%;
+}
+
+div#statistics-section {}
+
+.statistics-section > .container > h2 { 
+	text-align: center; 
+	text-transform: uppercase; 
+	font-size: 30px;
+	line-height: 40px;
+	display: inline-block; 
+	padding: 0 14%; 
+	font-weight: bold; 
+	letter-spacing: 2px; 
+	color: ;
+
+}
+
+.statistics-section > .container > h2 > span {
+	display: block;
+	margin: 58px 0;
+
+}
+
+
+.statistics-box {
+	width: 100%;
+	background-color: #3fb0ac;
+	padding: 22px 0;
+	display: inline-block;
+	min-height: 133px;
+	margin-top: 30px;
+}
+
+.statistics-box i {
+	float: left;
+	padding: 20px 15px;
+	line-height: 48px;
+	width: 84px;
+	text-align: center;
+	margin-left: 12%;
+}
+
+.statistics-box h4 {
+	float: left;
+	padding: 20px 15px;
+	margin: 0;
+	color: #fff;
+	border-left: 1px solid #fff;
+}
+
+.statistics-box h4 span {
+	display: block;
+	padding-bottom: 0; 
+	font-size: 16px; 
+	font-weight: normal; 
+}
+
+.statistics-box h4 span:first-child {
+	padding-top: 0;
+	font-size: 30px;
+}
