@@ -39,6 +39,20 @@ h3 {
   margin-top: -10%;
 }
 
+
+
+@media screen and (max-width: 480px) {
+  .fifthlogo img {
+    width: 75%;
+    height: auto;
+    
+  }
+  #home{
+    font-size: 0.700em;
+  }
+
+}
+
 @media screen and (max-width: 468px) {
   .fifthlogo{
     margin-top: -44%;
@@ -435,8 +449,8 @@ em {
 ********Shedule CSS*****
 **************************/
 
-#portfolio .container-fluid, 
-#portfolio .col-sm-3  {
+#schedule .container-fluid, 
+#schedule .col-sm-3  {
   overflow: hidden;
   padding: 0;
 }
@@ -446,11 +460,11 @@ font-size: 1.390em;
 line-height: 1.4;
 }
 
-#portfolio .folio-item {
+#schedule .folio-item {
   position: relative;
 }
 
-#portfolio .overlay {
+#schedule .overlay {
   background-color: #000;
   color: #fff; 
   left: 0;
@@ -515,7 +529,7 @@ line-height: 1.4;
   transition: all 0.8s ease-in-out;
 }
 
-#portfolio .folio-item:hover .folio-image {
+#schedule .folio-item:hover .folio-image {
   -webkit-transform: scale(1.5) rotate(-15deg);
   transform: scale(1.5) rotate(-15deg);
 }
@@ -524,36 +538,36 @@ line-height: 1.4;
   width: 100%;
 }
 
-#portfolio .folio-item:hover .overlay {
+#schedule .folio-item:hover .overlay {
   opacity: 0.8;
   bottom: 0;
   height: 100%;
 }
 
-#portfolio .folio-item:hover .folio-overview .folio-expand {
+#schedule .folio-item:hover .folio-overview .folio-expand {
   margin-top: 0;
   margin-left:0;
 }
 
-#portfolio .folio-item:hover .overlay .folio-info {
+#schedule .folio-item:hover .overlay .folio-info {
   opacity: 1;  
   margin-bottom:0;
   margin-top:0;
 }
 
 
-#single-portfolio {
+#single-schedule {
   padding: 90px 0;
   background: #f5f5f5;
   position: relative;
 }
 
-#single-portfolio img {
+#single-schedule img {
   width: 100%;
   margin-bottom: 10px;
 }
 
-#single-portfolio .close-folio-item {
+#single-schedule .close-folio-item {
   position: absolute;
   top: 30px;
   font-size: 34px;
@@ -574,11 +588,11 @@ line-height: 1.4;
 /*************************
 *********Speaker CSS*********
 **************************/
-#team {
+#Speakers {
   padding-top: 0;
 }
 
-.team-members {
+.Speakers-members {
   margin-bottom: 25px;
 }
 
@@ -620,29 +634,29 @@ line-height: 1.4;
   transform: scale(1.2);
 }
 
-.team-member {
+.Speakers-member {
   text-align: center;
   color: #333;
   font-size: 14px;
 }
 
-.team-member:hover .social-icons ul li a.facebook {
+.Speakers-member:hover .social-icons ul li a.facebook {
   background-color: #3b5999;
 }
-.team-member:hover .social-icons ul li a.twitter {
+.Speakers-member:hover .social-icons ul li a.twitter {
   background-color: #2ac6f7;
 }
-.team-member:hover .social-icons ul li a.dribbble {
+.Speakers-member:hover .social-icons ul li a.dribbble {
   background-color: #ff5b92;
 }
-.team-member:hover .social-icons ul li a.linkedin {
+.Speakers-member:hover .social-icons ul li a.linkedin {
   background-color: #036dc0;
 }
-.team-member:hover .social-icons ul li a.rss {
+.Speakers-member:hover .social-icons ul li a.rss {
   background-color: #ff6b00;
 }
 
-#team .img-responsive {
+#Speakers .img-responsive {
   width: 60%;
   text-align: center;
   margin-left: 20%;
@@ -757,6 +771,28 @@ line-height: 1.4;
   text-align: center;
   position: relative;
 }
+.tmobile div{
+  width: 100%
+  text-align: center;
+  position: relative;
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+
+
+@media screen and (min-width: 320px) {
+  .tmobile {
+    width: 80%;
+   
+    margin-left: 10%
+    
+  }
+  
+ }
 
 #twitter-carousel {
   position: relative;
@@ -831,7 +867,7 @@ line-height: 1.4;
 
 
 /*************************
-**********Blog CSS********
+********** Sponsors********
 **************************/
 
 .post-thumb {
@@ -870,7 +906,7 @@ line-height: 1.4;
   left: 90%;
 }
 
-.blog-left-control, .blog-right-control {
+.Sponsors-left-control, .Sponsors-right-control {
   position: absolute;
   top: 45%;
   width: 30px;
@@ -879,15 +915,15 @@ line-height: 1.4;
   font-size: 36px;
 }
 
-.blog-left-control {
+.Sponsors-left-control {
   left: 0;
 }
 
-.blog-right-control {
+.Sponsors-right-control {
   right: 0;
 }
 
-.blog-left-control:hover, .blog-right-control:hover {
+.Sponsors-left-control:hover, .Sponsors-right-control:hover {
   color: #fff;  
 }
 

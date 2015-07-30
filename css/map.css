@@ -2,3 +2,13 @@
 width: 100%;
 background-color: #c5d5cb;
 }
+
+@media (min-width: 360px) and (max-width: 1199px) {
+
+#map { height: 250px; 
+width: 90%;
+background-color: #c5d5cb;
+margin-left: 5%;
+}
+
+}

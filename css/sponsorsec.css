@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font: 18px/1.5 'Avenir Next', 'Avenir', 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+p { margin: 1.5em 0; }
+
+.scenter{
+  text-align: right;
+}
+
+/* Silver Sponsor section */
+section.silver { 
+  background: #fff;
+  width: 100%;
+  padding: 50px;
+}
+
+section.silver > .container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* BRONZE Sponsor section */
+section.bronze { 
+  background:#c0dfd9;
+  width: 700px;
+  margin: 0 auto;
+  box-sizing: content-box;
+  padding: 50px calc(50% - 350px);
+}
+
+@media (max-width: 800px) {
+  section.bronze {
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+}
+
+section:before { right: 100%; }
+section:after  { left: 100%;  }
+
+html, body { overflow-x: hidden; }

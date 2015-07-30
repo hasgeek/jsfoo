@@ -113,13 +113,13 @@
 		text-align: center;
 		margin-bottom: 50px;
 	}
-	.team-member {
+	.Speakers-member {
 		margin-bottom: 50px;
 	}
-	.team-members .col-sm-3, 
+	.Speakers-members .col-sm-3, 
 	.pricing-table .col-sm-3, 
-	#portfolio .col-sm-3, 
-	.blog-posts .col-sm-4  {
+	#schedule .col-sm-3, 
+	.Sponsors-posts .col-sm-4  {
 		width: 50%;
 		float: left;
 	}
@@ -185,13 +185,13 @@
 	.twitter-right-control {
 		right: 40%
 	}
-	#blog {
+	#Sponsors {
 		overflow: hidden;
 	}
 	.entry-header h2 {
 		line-height: 20px;
 	}
-	.blog-posts .col-sm-4 {
+	.Sponsors-posts .col-sm-4 {
 		margin-bottom: 35px;
 	}
 	.load-more {
@@ -218,10 +218,10 @@
 /* XS Portrait */
 @media (max-width: 479px) {
   
-	.team-members .col-sm-3, 
+	.Speakers-members .col-sm-3, 
 	.pricing-table .col-sm-3, 
-	#portfolio .col-sm-3, 
-	.blog-posts .col-sm-4 {
+	#schedule .col-sm-3, 
+	.Sponsors-posts .col-sm-4 {
 		width:100%;
 		float: none;
 	}
