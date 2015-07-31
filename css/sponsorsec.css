@@ -14,7 +14,17 @@ p { margin: 1.5em 0; }
 .scenter{
   text-align: right;
 }
+.two-up{
+  margin-top: 7%;
+}
 
+.web-text{
+  text-align: right;
+}
+
+.hrline{
+  text-align: center;
+}
 /* Silver Sponsor section */
 section.silver { 
   background: #fff;
@@ -25,6 +35,22 @@ section.silver {
 section.silver > .container {
   max-width: 700px;
   margin: 0 auto;
+}
+
+@media (max-width: 320px) {
+  section.silver {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 375px) {
+  section.silver {
+    width: 100%;
+    padding: 2px;
+    box-sizing: border-box;
+  }
 }
 
 /* BRONZE Sponsor section */
@@ -43,6 +69,26 @@ section.bronze {
     box-sizing: border-box;
   }
 }
+
+@media (max-width: 375px) {
+  section.bronze {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+}
+
+
+@media (max-width: 320px) {
+  section.bronze {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+}
+
+
+
 
 section:before { right: 100%; }
 section:after  { left: 100%;  }

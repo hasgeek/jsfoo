@@ -1,17 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 @import url(http://fonts.googleapis.com/css?family=Anonymous+Pro);
 @import url(http://fonts.googleapis.com/css?family=Josefin+Slab);
-/*
-  Theme Name: Oxygen
-  Theme Uri: http://www.themeum.com
-  Author: Themeum
-  Author Uri: http://www.themeum.com
-  Description: Onepage Site Template
-  Version: 1.0
-*/
+
 
 /*************************
-*******Typography******
+*******Main.css******
 **************************/
 
 body {
@@ -38,8 +31,6 @@ h3 {
 .fifthlogo {
   margin-top: -10%;
 }
-
-
 
 @media screen and (max-width: 480px) {
   .fifthlogo img {
@@ -334,7 +325,7 @@ section {
 }
 
 /*************************
-********Service CSS*******
+********shed*******
 **************************/
 
 .service-icon {
@@ -675,7 +666,7 @@ line-height: 1.4;
 
 
 /*************************
-*******Features CSS*******
+******* CSS*******
 **************************/
 #features {
   text-align: center;
@@ -780,9 +771,6 @@ line-height: 1.4;
   background-position: center;
   background-attachment: fixed;
 }
-
-
-
 
 @media screen and (min-width: 320px) {
   .tmobile {
@@ -1069,6 +1057,6 @@ line-height: 1.4;
   background-color: #ff6b00;
 }
 
-/*Presets*/
+
 
 
