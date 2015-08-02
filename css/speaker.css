@@ -1,9 +1,11 @@
  /*new speaker CSS*/
 
 
+.featuredspeakers{
+    margin-top: -10%;
+    margin-bottom:-3;
 
-
-
+}
 
 .spbody {
   width:100%;
@@ -25,11 +27,6 @@ img {
     vertical-align: middle;
 }
 
-
-
-
-
-
 a, a:visited {
     color:#EC2E52;
     text-decoration:none;
@@ -48,6 +45,12 @@ h4 {
     font-size:20px;
 }
 
+
+.featuredspeakers{
+    margin-bottom: -5%;
+    text-align: center;
+
+}
 
 
 .spcontent h2 {
@@ -150,8 +153,6 @@ h4 {
     padding:15px 27px;
     font-weight:700;
 }
-
-
 
 .speaker-details .image img{
     max-width:80%;
