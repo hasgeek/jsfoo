@@ -3,7 +3,8 @@
 .navheader{
   font-size: 2em;
   margin-bottom: 10px;
-  color: #312c32;
+  color: #666;
+  font-family: 'Ubuntu';
 }
 .codeofconduct{
   font-size: 1.25em;
@@ -20,6 +21,7 @@ footer {
   border-top-color:#ffffff;
   margin: 0 auto;
   width: 100%;
+  color: #666;
 }
 footer:before,
 footer:after {
@@ -40,21 +42,22 @@ footer p {
 .appcontent{
   margin-top: -3%;
   font-size: 1.1799em;
-  color: #312c32;
+  color: #666;
 }
 .applogo{
   margin-top: 1%;
 }
+.Sponsorheader{
+  margin-top: 0%;
+  font-size: 1.5em;
+}
 
-
-
-
-
-
-
-
-
-
+.sponsordeck{
+  text-align: center;
+  margin-top: -1%;
+  font-size: 1.7em;
+  margin-bottom: 5%;
+}
 
 
 
@@ -62,6 +65,7 @@ footer p {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+  .color: #666;
 
 .content {
   max-width: 1200px;
@@ -412,14 +416,17 @@ footer {
     text-transform: uppercase;
     text-align: center;
     margin: 0 auto 8px auto;
-    color: #312c32; }
+    color: #666;
+     }
   footer h4 {
     width: 100%;
     max-width: 400px;
     line-height: 1.6;
     text-align: center;
     margin: 18px auto 8px auto;
-    color: #312c32; }
+   color: #666;
+   font-weight: 300;
+  }
     footer h4 a {
       color: #fc633d;
       font-style: normal;

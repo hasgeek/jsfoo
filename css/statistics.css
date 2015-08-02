@@ -23,9 +23,9 @@ div#statistics-section {}
 
 .statistics-section > .container > h2 > span {
 	display: block;
-	margin: 58px 0;
-
-}
+	margin: 2px 0;
+	font-size: 1em;
+	}
 
 
 .statistics-box {

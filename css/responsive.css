@@ -18,13 +18,11 @@
 		margin-bottom: 10px;
 	}
 	.price {
-		font-size: 16px;
-		height: 110px;
-		line-height: 30px;
+		
 		width: 100%;
 	}
 	.price span {
-		font-size: 40px;
+		font-size: 1em;
 		margin-top: 27px;
 	}
 	.btn-signup {
@@ -142,14 +140,11 @@
 		font-size: 25px;
 	}
 	.price span {
-		font-size: 50px;
+		font-size: 6vw;
 		margin-top: 25px;
 	}
 	.price {
-		font-size: 18px;
-		height: 110px;
-		line-height: 35px;
-		width: 130px;
+		width: 100%;
 	}
 	.single-table ul {
 		margin-top: 22px;
@@ -225,5 +220,42 @@
 		width:100%;
 		float: none;
 	}
+}
+
+/* nexus-5 */
+@media (max-width: 360px) {
+ .price span {
+  font-size: 7vw;
+  line-height: 14px;
+}
+.statistics-section > .container > h2 > span {
+	display: block;
+	margin: 1px 0;
+	font-size: 6.4vw;
+	margin-top: -20%;
+}
+
+}
+
+/*apple iPhone 6*/
+@media (max-width: 375px) {
+ .price span {
+  font-size: 7.4vw;
+  line-height: 14px;
+}
+}
+
+/*apple iPhone 4*/
+@media (max-width: 320px) {
+ .price span {
+  font-size: 8.4vw;
+  line-height: 10px;
+}
+.statistics-section > .container > h2 > span {
+	display: block;
+	margin: 1px 0;
+	font-size: 5.4vw;
+	margin-top: -23%;
+}
 }
 
