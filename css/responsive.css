@@ -33,7 +33,7 @@
 /* xs */
 @media (max-width: 767px) {
 	body {
-		font-size: 14px;
+		font-size: 1em;
 	}
 	#home-slider .caption h1 {
 		font-size: 40px;

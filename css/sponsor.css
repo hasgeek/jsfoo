@@ -6,12 +6,41 @@
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
+.sponsors h2 {
+	margin-left: 11%;
+	font-size: 1.4vw;
+}
+
+
+@media (max-width: 360px) {
+ .sponsors h2 {
+	margin-left: 11%;
+	font-size: 5vw;
+}
+}
+@media (max-width: 360px) {
+ .sponsors h3 {
+	
+	font-size: 5vw;
+}
+}
+
+@media (max-width: 375px) {
+ .sponsors h2 {
+	margin-left: 11%;
+	font-size: 5.2vw;
+}
+
+
+}
 .sponsors h3 {
-	font-size: 0.8em;
+	font-size: 1.5em;
 	color: #7E7C75;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	margin: 0 0 20px 10%;
+	line-height: 2.1em;
+	
 }
 .sponsors ul, .sponsors ul li {
 	list-style-type: none;
