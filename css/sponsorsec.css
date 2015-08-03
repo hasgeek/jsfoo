@@ -11,11 +11,10 @@ body {
 
 section.Jsl{
  background:#431c5d;
-  width: 700px;
+  width: 100%;
   margin: 0 auto;
   box-sizing: content-box;
-  padding: 50px calc(50% - 350px);
-  text-align: center;
+   text-align: center;
 }
 
 p { margin: 1.5em 0; }
