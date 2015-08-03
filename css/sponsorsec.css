@@ -5,8 +5,17 @@
 
 body {
   color: white;
-  font: 18px/1.5 'Avenir Next', 'Avenir', 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
+  font: 18px/1.5 'lato' sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+section.Jsl{
+ background:#431c5d;
+  width: 700px;
+  margin: 0 auto;
+  box-sizing: content-box;
+  padding: 50px calc(50% - 350px);
+  text-align: center;
 }
 
 p { margin: 1.5em 0; }
