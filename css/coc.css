@@ -1,7 +1,7 @@
-@import url(http://fonts.googleapis.com/css?family=Josefin+Slab);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300italic,300,700);
 
 body {
-  font-family: "Droid Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   overflow-y: scroll;
 }
 
@@ -23,7 +23,7 @@ body > header h1, body > header h2 {
   font-style: italic;
 }
 body > header h1 {
-  font-family: "Alegreya Sans", sans-serif;
+  font-family: "400", sans-serif;
   font-weight: 500;
   font-size: 2rem;
   font-style: normal;
@@ -31,7 +31,7 @@ body > header h1 {
   display: inline-block;
 }
 body > header h2 {
-  font-family: "Josefin Slab", serif;
+  font-family: "Lato", serif;
   font-size: 1.15em;
   margin: 20px 0;
   color: #888;
@@ -40,7 +40,7 @@ body > header h2 {
 .thecode{
   font-size: 1.9em;
   color: #312c32;
-  font-family: "Alegreya Sans";
+  font-family: "Lato";
   margin-top: -8%;
 }
 body > header hr {
@@ -54,7 +54,8 @@ hr {
 }
 .thankyou{
   text-align: center;
-  color: #312c32;
+  color:#fc633d;
+  font-weight: 300;
   font-size: 1.8em;
 
 }
@@ -69,7 +70,7 @@ article header {
   padding-bottom: 20px;
 }
 article header h1 {
-  font-family: "Alegreya", serif;
+  font-family: "Lato", serif;
   font-weight: 700;
   font-size: 2.5rem;
   color: #111;
