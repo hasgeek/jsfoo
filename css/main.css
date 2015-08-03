@@ -150,6 +150,10 @@ section {
   padding: 4.96% 0;
 }
 
+section .fotter{
+  padding: 2%;
+}
+
 .heading {
   padding-bottom: 90px;
 }

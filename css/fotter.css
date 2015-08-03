@@ -36,17 +36,25 @@ footer p {
   padding: 1.25em;
 }
 
+.fotter1 h4{
+  font-size: 1.4em;
+
+
+}
+
 .app{
-  margin-top: 4.5%;
+  margin-bottom: -4.5%;
 }
 .appcontent{
-  margin-top: -3%;
-  font-size: 1.1799em;
+  margin-top: 3%;
+  margin-bottom: 1.5%;
+  font-size: 1.4em;
   color: #666;
 }
 .applogo{
   margin-top: 1%;
 }
+
 .Sponsorheader{
   margin-top: 0%;
   font-size: 1.5em;
@@ -64,8 +72,12 @@ footer p {
 .fotter1 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+
   .color: #666;
+}
+
+
 
 .content {
   max-width: 1200px;
@@ -80,7 +92,9 @@ footer p {
   margin-left: auto;
   clear: both;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: -3%
+  }
 
 .group {
   overflow: hidden;
@@ -145,6 +159,14 @@ footer p {
 
 .unit2of2 {
   width: 100%; }
+
+
+@media screen and (max-width: 360px) {
+  .unit1of2 {
+  width: 50%; 
+  margin-top: -10%;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .grid1of2,
@@ -281,10 +303,10 @@ footer p {
   width: 100%; }
 
 @font-face {
-  font-family: "Galaxie Copernicus";
+  font-family: "Lato";
   src: url("/webfonts/Copernicus-HeavyItalic.eot") format("eot");
   src: url("/webfonts/Copernicus-HeavyItalic.woff") format("woff");
-  font-weight: 900;
+  font-weight: 300;
   font-style: italic; }
 
 
@@ -419,6 +441,7 @@ footer {
     color: #666;
      }
   footer h4 {
+    font-size: 1.3em;
     width: 100%;
     max-width: 400px;
     line-height: 1.6;
@@ -426,6 +449,7 @@ footer {
     margin: 18px auto 8px auto;
    color: #666;
    font-weight: 300;
+
   }
     footer h4 a {
       color: #fc633d;
@@ -453,7 +477,7 @@ footer {
       footer p {
         font-size: 16px; }
       footer h4 {
-        font-size: 12px; } }
+        font-size: 1em; } }
   footer.el-tease {
     padding-top: 40px;
     padding-bottom: 40px;
