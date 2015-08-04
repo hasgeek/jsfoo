@@ -47,6 +47,17 @@ section.silver {
   padding: 4%;
 }
 
+section.startup{
+  background:#c2d4d8;
+  width: 100%;
+  padding: 4%;
+
+}
+section.startup > .container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 section.silver > .container {
   max-width: 700px;
   margin: 0 auto;
@@ -76,6 +87,7 @@ section.bronze {
   box-sizing: content-box;
   padding: 50px calc(50% - 350px);
 }
+
 
 @media (max-width: 800px) {
   section.bronze {

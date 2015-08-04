@@ -31,8 +31,6 @@
 	margin-left: 11%;
 	font-size: 5.2vw;
 }
-
-
 }
 .sponsors h3 {
 	font-size: 1.5em;
@@ -66,33 +64,9 @@
 
 }
 
-
-
-
-
-
-/* @end Sponsors */
-
-
-
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 
 /* Retina */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .embed iframe {
 	position: absolute;
 	top:  0;
@@ -147,18 +121,11 @@ a.ribbon:active {
 		font-size: 0.85em;
 	}
 
-	
-
 	.sponsorship-pack p.leading-para {
 		font-size: 1em;
 		text-align: center;
 	}
 }
-
-
-
-
-
 
 @media only screen and (min-width: 72em) {	
 	.we-are-8 {

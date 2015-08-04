@@ -154,6 +154,10 @@ section .fotter{
   padding: 2%;
 }
 
+@media (max-width: 360px){
+
+}
+
 .heading {
   padding-bottom: 90px;
 }
@@ -1068,7 +1072,3 @@ line-height: 1.4;
 #footer .social-icons ul li a.tumblr:hover {
   background-color: #ff6b00;
 }
-
-
-
-

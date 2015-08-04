@@ -26,8 +26,6 @@ a:hover, a:focus {
 .main-nav, 
  
 .progress-bar.progress-bar-primary, 
- 
- 
 .twitter-icon .fa-twitter, 
 .twitter-left-control:hover, .twitter-right-control:hover, 
 .post-icon, 
@@ -45,7 +43,6 @@ a:hover, a:focus {
   	background-color: #98dafc;
 
   }
-
   .single-table.featured{
   	background-color: #98dafc;
   }
@@ -53,7 +50,6 @@ a:hover, a:focus {
   .btn-start:hover{
   	background-color: #e05038;
   }
-
 
  .service-icon {
   background-color: #cdd422; 	
