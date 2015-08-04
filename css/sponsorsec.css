@@ -9,6 +9,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+p{
+  font-size: 1.3em;
+}
+h1{
+  font-size: 1.4em;
+}
+
 section.Jsl{
  background:#431c5d;
   width: 100%;
@@ -37,7 +44,7 @@ p { margin: 1.5em 0; }
 section.silver { 
   background: #fff;
   width: 100%;
-  padding: 50px;
+  padding: 4%;
 }
 
 section.silver > .container {
@@ -73,7 +80,7 @@ section.bronze {
 @media (max-width: 800px) {
   section.bronze {
     width: 100%;
-    padding: 50px;
+    padding: 3.5%;
     box-sizing: border-box;
   }
 }

@@ -163,8 +163,11 @@ footer p {
 
 @media screen and (max-width: 360px) {
   .unit1of2 {
-  width: 50%; 
+  width: 100%; 
   margin-top: -10%;
+  }
+  .app{
+    margin-top: -18%;
   }
 }
 
