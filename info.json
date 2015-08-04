@@ -1,0 +1,11 @@
+{
+    "application": "eventframe",
+    "identifier": "jsfoo2015",
+    "name": "JSFoo 2015",
+    "author": "Rajasekharreddy",
+    "description": "JSFoo Bangalore 2015 website template",
+    "license": "All rights reserved",
+    "doctype": "html5",
+    "options": {
+    }
+}

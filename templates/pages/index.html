@@ -6,24 +6,22 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>JSFoo</title>
-  <link rel="stylesheet" type="text/css" href="css/navbar.css">
-  <link rel="stylesheet" type="text/css" href="css/statistics.css">
-  <link rel="stylesheet" type="text/css" href="css/sponsor.css">
-  <link rel="stylesheet" type="text/css" href="css/map.css">
-  <link rel="stylesheet" type="text/css" href="css/hasgeek.css">
-  <link rel="stylesheet" type="text/css" href="css/fotter.css">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/animate.min.css" rel="stylesheet"> 
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/lightbox.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet">
-  <link id="css-preset" href="css/colourchang/maincolour.css" rel="stylesheet">
-  <link href="css/responsive.css" rel="stylesheet">
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <link rel="stylesheet" type="text/css" href="{{ theme_static('css/navbar.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ theme_static('css/statistics.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ theme_static('css/sponsor.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ theme_static('css/map.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ theme_static('css/hasgeek.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ theme_static('css/footer.css') }}">
+  <link rel="stylesheet" href="{{ theme_static('css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ theme_static('css/animate.min.css') }}"> 
+  <link rel="stylesheet" href="{{ theme_static('css/font-awesome.min.css') }}">
+  <link rel="stylesheet" href="{{ theme_static('css/lightbox.css') }}">
+  <link rel="stylesheet" href="{{ theme_static('css/main.css') }}">
+  <link rel="stylesheet" href="{{ theme_static('css/colourchang/maincolour.css') }}">
+  <link rel="stylesheet" href="{{ theme_static('css/responsive.css') }}">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"><!--favicon-->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head><!--/head-->
 
 <body>
@@ -60,7 +58,7 @@
     <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="item active" style="background-color: #431c5d;">
           <div class="caption">
-              <h1 class="fifthlogo"><img class="animated fadeInLeftBig" src="images/JSlogo.png" alt="5thel logo"></h1>
+              <h1 class="fifthlogo"><img class="animated fadeInLeftBig" src="{{ theme_static('images/JSlogo.png') }}" alt="5thel logo"></h1>
               <p class="animated fadeInLeftBig"> <span></span></p>
               <p class="animated fadeInRightBig">Conference and Workshops on JavaScript</p>
               <p class="animated fadeInRightBig">18 - 19 SEPTEMBER 2015, BANGALORE - MLR CONVENTION CENTER</p>
@@ -116,7 +114,7 @@
         <div class="row">
           <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="100ms">
             <div class="service-icon">
-            <i><img src="images/icon/session-icon.png" alt="session-icon"/></i><!-- edit in class in i class to put a logo-->
+            <i><img src="{{ theme_static('images/icon/session-icon.png') }}" alt="session-icon"/></i><!-- edit in class in i class to put a logo-->
             </div>
             <div class="service-info">
               <h3>CONFERENCE</h3>
@@ -160,7 +158,7 @@
       <div class="col-md-3 col-sm-6">
         <div class="statistics-box">
           
-          <i><img src="images/icon/group-icon.png" alt="group-icon"/></i>
+          <i><img src="{{ theme_static('images/icon/group-icon.png') }}" alt="group-icon"/></i>
           <h4>
             <span id="statistics-participants">500</span>
             <span>participants</span>
@@ -170,7 +168,7 @@
       
       <div class="col-md-3 col-sm-6">
         <div class="statistics-box">
-          <i><img src="images/icon/speaker-icon.png" alt="speakers-icon"/></i>
+          <i><img src="{{ theme_static('images/icon/speaker-icon.png') }}" alt="speakers-icon"/></i>
           <h4>
             <span id="statistics-speakers">23</span>
             <span>speakers</span>
@@ -179,7 +177,7 @@
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="statistics-box">
-          <i><img src="images/icon/session-icon.png" alt="session-icon"/></i>
+          <i><img src="{{ theme_static('images/icon/session-icon.png') }}" alt="session-icon"/></i>
           <h4>
             <span id="statistics-sessions">2</span>
             <span>sessions</span>
@@ -188,7 +186,7 @@
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="statistics-box">
-          <i><img src="images/icon/hours-icon.png" alt="hours-icon"/></i>
+          <i><img src="{{ theme_static('images/icon/hours-icon.png') }}" alt="hours-icon"/></i>
           <h4>
             <span id="statistics-hours">22</span>
             <span>hours</span>
@@ -325,7 +323,7 @@
           <div class="col-sm-3">
             <div class="Speakers-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
               <div class="member-image">
-                <img class="img-responsive" src="images/team/2.png" alt="">
+                <img class="img-responsive" src="{{ theme_static('images/team/2.png') }}" alt="">
               </div>
               <div class="member-info">
                 <h3>Mathias Bynens</h3>
@@ -339,7 +337,7 @@
           <div class="col-sm-3">
             <div class="Speakers-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
               <div class="member-image">
-                <img class="img-responsive" src="images/team/1.png" alt="">
+                <img class="img-responsive" src="{{ theme_static('images/team/1.png') }}" alt="">
               </div>
               <div class="member-info">
                 <h3>Mats Olsen</h3>
@@ -353,7 +351,7 @@
           <div class="col-sm-3">
             <div class="Speakers-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="800ms">
               <div class="member-image">
-                <img class="img-responsive" src="images/team/3.png" alt="">
+                <img class="img-responsive" src="{{ theme_static('images/team/3.png') }}" alt="">
               </div>
               <div class="member-info">
                 <h3>Guillermo Rauch</h3>
@@ -366,7 +364,7 @@
           <div class="col-sm-3">
             <div class="Speakers-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="1100ms">
               <div class="member-image">
-                <img class="img-responsive" src="images/team/4.png" alt="">
+                <img class="img-responsive" src="{{ theme_static('images/team/4.png') }}" alt="">
               </div>
               <div class="member-info">
                 <h3></h3>
@@ -506,7 +504,7 @@
   <section class="fotter">
     <div id="main-wrapper" class="text-center container">
     <main class="sticky-grid">
-    <h1 class="navheader">We strive to make our events friendly, safe and harrasment‑free for all. <span class="animated bounceInDown"></span></h1>
+    <h1 class="navheader">We strive to make our events friendly, safe and harassment‑free for all. <span class="animated bounceInDown"></span></h1>
     <p class="codeofconduct">Please observe the <span class="c1"><u><a href="Code_of_conduct.html" target="_blank">CODE OF CONDUCT</a></u></span> at the event.</p>
     <p>JSFoo is a conference by <a href="https://hasgeek.com/">HasGeek.</a></p>
     <HR COLOR="green" WIDTH="41.30%"> 
@@ -537,16 +535,15 @@
  </section>
 
 
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-  <script type="text/javascript" src="js/map.js"></script>
-  <script type="text/javascript" src="js/jquery.inview.min.js"></script>
-  <script type="text/javascript" src="js/wow.min.js"></script>
-  <script type="text/javascript" src="js/mousescroll.js"></script>
-  <script type="text/javascript" src="js/smoothscroll.js"></script>
-  <script type="text/javascript" src="js/jquery.countTo.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="{{ theme_static('js/jquery.js') }}"></script>
+  <script type="text/javascript" src="{{ theme_static('js/bootstrap.min.js') }}"></script>
+  <script type="text/javascript" src="{{ theme_static('js/map.js') }}"></script>
+  <script type="text/javascript" src="{{ theme_static('js/jquery.inview.min.js') }}"></script>
+  <script type="text/javascript" src="{{ theme_static('js/wow.min.js') }}"></script>
+  <script type="text/javascript" src="{{ theme_static('js/mousescroll.js') }}"></script>
+  <script type="text/javascript" src="{{ theme_static('js/smoothscroll.js') }}"></script>
+  <script type="text/javascript" src="{{ theme_static('js/jquery.countTo.js') }}"></script>
+  <script type="text/javascript" src="{{ theme_static('js/main.js') }}"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
 
 </body>

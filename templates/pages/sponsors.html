@@ -6,33 +6,26 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>JSFoo</title>
-  <link rel="stylesheet" type="text/css" href="css/navbar.css">
-  <link rel="stylesheet" type="text/css" href="css/sponsorsec.css">
-  <link rel="stylesheet" type="text/css" href="css/hasgeek.css">
-  <link rel="stylesheet" type="text/css" href="css/fotter.css">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/animate.min.css" rel="stylesheet"> 
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/lightbox.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet">
-  <link id="css-preset" href="css/colourchang/maincolour.css" rel="stylesheet">
-  <link href="css/responsive.css" rel="stylesheet">
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-
-
-  
+  <link rel="stylesheet" type="text/css" href="{{ theme_static('css/navbar.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ theme_static('css/statistics.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ theme_static('css/sponsor.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ theme_static('css/sponsorsec.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ theme_static('css/map.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ theme_static('css/hasgeek.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ theme_static('css/footer.css') }}">
+  <link rel="stylesheet" href="{{ theme_static('css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ theme_static('css/animate.min.css') }}"> 
+  <link rel="stylesheet" href="{{ theme_static('css/font-awesome.min.css') }}">
+  <link rel="stylesheet" href="{{ theme_static('css/lightbox.css') }}">
+  <link rel="stylesheet" href="{{ theme_static('css/main.css') }}">
+  <link rel="stylesheet" href="{{ theme_static('css/colourchang/maincolour.css') }}">
+  <link rel="stylesheet" href="{{ theme_static('css/responsive.css') }}">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-  <link rel="" href=""><!--favicon-->
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head><!--/head-->
 
 <body>
-
-  <!--.preloading-->
-  <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
-  <!--/.preloading-->
 
   <div class="hg-bar-holder fill-white"><div id="hg-bar" class="no-print">
     <div class="container">
@@ -69,7 +62,7 @@
   <!--/#home-->
  <section class="Jsl">
    <div class="jslogo">
-     <a href="index.html#home"><img class="JSlogo" src="images/JSlogo.png" alt="5thel logo" height="230px" width="auto"></a>
+     <a href="index.html#home"><img class="JSlogo" src="{{ theme_static('images/JSlogo.png') }}" alt="5thel logo" height="230px" width="auto"></a>
 </div>  
  </section>
 
@@ -109,7 +102,7 @@ We are passionate about what we do and are on the lookout for Javascript geeks a
 <section class="fotter">
 <div id="main-wrapper" class="text-center container">
   <main class="sticky-grid">
-  <h1 class="navheader">We strive to make our events friendly, safe and harrasment‑free for all. <span class="animated bounceInDown"></span></h1>
+  <h1 class="navheader">We strive to make our events friendly, safe and harassment‑free for all. <span class="animated bounceInDown"></span></h1>
   <p class="codeofconduct">Please observe the <span class="c1"><u><a href="Code_of_conduct.html" target="_blank">CODE OF CONDUCT</a></u></span> at the event.</p>
   <p><p>JSFoo is a conference by <a href="https://hasgeek.com/">HasGeek.</a></p></p>
 
