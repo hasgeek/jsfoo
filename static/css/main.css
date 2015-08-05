@@ -2012,14 +2012,18 @@ abbr {
 }
 /* line 126, ../scss/_objects.scss */
 #hg-bar {
-  background: #252C52 !important;
+  background: #000f36 !important;
   border-bottom-color: #252C52 !important;
   background-image: none;
 }
 
 /* line 131, ../scss/_objects.scss */
-#hg-bar, #hg-bar ul#hg-barlinks > li a, #hg-bar ul#hg-usertools > li a, #hg-bar ul#hg-barlinks > li a:visited, #hg-bar ul#hg-usertools > li a:visited {
-  color: #545B8A !important;
+#hg-bar, #hg-bar ul#hg-barlinks > li a {
+  color: #9699B3 !important;
+}
+
+#hg-bar ul#hg-barlinks > li:hover > a, #hg-bar ul#hg-barlinks > li:hover ul a {
+  color: #000 !important;
 }
 
 /* line 134, ../scss/_objects.scss */
@@ -2044,7 +2048,7 @@ html, body, #page {
 
 /* line 149, ../scss/_objects.scss */
 header {
-  background-color: #2E3661;
+  background-color: #000f36;
   color: #9699B3;
   height: auto;
   position: relative;
@@ -2053,9 +2057,15 @@ header {
 /* line 155, ../scss/_objects.scss */
 .masthead {
   position: absolute;
-  bottom: -5px;
+  bottom: -2px;
   left: 0;
   right: 0;
+}
+
+@media (min-width: 480px) and (max-width: 991px) {
+  .masthead {
+    bottom: -50px;
+  }
 }
 
 @media (min-width: 1200px) {
