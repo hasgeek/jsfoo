@@ -1960,9 +1960,14 @@ abbr {
   margin-left: 15px;
 }
 
+.ticket-details {
+  max-width: 1400px;
+  margin: auto;
+}
+
 /* line 91, ../scss/_objects.scss */
 @media (min-width: 992px) {
-  #feature-boxes .box {
+  .ticket-details .box {
     height: 24em;
   }
 }
