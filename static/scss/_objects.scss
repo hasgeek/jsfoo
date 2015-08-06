@@ -778,6 +778,10 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
   line-height: 1;
 }
 
+.site-navbar ul li a:focus, .site-navbar ul li a:active {
+  outline: none;
+}
+
 @media (min-width: 600px) {
   .site-navbar nav ul li {
     width: 33.3%;

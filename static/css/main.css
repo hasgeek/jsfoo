@@ -2909,19 +2909,24 @@ a.hasgeek-logo:hover {
   line-height: 1;
 }
 
+/* line 781, ../scss/_objects.scss */
+.site-navbar ul li a:focus, .site-navbar ul li a:active {
+  outline: none;
+}
+
 @media (min-width: 600px) {
-  /* line 782, ../scss/_objects.scss */
+  /* line 786, ../scss/_objects.scss */
   .site-navbar nav ul li {
     width: 33.3%;
   }
 }
 @media (min-width: 768px) {
-  /* line 788, ../scss/_objects.scss */
+  /* line 792, ../scss/_objects.scss */
   .site-navbar nav ul li {
     width: 25%;
   }
 
-  /* line 791, ../scss/_objects.scss */
+  /* line 795, ../scss/_objects.scss */
   .nav-fixed {
     position: fixed;
     top: 0;
@@ -2932,7 +2937,7 @@ a.hasgeek-logo:hover {
   }
 }
 @media (min-width: 992px) {
-  /* line 802, ../scss/_objects.scss */
+  /* line 806, ../scss/_objects.scss */
   .site-navbar nav ul li {
     float: none;
     display: inline-block;
@@ -2943,24 +2948,24 @@ a.hasgeek-logo:hover {
     width: auto;
   }
 
-  /* line 811, ../scss/_objects.scss */
+  /* line 815, ../scss/_objects.scss */
   .site-navbar nav ul li:first-child {
     border-left: 2px solid #aaa;
   }
 
-  /* line 814, ../scss/_objects.scss */
+  /* line 818, ../scss/_objects.scss */
   .site-navbar nav ul li:last-child {
     border-right: 2px solid #aaa;
   }
 
-  /* line 817, ../scss/_objects.scss */
+  /* line 821, ../scss/_objects.scss */
   .site-navbar ul li a {
     font-size: 14px;
     padding: 10px;
   }
 }
 @media (min-width: 1200px) {
-  /* line 824, ../scss/_objects.scss */
+  /* line 828, ../scss/_objects.scss */
   .site-navbar ul li a {
     font-size: 18px;
     padding: 0.8rem;
