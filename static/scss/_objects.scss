@@ -88,8 +88,16 @@
         margin-left: 15px;
     }
 }
-#feature-boxes .box {
+
+.ticket {
+  max-width: 1400px;
+  margin: auto;
+}
+
+@media (min-width: 992px) {
+  .ticket .box {
     height: 24em;
+  }
 }
 
 .page-section {
@@ -122,14 +130,23 @@
 }
 
 
-@media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
+@media (max-width: 767px) { #hg-bar { padding: 0 10px; } }
 #hg-bar { 
-    background: $primary-dark !important; 
-    border-bottom-color: $primary-dark !important; 
-    background-image: none;
+  background: #000f36 !important; 
+  border-bottom-color: $primary-dark !important; 
+  background-image: none;
 }
-#hg-bar, #hg-bar ul#hg-barlinks > li a, #hg-bar ul#hg-usertools > li a, #hg-bar ul#hg-barlinks > li a:visited, #hg-bar ul#hg-usertools > li a:visited { 
-    color: $primary-dark-text !important;
+#hg-bar, #hg-bar ul#hg-barlinks > li a {
+  color: #9699B3 !important;
+}
+#hg-bar ul#hg-barlinks > li a.hg-submenu::after { 
+  border-top-color: #9699B3 !important;
+}
+#hg-bar ul#hg-barlinks > li:hover > a, #hg-bar ul#hg-barlinks > li:hover ul a {
+  color: #000 !important;
+}
+#hg-bar ul#hg-barlinks > li:hover a.hg-submenu::after { 
+  border-top-color: #000 !important;
 }
 #hg-bar .container {
     width: auto;
@@ -147,16 +164,21 @@ html, body, #page {
 }
 
 header {
-    background-color: $primary;
+    background-color: #000f36;
     color: $primary-text;
     height: auto;
     position: relative;
 }
 .masthead {
     position: absolute;
-    bottom: -5px;
+    bottom: -2px;
     left: 0;
     right: 0;
+}
+@media (min-width: 480px) and (max-width: 991px) {
+  .masthead {
+    bottom: -50px;
+  }
 }
 @media (min-width: 1200px) {
     header {
@@ -502,10 +524,16 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
     }
 
 }
-@media (min-width:768px) {
-    .speaker-image {
-        width: 55%;
-    }
+
+.speaker-image {
+  width: 80%;
+  border-radius: 5px;
+  border: 3px solid #aaa;
+}
+@media (min-width: 480px) {
+  .speaker-image {
+    width: 60%;
+  }
 }
 
 #runup-events-cards {
