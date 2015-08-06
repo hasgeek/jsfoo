@@ -185,6 +185,15 @@ header {
         height: 100%;
     }
 }
+.heading-text {
+  padding-bottom: 8.00rem
+}
+
+@media (min-width: 1200px) {
+.heading-text {
+    padding-bottom: 0
+  }
+}
 
 .banner { 
     display: block;
@@ -728,5 +737,93 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
     .cbp_tmtimeline > li .cbp_tmtime {
         left: 40px;
     }
+}
+.site-navbar {
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  padding:0
+}
+
+@media (min-width: 480px) and (max-width: 991px) {
+  .site-navbar {
+    position: relative;
+    top: 42px;
+  }
+}
+
+.site-navbar nav {
+  text-align: center;
+}
+
+.site-navbar nav ul {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.site-navbar nav ul li {
+  float: left;
+  width: 50%;
+  list-style: none;
+  border-right: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+}
+
+.site-navbar ul li a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 0;
+  line-height: 1;
+}
+
+@media (min-width: 600px) {
+  .site-navbar nav ul li {
+    width: 33.3%;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-navbar nav ul li {
+    width: 25%;
+  }
+  .nav-fixed {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
+    background-color:rgba(84, 158, 175, 0.5);
+  }
+}
+
+@media (min-width: 992px) {
+  .site-navbar nav ul li {
+    float: none;
+    display: inline-block;
+    padding: 0;
+    margin-right:-5px;
+    border-left: 1px solid #aaa;
+    border-bottom: 0;
+    width: auto;
+  }
+  .site-navbar nav ul li:first-child {
+    border-left: 2px solid #aaa;
+  }
+  .site-navbar nav ul li:last-child {
+    border-right: 2px solid #aaa;
+  }
+  .site-navbar ul li a {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-navbar ul li a {
+    font-size: 18px;
+    padding: 0.8rem;
+  }
 }
 
