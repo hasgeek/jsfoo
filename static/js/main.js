@@ -1,5 +1,10 @@
 $(document).ready(function() {
     var siteNavTop = $(".site-navbar").offset().top;
+    var windowWidth = $(window).width();
+
+    $(window).resize(function() {
+        windowWidth = $(window).width();
+    });
 
     $(window).scroll(function() {
         if($(this).scrollTop() > siteNavTop) {
@@ -13,7 +18,7 @@ $(document).ready(function() {
     $('.smooth-scroll').click(function(event) {
         event.preventDefault();
         var section = $(this).attr('href');
-        if((window).width > 768) {
+        if(windowWidth > 767) {
             var sectionPos = $(""+section).offset().top - $('.site-navbar').height();
         }
         else {
