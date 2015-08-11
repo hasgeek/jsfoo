@@ -1,7 +1,14 @@
 {% with %}
-  {% from theme("data/workshops.html") import event %}
-  {% from theme("data/workshop-venue.html") import venue %}
-  {% set venue_id = 'workshop-venue' %}
+  {% from theme("data/workshop-venue.html") import venues %}
+  {% 
+    set venues = {
+        'id'    : 'workshop-venue'
+      , 'title' : 'Workshop Venues'
+      , 'link'  : 'workshops#venue'
+      , 'list'  : venues.values()
+      , 'types' : types
+    }
+  %}
   {% include theme("layouts/venue.html") %}
 {% endwith %}
 

@@ -13,19 +13,12 @@
     </div>
     <div class="col-lg-6 col-xs-12">
       <div class="legible-prose calm nopad-xs space-three link-silent">
-        <span>{{ event.blurb|safe }}</span>
-        {% if event.desc %}
-          <span id="event-desc" class="always-hidden secondary occupy push-one-top">{{ event.desc|safe }}</span>
-          <span><i id="show-more" class="fa fa-chevron-circle-down lightgray"></i></span>
+        {% if event.blurb %}
+          <span>{{ event.blurb|safe }}</span>
+        {% else %}
+        <!-- <p>If you are interested in talking at JSFoo, feel free to propose a session at <a href="https://jsfoo.talkfunnel.com/2015/">funnel</a>.</p>
+           <p class="space-one-top text-center"><a href="https://jsfoo.talkfunnel.com/2015/new" class="button regular-prose dark" target="_blank">Propose a talk</a></p> -->
         {% endif %}
-         <p class="space-one-top">We are working on the schedule. Meanwhile get updates on <a class="darkyellow" href="https://jsfoo.talkfunnel.com/2015/" target="_blank">funnel</a> or <a class="darkyellow" href="https://twitter.com/jsfooindia" target="_blank">@jsfooindia</a>. <!-- If you are interested in talking at JSFoo, feel free to propose a session at <a href="https://jsfoo.talkfunnel.com/2015/">funnel</a>.</p>
-         <p class="space-one-top text-center"><a href="https://jsfoo.talkfunnel.com/2015/new" class="button regular-prose dark" target="_blank">Propose a talk</a></p> -->
-         <p class="space-one-top">This year, we have hands-on workshops on </p>
-         <ol>
-           <li><a class="darkyellow" href="https://jsfoo.talkfunnel.com/2015/62-nodejs-workshop" target="_blank">Node.js</a> on 16th September 2015</li>
-          <li><a class="darkyellow" href="https://jsfoo.talkfunnel.com/2015/63-angularjs-workshop" target="_blank">Angularjs</a> on 17th September 2015</li>
-          <li><a class="darkyellow" href="https://jsfoo.talkfunnel.com/2015/39-nodebots-js-hardware-workshop" target="_blank">NodeBots &amp; JS Hardware Workshop</a> on 20th September 2015</li>
-        </ol>
       </div>
     </div>
   </div>

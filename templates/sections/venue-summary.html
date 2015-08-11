@@ -1,5 +1,13 @@
 {% with %}
-  {% from theme("data/conference-venue.html") import venue %}
-  {% set page_link = 'venue' %}
+  {% from theme("data/conference-venue.html") import venues %}
+  {% 
+    set venues = {
+        'id'    : 'venue'
+      , 'title' : 'Conference Venues'
+      , 'link'  : 'conference#venue'
+      , 'list'  : venues.values()
+      , 'types' : types
+    }
+  %}
   {% include theme("layouts/venue.html") %}
 {% endwith %}
