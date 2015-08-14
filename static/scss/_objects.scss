@@ -165,6 +165,10 @@
   cursor: pointer;
 }
 
+.no-js .turn-right {
+  display: none;
+}
+
 .turn-left {
   position: absolute;
   bottom: 0;
@@ -275,8 +279,20 @@ header {
 }
 
 @media (min-width: 1200px) {
-.heading-text {
-    padding-bottom: 0
+  .heading-text {
+    padding-bottom: 0;
+  }
+  .js .heading-text .text1 {
+    position: relative;
+    right: 300px;
+  }
+  .js .heading-text .text2 {
+    position: relative;
+    left: 300px;
+  }
+  .js .heading-text .ticket-btn {
+    position: relative;
+    top: 300px;
   }
 }
 

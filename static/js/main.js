@@ -41,4 +41,10 @@ $(document).ready(function() {
             $(this).clearQueue();
         });
     });
+
+    setTimeout(function() {
+      $('.heading-text .text1').animate({right: 0}, 500);
+      $('.heading-text .text2').animate({left: 0}, 500);
+      $('.heading-text .ticket-btn').animate({top: 0}, 500);
+    }, 500);
 });
