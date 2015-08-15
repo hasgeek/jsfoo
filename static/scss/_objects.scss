@@ -646,6 +646,13 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
   }
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .featured-speakers ul li:nth-child(3) {
+    float: none;
+    margin: auto;
+  }
+}
+
 #runup-events-cards {
     padding: 0;
     float: none;
@@ -936,8 +943,8 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 }
 
 .startupraid-logo {
-  width: 60%;
-  max-width: 250px;
+  width: 50%;
+  max-width: 200px;
   margin: auto;
   display: block;
 }
