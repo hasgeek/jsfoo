@@ -1,0 +1,60 @@
+{% raw %}
+<script id="scheduletemplate" type="text/x-mustache-template">
+  <h3 class="text-center space-one legible">{{date}}</h3>
+  <table class="schedule-table" id="{{tableid}}">
+    <thead>
+      <tr>
+        <th class="time semi-bold text-center regular">Time</th>
+        {{#rooms}}
+        {{#track}}
+          <th class="track{{track}} semi-bold text-center regular" data-td="track-{{track}}">{{title}}</th>
+        {{/track}}
+        {{^track}}
+          <th class="track{{track}} semi-bold tab-active text-center regular" data-td="track-{{track}}">{{title}}</th>
+        {{/track}}
+        {{/rooms}}
+      </tr>
+    </thead>
+    <tbody>
+    {{#slots}}
+      {{#issession}}
+      <tr>
+        <td class="time" scope="row"><p class="regular bold">{{slot}}</p></td>
+        {{#sessions}}
+        {{#is_break}}
+        <td colspan="3" class="centered" rowspan={{rowspan}}>
+          <h4 class="space-1q regular">{{title}}</h4>
+          <p class="space-1q secondary"><em>{{start}} - {{end}}</em></p> 
+        </td>       
+        {{/is_break}}
+        {{^is_break}}
+        {{#track}}
+          <td class="track-{{track}}" rowspan={{rowspan}}>
+        {{/track}}
+        {{^track}}
+          <td class="track-{{track}} tab-active" rowspan={{rowspan}}>
+        {{/track}}
+            <h4 class="link-silent space-1q regular">
+              {{#proposal_url}}
+              <a href="{{proposal_url}}" target="_blank" class="orange">{{title}}</a>
+              {{/proposal_url}}
+              {{^proposal_url}}
+              {{title}}
+              {{/proposal_url}}
+            </h4>
+            {{#speaker}}
+            <p class="space-1q regular">{{speaker}}</p>
+            {{/speaker}}
+            {{#title}}
+            <p class="space-1q secondary"><em>{{start}} - {{end}}</em></p>
+            {{/title}}
+          </td>
+        {{/is_break}}
+        {{/sessions}}
+      </tr>
+      {{/issession}}
+    {{/slots}}
+    </tbody>
+  </table>
+</script>
+{% endraw %}

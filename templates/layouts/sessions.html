@@ -28,6 +28,7 @@
               {{ item.blurb|safe }}
               <ul class="list-plain secondary space-one-top">
                 {% if item.date %}<li>{{ item.date|safe }}</li>{% endif %}
+                {% if item.time %}<li>{{ item.time|safe }}</li>{% endif %}
                 {% if item.venue %}<li><i class="fa fa-map-marker"></i>&nbsp; {{ item.venue|safe }}</li>{% endif %}
                 <li><a target="_blank" href="https://jsfoo.talkfunnel.com/2015/{{ item.id }}">Funnel Proposal</a></li>
                 {% if item.preview %}<li class="flushright"><a href="{{ item.preview }}">Preview</a></li>{% endif %}

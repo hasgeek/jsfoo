@@ -257,6 +257,7 @@ header {
     color: $primary-text;
     height: auto;
     position: relative;
+    overflow: hidden;
 }
 .masthead {
     position: absolute;
@@ -934,11 +935,17 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 
 @media (min-width: 1200px) {
   .site-navbar ul li a {
-    font-size: 18px;
+    font-size: 15px;
     padding: 0.8rem 0.6rem;
   }
   .nav-fixed.site-navbar ul li a {
     padding: 10px 0.6rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .site-navbar ul li a {
+    font-size: 17px;
   }
 }
 
@@ -947,4 +954,47 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
   max-width: 200px;
   margin: auto;
   display: block;
+}
+
+/* Schedule */
+.schedule-table           { border: 1px solid #EAEAEA; width: 100%; border-collapse: separate; border-spacing: 2px; background-color: #fff}
+
+
+.schedule-table thead th.time   { width: 25%; background-color: #CCC; padding: 1rem .5rem; }
+.schedule-table .track0  { width: 25%; background-color: #FFF; color: #CCC;}
+.schedule-table .track1  { width: 25%; background-color: #FFF; color: #CCC;}
+.schedule-table .track2  { width: 25%; background-color: #FFF; color: #CCC;}
+.schedule-table .tab-active { color: #222; background-color: #EEE}
+
+.schedule-table tbody td { display: none; vertical-align: top; text-align: center;}
+.schedule-table tbody td.time     { display: table-cell; background-color: #CCC; width: 20%; padding: 1rem; margin: 0; line-height: 1; max-height: 15px; vertical-align: center; }
+.schedule-table tbody td.time p { line-height: 1; padding: 0; margin: 0; }
+.schedule-table tbody td.time-hide { padding: 0; background-color: transparent; border-bottom: 1px solid #ccc; }
+.schedule-table tbody tr:nth-last-child(2) td.time-hide:last-child { border-bottom: transparent; }
+.schedule-table tbody td.time-hide p  { visibility: hidden; }
+.schedule-table td.track-0  { width: 80%; background-color: #EEE; }
+.schedule-table td.track-1  { width: 80%; background-color: #EEE;}
+.schedule-table td.track-2 { width: 80%; background-color: #EEE;}
+.schedule-table tbody td h4 { margin: 0; font-weight: normal; }
+.schedule-table tbody td p { text-transform: uppercase; font-size: .8rem; }
+.schedule-table tbody td.centered { background-color: #EEE; }
+.schedule-table tbody td.centered { display: table-cell; }
+.schedule-table tbody td.tab-active { display: table-cell; }
+.js .funnel-schedule-link { display: none; }
+.no-js .schedule-container { display: none; }
+
+@media only screen and (min-width: 768px) {
+    .schedule-table thead th.time   { width: 12%; background-color: #CCC; padding: 1rem .5rem; }
+    .schedule-table thead th.track0  { width: 34%; background-color: #EEE; color: #222;}
+    .schedule-table thead th.track1  { width: 34%; background-color: #DDD; color: #222;}
+    .schedule-table thead th.track2  { width: 20%; background-color: #F9F9F9; color: #222;}
+    .schedule-table tbody td.time    { width: 12%; background-color: #CCC; padding: 2rem 1rem 1rem}
+    .schedule-table td.track-0  { width: 34%; background-color: #EEE; display: table-cell;}
+    .schedule-table td.track-1  { width: 34%; background-color: #DDD; display: table-cell; }
+    .schedule-table td.track-2 { width: 20%; background-color: #F9F9F9; display: table-cell; }
+    .schedule-table td.track-empty  { width: 34%; background-color: #EEE; display: table-cell;}
+}
+@media only screen and (min-width: 1024px) {
+    .schedule-table th,
+    .schedule-table tbody td { padding: 1rem; }
 }
