@@ -987,3 +987,18 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
     .schedule-table th,
     .schedule-table tbody td { padding: 1rem; }
 }
+
+.email-input {
+  padding: 2px 10px 0;
+  position: relative;
+}
+
+.email-input, .notifybtn {
+  height: 40px;
+}
+
+@media only screen and (max-width: 419px) {
+  .notifybtn {
+    margin-top: 10px;
+  }
+}

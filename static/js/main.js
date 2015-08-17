@@ -15,16 +15,16 @@ var getTimeString = function(dateString) {
 }
 
 var getHrMin = function(dateString) {
-  var hr = dateString.substring(0, dateString.indexOf(":"));
-  var min = dateString.substring(dateString.indexOf(":")+1);
-  return [hr, min];
+    var hr = dateString.substring(0, dateString.indexOf(":"));
+    var min = dateString.substring(dateString.indexOf(":")+1);
+    return [hr, min];
 }
 
 var getdateObject = function(hr, min) {
-  var time = new Date();
-  time.setHours(hr);
-  time.setMinutes(min);
-  return time;
+    var time = new Date();
+    time.setHours(hr);
+    time.setMinutes(min);
+    return time;
 }
 
 var toTimeString = function(time) {
@@ -33,32 +33,32 @@ var toTimeString = function(time) {
 
 //Input UTC, returns IST
 var getIST = function(utcTime) {
-  var hr = parseInt(getHrMin(utcTime)[0], 10) + 5;
-  var min = parseInt(getHrMin(utcTime)[1], 10) + 30;
-  var time = getdateObject(hr, min);
-  ist = toTimeString(time);
-  return ist;
+    var hr = parseInt(getHrMin(utcTime)[0], 10) + 5;
+    var min = parseInt(getHrMin(utcTime)[1], 10) + 30;
+    var time = getdateObject(hr, min);
+    ist = toTimeString(time);
+    return ist;
 }
 
 var createTable = function(schedule) {
-  var hr;
-  var min;
-  var startTime;
-  var endTime;
-  var slots;
-  var slotTime;
-  hr = getHrMin(schedule.start)[0];
-  min = getHrMin(schedule.start)[1];
-  startTime = getdateObject(hr, min);
-  hr = getHrMin(schedule.end)[0];
-  min = getHrMin(schedule.end)[1];
-  endTime = getdateObject(hr, min);
-  schedule.slots = [];
-  do {
-    slotTime = toTimeString(startTime);
-    schedule.slots.push({slot: slotTime, issession: false, sessions: [], occupied: "empty"});
-    startTime.setMinutes(startTime.getMinutes() + 5);
-  }while(startTime <= endTime);
+      var hr;
+      var min;
+      var startTime;
+      var endTime;
+      var slots;
+      var slotTime;
+      hr = getHrMin(schedule.start)[0];
+      min = getHrMin(schedule.start)[1];
+      startTime = getdateObject(hr, min);
+      hr = getHrMin(schedule.end)[0];
+      min = getHrMin(schedule.end)[1];
+      endTime = getdateObject(hr, min);
+      schedule.slots = [];
+      do {
+        slotTime = toTimeString(startTime);
+        schedule.slots.push({slot: slotTime, issession: false, sessions: [], occupied: "empty"});
+        startTime.setMinutes(startTime.getMinutes() + 5);
+      }while(startTime <= endTime);
 }
 
 var getTotalMins = function(time) {
@@ -83,74 +83,74 @@ var getTrack = function(audiName, rooms) {
 }
 
 var pushSessions = function(emptyschedule, datapoints) {
-  //Check if each session ends within slot if not add rowspan
-  datapoints.forEach(function(slot, slotindex, slots) {
+    //Check if each session ends within slot if not add rowspan
+    datapoints.forEach(function(slot, slotindex, slots) {
     var sessions = slot.sessions;
     sessions.forEach(function(session, sessionindex, sessions) {
-      var sessionTime = getTotalMins(session.start);
-      var sessionEndTime = getTotalMins(session.end);
-      emptyschedule.slots.forEach(function(emptyscheduleSlot, emptyscheduleSlotIndex, emptyscheduleSlots) {
-        //Check if the session start time is equal to time interval
-        if(getTotalMins(emptyscheduleSlot.slot) === sessionTime) {
-          emptyscheduleSlots[emptyscheduleSlotIndex].sessions.push(session);
-          emptyscheduleSlots[emptyscheduleSlotIndex].issession = true;
-        }
-      });//eof schedule.slots
+        var sessionTime = getTotalMins(session.start);
+        var sessionEndTime = getTotalMins(session.end);
+        emptyschedule.slots.forEach(function(emptyscheduleSlot, emptyscheduleSlotIndex, emptyscheduleSlots) {
+            //Check if the session start time is equal to time interval
+            if(getTotalMins(emptyscheduleSlot.slot) === sessionTime) {
+                emptyscheduleSlots[emptyscheduleSlotIndex].sessions.push(session);
+                emptyscheduleSlots[emptyscheduleSlotIndex].issession = true;
+            }
+        });//eof schedule.slots
     }); //eof sessions loop
   });//eof slots loop
 }
 
 var addRowSpan = function(schedule) {
-  schedule.slots.forEach(function(slot, slotindex, slots) {
-    if(slot.issession) {
-      if(slot.sessions[0].track === 0 || slot.sessions[0].is_break) {
-        slot.occupied = 0;
-      }
-      var sessions = slot.sessions;
-      for(sessionindex = 0; sessionindex < sessions.length; sessionindex++) {
-        var sessionEndTime = getTotalMins(sessions[sessionindex].end);
-        var index = slotindex + 1;
-        var rowspan = 1;
-        var rows = false;
-        for (index = slotindex + 1; index < slots.length; index++) {
-          if(slots[index].issession === true && sessionEndTime <= getTotalMins(slots[index].sessions[0].start)) {
-            break;
-          }
-          else if(slots[index].issession === true && sessionEndTime > getTotalMins(slots[index].sessions[0].start)) {
-            rows = true;
-            rowspan = rowspan + 1;
-          }
+    schedule.slots.forEach(function(slot, slotindex, slots) {
+        if(slot.issession) {
+            if(slot.sessions[0].track === 0 || slot.sessions[0].is_break) {
+                slot.occupied = 0;
+            }
+            var sessions = slot.sessions;
+            for(sessionindex = 0; sessionindex < sessions.length; sessionindex++) {
+                var sessionEndTime = getTotalMins(sessions[sessionindex].end);
+                var index = slotindex + 1;
+                var rowspan = 1;
+                var rows = false;
+                for (index = slotindex + 1; index < slots.length; index++) {
+                    if(slots[index].issession === true && sessionEndTime <= getTotalMins(slots[index].sessions[0].start)) {
+                        break;
+                    }
+                    else if(slots[index].issession === true && sessionEndTime > getTotalMins(slots[index].sessions[0].start)) {
+                        rows = true;
+                        rowspan = rowspan + 1;
+                    }
+                }
+                if(rows) {
+                    schedule.slots[slotindex].sessions[sessionindex].rowspan = rowspan;
+                }
+            }
         }
-        if(rows) {
-          schedule.slots[slotindex].sessions[sessionindex].rowspan = rowspan;
-        }
-      }
-    }
-  });//eof slots loop 
+    });//eof slots loop 
 }
 
 var checkColumns = function(schedule) {
-  //Check if session have track 0 to maintain table
-  for(var counter = 0; counter < schedule.slots.length; counter++) {
-   if(schedule.slots[counter].issession && schedule.slots[counter].occupied !== 0) {
-      //Check previous session extends till this one
-      var found = false;
-      for(j=counter-1; j>0; j--) {
-        if(schedule.slots[j].issession && getTotalMins(schedule.slots[j].sessions[0].end) > getTotalMins(schedule.slots[counter].sessions[0].start)) {
-          found = true;
+    //Check if session have track 0 to maintain table
+    for(var counter = 0; counter < schedule.slots.length; counter++) {
+        if(schedule.slots[counter].issession && schedule.slots[counter].occupied !== 0) {
+            //Check previous session extends till this one
+            var found = false;
+            for(j=counter-1; j>0; j--) {
+                if(schedule.slots[j].issession && getTotalMins(schedule.slots[j].sessions[0].end) > getTotalMins(schedule.slots[counter].sessions[0].start)) {
+                    found = true;
+                }
+            }
+            if(found === false) {
+                //Add a empty track session
+                var hr = parseInt(getHrMin(schedule.slots[counter].sessions[0].start)[0], 10);
+                var min = parseInt(getHrMin(schedule.slots[counter].sessions[0].start)[1], 10) + 5;
+                var time = getdateObject(hr, min);
+                var endTime = toTimeString(time);
+                schedule.slots[counter].sessions[1] = schedule.slots[counter].sessions[0];
+                schedule.slots[counter].sessions[0] = {track: 'empty', start: schedule.slots[counter].sessions[1].start, end: endTime};
+            }
         }
-      }
-      if(found === false) {
-        //Add a empty track session
-        var hr = parseInt(getHrMin(schedule.slots[counter].sessions[0].start)[0], 10);
-        var min = parseInt(getHrMin(schedule.slots[counter].sessions[0].start)[1], 10) + 5;
-        var time = getdateObject(hr, min);
-        var endTime = toTimeString(time);
-        schedule.slots[counter].sessions[1] = schedule.slots[counter].sessions[0];
-        schedule.slots[counter].sessions[0] = {track: 'empty', start: schedule.slots[counter].sessions[1].start, end: endTime};
-      }
     }
-  }
 }
 
 var renderResponsiveTable = function() {
@@ -201,10 +201,10 @@ function parseJson(data) {
             var EndTime;
             //Start and end time in a schedule
             if(slotindex === 0) {
-              schedules[scheduleindex].start = getIST(getTimeString(slot.sessions[0].start));
+                schedules[scheduleindex].start = getIST(getTimeString(slot.sessions[0].start));
             }
             if(slotindex === slots.length-1) {
-              schedules[scheduleindex].end = getIST(getTimeString(slot.sessions[sessions.length-1].end));
+                schedules[scheduleindex].end = getIST(getTimeString(slot.sessions[sessions.length-1].end));
             }
             sessions.forEach(function(session, sessionindex, sessions) {
                 //Type of schedule-
@@ -244,14 +244,14 @@ function parseJson(data) {
         });
 
         if(schedules[scheduleindex].type === 'conference') {
-          conferenceSchedule.push({date: schedules[scheduleindex].date, tableid: schedules[scheduleindex].tableid, rooms: schedules[scheduleindex].rooms, start: schedules[scheduleindex].start, end: schedules[scheduleindex].end});
-          createTable(conferenceSchedule[conferenceScheduleCounter]);
-          conferenceScheduleCounter += 1;
+            conferenceSchedule.push({date: schedules[scheduleindex].date, tableid: schedules[scheduleindex].tableid, rooms: schedules[scheduleindex].rooms, start: schedules[scheduleindex].start, end: schedules[scheduleindex].end});
+            createTable(conferenceSchedule[conferenceScheduleCounter]);
+            conferenceScheduleCounter += 1;
         }
         else {
-          workshopSchedule.push({date:schedules[scheduleindex].date, rooms: schedules[scheduleindex].rooms, start: schedules[scheduleindex].start, end: schedules[scheduleindex].end});
-          createTable(workshopSchedule[workshopScheduleCounter]);
-          workshopScheduleCounter += 1;
+            workshopSchedule.push({date:schedules[scheduleindex].date, rooms: schedules[scheduleindex].rooms, start: schedules[scheduleindex].start, end: schedules[scheduleindex].end});
+            createTable(workshopSchedule[workshopScheduleCounter]);
+            workshopScheduleCounter += 1;
         }
     });//eof schedules loop
 
@@ -270,16 +270,16 @@ function parseJson(data) {
         });
 
         if(schedule.type === 'conference') {
-          pushSessions(conferenceSchedule[conferenceScheduleCounter], schedule.slots);
-          addRowSpan(conferenceSchedule[conferenceScheduleCounter]);
-          checkColumns(conferenceSchedule[conferenceScheduleCounter]);
-          conferenceScheduleCounter += 1;
+            pushSessions(conferenceSchedule[conferenceScheduleCounter], schedule.slots);
+            addRowSpan(conferenceSchedule[conferenceScheduleCounter]);
+            checkColumns(conferenceSchedule[conferenceScheduleCounter]);
+            conferenceScheduleCounter += 1;
         }
         else {
-          pushSessions(workshopSchedule[workshopScheduleCounter], schedule.slots);
-          addRowSpan(workshopSchedule[workshopScheduleCounter]);
-          checkColumns(workshopSchedule[workshopScheduleCounter]);
-          workshopScheduleCounter += 1;
+            pushSessions(workshopSchedule[workshopScheduleCounter], schedule.slots);
+            addRowSpan(workshopSchedule[workshopScheduleCounter]);
+            checkColumns(workshopSchedule[workshopScheduleCounter]);
+            workshopScheduleCounter += 1;
         }
 
     }); //eof schedules loop
@@ -370,6 +370,30 @@ $(document).ready(function() {
             $(this).addClass('tab-active');
             parentTable.find('.' + activeColumn).addClass('tab-active');
             renderResponsiveTable();
+        }
+    });
+
+    $('#notifyme').on('submit', function(event) {
+        event.preventDefault();
+        if ($('#emailid').val() === "") {
+            $('.notifyme-status').html('Please enter a email id');
+        }
+        else {
+            $.ajax({
+                type: 'post',
+                dataType: 'json',
+                url: 'https://docs.google.com/forms/d/1qKmuBqt0y0wus1k0xulr2PhkBb4hr6ZFSMUUKVYAmhU/formResponse',
+                data: { "entry_1553910295" : $('#emailid').val() },
+                complete: function(response) {
+                    if(response.status === 0 || response.status === 200) {
+                        $('#emailid').val('');
+                        $('.notifyme-status').html('Thank you for subscribing to Startup Raid');
+                    }
+                    else {
+                        $('.notifyme-status').html('Error, try again');
+                    }
+                }
+            });
         }
     });
 });
