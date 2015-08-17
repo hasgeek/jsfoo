@@ -267,7 +267,7 @@ header {
 }
 @media (min-width: 480px) and (max-width: 991px) {
   .masthead {
-    bottom: -50px;
+    bottom: -10px;
   }
 }
 @media (min-width: 1200px) {
@@ -853,13 +853,6 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
   padding:0
 }
 
-@media (min-width: 480px) and (max-width: 991px) {
-  .site-navbar {
-    position: relative;
-    top: 42px;
-  }
-}
-
 .site-navbar nav {
   text-align: center;
 }
@@ -928,7 +921,7 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
     border-right: 2px solid #aaa;
   }
   .site-navbar ul li a {
-    font-size: 14px;
+    font-size: 13px;
     padding: 10px;
   }
 }
