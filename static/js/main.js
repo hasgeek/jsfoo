@@ -154,7 +154,7 @@ var checkColumns = function(schedule) {
 }
 
 var renderResponsiveTable = function() {
-    $('td.tab-active').attr('colspan', 3);
+    $('td.tab-active').attr('colspan', 2);
 }
 
 var disableResponsiveTable = function() {
