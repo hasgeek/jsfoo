@@ -96,10 +96,30 @@
 
 .ticket .box-front-side, .ticket .box-back-side {
   height: 30em;
+  display: none;
+  padding: 2em 0.7em;
+  position: relative;
+  border: 2px solid #aaa;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+  transition: transform 1s;
 }
 
 .ticket .box1 .box-front-side, .ticket .box1 .box-back-side {
   height: 40em;
+}
+
+.ticket .show-side{
+  display: block;
+}
+
+.flip {
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 @media (min-width: 480px) {
@@ -139,25 +159,6 @@
   }
 }
 
-.box-front-side, .box-back-side {
-  display: none;
-  padding: 2em 0.7em;
-  backface-visibility: hidden;
-  position: relative;
-}
-
-.box-front-side {
-  border: 2px solid #aaa;
-}
-
-.box-back-side {
-  border: 2px solid #777;
-}
-
-.show-side{
-  display: block;
-}
-
 .turn-right {
   position: absolute;
   bottom: 0;
@@ -174,19 +175,6 @@
   bottom: 0;
   left: 30px;
   cursor: pointer;
-}
-
-.rotate {
-  -moz-transform: rotateX(0) rotateY(180eg);
-  -webkit-transform: rotateX(0) rotateY(180eg);
-  -o-transform: rotateX(0) rotateY(180eg);
-  -ms-transform: rotateX(0) rotateY(180eg);
-  transform: rotateX(0) rotateY(180eg);
-  -webkit-transition: all 5s ease;
-  -moz-transition: all 5s ease;
-  -ms-transition: all 5s ease;
-  -o-transition: all 5s ease;
-  transition: all 5s ease;
 }
 
 .page-section {
@@ -950,7 +938,8 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 }
 
 /* Schedule */
-.schedule-table           { border: 1px solid #EAEAEA; width: 100%; border-collapse: separate; border-spacing: 2px; background-color: #fff}
+.schedule-container { max-width: 1000px; }
+.schedule-table { border: 1px solid #EAEAEA; width: 100%; border-collapse: separate; border-spacing: 2px; background-color: #fff}
 
 
 .schedule-table thead th.time   { width: 12%; background-color: #CCC; padding: 1rem .5rem; }
@@ -975,17 +964,17 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 .no-js .schedule-container { display: none; }
 
 @media only screen and (min-width: 768px) {
-    .schedule-table thead th.time   { width: 12%; background-color: #CCC; padding: 1rem .5rem; }
-    .schedule-table thead th.track0  { width: 44%; background-color: #EEE; color: #222;}
-    .schedule-table thead th.track1  { width: 44%; background-color: #DDD; color: #222;}
-    .schedule-table tbody td.time    { width: 12%; background-color: #CCC; padding: 2rem 1rem 1rem}
-    .schedule-table td.track-0  { width: 34%; background-color: #EEE; display: table-cell;}
-    .schedule-table td.track-1  { width: 34%; background-color: #DDD; display: table-cell; }
-    .schedule-table td.track-empty  { width: 34%; background-color: #EEE; display: table-cell;}
+  .schedule-table thead th.time   { width: 12%; background-color: #CCC; padding: 1rem .5rem; }
+  .schedule-table thead th.track0  { width: 44%; background-color: #EEE; color: #222;}
+  .schedule-table thead th.track1  { width: 44%; background-color: #DDD; color: #222;}
+  .schedule-table tbody td.time    { width: 12%; background-color: #CCC; padding: 2rem 1rem 1rem}
+  .schedule-table td.track-0  { width: 34%; background-color: #EEE; display: table-cell;}
+  .schedule-table td.track-1  { width: 34%; background-color: #DDD; display: table-cell; }
+  .schedule-table td.track-empty  { width: 34%; background-color: #EEE; display: table-cell;}
 }
 @media only screen and (min-width: 1024px) {
-    .schedule-table th,
-    .schedule-table tbody td { padding: 1rem; }
+  .schedule-table th,
+  .schedule-table tbody td { padding: 1rem; }
 }
 
 .email-input {

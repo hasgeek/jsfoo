@@ -317,15 +317,15 @@ $(document).ready(function() {
     });
 
     $('.turn-right').click(function() {
-        $(this).parent('.box-front-side').addClass('rotate').delay(200).queue(function() {
-            $(this).removeClass('show-side').removeClass('rotate');
+        $(this).parent('.box-front-side').addClass('flip').delay(400).queue(function() {
+            $(this).removeClass('show-side').removeClass('flip');
             $(this).parents('.box').find('.box-back-side').addClass('show-side');
             $(this).clearQueue();
         });
     });
     $('.turn-left').click(function() {
-        $(this).parent('.box-back-side').addClass('rotate').queue(function() {
-            $(this).removeClass('show-side').removeClass('rotate');
+        $(this).parent('.box-back-side').addClass('flip').delay(400).queue(function() {
+            $(this).removeClass('show-side').removeClass('flip');
             $(this).parents('.box').find('.box-front-side').addClass('show-side');
             $(this).clearQueue();
         });
