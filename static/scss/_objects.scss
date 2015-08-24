@@ -95,7 +95,7 @@
 }
 
 .ticket .box-front-side, .ticket .box-back-side {
-  height: 30em;
+  height: 31em;
   display: none;
   padding: 2em 0.7em;
   position: relative;
@@ -124,7 +124,7 @@
 
 @media (min-width: 480px) {
   .ticket .box-front-side, .ticket .box-back-side {
-    height: 25em;
+    height: 27em;
   }
 
   .ticket .box1 .box-front-side, .ticket .box1 .box-back-side {
@@ -141,9 +141,6 @@
 @media (min-width: 992px) {
   .ticket .box-front-side, .ticket .box-back-side {
     height: 33em;
-  }
-  .ticket .box3 .box-front-side, .ticket .box3 .box-back-side {
-    height: 25em;
   }
 }
 
@@ -856,7 +853,7 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 .phone-menu h1 {
   float: left;
   margin: 0;
-  padding: 0 25px 5px;
+  padding: 5px 25px;
   line-height: 1;
 }
 .phone-menu h1 img{
