@@ -1,42 +1,25 @@
 <section id="speakers" class="featured-speakers push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
-  <div class="container">
-  <div class="row-fluid">
-    <h2 class="col-sm-12 col-xs-12 legible medium all-caps text-center space-one prose-type">Featured speakers</h2>
-  </div>
-  {% for item in session.list -%}
-    {% if item.featured %}
-      {% if loop.first %}
-      <div class="row-fluid space-three-top">
-        <div class="col-sm-12 col-xs-12 legible-prose">
-          <ul class="space-half-top list-space-line list-plain list-silent row">
-      {% endif %}
-            <!-- <li class="col-lg-4 col-md-3 col-sm-4 col-xs-12 text-center"> -->
-            <li class="col-md-4 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1 text-center">
-              <!-- <a href="/2014/conference#{{ item.id }}"> -->
-                <div>
-                  <div>
-                    <img class="speaker-image" src="{{ theme_static(item.photo) }}" alt="{{ item.speaker }}">
-                  </div>
-                  <div>
-                    <div class="legible">{{ item.speaker }}</div>
-                    <h5>{{ item.designation|safe }}</h5>
-                    <h5 class="all-caps">{{ item.place }}</h5>
-                    {% if item.sponsor %}<h5>Sponsored by <a target="_blank" href="{{ item.sponsor_link }}">{{ item.sponsor }}</a></h5>{% endif %}
-                    {% if item.funnel %}<h5 class="darkyellow"><a target="_blank" href="{{ item.funnel }}">View Funnel Submission</a></h5>{% endif %}
-<!--                     <h5 class="link-silent">
-                     {% if item.preview %}<a target="_blank" href="{{ item.preview }}"><i class="fa fa-youtube-play"></i></a>{% endif %}{% if item.funnel %}&nbsp;<a target="_blank" href="{{ item.funnel }}"><i class="fa fa-filter"></i></a>{% endif %}
-                    {% if item.twitter %}&nbsp;<a target="_blank" href="https://twitter.com/{{ item.twitter }}"><i class="fa fa-twitter"></i></a>{% endif %}
-                    </h5> -->
-                  </div>
-                </div>
-              <!-- </a> -->              
-            </li>
-      {% if loop.last %}
-          </ul>
-        </div>    
-      </div>
-      {% endif %}
-    {% endif %}
-  {%- endfor %}
+  <div class="container-fluid">
+    <div class="row">
+      <h2 class="col-sm-12 col-xs-12 legible medium all-caps text-center space-one prose-type">Meet our speakers</h2>
+    </div>
+    <div class="row-fluid space-three-top">
+      <ul class="space-half-top list-plain list-silent row">
+      {% for item in session.list|sort(attribute='speaker') -%}
+        <li class="col-md-3 col-sm-4 col-xs-12 text-center speaker-list">
+          <div>
+            <img class="speaker-image" src="{{ item.photo }}" alt="{{ item.speaker }}">
+          </div>
+          <div>
+            {% if item.title %} <h5 class="space-1q-top nospace-bottom link-silent"><a target="_blank" class="secondary orange dark" {% if item.funnel %} href="{{ item.funnel }}" {% endif %}>{{ item.title }}</a></h5>{% endif %}
+            <h2 class="regular bold space-1q-top nospace-bottom all-caps">{{ item.speaker }}</h2>
+            {% if item.designation %}<h5 class="secondary-prose space-1q-top nospace-bottom blue">{{ item.designation|safe }}</h5>{% endif %}
+            {% if item.place %}<h5 class="secondary space-1q-top nospace-bottom">{{ item.place }}</h5>{% endif %}
+            {% if item.sponsor %}<h5 class="secondary space-1q-top nospace-bottom">Sponsored by <a target="_blank" href="{{ item.sponsor_link }}">{{ item.sponsor }}</a></h5>{% endif %}
+          </div>           
+        </li>
+      {%- endfor %}
+      </ul>
+    </div>    
 </div>
 </section>

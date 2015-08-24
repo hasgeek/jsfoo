@@ -40,11 +40,15 @@
 {% endblock %}
 
 {% block sitenav %}
-  <div class="site-navbar container-fluid fill-darkblue clearfix">
-    <nav class="all-caps nospace clearfix">
+  <div class="site-navbar">
+    <div class="phone-menu clearfix">
+      <h1 class="logo link-silent"><a href="#page" class="smooth-scroll"><img src="{{ theme_static('img/logo.png') }}"/></a></h1>
+      <p id="menu-btn" class="menu white regular" data-target="#dropdown-menu"><i class="fa fa-bars"></i></p>
+    </div>
+    <nav class="all-caps nospace clearfix off" id="dropdown-menu">
       <ul class="link-silent clearfix">
         <li><a href="#about" class="smooth-scroll">Announcements</a></li>
-        <li><a href="#speakers" class="smooth-scroll">Featured Speakers</a></li>
+        <li><a href="#speakers" class="smooth-scroll">Speakers</a></li>
         <li><a href="#schedules" class="smooth-scroll">Schedule</a></li>
         <li><a href="#tickets" class="smooth-scroll">Ticket Details</a></li>
         <li><a href="#venue" class="smooth-scroll">Venue</a></li>
