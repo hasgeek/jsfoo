@@ -376,28 +376,4 @@ $(document).ready(function() {
             renderResponsiveTable();
         }
     });
-
-    $('#notifyme').on('submit', function(event) {
-        event.preventDefault();
-        if ($('#emailid').val() === "") {
-            $('.notifyme-status').html('Please enter a email id');
-        }
-        else {
-            $.ajax({
-                type: 'post',
-                dataType: 'json',
-                url: 'https://docs.google.com/forms/d/1qKmuBqt0y0wus1k0xulr2PhkBb4hr6ZFSMUUKVYAmhU/formResponse',
-                data: { "entry_1553910295" : $('#emailid').val() },
-                complete: function(response) {
-                    if(response.status === 0 || response.status === 200) {
-                        $('#emailid').val('');
-                        $('.notifyme-status').html('Thank you for subscribing to Startup Raid');
-                    }
-                    else {
-                        $('.notifyme-status').html('Error, try again');
-                    }
-                }
-            });
-        }
-    });
 });
