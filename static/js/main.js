@@ -366,6 +366,17 @@ $(document).ready(function() {
         }
     });
 
+    $('#conferenceschedule, #workshopschedule').on('click', 'table td .expand', function() {
+        if($(this).hasClass('fa-chevron-circle-down')) {
+            $(this).removeClass('fa-chevron-circle-down').addClass('fa-chevron-circle-up');
+            $(this).parents('td').find('.description-text').addClass('show-text');
+        }
+        else {
+            $(this).removeClass('fa-chevron-circle-up').addClass('fa-chevron-circle-down');
+            $(this).parents('td').find('.description-text').removeClass('show-text');
+        }
+    });
+
     $('#conferenceschedule, #workshopschedule').on('click', 'table th.track0, table th.track1, table th.track2', function() {
         if($(window).width() < 768){
             var parentTable = $(this).parents('table');
@@ -374,6 +385,49 @@ $(document).ready(function() {
             $(this).addClass('tab-active');
             parentTable.find('.' + activeColumn).addClass('tab-active');
             renderResponsiveTable();
+        }
+    });
+
+    $('#expand-cancel-form').on('click', function(event) {
+        event.preventDefault();
+        $('#canceltickets').slideDown("slow");
+    });
+
+    $("input[type='radio'][name='cancel-options']").on('change',function() {
+        if ($('input[type="radio"][name="cancel-options"]:checked').val() === "Cancel") {
+            $(".tranfer-details").slideUp();
+        }
+        else {
+            $(".tranfer-details").slideDown();
+        }
+    });
+
+    $('#canceltickets').on('submit', function(event) {
+        event.preventDefault();
+        if ( $('input[type="radio"][name="cancel-options"]:checked').val() === "Transfer"  && ( $('#transferee-name').val() === "" || $('#transferee-email').val() === "" || $('#transferee-phone').val() === "" )) {
+            $('.cancelticket-status').html('Please fill all the fields');
+        }
+        else {
+            $.ajax({
+                type: 'post',
+                url: 'https://docs.google.com/a/hasgeek.in/forms/d/1HwTmcgu6Zc8QxmPUmfsrx3lt_QClvHW0_YJAUX65KM8/formResponse',
+                data: { "entry_820217593" : $('#ticket-no').val(),  "entry_1142154418" : $('#ticket-email').val(), "entry.566855753" : $('input[type="radio"][name="cancel-options"]:checked').val(), 
+                        "entry.1849206271" : $('#transferee-name').val(), "entry.1093314302" : $('#transferee-email').val() , "entry.361982548" : $('#transferee-phone').val()},
+                dataType: 'xml',
+                complete: function(response) {
+                    if(response.status === 0 || response.status === 200) {
+                        $('#ticket-no').val('');
+                        $('#ticket-email').val('');
+                        $('#transferee-name').val('');
+                        $('#transferee-email').val('');
+                        $('#transferee-phone').val('+91');
+                        $('.cancelticket-status').html('<p>We are sad that you won&#39;t be able to come. Your cancellation request is being processed, you should receive a refund within 7-8 working days. Feel free to get in touch at <a href="mailto:info@hasgeek.com" class="link-silent orange">info@hasgeek.com</a> for further queries.</p>');
+                    }
+                    else {
+                        $('.cancelticket-status').html('<p>Error, try again</p>');
+                    }
+                }
+            });
         }
     });
 });

@@ -41,9 +41,15 @@
               {{^proposal_url}}
               {{title}}
               {{/proposal_url}}
+              {{#description}}
+              <i class="fa fa-chevron-circle-down lightgray expand"></i>
+              {{/description}}
             </h4>
+            {{#description}}
+            <div class="space-1q secondary-prose description-text">{{{description}}}</div>
+            {{/description}}
             {{#speaker}}
-            <p class="space-1q regular">{{speaker}}</p>
+            <p class="space-1q regular all-caps">{{speaker}}</p>
             {{/speaker}}
             {{#title}}
             <p class="space-1q secondary"><em>{{start}} - {{end}}</em></p>

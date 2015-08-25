@@ -3230,84 +3230,109 @@ a.hasgeek-logo:hover {
 /* line 970, ../scss/_objects.scss */
 .schedule-table tbody td h4 {
   margin: 0;
-  font-weight: normal;
 }
 
 /* line 971, ../scss/_objects.scss */
-.schedule-table tbody td p {
-  text-transform: uppercase;
-  font-size: .8rem;
-}
-
-/* line 972, ../scss/_objects.scss */
 .schedule-table tbody td.centered {
   background-color: #EEE;
 }
 
-/* line 973, ../scss/_objects.scss */
+/* line 972, ../scss/_objects.scss */
 .schedule-table tbody td.centered {
   display: table-cell;
 }
 
-/* line 974, ../scss/_objects.scss */
+/* line 973, ../scss/_objects.scss */
 .schedule-table tbody td.tab-active {
   display: table-cell;
 }
 
-/* line 975, ../scss/_objects.scss */
+/* line 974, ../scss/_objects.scss */
 .js .funnel-schedule-link {
   display: none;
 }
 
-/* line 976, ../scss/_objects.scss */
+/* line 975, ../scss/_objects.scss */
 .no-js .schedule-container {
   display: none;
 }
 
+/* line 976, ../scss/_objects.scss */
+.no-js .schedule-table .fa-chevron-circle-down {
+  display: none;
+}
+
+/* line 977, ../scss/_objects.scss */
+.schedule-table .fa-chevron-circle-down, .schedule-table .fa-chevron-circle-up {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+/* line 978, ../scss/_objects.scss */
+.js .schedule-table .description-text {
+  display: none;
+}
+
+/* line 979, ../scss/_objects.scss */
+.js .schedule-table .description-text.show-text {
+  display: block;
+}
+
+@media (max-width: 479px) {
+  /* line 982, ../scss/_objects.scss */
+  .schedule-table tbody td h4 {
+    font-size: .8rem;
+  }
+
+  /* line 983, ../scss/_objects.scss */
+  .schedule-table tbody td p {
+    font-size: .6rem;
+  }
+}
 @media only screen and (min-width: 768px) {
-  /* line 979, ../scss/_objects.scss */
+  /* line 986, ../scss/_objects.scss */
   .schedule-table thead th.time {
     width: 12%;
     background-color: #CCC;
     padding: 1rem .5rem;
   }
 
-  /* line 980, ../scss/_objects.scss */
+  /* line 987, ../scss/_objects.scss */
   .schedule-table thead th.track0 {
     width: 44%;
     background-color: #EEE;
     color: #222;
   }
 
-  /* line 981, ../scss/_objects.scss */
+  /* line 988, ../scss/_objects.scss */
   .schedule-table thead th.track1 {
     width: 44%;
     background-color: #DDD;
     color: #222;
   }
 
-  /* line 982, ../scss/_objects.scss */
+  /* line 989, ../scss/_objects.scss */
   .schedule-table tbody td.time {
     width: 12%;
     background-color: #CCC;
     padding: 2rem 1rem 1rem;
   }
 
-  /* line 983, ../scss/_objects.scss */
+  /* line 990, ../scss/_objects.scss */
   .schedule-table td.track-0 {
     width: 34%;
     background-color: #EEE;
     display: table-cell;
   }
 
-  /* line 984, ../scss/_objects.scss */
+  /* line 991, ../scss/_objects.scss */
   .schedule-table td.track-1 {
     width: 34%;
     background-color: #DDD;
     display: table-cell;
   }
 
-  /* line 985, ../scss/_objects.scss */
+  /* line 992, ../scss/_objects.scss */
   .schedule-table td.track-empty {
     width: 34%;
     background-color: #EEE;
@@ -3315,9 +3340,42 @@ a.hasgeek-logo:hover {
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 988, ../scss/_objects.scss */
+  /* line 995, ../scss/_objects.scss */
   .schedule-table th,
   .schedule-table tbody td {
     padding: 1rem;
+  }
+}
+/* line 999, ../scss/_objects.scss */
+#expand-cancel-form:focus,
+#expand-cancel-form:active {
+  outline: none;
+}
+
+/* line 1003, ../scss/_objects.scss */
+.cancel-tickets {
+  display: none;
+}
+
+/* line 1006, ../scss/_objects.scss */
+.cancel-tickets .radio-box {
+  text-align: left;
+}
+
+@media (max-width: 479px) {
+  /* line 1010, ../scss/_objects.scss */
+  .cancel-tickets .radio-box {
+    width: 10%;
+  }
+
+  /* line 1013, ../scss/_objects.scss */
+  .cancel-tickets .radio-label {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  /* line 1018, ../scss/_objects.scss */
+  .cancel-tickets .radio-box {
+    text-align: right;
   }
 }
