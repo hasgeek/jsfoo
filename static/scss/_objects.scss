@@ -272,7 +272,7 @@ header {
     position: relative;
     left: 300px;
   }
-  .js .heading-text .ticket-btn {
+  .js .heading-text .ticket-btn, .js .heading-text .transfer-links{
     position: relative;
     top: 100px;
   }
@@ -1022,4 +1022,15 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
   .help-text {
     padding-left: 0;
   }
+}
+
+@media (max-width: 479px) {
+  #ticket-email, #cancel-ticket-email {
+    font-size: 0.6rem;
+  }
+}
+
+.submit-loader {
+  padding: 0px 10px 5px;
+  display: none;
 }

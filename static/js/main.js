@@ -338,7 +338,7 @@ $(document).ready(function() {
     setTimeout(function() {
       $('.heading-text .text1').animate({right: 0}, 500);
       $('.heading-text .text2').animate({left: 0}, 500);
-      $('.heading-text .ticket-btn').animate({top: 0}, 500);
+      $('.heading-text .ticket-btn, .heading-text .transfer-links').animate({top: 0}, 500);
     }, 500);
 
     // For conference and workshop schedule
@@ -416,16 +416,17 @@ $(document).ready(function() {
         if(formDataValid) {
             if(formData["type"] === "Cancel") {
                 formTarget = "cancelticket";
-                postData =  { "Ticket no." : formData["ticket-no"],  "Email" : formData["ticket-email"], "Type" : formData["type"], "Event" : "JSFoo 2015" };
+                postData =  { "Order no.": formData["order-no"], "Ticket no." : formData["ticket-no"],  "Email" : formData["ticket-email"], "Type" : formData["type"], "Event" : "JSFoo 2015" };
             }
             else {
                 formTarget = "transferticket";
-                postData = { "Ticket no." : formData["ticket-no"],  "Email" : formData["ticket-email"], "Type" : formData["type"], 
+                postData = { "Order no.": formData["order-no"], "Ticket no." : formData["ticket-no"],  "Email" : formData["ticket-email"], "Type" : formData["type"], 
                              "Transferee name" :formData["transferee-name"], "Transferee email" : formData["transferee-email"] , "Transferee phone" : formData["transferee-phone"], "Event" : "JSFoo 2015" };
             }
             p = "Are you sure you want to " + formData["type"] + " your ticket?";
             var result = window.confirm(p);
             if(result) {
+                $('.submit-loader').show();
                 $.ajax({
                     type: 'post',
                     url: 'https://script.google.com/macros/s/AKfycbycMp_bW4uj2JmUS4a0ghe7W7xfUzrIP28AV_6wQihg5kX9pDxI/exec',
@@ -433,6 +434,7 @@ $(document).ready(function() {
                     dataType: 'json',
                     timeout: 5000,
                     complete: function(response, textStatus) {
+                        $('.submit-loader').hide();
                         if(response.status === 200) {
                             $("#" + formTarget)[0].reset();
                             if(formTarget === "cancelticket") {

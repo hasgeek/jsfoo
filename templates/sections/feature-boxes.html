@@ -89,72 +89,77 @@
         </div>
       </div>
 
-      <div class="col-xs-12 space-one">
+      <div class="col-xs-12 space-one" id="request-form">
         <a href="https://in.explara.com/e/jsfoo-2015" class="button regular dark" title="JSFoo 2015 Tickets on Explara" target="_blank">Buy Tickets</a>
       </div>
 
       <div class="col-xs-12 nospace">
-        <div class="text-center">
+        <div class="text-center medium regular">
           <a href="https://docs.google.com/a/hasgeek.in/forms/d/1HwTmcgu6Zc8QxmPUmfsrx3lt_QClvHW0_YJAUX65KM8/viewform" class="darkblue link-silent secondary expand-cancel-form" data-target="#transferticket">Transfer ticket</a>
           <a href="https://docs.google.com/a/hasgeek.in/forms/d/1HwTmcgu6Zc8QxmPUmfsrx3lt_QClvHW0_YJAUX65KM8/viewform" class="darkblue link-silent secondary expand-cancel-form" data-target="#cancelticket">Cancel ticket</a>
         </div>
         <form class="form-horizontal cancel-tickets space-one-top nospace-bottom" id='transferticket' action="" role="form" autocomplete="off">
           <div class="form-group">
-            <label for="ticket-no" class="col-sm-3 control-label secondary medium">Ticket no.</label>
-            <div class="col-sm-6">
-              <input type="text" class="form-control secondary" id="ticket-no" name="ticket-no" required/>
+            <div class="col-sm-6 col-sm-offset-3">
+              <input type="text" class="form-control secondary" id="order-no" name="order-no" required placeholder="Order No."/>
             </div>
           </div>
           <div class="form-group">
-            <label for="ticket-email" class="col-sm-3 control-label secondary medium">Email</label>
-            <div class="col-sm-6">
-              <input type="email" class="form-control secondary" id="ticket-email" name="ticket-email" required/>
+            <div class="col-sm-6 col-sm-offset-3">
+              <input type="text" class="form-control secondary" id="ticket-no" name="ticket-no" required placeholder="Ticket No."/>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-6 col-sm-offset-3">
+              <input type="email" class="form-control secondary" id="ticket-email" name="ticket-email" required placeholder="Specify the email that you used to buy the ticket"/>
             </div>
           </div>
           <input type="hidden" value="Transfer" name="type" />
           <div class="form-group">
             <p class="secondary space-1q text-left col-sm-offset-3 col-sm-9">Enter the details of the person the ticket is being transferred to</p>
-            <label for="transferee-name" class="col-sm-3 control-label secondary medium">Name</label>
-            <div class="col-sm-6">
-              <input type="text" class="form-control secondary" id="transferee-name" name="transferee-name" required/>
+            <div class="col-sm-6 col-sm-offset-3">
+              <input type="text" class="form-control secondary" id="transferee-name" name="transferee-name" required placeholder="Name"/>
             </div>
           </div>
           <div class="form-group">
-            <label for="transferee-email" class="col-sm-3 control-label secondary medium">Email</label>
-            <div class="col-sm-6">
-              <input type="email" class="form-control secondary" id="transferee-email" name="transferee-email" required/>
+            <div class="col-sm-6 col-sm-offset-3">
+              <input type="email" class="form-control secondary" id="transferee-email" name="transferee-email" required placeholder="Email"/>
             </div>
           </div>
           <div class="form-group">
-            <label for="transferee-phone" class="col-sm-3 control-label secondary medium">Phone</label>
-            <div class="col-sm-6">
-              <input type="tel" class="form-control secondary" id="transferee-phone" name="transferee-phone" required/>
+            <div class="col-sm-6 col-sm-offset-3">
+              <input type="tel" class="form-control secondary" id="transferee-phone" name="transferee-phone" required placeholder="Phone"/>
             </div>
           </div>
           <div class="form-group">
             <div class="col-sm-offset-3 col-sm-6 text-left ">
               <button type="submit" class="button secondary dark">Submit</button>
+              <img src="{{ theme_static('img/ajax-loader.gif') }}" class="submit-loader"/>
             </div>
           </div>
         </form>
 
         <form class="form-horizontal cancel-tickets space-one-top nospace-bottom" id='cancelticket' action="" role="form" autocomplete="off">
           <div class="form-group">
-            <label for="cancel-ticket-no" class="col-sm-3 control-label secondary medium">Ticket no.</label>
-            <div class="col-sm-6">
-              <input type="text" class="form-control secondary" id="cancel-ticket-no" name="ticket-no" required/>
+            <div class="col-sm-6 col-sm-offset-3">
+              <input type="text" class="form-control secondary" id="cancel-order-no" name="order-no" required placeholder="Order No."/>
             </div>
           </div>
           <div class="form-group">
-            <label for="cancel-ticket-email" class="col-sm-3 control-label secondary medium">Email</label>
-            <div class="col-sm-6">
-              <input type="email" class="form-control secondary" id="cancel-ticket-email" name="ticket-email" required/>
+            <div class="col-sm-6 col-sm-offset-3">
+              <input type="text" class="form-control secondary" id="cancel-ticket-no" name="ticket-no" required placeholder="Ticket No."/>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-6 col-sm-offset-3">
+              <input type="email" class="form-control secondary" id="cancel-ticket-email" name="ticket-email" required placeholder="Specify the email that you used to buy the ticket"/>
             </div>
           </div>
           <input type="hidden" value="Cancel" name="type"/>
           <div class="form-group">
             <div class="col-sm-offset-3 col-sm-6 text-left">
               <button type="submit" class="button secondary dark">Submit</button>
+              <img src="{{ theme_static('img/ajax-loader.gif') }}" class="submit-loader"/>
             </div>
           </div>
         </form> 

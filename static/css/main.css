@@ -2190,7 +2190,7 @@ header {
   }
 
   /* line 275, ../scss/_objects.scss */
-  .js .heading-text .ticket-btn {
+  .js .heading-text .ticket-btn, .js .heading-text .transfer-links {
     position: relative;
     top: 100px;
   }
@@ -3386,4 +3386,15 @@ a.hasgeek-logo:hover {
   .help-text {
     padding-left: 0;
   }
+}
+@media (max-width: 479px) {
+  /* line 1028, ../scss/_objects.scss */
+  #ticket-email, #cancel-ticket-email {
+    font-size: 0.6rem;
+  }
+}
+/* line 1033, ../scss/_objects.scss */
+.submit-loader {
+  padding: 0px 10px 5px;
+  display: none;
 }
