@@ -388,46 +388,66 @@ $(document).ready(function() {
         }
     });
 
-    $('#expand-cancel-form').on('click', function(event) {
+    $('.expand-cancel-form').on('click', function(event) {
         event.preventDefault();
-        $('#canceltickets').slideDown("slow");
+        $('.cancel-tickets').hide();
+        $('.cancelticket-status').html('');
+        var target = $(this).attr('data-target');
+        $(target).slideDown("slow");
     });
 
-    $("input[type='radio'][name='cancel-options']").on('change',function() {
-        if ($('input[type="radio"][name="cancel-options"]:checked').val() === "Cancel") {
-            $(".tranfer-details").slideUp();
-        }
-        else {
-            $(".tranfer-details").slideDown();
-        }
-    });
+    var formTarget;
+    var cancelSuccessMessage = 'We are sad that you wouldn&#39;t be able to come. Your cancellation request is being processed, you should receive a refund within 7-8 working days. Feel free to get in touch at <a href="mailto:info@hasgeek.com" class="link-silent orange">info@hasgeek.com</a> for further queries.';
+    var transferSuccessMessage = 'We are sad that you wouldn&#39;t be able to come. Your transfer request is being processed. Feel free to get in touch at <a href="mailto:info@hasgeek.com" class="link-silent orange">info@hasgeek.com</a> for further queries.';
 
-    $('#canceltickets').on('submit', function(event) {
+    $('#cancelticket, #transferticket').on('submit', function(event) {
         event.preventDefault();
-        if ( $('input[type="radio"][name="cancel-options"]:checked').val() === "Transfer"  && ( $('#transferee-name').val() === "" || $('#transferee-email').val() === "" || $('#transferee-phone').val() === "" )) {
-            $('.cancelticket-status').html('Please fill all the fields');
+        $('.cancelticket-status').html('');
+        var formElements = $(this).serializeArray();
+        var formDataValid = true;
+        var formData ={}, postData ={};
+        for (var formIndex=0; formIndex < formElements.length; formIndex++) {
+            if(formElements[formIndex].value === "") {
+                $('.cancelticket-status').html('Please fill all the fields');
+                formDataValid = false;
+            }
+            formData[formElements[formIndex].name] = formElements[formIndex].value;
         }
-        else {
-            $.ajax({
-                type: 'post',
-                url: 'https://docs.google.com/a/hasgeek.in/forms/d/1HwTmcgu6Zc8QxmPUmfsrx3lt_QClvHW0_YJAUX65KM8/formResponse',
-                data: { "entry_820217593" : $('#ticket-no').val(),  "entry_1142154418" : $('#ticket-email').val(), "entry.566855753" : $('input[type="radio"][name="cancel-options"]:checked').val(), 
-                        "entry.1849206271" : $('#transferee-name').val(), "entry.1093314302" : $('#transferee-email').val() , "entry.361982548" : $('#transferee-phone').val()},
-                dataType: 'xml',
-                complete: function(response) {
-                    if(response.status === 0 || response.status === 200) {
-                        $('#ticket-no').val('');
-                        $('#ticket-email').val('');
-                        $('#transferee-name').val('');
-                        $('#transferee-email').val('');
-                        $('#transferee-phone').val('+91');
-                        $('.cancelticket-status').html('<p>We are sad that you won&#39;t be able to come. Your cancellation request is being processed, you should receive a refund within 7-8 working days. Feel free to get in touch at <a href="mailto:info@hasgeek.com" class="link-silent orange">info@hasgeek.com</a> for further queries.</p>');
+        if(formDataValid) {
+            if(formData["type"] === "Cancel") {
+                formTarget = "cancelticket";
+                postData =  { "Ticket no." : formData["ticket-no"],  "Email" : formData["ticket-email"], "Type" : formData["type"], "Event" : "JSFoo 2015" };
+            }
+            else {
+                formTarget = "transferticket";
+                postData = { "Ticket no." : formData["ticket-no"],  "Email" : formData["ticket-email"], "Type" : formData["type"], 
+                             "Transferee name" :formData["transferee-name"], "Transferee email" : formData["transferee-email"] , "Transferee phone" : formData["transferee-phone"], "Event" : "JSFoo 2015" };
+            }
+            p = "Are you sure you want to " + formData["type"] + " your ticket?";
+            var result = window.confirm(p);
+            if(result) {
+                $.ajax({
+                    type: 'post',
+                    url: 'https://script.google.com/macros/s/AKfycbycMp_bW4uj2JmUS4a0ghe7W7xfUzrIP28AV_6wQihg5kX9pDxI/exec',
+                    data: postData,
+                    dataType: 'json',
+                    timeout: 5000,
+                    complete: function(response, textStatus) {
+                        if(response.status === 200) {
+                            $("#" + formTarget)[0].reset();
+                            if(formTarget === "cancelticket") {
+                                $('.cancelticket-status').html(cancelSuccessMessage);
+                            }
+                            else {
+                                $('.cancelticket-status').html(transferSuccessMessage);
+                            }
+                        }
+                        else {
+                            $('.cancelticket-status').html('Error, try again');
+                        }
                     }
-                    else {
-                        $('.cancelticket-status').html('<p>Error, try again</p>');
-                    }
-                }
-            });
+                });
+            }
         }
     });
 });

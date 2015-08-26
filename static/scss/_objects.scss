@@ -965,8 +965,8 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 .schedule-table tbody td.time-hide { padding: 0; background-color: transparent; border-bottom: 1px solid #ccc; }
 .schedule-table tbody tr:nth-last-child(2) td.time-hide:last-child { border-bottom: transparent; }
 .schedule-table tbody td.time-hide p  { visibility: hidden; }
-.schedule-table td.track-0  { width: 44%; background-color: #EEE; }
-.schedule-table td.track-1  { width: 44%; background-color: #EEE;}
+.schedule-table td.track-0  { width: 44%; background-color: #EEE; padding: 0.7rem;}
+.schedule-table td.track-1  { width: 44%; background-color: #EEE; padding: 0.7rem;}
 .schedule-table tbody td h4 { margin: 0; }
 .schedule-table tbody td.centered { background-color: #EEE; }
 .schedule-table tbody td.centered { display: table-cell; }
@@ -996,8 +996,12 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
   .schedule-table tbody td { padding: 1rem; }
 }
 
-#expand-cancel-form:focus,
-#expand-cancel-form:active {
+.expand-cancel-form {
+  display: inline-block;
+  padding:0 10px;
+}
+.expand-cancel-form:focus,
+.expand-cancel-form:active {
   outline: none;
 }
 .cancel-tickets {
@@ -1006,16 +1010,16 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 .cancel-tickets .radio-box {
   text-align: left;
 }
-@media (max-width: 479px) {
-  .cancel-tickets .radio-box {
-    width: 10%;
-  }
-  .cancel-tickets .radio-label {
-    width: 80%;
-  }
-}
 @media (min-width: 768px) {
   .cancel-tickets .radio-box {
     text-align: right;
+  }
+}
+.help-text {
+  padding-left: 0;
+}
+@media (min-width: 768px) {
+  .help-text {
+    padding-left: 0;
   }
 }

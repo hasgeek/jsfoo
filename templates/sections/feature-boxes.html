@@ -93,64 +93,73 @@
         <a href="https://in.explara.com/e/jsfoo-2015" class="button regular dark" title="JSFoo 2015 Tickets on Explara" target="_blank">Buy Tickets</a>
       </div>
 
-      <div class="col-xs-12 space-one">
-        <!-- <p class="large"><a href="https://docs.google.com/a/hasgeek.in/forms/d/1HwTmcgu6Zc8QxmPUmfsrx3lt_QClvHW0_YJAUX65KM8/viewform" id="expand-cancel-form" class="orange link-silent">To transfer/cancel your JSFoo ticket</a></p> -->
-        <form class="form-horizontal cancel-tickets space-one" id='canceltickets' action="" role="form" autocomplete="off">
+      <div class="col-xs-12 nospace">
+        <div class="text-center">
+          <a href="https://docs.google.com/a/hasgeek.in/forms/d/1HwTmcgu6Zc8QxmPUmfsrx3lt_QClvHW0_YJAUX65KM8/viewform" class="darkblue link-silent secondary expand-cancel-form" data-target="#transferticket">Transfer ticket</a>
+          <a href="https://docs.google.com/a/hasgeek.in/forms/d/1HwTmcgu6Zc8QxmPUmfsrx3lt_QClvHW0_YJAUX65KM8/viewform" class="darkblue link-silent secondary expand-cancel-form" data-target="#cancelticket">Cancel ticket</a>
+        </div>
+        <form class="form-horizontal cancel-tickets space-one-top nospace-bottom" id='transferticket' action="" role="form" autocomplete="off">
           <div class="form-group">
             <label for="ticket-no" class="col-sm-3 control-label secondary medium">Ticket no.</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control secondary" id="ticket-no" required/>
+              <input type="text" class="form-control secondary" id="ticket-no" name="ticket-no" required/>
             </div>
           </div>
           <div class="form-group">
             <label for="ticket-email" class="col-sm-3 control-label secondary medium">Email</label>
             <div class="col-sm-6">
-              <input type="email" class="form-control secondary" id="ticket-email" required/>
+              <input type="email" class="form-control secondary" id="ticket-email" name="ticket-email" required/>
+            </div>
+          </div>
+          <input type="hidden" value="Transfer" name="type" />
+          <div class="form-group">
+            <p class="secondary space-1q text-left col-sm-offset-3 col-sm-9">Enter the details of the person the ticket is being transferred to</p>
+            <label for="transferee-name" class="col-sm-3 control-label secondary medium">Name</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control secondary" id="transferee-name" name="transferee-name" required/>
             </div>
           </div>
           <div class="form-group">
-            <div class="col-sm-3 col-xs-1 radio-box">
-              <input type="radio" name="cancel-options" id="cancel" value="Cancel" />
-            </div>
-            <div class="col-sm-9 col-xs-11 text-left radio-label">
-              <label for="cancel" class="secondary medium">Cancel Ticket</label>
-            </div>
-            <div class="col-sm-3 col-xs-1 radio-box">
-              <input type="radio" name="cancel-options" id="transfer" value="Transfer" checked />
-            </div>
-            <div class="col-sm-9 col-xs-11 text-left radio-label">
-              <label for="transfer" class="secondary medium">Transfer Ticket</label>
+            <label for="transferee-email" class="col-sm-3 control-label secondary medium">Email</label>
+            <div class="col-sm-6">
+              <input type="email" class="form-control secondary" id="transferee-email" name="transferee-email" required/>
             </div>
           </div>
-          <div class="tranfer-details">
-            <p class="secondary space-1q">Enter the details of the person the ticket is being transferred to</p>
-            <div class="form-group">
-              <label for="transferee-name" class="col-sm-3 control-label secondary medium">Name</label>
-              <div class="col-sm-6">
-                <input type="text" class="form-control secondary" id="transferee-name" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="transferee-email" class="col-sm-3 control-label secondary medium">Email</label>
-              <div class="col-sm-6">
-                <input type="email" class="form-control secondary" id="transferee-email" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="transferee-phone" class="col-sm-3 control-label secondary medium">Phone</label>
-              <div class="col-sm-6">
-                <input type="tel" class="form-control secondary" id="transferee-phone" value="+91"/>
-              </div>
+          <div class="form-group">
+            <label for="transferee-phone" class="col-sm-3 control-label secondary medium">Phone</label>
+            <div class="col-sm-6">
+              <input type="tel" class="form-control secondary" id="transferee-phone" name="transferee-phone" required/>
             </div>
           </div>
+          <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-6 text-left ">
+              <button type="submit" class="button secondary dark">Submit</button>
+            </div>
+          </div>
+        </form>
+
+        <form class="form-horizontal cancel-tickets space-one-top nospace-bottom" id='cancelticket' action="" role="form" autocomplete="off">
+          <div class="form-group">
+            <label for="cancel-ticket-no" class="col-sm-3 control-label secondary medium">Ticket no.</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control secondary" id="cancel-ticket-no" name="ticket-no" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cancel-ticket-email" class="col-sm-3 control-label secondary medium">Email</label>
+            <div class="col-sm-6">
+              <input type="email" class="form-control secondary" id="cancel-ticket-email" name="ticket-email" required/>
+            </div>
+          </div>
+          <input type="hidden" value="Cancel" name="type"/>
           <div class="form-group">
             <div class="col-sm-offset-3 col-sm-6 text-left">
               <button type="submit" class="button secondary dark">Submit</button>
-              <div class="cancelticket-status secondary space-half-top nospace-bootom"></div>
             </div>
           </div>
-<!--           <p class="secondary space-1q">For any further clarification, you can mail us at <a href="mailto:info@hasgeek.com" class="link-silent orange">info@hasgeek.com</a></p> -->
-        </form>
+        </form> 
+
+        <div class="secondary nospace text-left col-sm-offset-3 col-sm-6 help-text"><p class="cancelticket-status"></p></div>       
       </div>
 
     </div>

@@ -3219,12 +3219,14 @@ a.hasgeek-logo:hover {
 .schedule-table td.track-0 {
   width: 44%;
   background-color: #EEE;
+  padding: 0.7rem;
 }
 
 /* line 969, ../scss/_objects.scss */
 .schedule-table td.track-1 {
   width: 44%;
   background-color: #EEE;
+  padding: 0.7rem;
 }
 
 /* line 970, ../scss/_objects.scss */
@@ -3347,35 +3349,41 @@ a.hasgeek-logo:hover {
   }
 }
 /* line 999, ../scss/_objects.scss */
-#expand-cancel-form:focus,
-#expand-cancel-form:active {
-  outline: none;
+.expand-cancel-form {
+  display: inline-block;
+  padding: 0 10px;
 }
 
 /* line 1003, ../scss/_objects.scss */
+.expand-cancel-form:focus,
+.expand-cancel-form:active {
+  outline: none;
+}
+
+/* line 1007, ../scss/_objects.scss */
 .cancel-tickets {
   display: none;
 }
 
-/* line 1006, ../scss/_objects.scss */
+/* line 1010, ../scss/_objects.scss */
 .cancel-tickets .radio-box {
   text-align: left;
 }
 
-@media (max-width: 479px) {
-  /* line 1010, ../scss/_objects.scss */
-  .cancel-tickets .radio-box {
-    width: 10%;
-  }
-
-  /* line 1013, ../scss/_objects.scss */
-  .cancel-tickets .radio-label {
-    width: 80%;
-  }
-}
 @media (min-width: 768px) {
-  /* line 1018, ../scss/_objects.scss */
+  /* line 1014, ../scss/_objects.scss */
   .cancel-tickets .radio-box {
     text-align: right;
+  }
+}
+/* line 1018, ../scss/_objects.scss */
+.help-text {
+  padding-left: 0;
+}
+
+@media (min-width: 768px) {
+  /* line 1022, ../scss/_objects.scss */
+  .help-text {
+    padding-left: 0;
   }
 }
