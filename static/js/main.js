@@ -397,7 +397,7 @@ $(document).ready(function() {
     });
 
     var formTarget;
-    var cancelSuccessMessage = 'We are sad that you wouldn&#39;t be able to come. Your cancellation request is being processed, you should receive a refund within 7-8 working days. Feel free to get in touch at <a href="mailto:info@hasgeek.com" class="link-silent orange">info@hasgeek.com</a> for further queries.';
+    var cancelSuccessMessage = 'We are sad that you wouldn&#39;t be able to come. Your cancellation request is being processed, you should receive a refund within 7 working days. Feel free to get in touch at <a href="mailto:info@hasgeek.com" class="link-silent orange">info@hasgeek.com</a> for further queries.';
     var transferSuccessMessage = 'We are sad that you wouldn&#39;t be able to come. Your transfer request is being processed. Feel free to get in touch at <a href="mailto:info@hasgeek.com" class="link-silent orange">info@hasgeek.com</a> for further queries.';
 
     $('#cancelticket, #transferticket').on('submit', function(event) {
