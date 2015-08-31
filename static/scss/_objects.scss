@@ -1003,11 +1003,8 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 .expand-cancel-form:active {
   outline: none;
 }
-.cancel-tickets {
+.cancel-tickets, .cancelticket-status {
   display: none;
-}
-#transferticket {
-  display: block;
 }
 .cancel-tickets .radio-box {
   text-align: left;
@@ -1022,7 +1019,7 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 }
 @media (min-width: 768px) {
   .help-text {
-    padding-left: 0;
+    padding-left: 10px;
   }
 }
 
@@ -1035,8 +1032,4 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 .submit-loader {
   padding: 0px 10px 5px;
   display: none;
-}
-
-#request-form {
-  height: 515px;
 }

@@ -92,11 +92,11 @@
         <a href="https://in.explara.com/e/jsfoo-2015/checkout" class="button regular dark" title="JSFoo 2015 Tickets on Explara" target="_blank">Buy Tickets</a>
       </div>
 
-      <div class="col-xs-12 nospace" id="request-form">
-        <div class="text-center regular">
-          <p>If you need to <a href="https://docs.google.com/a/hasgeek.in/forms/d/1HwTmcgu6Zc8QxmPUmfsrx3lt_QClvHW0_YJAUX65KM8/viewform" class="orange medium expand-cancel-form" data-target="#transferticket">transfer</a> or <a href="https://docs.google.com/a/hasgeek.in/forms/d/1HwTmcgu6Zc8QxmPUmfsrx3lt_QClvHW0_YJAUX65KM8/viewform" class="orange medium expand-cancel-form" data-target="#cancelticket">cancel</a> your ticket, submit the details and we will process your request within 7 days.</p>
+      <div class="col-xs-12" id="request-form">
+        <div class="text-center regular space-one-bottom">
+          <p>If you need to <a href="https://docs.google.com/a/hasgeek.in/forms/d/1HwTmcgu6Zc8QxmPUmfsrx3lt_QClvHW0_YJAUX65KM8/viewform" class="expand-cancel-form button dark secondary-prose" data-target="#transferticket">transfer</a> or <a href="https://docs.google.com/a/hasgeek.in/forms/d/1HwTmcgu6Zc8QxmPUmfsrx3lt_QClvHW0_YJAUX65KM8/viewform" class="expand-cancel-form button dark secondary-prose" data-target="#cancelticket">cancel</a> your ticket, submit the details and we will process your request within 7 days.</p>
         </div>
-        <form class="form-horizontal cancel-tickets space-one-top nospace-bottom" id='transferticket' action="" role="form" autocomplete="off">
+        <form class="form-horizontal cancel-tickets nospace" id='transferticket' action="" role="form" autocomplete="off">
           <h4 class="text-center medium regular">Transfer ticket form</h4>
           <div class="form-group">
             <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
@@ -133,12 +133,13 @@
           <div class="form-group">
             <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-left ">
               <button type="submit" class="button secondary dark">Submit</button>
+              <button class="button secondary dark close-form gap-half">Close</button>
               <img src="{{ theme_static('img/ajax-loader.gif') }}" class="submit-loader"/>
             </div>
           </div>
         </form>
 
-        <form class="form-horizontal cancel-tickets space-one-top nospace-bottom" id='cancelticket' action="" role="form" autocomplete="off">
+        <form class="form-horizontal cancel-tickets nospace" id='cancelticket' action="" role="form" autocomplete="off">
           <h4 class="text-center medium regular">Cancel ticket form</h4>
           <div class="form-group">
             <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
@@ -159,6 +160,7 @@
           <div class="form-group">
             <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-left">
               <button type="submit" class="button secondary dark">Submit</button>
+              <button class="button secondary dark close-form gap-half">Close</button>
               <img src="{{ theme_static('img/ajax-loader.gif') }}" class="submit-loader"/>
             </div>
           </div>

@@ -3360,50 +3360,40 @@ a.hasgeek-logo:hover {
 }
 
 /* line 1006, ../scss/_objects.scss */
-.cancel-tickets {
+.cancel-tickets, .cancelticket-status {
   display: none;
 }
 
 /* line 1009, ../scss/_objects.scss */
-#transferticket {
-  display: block;
-}
-
-/* line 1012, ../scss/_objects.scss */
 .cancel-tickets .radio-box {
   text-align: left;
 }
 
 @media (min-width: 768px) {
-  /* line 1016, ../scss/_objects.scss */
+  /* line 1013, ../scss/_objects.scss */
   .cancel-tickets .radio-box {
     text-align: right;
   }
 }
-/* line 1020, ../scss/_objects.scss */
+/* line 1017, ../scss/_objects.scss */
 .help-text {
   padding-left: 0;
 }
 
 @media (min-width: 768px) {
-  /* line 1024, ../scss/_objects.scss */
+  /* line 1021, ../scss/_objects.scss */
   .help-text {
-    padding-left: 0;
+    padding-left: 10px;
   }
 }
 @media (max-width: 479px) {
-  /* line 1030, ../scss/_objects.scss */
+  /* line 1027, ../scss/_objects.scss */
   #ticket-email, #cancel-ticket-email {
     font-size: 0.6rem;
   }
 }
-/* line 1035, ../scss/_objects.scss */
+/* line 1032, ../scss/_objects.scss */
 .submit-loader {
   padding: 0px 10px 5px;
   display: none;
-}
-
-/* line 1040, ../scss/_objects.scss */
-#request-form {
-  height: 515px;
 }

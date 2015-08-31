@@ -391,9 +391,15 @@ $(document).ready(function() {
     $('.expand-cancel-form').on('click', function(event) {
         event.preventDefault();
         $('.cancel-tickets').hide();
-        $('.cancelticket-status').html('');
+        $('.cancelticket-status').html('').hide();
         var target = $(this).attr('data-target');
         $(target).slideDown("slow");
+    });
+
+    $('.close-form').on('click', function(event) {
+        event.preventDefault();
+        $(this).parents('.cancel-tickets').slideUp();
+        $('.cancelticket-status').html('').hide();
     });
 
     var formTarget;
@@ -438,14 +444,14 @@ $(document).ready(function() {
                         if(response.status === 200) {
                             $("#" + formTarget)[0].reset();
                             if(formTarget === "cancelticket") {
-                                $('.cancelticket-status').html(cancelSuccessMessage);
+                                $('.cancelticket-status').show().html(cancelSuccessMessage);
                             }
                             else {
-                                $('.cancelticket-status').html(transferSuccessMessage);
+                                $('.cancelticket-status').show().html(transferSuccessMessage);
                             }
                         }
                         else {
-                            $('.cancelticket-status').html('Error, try again');
+                            $('.cancelticket-status').show().html('Error, try again');
                         }
                     }
                 });
