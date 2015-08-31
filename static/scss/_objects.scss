@@ -399,8 +399,8 @@ header .logo {
     .editorial-panel ul li:nth-child(odd)   { float: left;  clear: both;  }
     .editorial-panel ul li:nth-child(even)  { float: right; }
 }
-.editorial-panel a {
-    border-bottom: none;
+#editorial .speaker-image {
+    border-radius: 20px;
 }
 
 @media (min-width: 768px) {
@@ -619,7 +619,7 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 
 .speaker-image {
   width: 80%;
-  border-radius: 5px;
+  border-radius: 50%;
   border: 3px solid #aaa;
 }
 @media (min-width: 480px) {

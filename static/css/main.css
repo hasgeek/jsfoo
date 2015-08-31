@@ -1585,19 +1585,19 @@ html {
 /* line 29, ../scss/_typography.scss */
 .regular {
   font-size: 1.000rem;
-  line-height: 1.40;
+  line-height: 1.30;
 }
 
 /* line 30, ../scss/_typography.scss */
 .regular-prose {
-  font-size: 1.000rem;
-  line-height: 1.40;
+  font-size: 0.900rem;
+  line-height: 1.25;
 }
 
 /* line 31, ../scss/_typography.scss */
 .secondary {
-  font-size: 0.875rem;
-  line-height: 1.40;
+  font-size: 0.850rem;
+  line-height: 1.25;
 }
 
 /* line 32, ../scss/_typography.scss */
@@ -2374,8 +2374,8 @@ header .logo {
   }
 }
 /* line 402, ../scss/_objects.scss */
-.editorial-panel a {
-  border-bottom: none;
+#editorial .speaker-image {
+  border-radius: 20px;
 }
 
 @media (min-width: 768px) {
@@ -2758,7 +2758,7 @@ a.hasgeek-logo:hover {
 /* line 620, ../scss/_objects.scss */
 .speaker-image {
   width: 80%;
-  border-radius: 5px;
+  border-radius: 50%;
   border: 3px solid #aaa;
 }
 

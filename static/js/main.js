@@ -369,11 +369,11 @@ $(document).ready(function() {
     $('#conferenceschedule, #workshopschedule').on('click', 'table td .expand', function() {
         if($(this).hasClass('fa-chevron-circle-down')) {
             $(this).removeClass('fa-chevron-circle-down').addClass('fa-chevron-circle-up');
-            $(this).parents('td').find('.description-text').addClass('show-text');
+            $(this).parents('td').find('.description-text').slideDown();
         }
         else {
             $(this).removeClass('fa-chevron-circle-up').addClass('fa-chevron-circle-down');
-            $(this).parents('td').find('.description-text').removeClass('show-text');
+            $(this).parents('td').find('.description-text').slideUp();
         }
     });
 
