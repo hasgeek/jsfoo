@@ -918,7 +918,7 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
   }
   .site-navbar nav ul li a {
     width: 100%;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
     padding: 10px;
     border-left: 2px solid #aaa;
@@ -934,11 +934,18 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 
 @media (min-width: 1200px) {
   .site-navbar nav ul li a {
-    font-size: 18px;
-    padding: 0.8rem 0.6rem;
+    font-size: 15px;
+    padding: 0.6rem;
   }
   .nav-fixed.site-navbar nav ul li a {
     padding: 10px 0.6rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .site-navbar nav ul li a {
+    font-size: 17px;
+    padding: 0.6rem;
   }
 }
 

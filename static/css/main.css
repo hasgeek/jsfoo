@@ -3093,7 +3093,7 @@ a.hasgeek-logo:hover {
   /* line 919, ../scss/_objects.scss */
   .site-navbar nav ul li a {
     width: 100%;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
     padding: 10px;
     border-left: 2px solid #aaa;
@@ -3113,8 +3113,8 @@ a.hasgeek-logo:hover {
 @media (min-width: 1200px) {
   /* line 936, ../scss/_objects.scss */
   .site-navbar nav ul li a {
-    font-size: 18px;
-    padding: 0.8rem 0.6rem;
+    font-size: 15px;
+    padding: 0.6rem;
   }
 
   /* line 940, ../scss/_objects.scss */
@@ -3122,7 +3122,14 @@ a.hasgeek-logo:hover {
     padding: 10px 0.6rem;
   }
 }
-/* line 945, ../scss/_objects.scss */
+@media (min-width: 1400px) {
+  /* line 946, ../scss/_objects.scss */
+  .site-navbar nav ul li a {
+    font-size: 17px;
+    padding: 0.6rem;
+  }
+}
+/* line 952, ../scss/_objects.scss */
 .startupraid-logo {
   width: 50%;
   max-width: 200px;
@@ -3131,12 +3138,12 @@ a.hasgeek-logo:hover {
 }
 
 /* Schedule */
-/* line 953, ../scss/_objects.scss */
+/* line 960, ../scss/_objects.scss */
 .schedule-container {
   max-width: 1000px;
 }
 
-/* line 954, ../scss/_objects.scss */
+/* line 961, ../scss/_objects.scss */
 .schedule-table {
   border: 1px solid #EAEAEA;
   width: 100%;
@@ -3145,41 +3152,41 @@ a.hasgeek-logo:hover {
   background-color: #fff;
 }
 
-/* line 957, ../scss/_objects.scss */
+/* line 964, ../scss/_objects.scss */
 .schedule-table thead th.time {
   width: 12%;
   background-color: #CCC;
   padding: 1rem .5rem;
 }
 
-/* line 958, ../scss/_objects.scss */
+/* line 965, ../scss/_objects.scss */
 .schedule-table .track0 {
   width: 44%;
   background-color: #FFF;
   color: #CCC;
 }
 
-/* line 959, ../scss/_objects.scss */
+/* line 966, ../scss/_objects.scss */
 .schedule-table .track1 {
   width: 44%;
   background-color: #FFF;
   color: #CCC;
 }
 
-/* line 960, ../scss/_objects.scss */
+/* line 967, ../scss/_objects.scss */
 .schedule-table .tab-active {
   color: #222;
   background-color: #EEE;
 }
 
-/* line 962, ../scss/_objects.scss */
+/* line 969, ../scss/_objects.scss */
 .schedule-table tbody td {
   display: none;
   vertical-align: top;
   text-align: center;
 }
 
-/* line 963, ../scss/_objects.scss */
+/* line 970, ../scss/_objects.scss */
 .schedule-table tbody td.time {
   display: table-cell;
   background-color: #CCC;
@@ -3191,150 +3198,150 @@ a.hasgeek-logo:hover {
   vertical-align: center;
 }
 
-/* line 964, ../scss/_objects.scss */
+/* line 971, ../scss/_objects.scss */
 .schedule-table tbody td.time p {
   line-height: 1;
   padding: 0;
   margin: 0;
 }
 
-/* line 965, ../scss/_objects.scss */
+/* line 972, ../scss/_objects.scss */
 .schedule-table tbody td.time-hide {
   padding: 0;
   background-color: transparent;
   border-bottom: 1px solid #ccc;
 }
 
-/* line 966, ../scss/_objects.scss */
+/* line 973, ../scss/_objects.scss */
 .schedule-table tbody tr:nth-last-child(2) td.time-hide:last-child {
   border-bottom: transparent;
 }
 
-/* line 967, ../scss/_objects.scss */
+/* line 974, ../scss/_objects.scss */
 .schedule-table tbody td.time-hide p {
   visibility: hidden;
 }
 
-/* line 968, ../scss/_objects.scss */
+/* line 975, ../scss/_objects.scss */
 .schedule-table td.track-0 {
   width: 44%;
   background-color: #EEE;
   padding: 0.7rem;
 }
 
-/* line 969, ../scss/_objects.scss */
+/* line 976, ../scss/_objects.scss */
 .schedule-table td.track-1 {
   width: 44%;
   background-color: #EEE;
   padding: 0.7rem;
 }
 
-/* line 970, ../scss/_objects.scss */
+/* line 977, ../scss/_objects.scss */
 .schedule-table tbody td h4 {
   margin: 0;
 }
 
-/* line 971, ../scss/_objects.scss */
+/* line 978, ../scss/_objects.scss */
 .schedule-table tbody td.centered {
   background-color: #EEE;
 }
 
-/* line 972, ../scss/_objects.scss */
+/* line 979, ../scss/_objects.scss */
 .schedule-table tbody td.centered {
   display: table-cell;
 }
 
-/* line 973, ../scss/_objects.scss */
+/* line 980, ../scss/_objects.scss */
 .schedule-table tbody td.tab-active {
   display: table-cell;
 }
 
-/* line 974, ../scss/_objects.scss */
+/* line 981, ../scss/_objects.scss */
 .js .funnel-schedule-link {
   display: none;
 }
 
-/* line 975, ../scss/_objects.scss */
+/* line 982, ../scss/_objects.scss */
 .no-js .schedule-container {
   display: none;
 }
 
-/* line 976, ../scss/_objects.scss */
+/* line 983, ../scss/_objects.scss */
 .no-js .schedule-table .fa-chevron-circle-down {
   display: none;
 }
 
-/* line 977, ../scss/_objects.scss */
+/* line 984, ../scss/_objects.scss */
 .schedule-table .fa-chevron-circle-down, .schedule-table .fa-chevron-circle-up {
   cursor: pointer;
   margin: 0 5px;
 }
 
-/* line 978, ../scss/_objects.scss */
+/* line 985, ../scss/_objects.scss */
 .js .schedule-table .description-text {
   display: none;
 }
 
-/* line 979, ../scss/_objects.scss */
+/* line 986, ../scss/_objects.scss */
 .js .schedule-table .description-text.show-text {
   display: block;
 }
 
 @media (max-width: 479px) {
-  /* line 982, ../scss/_objects.scss */
+  /* line 989, ../scss/_objects.scss */
   .schedule-table tbody td h4 {
     font-size: .8rem;
   }
 
-  /* line 983, ../scss/_objects.scss */
+  /* line 990, ../scss/_objects.scss */
   .schedule-table tbody td p {
     font-size: .6rem;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 986, ../scss/_objects.scss */
+  /* line 993, ../scss/_objects.scss */
   .schedule-table thead th.time {
     width: 12%;
     background-color: #CCC;
     padding: 1rem .5rem;
   }
 
-  /* line 987, ../scss/_objects.scss */
+  /* line 994, ../scss/_objects.scss */
   .schedule-table thead th.track0 {
     width: 44%;
     background-color: #EEE;
     color: #222;
   }
 
-  /* line 988, ../scss/_objects.scss */
+  /* line 995, ../scss/_objects.scss */
   .schedule-table thead th.track1 {
     width: 44%;
     background-color: #DDD;
     color: #222;
   }
 
-  /* line 989, ../scss/_objects.scss */
+  /* line 996, ../scss/_objects.scss */
   .schedule-table tbody td.time {
     width: 12%;
     background-color: #CCC;
     padding: 2rem 1rem 1rem;
   }
 
-  /* line 990, ../scss/_objects.scss */
+  /* line 997, ../scss/_objects.scss */
   .schedule-table td.track-0 {
     width: 34%;
     background-color: #EEE;
     display: table-cell;
   }
 
-  /* line 991, ../scss/_objects.scss */
+  /* line 998, ../scss/_objects.scss */
   .schedule-table td.track-1 {
     width: 34%;
     background-color: #DDD;
     display: table-cell;
   }
 
-  /* line 992, ../scss/_objects.scss */
+  /* line 999, ../scss/_objects.scss */
   .schedule-table td.track-empty {
     width: 34%;
     background-color: #EEE;
@@ -3342,57 +3349,57 @@ a.hasgeek-logo:hover {
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 995, ../scss/_objects.scss */
+  /* line 1002, ../scss/_objects.scss */
   .schedule-table th,
   .schedule-table tbody td {
     padding: 1rem;
   }
 }
-/* line 999, ../scss/_objects.scss */
+/* line 1006, ../scss/_objects.scss */
 .expand-cancel-form {
   display: inline-block;
 }
 
-/* line 1002, ../scss/_objects.scss */
+/* line 1009, ../scss/_objects.scss */
 .expand-cancel-form:focus,
 .expand-cancel-form:active {
   outline: none;
 }
 
-/* line 1006, ../scss/_objects.scss */
+/* line 1013, ../scss/_objects.scss */
 .cancel-tickets, .cancelticket-status {
   display: none;
 }
 
-/* line 1009, ../scss/_objects.scss */
+/* line 1016, ../scss/_objects.scss */
 .cancel-tickets .radio-box {
   text-align: left;
 }
 
 @media (min-width: 768px) {
-  /* line 1013, ../scss/_objects.scss */
+  /* line 1020, ../scss/_objects.scss */
   .cancel-tickets .radio-box {
     text-align: right;
   }
 }
-/* line 1017, ../scss/_objects.scss */
+/* line 1024, ../scss/_objects.scss */
 .help-text {
   padding-left: 0;
 }
 
 @media (min-width: 768px) {
-  /* line 1021, ../scss/_objects.scss */
+  /* line 1028, ../scss/_objects.scss */
   .help-text {
     padding-left: 10px;
   }
 }
 @media (max-width: 479px) {
-  /* line 1027, ../scss/_objects.scss */
+  /* line 1034, ../scss/_objects.scss */
   #ticket-email, #cancel-ticket-email {
     font-size: 0.6rem;
   }
 }
-/* line 1032, ../scss/_objects.scss */
+/* line 1039, ../scss/_objects.scss */
 .submit-loader {
   padding: 0px 10px 5px;
   display: none;
