@@ -3404,3 +3404,8 @@ a.hasgeek-logo:hover {
   padding: 0px 10px 5px;
   display: none;
 }
+
+/* line 1044, ../scss/_objects.scss */
+.transfer-form {
+  padding-top: 70px;
+}
