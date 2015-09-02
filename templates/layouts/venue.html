@@ -1,4 +1,4 @@
-<section id="{{ venues.id|default('venue') }}" class="venue push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
+<section id="{{ venues.id|default('venue') }}" class="venue push-two clearfix{% if background %} fill-{{ background }}{% else %} fill-primary{% endif %}">
   <div class="container">
       <div class="row">
           <h3 class="col-sm-12 col-xs-12 legible medium all-caps text-center space-one prose-type">{% if venues.title %} {{ venues.title }} {% else %} Venue {% endif %}</h3>

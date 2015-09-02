@@ -645,11 +645,23 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 }
 .speaker-photo {
   max-width: 250px;
+  border-radius: 50%;
+  border: 4px solid #CF6F01;
 }
 .speaker-photo-small {
   float: left;
   width: 40%;
   margin:0 5%;
+}
+.preview-photos {
+  margin:1% 1% 0 0;
+  width: 48%;
+}
+@media(min-width: 768px) {
+  .preview-photos {
+    margin:10px 1% 0 0;
+    width: 24%;
+  }
 }
 #runup-events-cards {
     padding: 0;
