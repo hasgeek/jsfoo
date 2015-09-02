@@ -160,36 +160,63 @@
 %}  
 {%
   set workshops = {
+    '65-a-slow-and-hopefully-heedful-ride-through-reactjs-':{
+        'id'          : '65-a-slow-and-hopefully-heedful-ride-through-reactjs-'
+      , 'title'       : 'A Slow (and Hopefully Heedful) Ride Through ReactJS and Flux'
+      , 'speaker'     : 'Akshay Gupta &amp; Abhinav Sarkar'
+      , 'designation' : ''
+      , 'place'       : ''
+      , 'twitter'     : ''
+      , 'bio'         : '<p><strong>Akshay:</strong> Modern day aesthetically-relevant hacker. Long time Rubyist, recent JavaScript and Clojure programmer.<br><strong>Abhinav:</strong> Old school JVM hacker. Loves log files. Wishes he was programming Haskell.</p><p>We work in a variety of different projects at Nilenso. From media publishing platforms and energy saving projects to multi-variate testing and machine learning systems.</p>'
+      , 'objective'   : '<p>ReactJS and Flux as much better front-end engineering battle-axes.</p>'
+      , 'blurb'       : '<p>This is an in-depth version of our previous <a class="orange" href=\"https://metarefresh.talkfunnel.com/2015/1326-a-quick-and-hopefully-painless-ride-through-reactj\">introduction to ReactJS workshop</a>.</p><p>We&rsquo;ll go through the fundamentals and philosophy of ReactJS and see how we can write more modular, testable and maintainable JavaScript interfaces.</p><p>We&rsquo;ll try to cover these high-level ideas:</p><ul><li>Setting up a simple ReactJS application.</li>\n<li>Writing UI components that can be re-used across the application.</li><li>HTML-like templating languages (like JSX, react-templates) that make it much easier for designers to write dynamic interactions by themselves.</li><li>Declarative / logic-less UI components that can perform transitions / animations etc.</li><li>We&rsquo;ll try our hands on building a few simple UI components. For example, a menu system like this: <img class="space-half" alt=\"\" src=\"https://s3.amazonaws.com/f.cl.ly/items/430I1j2L3b1C2e2A0W1Q/did-a-thing.gif\" title=\"menu system in react\"></li><li>Understanding the Virtual DOM and DOM reconciliation algorithms.</li><li>Server-side rendering for better performance and SEO.</li>\n<li>Using Promises to write better asynchronous components.</li><li>RefluxJS as an implementation of the Flux architecture pattern that simplifies data-flow in heavy JavaScript UIs.</li><li>Testing React components using React.addons.TestUtils and MochaJS.</li></ul>'
+      , 'requirements' : '<ul>\n<li>Prior experience in JavaScript, HTML and CSS.</li>\n<li>Laptop with the latest Chrome, Sublime Text editor, a terminal and python installed.</li>\n</ul>'
+      , 'photos'       : ['https://images.hasgeek.com/embed/file/ff87544b12b04ccca026fbdcf3b1b875', 'https://images.hasgeek.com/embed/file/19635fa7a29e46adadea7d217c65b6a8']
+      , 'featured'    : true
+      , 'date'        : 'September 15, 2015'
+      , 'time'        : '9 AM to 6 PM'
+      , 'venue'       : 'The Energy and Research Institute (TERI), Bangalore'
+      , 'price'       : 'Rs. 6000'
+      , 'count'       : 1
+    },
     '62-nodejs-workshop':{
         'id'          : '62-nodejs-workshop'
-      , 'title'       : 'Node.js Workshop'
+      , 'title'       : 'NodeJS Workshop'
       , 'speaker'     : 'Shyam Seshadri'
       , 'designation' : 'Founder &amp; CEO of Fundoo Solutions Private Limited'
       , 'place'       : 'Mumbai'
       , 'twitter'     : 'omniscient1'
+      , 'bio'         : '<p>I have been conducting hands-on trainings in AngularJS and NodeJS for over 2 years now, and have conducted over 40 workshops for various companies across the world. And every single one of my clients loves the hands-on nature of the trainings (look at my twitter for some examples).</p><p>I have also written two books for AngularJS for O&rsquo;Reilly, and the latest one is called AngularJS Up and Running. I am an Ex-Googler who was part of the original AngularJS team, and now enjoy spending my time running trainings and workshops.</p>'
+      , 'objective'   : '<p>This workshop is for JS Developers looking to get a head start in understanding NodeJS and want to learn how to use it for their own projects, as well as Developers who want to be able to quickly develop rest servers for their projects. By the end of this, developers will know how to start writing NodeJS applications, and understand the various bits and pieces of a NodeJS application</p>'
       , 'blurb'       : '<p>This workshop is for JS Developers looking to get a head start in understanding NodeJS and want to learn how to use it for their own projects, as well as Developers who want to be able to quickly develop rest servers for their projects. By the end of this, developers will know how to start writing NodeJS applications, and understand the various bits and pieces of a NodeJS application.</p><p>The NodeJS workshop will walk developers through starting their very own NodeJS projects from scratch. As part of the workshop, we will cover:</p><ul><li>What is NodeJS, and how does it work?</li><li>The NPM system and adding modular dependencies</li><li>Understanding Package.json</li>NodeJS’ single threaded architecture and the Event Loop</li><li>Handling Async behavior for rapid processing</li><li>Working with external modules</li><li>Understanding ExpressJS</li><li>Creating configuration driven NodeJS servers</li><li>Working with MongoDB (If time permits)</li></ul><p>Developers will work with one application that will be developed from scratch, step by step, during this entire workshop.</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/ef1df74a3c734363a3d2badd86a092ed.jpeg'
+      , 'requirements': '<p>Requirements for attendees:</p><ul><li>Prior JS experience (2+ years minimum)</li><li>Understanding of Servers and REST API</li><li>Understanding of Asynchronous APIs and calls</li><li>Comfortable with command line</li></ul><p>System Requirements:</p><ul><li>NodeJS (v0.12+)</li><li>Git (Not Github, but Git)</li><li>MongoDB (Will try and provide a common one, but just in case)</li><li>WebStorm </li><li>Your own laptops with all these setup</li></ul>'
+      , 'photos'       : ['https://imgee.s3.amazonaws.com/imgee/ef1df74a3c734363a3d2badd86a092ed.jpeg']
       , 'featured'    : true
       , 'date'        : 'September 16, 2015'
       , 'time'        : '9 AM to 6 PM'
       , 'venue'       : 'The Energy and Research Institute (TERI), Bangalore'
-      , 'count'       : 1
+      , 'price'       : 'Rs. 12000'
+      , 'count'       : 2
     },
     '63-angularjs-workshop':{
         'id'          : '63-angularjs-workshop'
-      , 'title'       : 'Angularjs Workshop'
+      , 'title'       : 'AngularJS Workshop'
       , 'speaker'     : 'Shyam Seshadri'
       , 'designation' : 'Founder &amp; CEO of Fundoo Solutions Private Limited'
       , 'place'       : 'Mumbai'
       , 'twitter'     : 'omniscient1'
+      , 'bio'         : '<p>I have been conducting hands-on trainings in AngularJS and NodeJS for over 2 years now, and have conducted over 40 workshops for various companies across the world. And every single one of my clients loves the hands-on nature of the trainings (look at my twitter for some examples).</p><p>I have also written two books for AngularJS for O&rsquo;Reilly, and the latest one is called AngularJS Up and Running. I am an Ex-Googler who was part of the original AngularJS team, and now enjoy spending my time running trainings and workshops.</p>'
+      , 'objective': '<p>AngularJS has been around for quite a few years. Get to learn AngularJS as it was designed, to get the optimal use, and understand how to write AngularJS 2 ready code today. Developers will get a quick overview on the basic core parts of AngularJS, what to use it for, and how to write AngularJS code in such a way that it makes it easy to transfer to AngularJS 2 when it is ready. Also, we will cover what is changing in AngularJS 2, as well as some of the reasons for the same</p>'
       , 'blurb'       : '<p>AngularJS has been around for quite a few years. Get to learn AngularJS as it was designed, to get the optimal use, and understand how to write AngularJS 2 ready code today. Developers will get a quick overview on the basic core parts of AngularJS, what to use it for, and how to write AngularJS code in such a way that it makes it easy to transfer to AngularJS 2 when it is ready. Also, we will cover what is changing in AngularJS 2, as well as some of the reasons for the same.</p><p>The workshop will walk developers very quickly through the basics of ANgularJS, cover some of the advanced concepts around Services, Directives, and then jump into AngularJS 2</p><ul><li>AngularJS Controllers</li>
       <li>AngularJS services, when to create them and how to use them</li><li>Understanding routing in AngularJS - UI-Router</li><li>AngularJS directives - Basics and Advanced</li><li>What is changing in AngularJS 2</li><li>Writing code in AngularJS 2 friendly way today</li></ul><p>This workshop will again take one end to end example, and build that from scratch along with the attendees so that everyone gets an idea of how AngularJS works within the context of the a larger application framework.</p>'
-      , 'photo'       : 'https://imgee.s3.amazonaws.com/imgee/ef1df74a3c734363a3d2badd86a092ed.jpeg'
+      , 'requirements': '<p>Requirements for attendees:</p>\n<ul>\n<li>Prior JS experience (1+ years minimum)</li>\n<li>Understanding of Asynchronous APIs and calls</li>\n<li>Prior experience in AJAX and MVC frameworks <em>highly recommended</em></li>\n<li>Comfortable with command line</li>\n</ul>\n<p>System Requirements:</p>\n<ul>\n<li>NodeJS (v0.12+)</li>\n<li>Git (Not Github, but Git)</li>\n<li>WebStorm (Optional, but recommended!)</li>\n<li>Your own laptops with all these setup</li>\n</ul>'
+      , 'photos'       : ['https://imgee.s3.amazonaws.com/imgee/ef1df74a3c734363a3d2badd86a092ed.jpeg']
       , 'featured'    : true
       , 'date'        : 'September 17, 2015'
-      , 'time'        : '9 AM to 6 PM'      
+      , 'time'        : '9 AM to 6 PM'    
+      , 'price'       : 'Rs. 12000'  
       , 'venue'       : 'The Energy and Research Institute (TERI), Bangalore'
-      , 'count'       : 2
+      , 'count'       : 3
     },
     '39-nodebots-js-hardware-workshop':{
         'id'          : '39-nodebots-js-hardware-workshop'
@@ -198,14 +225,18 @@
       , 'designation' : 'CTO &amp; Head of Data Science for JBA'
       , 'place'       : 'Mumbai'
       , 'twitter'     : 'ajfisher'
+      , 'bio': '<p>Andrew Fisher is a member of the core Johnny-Five team, the most used framework for JS + Hardware, and is the creator and lead maintainer of node-pixel, an open source project for controlling LEDs from JavaScript. He is a co-author of the book, &ldquo;Make: JavaScript Robotics&rdquo; and has helped organise and run NodeBots workshops for thousands of developers around the region including Australia, China and Sri Lanka. Andrew also helps design hardware for teaching NodeBots workshops. </p>\n<p>When not building robots, Andrew is the Chief Technology Officer and Head of Data Science for JBA, an Australian based consultancy focused on customer experience analysis and design.</p>'
+      , 'objective': '<p>As the Internet of Things takes off, building devices that can operate in the physical world but can talk to the Web becomes an important part of the skills of the web developer.</p>\n<p>This workshop will provide a good foundation for how you can use JavaScript to be able to work with and build physical Internet Connected Things as well as Robots. </p>'
       , 'blurb'       : '<p>As the Internet of Things takes off, building devices that can operate in the physical world but can talk to the Web becomes an important part of the skills of the web developer.</p>
-      <p>This workshiop will provide a good foundation for how you can use JavaScript to be able to work with and build physical Internet Connected Things as well as Robots.</p><p>As well as being a great web language, JavaScript is well suited to the physical world too. In this session we will start with the nodebots stack (how to use JS to control physical things such as sensors, actuators and robots) with some simple examples to get everyone up and running.</p><p>From there we will get into small teams to solve a challenge in a more free-flowing hack session over the course of the day, developing your skill with the stack by solving a problem. </p><p>We’ll then come together to see how well each team meets the challenge set out in a friendly show and tell or competition.Participants will leave having a good knowledge of the JS Hardware stack, how to start working with simple electronics using JavaScript and having designed and built a robot that meets a goal.</p>'
-      , 'photo'       : 'https://images.hasgeek.com/embed/file/f8de87476036417cbd8a261c0f1ccd6c'
+      <p>This workshop will provide a good foundation for how you can use JavaScript to be able to work with and build physical Internet Connected Things as well as Robots.</p><p>As well as being a great web language, JavaScript is well suited to the physical world too. In this session we will start with the nodebots stack (how to use JS to control physical things such as sensors, actuators and robots) with some simple examples to get everyone up and running.</p><p>From there we will get into small teams to solve a challenge in a more free-flowing hack session over the course of the day, developing your skill with the stack by solving a problem. </p><p>We’ll then come together to see how well each team meets the challenge set out in a friendly show and tell or competition.Participants will leave having a good knowledge of the JS Hardware stack, how to start working with simple electronics using JavaScript and having designed and built a robot that meets a goal.</p>'
+      ,'requirements': '<p>Participants should have an good knowledge of JavaScript and at least familiarity with NodeJS as these will be assumed knowledge. No assumptions are made regarding hardware or electronics knowledge as this will be covered in the session enough to get you going (if you&rsquo;re an electrical engineer you&rsquo;re welcome to come too though!).</p>\n<p>All participants will need to have a laptop that can run nodejs and arduino on it. </p>\n<p>The hardware components for the workshop will be supplied.</p>'
+      , 'photos'       : ['https://images.hasgeek.com/embed/file/f8de87476036417cbd8a261c0f1ccd6c']
       , 'featured'    : true
       , 'date'        : 'September 20, 2015'
-      , 'time'        : '10 AM to 6 PM'      
+      , 'time'        : '10 AM to 6 PM'     
+      , 'price'       : 'Rs. 15000' 
       , 'venue'       : 'WorkBench Projects, Halasuru Metro Station, Bangalore'
-      , 'count'       : 3
+      , 'count'       : 4
     }
   }
 %}  
