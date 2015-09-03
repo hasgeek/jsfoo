@@ -2806,7 +2806,7 @@ a.hasgeek-logo:hover {
 /* line 657, ../scss/_objects.scss */
 .preview-photos {
   margin: 1% 1% 0 0;
-  width: 48%;
+  max-width: 48%;
 }
 
 /* line 661, ../scss/_objects.scss */
@@ -2824,7 +2824,7 @@ a.hasgeek-logo:hover {
   /* line 669, ../scss/_objects.scss */
   .preview-photos {
     margin: 10px 1% 0 0;
-    width: 24%;
+    max-width: 24%;
   }
 }
 /* line 674, ../scss/_objects.scss */

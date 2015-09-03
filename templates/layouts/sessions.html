@@ -14,6 +14,7 @@
         {% if item.sponsor %}<div class="lightblue secondary-prose space-1q-top nospace-bottom link-silent"><em>Sponsored session by <a href="{{ item.sponsor_link }}" target="_blank">{{ item.sponsor }}</a></em></div>{% endif %}
       </div>
       <div class="col-md-8 col-xs-12">
+        {% if item.banner %}<div class="regular nospace-top push-one-top pad-half"><img src="{{ item.banner[0]|safe }}" alt="{{ item.banner[0]|safe }}"/><p class="tiny space-1q-top">{{ item.banner[1]|safe }}</p></div>{% endif %}
         {% if item.objective %}<div class="regular nospace-top push-one-top pad-half"><h2 class="legible semibold nospace-top space-half-bottom">Objective</h2>{{ item.objective|safe }}</div>{% endif %}
         {% if item.blurb %}<div class="regular space-one pad-half link-silent"><h2 class="legible semibold space-half">Description</h2>{{ item.blurb|safe }}</div>{% endif %}
         {% if item.requirements %}<div class="regular space-one pad-half"><h2 class="legible semibold space-half">Requirements</h2>{{ item.requirements|safe }}</div>{% endif %}

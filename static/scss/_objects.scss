@@ -656,7 +656,7 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 }
 .preview-photos {
   margin:1% 1% 0 0;
-  width: 48%;
+  max-width: 48%;
 }
 .session:nth-child(odd) {
   background-color: #fff;
@@ -668,7 +668,7 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 @media(min-width: 768px) {
   .preview-photos {
     margin:10px 1% 0 0;
-    width: 24%;
+    max-width: 24%;
   }
 }
 #runup-events-cards {
