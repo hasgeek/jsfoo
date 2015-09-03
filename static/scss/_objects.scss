@@ -652,10 +652,15 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
   float: left;
   width: 40%;
   margin:0 5%;
+  max-width: auto;
 }
 .preview-photos {
   margin:1% 1% 0 0;
   width: 48%;
+}
+.session:nth-child(odd) {
+  background-color: #fff;
+  color: #333;
 }
 @media(min-width: 768px) {
   .preview-photos {
