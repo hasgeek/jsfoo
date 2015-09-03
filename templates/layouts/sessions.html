@@ -18,7 +18,7 @@
         {% if item.blurb %}<div class="regular space-one pad-half link-silent"><h2 class="legible semibold space-half">Description</h2>{{ item.blurb|safe }}</div>{% endif %}
         {% if item.requirements %}<div class="regular space-one pad-half"><h2 class="legible semibold space-half">Requirements</h2>{{ item.requirements|safe }}</div>{% endif %}
         {% if item.previewphotos %}<div class="regular space-one-top pad-half link-silent">{% for link in item.previewphotos %}<img src="{{ link }}" class="preview-photos"/>{% endfor %}</div>{% endif %}
-        {% if item.links %}<div class="regular space-one-top pad-half link-silent session-links"><p class="legible semibold">Links</p><ul>{% for link in item.links %}<li><a class="orange" href="http://{{ link }}">{{ link }}</a></li>{% endfor %}</ul></div>{% endif %}
+        {% if item.links %}<div class="regular space-one-top pad-half link-silent session-links"><p class="legible semibold">Links</p><ul>{% for link in item.links %}<li><a class="orange" href="http://{{ link }}" target="_blank">{{ link }}</a></li>{% endfor %}</ul></div>{% endif %}
         <ul class="list-plain regular space-one-top pad-half">
           {% if item.date %}<li class="space-1q">{{ item.date|safe }}</li>{% endif %}
           {% if item.time %}<li class="space-1q">{{ item.time|safe }}</li>{% endif %}
