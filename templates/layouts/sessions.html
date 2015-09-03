@@ -6,12 +6,12 @@
     <div class="row">
       <h3 class="legible nospace-top medium push-one-top pad-half darkblue bold text-center">{{ item.title|safe }}</h3>
       <div class="col-md-4 col-xs-12 speaker-bio">
-        {% if item.photos %}<div class="clearfix nospace-top push-one-top">{% for photo in item.photos %}<img src="{{photo}}" alt="" class="center-block speaker-photo {% if item.photos|length > 1 %} speaker-photo-small {% endif %}">{% endfor %}</div>{% endif %}
-        <h4 class="regular prose-type calm all-caps space-one-top darkblue bold text-center">{{ item.speaker|safe }}</h4>
-        {% if item.twitter %}<div class="link-silent regular-prose text-center"><a href="">@{{ item.twitter }}</a></div>{% endif %}
-        {% if item.designation %}<p class="secondary italic push-half-bottom darkyellow text-center">{{ item.designation|safe }}</p>{% endif %}
-        {% if item.bio %}<div class="secondary push-half-bottom text-center">{{ item.bio|safe }}</div>{% endif %}
-        {% if item.sponsor %}<div class="lightblue secondary-prose link-silent"><em>Sponsored session by <a href="{{ item.sponsor_link }}" target="_blank">{{ item.sponsor }}</a></em></div>{% endif %}
+        {% if item.photos %}<div class="clearfix nospace-top push-one-top nospace-bottom">{% for photo in item.photos %}<img src="{{photo}}" alt="" class="center-block speaker-photo {% if item.photos|length > 1 %} speaker-photo-small {% endif %}">{% endfor %}</div>{% endif %}
+        <h4 class="regular prose-type calm all-caps space-1q-top nospace-bottom darkblue bold text-center">{{ item.speaker|safe }}</h4>
+        {% if item.twitter %}<div class="link-silent regular-prose space-1q-top nospace-bottom text-center"><a href="">@{{ item.twitter }}</a></div>{% endif %}
+        {% if item.designation %}<p class="secondary italic space-1q-top nospace-bottom darkyellow text-center">{{ item.designation|safe }}</p>{% endif %}
+        {% if item.bio %}<div class="secondary space-1q-top nospace-bottom text-center">{{ item.bio|safe }}</div>{% endif %}
+        {% if item.sponsor %}<div class="lightblue secondary-prose space-1q-top nospace-bottom link-silent"><em>Sponsored session by <a href="{{ item.sponsor_link }}" target="_blank">{{ item.sponsor }}</a></em></div>{% endif %}
       </div>
       <div class="col-md-8 col-xs-12">
         {% if item.objective %}<div class="regular nospace-top push-one-top pad-half"><h2 class="legible nospace-top space-half-bottom">Objective</h2>{{ item.objective|safe }}</div>{% endif %}
