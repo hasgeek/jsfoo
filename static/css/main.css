@@ -2606,6 +2606,11 @@ header .logo {
   padding: .84rem 4rem;
 }
 
+/* line 505, ../scss/_objects.scss */
+.sponsor-m .sponsorlogo.contain-height {
+  padding: 0.5rem;
+}
+
 /* line 507, ../scss/_objects.scss */
 .credits .row-fluid .offset1 {
   margin-left: 8.51063829787234%;
