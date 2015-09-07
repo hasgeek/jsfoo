@@ -16,6 +16,7 @@
       <div class="col-md-8 col-xs-12">
         {% if item.banner %}<div class="regular nospace-top push-one-top pad-half"><img src="{{ item.banner[0]|safe }}" alt="{{ item.banner[0]|safe }}"/><p class="tiny space-1q-top">{{ item.banner[1]|safe }}</p></div>{% endif %}
         {% if item.objective %}<div class="regular nospace-top push-one-top pad-half"><h2 class="legible semibold nospace-top space-half-bottom">Objective</h2>{{ item.objective|safe }}</div>{% endif %}
+        {% if item.preview %}<div class="pad-half"> {{ item.preview|safe }} </div>{% endif %}
         {% if item.blurb %}<div class="regular space-one pad-half link-silent"><h2 class="legible semibold space-half">Description</h2>{{ item.blurb|safe }}</div>{% endif %}
         {% if item.requirements %}<div class="regular space-one pad-half"><h2 class="legible semibold space-half">Requirements</h2>{{ item.requirements|safe }}</div>{% endif %}
         {% if item.previewphotos %}<div class="regular space-one-top pad-half link-silent">{% for link in item.previewphotos %}<img src="{{ link }}" class="preview-photos"/>{% endfor %}</div>{% endif %}
@@ -26,7 +27,6 @@
           {% if item.venue %}<li class="space-1q"><i class="fa fa-map-marker"></i>&nbsp; {{ item.venue|safe }}</li>{% endif %}
           {% if item.price %}<li class="large space-1q bold">{{ item.price|safe }}</li>{% endif %}
           <li class="space-1q"><a class="orange" target="_blank" href="https://jsfoo.talkfunnel.com/2015/{{ item.id }}">Read workshop proposal</a></li>
-          {% if item.preview %}<li class="flushright"><a href="{{ item.preview }}">Preview</a></li>{% endif %}
         </ul>
         <div class="space-one-top pad-half"><a href="https://in.explara.com/e/jsfoo-2015/checkout" class="button button-on-dark regular dark ticket-btn" title="JSFoo 2015 Tickets on Explara" target="_blank">Buy Tickets</a></div>
         </ul>
