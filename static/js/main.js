@@ -174,6 +174,7 @@ var renderScheduleTable = function(schedules, eventType) {
         }
         else {
           $('#workshopschedule').append(Mustache.render(tableTemplate, schedule));
+          $(".schedule-table-container p.loadingtxt").hide();
         }
     });
     if($(window).width() < 768){
@@ -288,7 +289,9 @@ function parseJson(data) {
 }
 
 $(document).ready(function() {
-    var siteNavTop = $(".site-navbar").offset().top;
+    if($(".site-navbar").length) {
+      var siteNavTop = $(".site-navbar").offset().top;
+    }
     var windowWidth = $(window).width();
 
     $(window).resize(function() {

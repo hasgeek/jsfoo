@@ -1,5 +1,11 @@
-{% with %}
-  {% from theme("data/workshop-schedule.html") import schedule %}
-  {% from theme("data/sessions.html") import workshops, types %}
-  {% include theme("layouts/schedule.html") %}
-{% endwith %}
+{% include theme("layouts/schedule-table.html") %}
+<section id="schedules" class="page-section clearfix{% if background %} fill-{{ background }}{% endif %} push-two-top push-four-bottom">
+  <div class="container schedule-container">
+    <div class="text-center" id="workshop-schedule">
+      <h2 class="legible medium prose-type all-caps text-center space-one-top">Workshop Schedule</h2>
+      <div class="schedule-table-container text-center" id="workshopschedule">
+        <p class="text-center loadingtxt"><a class="button dark regular" href="https://jsfoo.talkfunnel.com/2015/schedule">View Schedule</a></p>
+      </div>
+    </div>
+  </div>
+</section>
