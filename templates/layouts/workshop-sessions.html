@@ -16,7 +16,7 @@
         <h2 class="legible space-half">Instructor</h2>
         {% if item.photos %}<div class="clearfix">{% for photo in item.photos %}<img src="{{photo}}" alt="" class="nospace-top push-one-top speaker-photo {% if item.photos|length > 1 %} speaker-photo-small {% endif %}">{% endfor %}</div>{% endif %}
         <h4 class="regular prose-type calm all-caps space-one">{{ item.speaker|safe }}</h4>
-        {% if item.twitter %}<div class="link-silent regular-prose"><a href="">@{{ item.twitter }}</a></div>{% endif %}
+        {% if item.twitter %}<div class="link-silent regular-prose"><a href="http://twitter.com/{{ item.twitter }}">@{{ item.twitter }}</a></div>{% endif %}
         {% if item.designation %}<p class="secondary italic push-half-bottom darkyellow">{{ item.designation|safe }}</p>{% endif %}
         {% if item.bio %}<div class="regular push-half-bottom">{{ item.bio|safe }}</div>{% endif %}
         {% if item.sponsor %}<div class="lightblue secondary-prose link-silent"><em>Sponsored session by <a href="{{ item.sponsor_link }}" target="_blank">{{ item.sponsor }}</a></em></div>{% endif %}
