@@ -1071,3 +1071,52 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 .transfer-form {
   padding-top: 70px;
 }
+
+.submit-loader {
+  padding: 0px 10px 5px;
+  display: none;
+}
+
+.subscribe-input {
+  background-color: $darkblue;
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.4;
+  border: none;
+  box-shadow: none;
+  margin: 0 5px 10px;
+  padding: 0 10px;
+  width: 300px;
+  height: 42px;
+  max-height: 42px;
+}
+.subscribe-button {
+  background-color: $darkyellow;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  padding: 0 10px;
+  height: 42px;
+  max-height: 42px;
+  margin: 0 0 5px;
+}
+.subscribe-button:active, .subscribe-button:focus,
+.subscribe-input:active, .subscribe-input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+.subscribe-button:active, .subscribe-button:focus,
+.subscribe-button:hover {
+  background-color: #EB9812;
+}
+.ajax-loader {
+  visibility: hidden;
+  padding: 0px 10px 5px;
+}
+.helptext {
+  height: 30px;
+}

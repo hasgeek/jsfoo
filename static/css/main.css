@@ -3453,3 +3453,64 @@ a.hasgeek-logo:hover {
 .transfer-form {
   padding-top: 70px;
 }
+
+/* line 1075, ../scss/_objects.scss */
+.submit-loader {
+  padding: 0px 10px 5px;
+  display: none;
+}
+
+/* line 1080, ../scss/_objects.scss */
+.subscribe-input {
+  background-color: #549EAF;
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.4;
+  border: none;
+  box-shadow: none;
+  margin: 0 5px 10px;
+  padding: 0 10px;
+  width: 300px;
+  height: 42px;
+  max-height: 42px;
+}
+
+/* line 1094, ../scss/_objects.scss */
+.subscribe-button {
+  background-color: #FAA51A;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  padding: 0 10px;
+  height: 42px;
+  max-height: 42px;
+  margin: 0 0 5px;
+}
+
+/* line 1106, ../scss/_objects.scss */
+.subscribe-button:active, .subscribe-button:focus,
+.subscribe-input:active, .subscribe-input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* line 1112, ../scss/_objects.scss */
+.subscribe-button:active, .subscribe-button:focus,
+.subscribe-button:hover {
+  background-color: #EB9812;
+}
+
+/* line 1116, ../scss/_objects.scss */
+.ajax-loader {
+  visibility: hidden;
+  padding: 0px 10px 5px;
+}
+
+/* line 1120, ../scss/_objects.scss */
+.helptext {
+  height: 30px;
+}

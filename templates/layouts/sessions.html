@@ -8,7 +8,7 @@
       <div class="col-md-4 col-xs-12 speaker-bio">
         {% if item.photos %}<div class="clearfix nospace-top push-one-top space-half-bottom">{% for photo in item.photos %}<img src="{{photo}}" alt="" class="center-block speaker-photo {% if item.photos|length > 1 %} speaker-photo-small {% endif %}">{% endfor %}</div>{% endif %}
         <h4 class="regular prose-type calm all-caps space-1q-top nospace-bottom darkblue bold text-center">{{ item.speaker|safe }}</h4>
-        {% if item.twitter %}<div class="link-silent regular-prose space-1q-top nospace-bottom text-center"><a href="">@{{ item.twitter }}</a></div>{% endif %}
+        {% if item.twitter %}<div class="link-silent regular-prose space-1q-top nospace-bottom text-center"><a href="https://twitter.com/{{ item.twitter }}" target="_blank">@{{ item.twitter }}</a></div>{% endif %}
         {% if item.designation %}<p class="secondary italic space-1q-top nospace-bottom darkyellow text-center">{{ item.designation|safe }}</p>{% endif %}
         {% if item.bio %}<div class="secondary space-1q-top nospace-bottom text-center">{{ item.bio|safe }}</div>{% endif %}
         {% if item.sponsor %}<div class="lightblue secondary-prose space-1q-top nospace-bottom link-silent"><em>Sponsored session by <a href="{{ item.sponsor_link }}" target="_blank">{{ item.sponsor }}</a></em></div>{% endif %}
@@ -28,7 +28,7 @@
           {% if item.price %}<li class="large space-1q bold">{{ item.price|safe }}</li>{% endif %}
           <li class="space-1q"><a class="orange" target="_blank" href="https://jsfoo.talkfunnel.com/2015/{{ item.id }}">Read workshop proposal</a></li>
         </ul>
-        <div class="space-one-top pad-half"><a href="https://in.explara.com/e/jsfoo-2015/checkout" class="button button-on-dark regular dark ticket-btn" title="JSFoo 2015 Tickets on Explara" target="_blank">Buy Tickets</a></div>
+<!--         <div class="space-one-top pad-half"><a href="https://in.explara.com/e/jsfoo-2015/checkout" class="button button-on-dark regular dark ticket-btn" title="JSFoo 2015 Tickets on Explara" target="_blank">Buy Tickets</a></div> -->
         </ul>
       </div>
     </div>
