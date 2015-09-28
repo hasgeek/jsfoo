@@ -1087,9 +1087,14 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
   box-shadow: none;
   margin: 0 5px 10px;
   padding: 0 10px;
-  width: 300px;
+  width: 250px;
   height: 42px;
   max-height: 42px;
+}
+@media(min-width:480px) {
+  .subscribe-input {
+    width: 300px;
+  }
 }
 .subscribe-button {
   background-color: $darkyellow;

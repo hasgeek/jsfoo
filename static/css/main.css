@@ -3471,12 +3471,18 @@ a.hasgeek-logo:hover {
   box-shadow: none;
   margin: 0 5px 10px;
   padding: 0 10px;
-  width: 300px;
+  width: 250px;
   height: 42px;
   max-height: 42px;
 }
 
-/* line 1094, ../scss/_objects.scss */
+@media (min-width: 480px) {
+  /* line 1095, ../scss/_objects.scss */
+  .subscribe-input {
+    width: 300px;
+  }
+}
+/* line 1099, ../scss/_objects.scss */
 .subscribe-button {
   background-color: #FAA51A;
   font-size: 18px;
@@ -3490,7 +3496,7 @@ a.hasgeek-logo:hover {
   margin: 0 0 5px;
 }
 
-/* line 1106, ../scss/_objects.scss */
+/* line 1111, ../scss/_objects.scss */
 .subscribe-button:active, .subscribe-button:focus,
 .subscribe-input:active, .subscribe-input:focus {
   outline: none;
@@ -3498,19 +3504,19 @@ a.hasgeek-logo:hover {
   box-shadow: none;
 }
 
-/* line 1112, ../scss/_objects.scss */
+/* line 1117, ../scss/_objects.scss */
 .subscribe-button:active, .subscribe-button:focus,
 .subscribe-button:hover {
   background-color: #EB9812;
 }
 
-/* line 1116, ../scss/_objects.scss */
+/* line 1121, ../scss/_objects.scss */
 .ajax-loader {
   visibility: hidden;
   padding: 0px 10px 5px;
 }
 
-/* line 1120, ../scss/_objects.scss */
+/* line 1125, ../scss/_objects.scss */
 .helptext {
   height: 30px;
 }
