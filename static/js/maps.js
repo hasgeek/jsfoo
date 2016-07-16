@@ -29,7 +29,7 @@ $(function initLeaflets() {
             , scrollWheelZoom: options.scrollWheelZoom
         });
         
-        L.tileLayer('http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
               maxZoom: options.maxZoom
             , attribution: options.attribution
             , subdomains: options.subdomains
