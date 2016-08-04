@@ -6,6 +6,7 @@
     'sections'            : [
       ('event-summary',       '') ,
       ('highlights',  'primary') ,
+      ('tickets',  '') ,
       ('venue-summary',  'lightblue') ,
       ('sponsors-summary',  'darkblue')
     ]
@@ -45,10 +46,82 @@
       <ul class="link-silent clearfix">
         <li><a href="#about" class="smooth-scroll">Announcements</a></li>
         <li><a href="#highlights" class="smooth-scroll">Highlights</a></li>
+        <li><a href="#tickets" class="smooth-scroll">Tickets</a></li>
         <li><a href="#venue" class="smooth-scroll">Venue</a></li>
         <li><a href="#sponsors" class="smooth-scroll">Sponsors</a></li>
         <li><a href="code-of-conduct">Code of conduct</a></li>
       </ul>
     </nav>
   </div>
+{% endblock %}
+
+{% block footer_script %}
+<style type="text/css">       
+  #boxoffice-widget .boxoffice-button-action {        
+    background-color: #FAA51A;        
+    border-color:  #d98f15;       
+    color: #fff;        
+  }       
+  #boxoffice-widget .boxoffice-button-info {        
+    background-color: #5BC0DE;        
+    border-color: #2A9CBE;        
+    color: #fff;        
+  }       
+  #boxoffice-widget .payment-stages-bg {        
+    background-color: #2E3661;        
+  }       
+  #boxoffice-widget .progress-indicator>li {        
+    color: #FFF;        
+  }
+  #boxoffice-widget .progress-indicator>li.active, .progress-indicator > li.active .bubble {
+    color: #337AB7;
+  }    
+  #boxoffice-widget .category-heading {       
+    background-color: #549EAF;        
+    border-bottom: 3px solid #44818f;       
+    color: rgba(0,0,0,0.6);     
+    line-height: 1.1;     
+    font-weight: bold;
+  }       
+  #boxoffice-widget .category-heading:after {       
+    border-color: #549EAF transparent #549EAF #549EAF;        
+  }   
+</style>        
+        
+<script>        
+  $(function(){       
+    //Boxoffice widget        
+    var boxofficeUrl = "https://boxoffice.hasgeek.com";       
+    var username, userphone, useremail;       
+    {% if g.user %}       
+      {% if g.user.fullname %}        
+        username = "{{ g.user.fullname }}";       
+      {% endif %}       
+      {% if g.user.phone %}       
+        userphone = "{{ g.user.phone }}";       
+      {% endif %}       
+      useremail = "{{ g.user.email }}";       
+    {% endif %}       
+    $.get({   
+      url: boxofficeUrl+"/api/1/boxoffice.js",    
+      crossDomain: true   
+    }).done(function(data) {  
+      
+      var boxofficeScript = document.createElement('script');   
+      boxofficeScript.innerHTML = data.script;    
+      document.getElementsByTagName('body')[0].appendChild(boxofficeScript);    
+      window.Boxoffice.init({   
+        org: 'hasgeek',   
+        itemCollection: '063ed821-5a33-11e6-b520-539212156c90',   
+        user_name: username,    
+        user_phone: userphone,    
+        user_email: useremail,    
+        paymentDesc: 'JSFoo 2016'    
+      });     
+    
+    }).fail(function(response) {    
+      $('#boxoffice-widget p').html('Unable to connect. Please try again.');    
+    });   
+  });       
+</script>
 {% endblock %}

@@ -1192,8 +1192,8 @@ body {
 
 /* line 9, ../scss/_theme.scss */
 a {
-  color: inherit;
-  border-bottom: 1px solid;
+  color: #CF6F01;
+  text-decoration: none;
 }
 
 /* line 13, ../scss/_theme.scss */
@@ -1248,6 +1248,7 @@ a#editions > i {
 /* line 50, ../scss/_theme.scss */
 .link-silent a,
 a.link-silent {
+  color: inherit;
   border-bottom: none;
 }
 
@@ -3099,11 +3100,16 @@ a.hasgeek-logo:hover {
   text-decoration: none;
   line-height: 1;
   border-bottom: 2px solid #aaa;
+  color: #fff;
 }
 
 /* line 922, ../scss/_objects.scss */
 .site-navbar a:focus, .site-navbar a:active {
   outline: none;
+}
+
+.site-navbar a:hover{
+  color: #FAA51A;
 }
 
 @media (min-width: 992px) {
@@ -3142,6 +3148,7 @@ a.hasgeek-logo:hover {
     padding: 10px;
     border-left: 2px solid #aaa;
     border-bottom: 0;
+    color: #333;
   }
 
   /* line 954, ../scss/_objects.scss */
