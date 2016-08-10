@@ -8,18 +8,28 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}JSFoo: JavaScript Conference in Bangalore, India{% endif %}">
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Meet some of India’s best JS developers to talk about speed and performance of your apps, front-end and backend architecture, and cutting-edge developments in JS.
+{% endif %}">
 <meta name="author" content="HasGeek and friends">
+<meta name="keywords" content="Conference, Workshop, Javascript, Node.js, JS, Front-end, Web apps, Progressive web apps, ReactJS, Build tools, Bangalore, Bengaluru, India"> 
 
-<meta property="og:title" content="JSFoo 2015{% if page.title %} — {{ page.title }}{% endif %}"/>
-<meta property="og:image" content="{{ request.url_root[:-1] }}{{ theme_static('img/logo.png') }}"/>
+<meta property="og:title" content="{% if page.title %}{{ page.title }} — JSFoo 2016{% else %}JSFoo - India’s first JavaScript conference{% endif %}"/>
+<meta property="og:image" content="https://images.hasgeek.com/embed/file/cd665bc09fc84671b62641a9ea8821f5"/>
 <meta property="og:url" content="{{ request.url }}"/>
-<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}JSFoo: JavaScript Conference in Bangalore, India{% endif %}"/>
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Meet some of India’s best JS developers to talk about speed and performance of your apps, front-end and backend architecture, and cutting-edge developments in JS.
+{% endif %}"/>
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@jsfooindia" /> 
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }} — JSFoo 2016{% else %}JSFoo - India’s first JavaScript conference{% endif %}" /> 
+<meta name="twitter:image" content="https://images.hasgeek.com/embed/file/0473049b37a640bcb072adc3e010e70f">
+
+<meta property="fb:app_id" content="1261802420505437" />
 
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-<title>{% if page.title %}{{ page.title }} — {% endif %}JSFoo 2016</title>
+<title>{% if page.title %}{{ page.title }} — JSFoo 2016{% else %}JSFoo - India’s first JavaScript conference{% endif %}</title>
 
 {%- if _theme %}
   {% assets "css_" + _theme -%}
@@ -39,43 +49,26 @@
 <link href='//fonts.googleapis.com/css?family=Syncopate:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="/_baseframe/css/networkbar.css">
 
-<!-- Custom Audience Pixel Code -->
-<script>(function() {
-var _fbq = window._fbq || (window._fbq = []);
-if (!_fbq.loaded) {
-var fbds = document.createElement('script');
-fbds.async = true;
-fbds.src = '//connect.facebook.net/en_US/fbds.js';
-var s = document.getElementsByTagName('script')[0];
-s.parentNode.insertBefore(fbds, s);
-_fbq.loaded = true;
-}
-_fbq.push(['addPixelId', '1652854178264244']);
-})();
-window._fbq = window._fbq || [];
-window._fbq.push(['track', 'PixelInitialized', {}]);
-</script>
-<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1652854178264244&amp;ev=PixelInitialized" /></noscript>
-
-<!-- Facebook Conversion Code for Key Page Views - JSFoo -->
-<script>(function() {
-var _fbq = window._fbq || (window._fbq = []);
-if (!_fbq.loaded) {
-var fbds = document.createElement('script');
-fbds.async = true;
-fbds.src = '//connect.facebook.net/en_US/fbds.js';
-var s = document.getElementsByTagName('script')[0];
-s.parentNode.insertBefore(fbds, s);
-_fbq.loaded = true;
-}
-})();
-window._fbq = window._fbq || [];
-window._fbq.push(['track', '6030156043717', {'value':'3000','currency':'INR'}]);
-</script>
-<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6030156043717&amp;cd[value]=3000&amp;cd[currency]=INR&amp;noscript=1" /></noscript>
 
 </head>
 <body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1261802420505437',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
 <div class="">
   {% block networkbar %}
