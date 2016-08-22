@@ -1192,8 +1192,8 @@ body {
 
 /* line 9, ../scss/_theme.scss */
 a {
-  color: #CF6F01;
-  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid;
 }
 
 /* line 13, ../scss/_theme.scss */
@@ -1248,7 +1248,6 @@ a#editions > i {
 /* line 50, ../scss/_theme.scss */
 .link-silent a,
 a.link-silent {
-  color: inherit;
   border-bottom: none;
 }
 
@@ -1534,152 +1533,157 @@ i, .button,
   font: 12px/1.5 "Lato", "Open Sans", sans-serif !important;
 }
 
+/* line 17, ../scss/_typography.scss */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "minion-pro", serif;
+}
+
 /*  Scale  */
-/* line 20, ../scss/_typography.scss */
+/* line 24, ../scss/_typography.scss */
 html {
   font-size: 20px;
   line-height: 1.4;
 }
 
-/* line 22, ../scss/_typography.scss */
+/* line 26, ../scss/_typography.scss */
 .huge {
   font-size: 2.000rem;
   line-height: 1.10;
 }
 
-/* line 23, ../scss/_typography.scss */
+/* line 27, ../scss/_typography.scss */
 .huge.body-type {
   font-size: 2.125rem;
   line-height: 1.10;
 }
 
-/* line 24, ../scss/_typography.scss */
+/* line 28, ../scss/_typography.scss */
 .extralarge {
   font-size: 1.750rem;
   line-height: 1.30;
 }
 
-/* line 25, ../scss/_typography.scss */
+/* line 29, ../scss/_typography.scss */
 .large {
   font-size: 1.250rem;
   line-height: 1.22;
 }
 
-/* line 26, ../scss/_typography.scss */
+/* line 30, ../scss/_typography.scss */
 .large-prose {
   font-size: 0.600rem;
   line-height: 1.22;
 }
 
-/* line 27, ../scss/_typography.scss */
+/* line 31, ../scss/_typography.scss */
 .legible {
   font-size: 1.300rem;
   line-height: 1.50;
 }
 
-/* line 28, ../scss/_typography.scss */
+/* line 32, ../scss/_typography.scss */
 .legible-prose {
   font-size: 1.125rem;
   line-height: 1.40;
 }
 
-/* line 29, ../scss/_typography.scss */
+/* line 33, ../scss/_typography.scss */
 .regular {
   font-size: 1.000rem;
   line-height: 1.30;
 }
 
-/* line 30, ../scss/_typography.scss */
+/* line 34, ../scss/_typography.scss */
 .regular-prose {
   font-size: 0.900rem;
   line-height: 1.25;
 }
 
-/* line 31, ../scss/_typography.scss */
+/* line 35, ../scss/_typography.scss */
 .secondary {
   font-size: 0.850rem;
   line-height: 1.25;
 }
 
-/* line 32, ../scss/_typography.scss */
+/* line 36, ../scss/_typography.scss */
 .secondary-prose {
   font-size: 0.650rem;
   line-height: 1.20;
 }
 
-/* line 33, ../scss/_typography.scss */
+/* line 37, ../scss/_typography.scss */
 .tiny {
   font-size: 0.630rem;
   line-height: 1.53;
 }
 
 @media only screen and (min-width: 30em) {
-  /* line 36, ../scss/_typography.scss */
+  /* line 40, ../scss/_typography.scss */
   html {
     font-size: 18px;
   }
 
-  /* line 37, ../scss/_typography.scss */
+  /* line 41, ../scss/_typography.scss */
   .huge {
     font-size: 3.000rem;
     line-height: 1.10;
   }
 
-  /* line 38, ../scss/_typography.scss */
+  /* line 42, ../scss/_typography.scss */
   .huge.body-type {
     font-size: 2.500rem;
     line-height: 1.05;
   }
 
-  /* line 39, ../scss/_typography.scss */
+  /* line 43, ../scss/_typography.scss */
   .regular-prose {
     font-size: 0.095rem;
     line-height: 1.40;
   }
 
-  /* line 40, ../scss/_typography.scss */
+  /* line 44, ../scss/_typography.scss */
   .regular-prose {
     font-size: 1.000rem;
     line-height: 1.47;
   }
 }
 @media only screen and (min-width: 45em) {
-  /* line 43, ../scss/_typography.scss */
+  /* line 47, ../scss/_typography.scss */
   html {
     font-size: 21px;
   }
 
-  /* line 44, ../scss/_typography.scss */
+  /* line 48, ../scss/_typography.scss */
   .huge.body-type {
     font-size: 2.500rem;
     line-height: 1.05;
   }
 
-  /* line 45, ../scss/_typography.scss */
+  /* line 49, ../scss/_typography.scss */
   .extralarge {
     font-size: 2.000rem;
     line-height: 1.30;
   }
 
-  /* line 46, ../scss/_typography.scss */
+  /* line 50, ../scss/_typography.scss */
   .large-prose {
     font-size: 1.000rem;
     line-height: 1.22;
   }
 
-  /* line 47, ../scss/_typography.scss */
+  /* line 51, ../scss/_typography.scss */
   .regular-prose {
     font-size: 1.000rem;
     line-height: 1.50;
   }
 
-  /* line 48, ../scss/_typography.scss */
+  /* line 52, ../scss/_typography.scss */
   .secondary-prose {
     font-size: 0.650rem;
     line-height: 1.49;
   }
 
-  /* line 49, ../scss/_typography.scss */
+  /* line 53, ../scss/_typography.scss */
   .tiny {
     font-size: 0.550rem;
     line-height: 1.49;
@@ -1687,97 +1691,97 @@ html {
 }
 @media only screen and (min-width: 55em) {
   /*    .huge.body-type     { font-size: 3.500rem; line-height: 0.95; }*/
-  /* line 53, ../scss/_typography.scss */
+  /* line 57, ../scss/_typography.scss */
   .regular-prose {
     font-size: 1.000rem;
     line-height: 1.60;
   }
 }
 @media only screen and (min-width: 85em) {
-  /* line 56, ../scss/_typography.scss */
+  /* line 60, ../scss/_typography.scss */
   html {
     font-size: 24px;
   }
 }
 /*  Helpers  */
-/* line 63, ../scss/_typography.scss */
+/* line 67, ../scss/_typography.scss */
 abbr {
   font-size: 0.9em;
   font-variant: small-caps;
   border-bottom: none;
 }
 
-/* line 69, ../scss/_typography.scss */
+/* line 73, ../scss/_typography.scss */
 .thin {
   font-weight: 300;
 }
 
-/* line 70, ../scss/_typography.scss */
+/* line 74, ../scss/_typography.scss */
 .calm {
   font-weight: normal;
 }
 
-/* line 71, ../scss/_typography.scss */
+/* line 75, ../scss/_typography.scss */
 .medium {
   font-weight: 500;
 }
 
-/* line 72, ../scss/_typography.scss */
+/* line 76, ../scss/_typography.scss */
 .semibold {
   font-weight: 600;
 }
 
-/* line 73, ../scss/_typography.scss */
+/* line 77, ../scss/_typography.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 74, ../scss/_typography.scss */
+/* line 78, ../scss/_typography.scss */
 .extrabold {
   font-weight: 900;
 }
 
-/* line 75, ../scss/_typography.scss */
+/* line 79, ../scss/_typography.scss */
 .italic {
   font-style: italic;
 }
 
-/* line 76, ../scss/_typography.scss */
+/* line 80, ../scss/_typography.scss */
 .no-italic {
   font-style: normal;
 }
 
-/* line 78, ../scss/_typography.scss */
+/* line 82, ../scss/_typography.scss */
 .all-caps {
   text-transform: uppercase;
 }
 
-/* line 79, ../scss/_typography.scss */
+/* line 83, ../scss/_typography.scss */
 .all-lower {
   text-transform: lowercase !important;
 }
 
-/* line 80, ../scss/_typography.scss */
+/* line 84, ../scss/_typography.scss */
 .small-caps {
   font-variant: small-caps;
 }
 
-/* line 81, ../scss/_typography.scss */
+/* line 85, ../scss/_typography.scss */
 .strike {
   text-decoration: line-through;
 }
 
-/* line 82, ../scss/_typography.scss */
+/* line 86, ../scss/_typography.scss */
 .no-underline {
   text-decoration: none;
 }
 
-/* line 84, ../scss/_typography.scss */
+/* line 88, ../scss/_typography.scss */
 .unordered {
   list-style-type: none;
 }
 
-/* line 86, ../scss/_typography.scss */
+/* line 90, ../scss/_typography.scss */
 .amp {
   font-family: 'Hoefler Text', Baskerville, Palatino, 'Book Antiqua', Constantia, 'URW Palladio L';
   font-style: italic;
@@ -1785,53 +1789,53 @@ abbr {
   line-height: 0.5em;
 }
 
-/* line 92, ../scss/_typography.scss */
+/* line 96, ../scss/_typography.scss */
 .quo {
   margin-left: -0.24em;
 }
 
-/* line 93, ../scss/_typography.scss */
+/* line 97, ../scss/_typography.scss */
 .dquo {
   margin-left: -0.44em;
 }
 
-/* line 94, ../scss/_typography.scss */
+/* line 98, ../scss/_typography.scss */
 .tquo {
   margin-left: -0.68em;
 }
 
-/* line 97, ../scss/_typography.scss */
+/* line 101, ../scss/_typography.scss */
 .list-plain {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 98, ../scss/_typography.scss */
+/* line 102, ../scss/_typography.scss */
 .dl-plain dd {
   margin-left: 0;
   line-height: inherit;
 }
 
-/* line 99, ../scss/_typography.scss */
+/* line 103, ../scss/_typography.scss */
 .dl-plain dd + dt {
   margin-top: 2rem;
 }
 
 @media (max-width: 767px) {
-  /* line 101, ../scss/_typography.scss */
+  /* line 105, ../scss/_typography.scss */
   .inline-on-mobile li {
     display: inline;
     margin-right: 0.5rem;
   }
 
-  /* line 102, ../scss/_typography.scss */
+  /* line 106, ../scss/_typography.scss */
   .inline-on-mobile dd {
     display: inline;
     margin-right: 0.5rem;
   }
 }
-/* line 104, ../scss/_typography.scss */
+/* line 108, ../scss/_typography.scss */
 .prose li {
   line-height: inherit;
 }
@@ -3100,16 +3104,11 @@ a.hasgeek-logo:hover {
   text-decoration: none;
   line-height: 1;
   border-bottom: 2px solid #aaa;
-  color: #fff;
 }
 
 /* line 922, ../scss/_objects.scss */
 .site-navbar a:focus, .site-navbar a:active {
   outline: none;
-}
-
-.site-navbar a:hover{
-  color: #FAA51A;
 }
 
 @media (min-width: 992px) {
@@ -3148,7 +3147,6 @@ a.hasgeek-logo:hover {
     padding: 10px;
     border-left: 2px solid #aaa;
     border-bottom: 0;
-    color: #333;
   }
 
   /* line 954, ../scss/_objects.scss */
