@@ -206,13 +206,13 @@
   border-bottom-color: $primary-dark !important; 
   background-image: none;
 }
-#hg-bar, #hg-bar ul#hg-barlinks > li a {
+#hg-bar, #hg-bar ul#hg-barlinks > li a , #hg-bar ul#hg-usertools > li a{
   color: #9699B3 !important;
 }
 #hg-bar ul#hg-barlinks > li a.hg-submenu::after { 
   border-top-color: #9699B3 !important;
 }
-#hg-bar ul#hg-barlinks > li:hover > a, #hg-bar ul#hg-barlinks > li:hover ul a {
+#hg-bar ul#hg-barlinks > li:hover > a, #hg-bar ul#hg-barlinks > li:hover ul a, #hg-bar ul#hg-usertools > li:hover a {
   color: #000 !important;
 }
 #hg-bar ul#hg-barlinks > li:hover a.hg-submenu::after { 
