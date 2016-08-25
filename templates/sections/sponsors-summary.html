@@ -24,7 +24,7 @@
           <ul class="col-lg-7 col-md-7 col-sm-8 col-xs-12 nospace-bottom list-plain link-silent clearfix list-space-line sponsor-{{ type.size }}">
         {% endif %}
           <li>
-              <a href="{% if type.size == 'compact' %}{{ item.link }}{% else %}sponsors#{{ type.id }}-{{ item.id }}{% endif %}" class="occupy fill-silver-hud sponsorlogo {% if item.orientation == 'portrait' %}contain-height{% elif item.orientation == 'landscape' %}contain-width{% endif %}">
+              <a href="{% if type.size == 'compact' %}{{ item.link }}{% else %}sponsors#{{ type.id }}-{{ item.id }}{% endif %}" class="occupy fill-white sponsorlogo {% if item.orientation == 'portrait' %}contain-height{% elif item.orientation == 'landscape' %}contain-width{% endif %}">
                 <img alt="{{ item.title }}" src="{{ item.logo }}">
               </a>
           </li>
