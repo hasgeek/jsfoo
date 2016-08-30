@@ -372,7 +372,6 @@ $(document).ready(function() {
       dataType: 'jsonp',
       url: funnelurl,
       success: function(data) {
-        console.log("data", data);
         parseJson(data, eventType, divContainer);
       }
     });//eof ajax call
