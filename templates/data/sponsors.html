@@ -8,6 +8,11 @@
 {%
   set types = [
     {
+        'id'    : 'platinum'
+      , 'title' : 'Platinum'
+      , 'size'  : 'xl'
+    }
+    , {
         'id'    : 'gold'
       , 'title' : 'Gold'
       , 'size'  : 'xl'
@@ -62,16 +67,16 @@
 {# Logo Orientation can be either 'landscape' or 'portrait' #}
 {%
   set items = [
-  {
-    'title': 'Media.net',
-    'id': 'media.net',
-    'link': 'http://www.media.net/',
-    'display': 'http://www.media.net/',
-    'type': 'platinum',
-    'logo': 'https://images.hasgeek.com/embed/file/352a103d80664e0a922fe61c806b47d0',
-    'blurb': '<p><a href="http://www.media.net/" target="_blank">Media.net</a> is one of the world\'s leading companies in the Contextual Advertising space that provides a wide range of advertising and traffic monetization solutions. Since its founding, <a href="http://www.media.net/" target="_blank">Media.net</a> has constantly broken new ground in building innovative contextual advertising solutions. Our diverse client base includes web publishers with premium content, registrars, hosting companies and holders of high value domain portfolios.</p><p>We build algorithms to map the user\'s intent with the content of the ads that are shown and the problem space encompasses some of the most comprehensive problems in Computer Science such as Artificial Intelligence, Machine Learning, Natural language Processing, Big Data & BI, Large Scale Distributed Computing, Behavioral targeting, Recommender Systems etc.</p><p>Our existing 650+ master minds building these systems come from the finest engineering schools. What do they enjoy the most at <a href="http://www.media.net/" target="_blank">Media.net</a> is the autonomy to operate in solving global scale problems and they feel comfortable being surrounded by sharp minds & geeks similar to them.</p><p>To know more about us please visit <a href="http://www.media.net/" target="_blank">www.media.net</a></p>'
-  },
-   {
+    {
+      'title': 'Media.net',
+      'id': 'media.net',
+      'link': 'http://www.media.net/',
+      'display': 'http://www.media.net/',
+      'type': 'platinum',
+      'logo': 'https://images.hasgeek.com/embed/file/352a103d80664e0a922fe61c806b47d0',
+      'blurb': '<p><a href="http://www.media.net/" target="_blank">Media.net</a> is one of the world\'s leading companies in the Contextual Advertising space that provides a wide range of advertising and traffic monetization solutions. Since its founding, <a href="http://www.media.net/" target="_blank">Media.net</a> has constantly broken new ground in building innovative contextual advertising solutions. Our diverse client base includes web publishers with premium content, registrars, hosting companies and holders of high value domain portfolios.</p><p>We build algorithms to map the user\'s intent with the content of the ads that are shown and the problem space encompasses some of the most comprehensive problems in Computer Science such as Artificial Intelligence, Machine Learning, Natural language Processing, Big Data & BI, Large Scale Distributed Computing, Behavioral targeting, Recommender Systems etc.</p><p>Our existing 650+ master minds building these systems come from the finest engineering schools. What do they enjoy the most at <a href="http://www.media.net/" target="_blank">Media.net</a> is the autonomy to operate in solving global scale problems and they feel comfortable being surrounded by sharp minds & geeks similar to them.</p><p>To know more about us please visit <a href="http://www.media.net/" target="_blank">www.media.net</a></p>'
+    },
+    {
         'title'       : 'PayPal'
       , 'id'          : 'paypal'
       , 'logo'        : 'https://images.hasgeek.com/embed/file/a9867071c2624e0ebc62c40baa3d59e9'
@@ -79,8 +84,8 @@
       , 'display'     : 'https://paypal.com'
       , 'type'        : 'gold'
       , 'blurb'       : 'At PayPal (Nasdaq:PYPL), we put people at the center of everything we do. Founded in 1998, we continue to be at the forefront of the digital payments revolution. PayPal gives people better ways to manage and move their money, offering them choice and flexibility in how they are able to send money, pay or get paid. We operate an open, secure and technology agnostic payments platform that businesses use to securely transact with their customers online, in stores and increasingly on mobile devices. In 2015, 28% of the 4.9 billion payments we processed were made on a mobile device. With our 188 million active customer accounts, PayPal is a truly global payments platform that is available to people in more than 200 markets, allowing customers to get paid in more than 100 currencies, withdraw funds to their bank accounts in 56 currencies and hold balances in their PayPal accounts in 25 currencies.'
-    }
-    , {
+    },
+    {
         'title'       : 'Intuit'
       , 'id'          : 'intuit'
       , 'logo'        : 'https://images.hasgeek.com/embed/file/e68664ce9b1644349d3bac89ccb6a43d'
@@ -88,8 +93,8 @@
       , 'display'     : 'http://www.intuit.in/' 
       , 'type'        : 'silver'
       , 'blurb'       : '<p>Intuit Inc. creates business and financial management solutions that simplify the business of life for small businesses, consumers and accounting professionals.</p><p>Its flagship products and services include QuickBooks, TurboTax and <a href="https://mint.com" target="_blank">Mint.com</a>, which make it easier to manage small businesses and payroll processing; tax preparation and filing; and personal finance respectively. ProSeries and Lacerte are Intuit\'s leading tax preparation offerings for professional accountants.</p><p>Founded in 1983, Intuit had revenue of $4.2 billion in its fiscal year 2015, with approximately 7,700 employees in major offices in the United States, Canada, the United Kingdom, India and other locations. More information can be found at <a href="https://www.intuit.com" target="_blank">www.intuit.com</a>.</p><p>Being a premier innovative growth company, Intuit is committed to building awesome products and delighting customers by leveraging the best of technology. Our focus on customer-driven innovation and passion for everything tech connects with the theme of the JSFoo Conference. It\'s our pleasure to learn and share our approach with the larger community at the conference.</p>'
-    }
-, {
+    },
+    {
         'title'       : 'GO-JEK'
       , 'id'          : 'gojek'
       , 'logo'        : 'https://images.hasgeek.com/embed/file/a5a50f0d82e84235afcbe10d55094dcc'
@@ -97,6 +102,15 @@
       , 'display'       : 'http://gojekengineering.com'
       , 'type'        : 'silver'
       , 'blurb'       : '<p>GO-JEK is Indonesia\'s largest startup, and is currently the fastest growing startup in South and South East Asia, <a href="https://medium.com/gojekengineering/my-go-jek-story-af5f1925bfe" target="_blank">growing 900X in the 18 months since launch</a>. GO-JEK\'s platform powers the Indonesian equivalents of Ola, PayTM, Swiggy, Grophers, Zomato, Dunzo and UrbanClap, and at comparable scale. GO-FOOD alone already does more daily orders than all Indian food tech startups combined.</p><p>Funded by Sequoia Capital and Yuri Milner\'s DST global, GO-JEK’s mission is formalising the informal sector to provide a one stop mobile application for the daily needs of Indonesia, the 4th largest country in the world. We partner with more than 200,000 experienced and trustworthy motorcycle, car and truck drivers to provide our customers with a wide array of services. These include payments, people logistics, hyperlocal delivery, food delivery, e-commerce logistics, O2O, lifestyle and home improvement services.</p>'
+    },
+    {
+        'title'       : 'SapientNitro'
+      , 'id'          : 'sapientnitro'
+      , 'logo'        : 'https://images.hasgeek.com/embed/file/84983aac8f3a4916ac2aaedf3ce5efa4'
+      , 'link'        : 'http://www.sapientnitro.com/en-us.html'
+      , 'display'     : 'www.sapientnitro.com'
+      , 'type'        : 'silver'
+      , 'blurb'       : '<p>SapientNitro SM , part of Publicis.Sapient, is a new breed of agency redefining storytelling for an always-on world. We’re changing the way our clients engage today’s connected consumers by uniquely creating integrated, immersive stories across brand communications, digital engagement, and omni-channel commerce. We call it Storyscaping, where art and imagination meet the power and scale of systems thinking. SapientNitro’s unique combination of creative, brand and technology expertise results in one global team collaborating across disciplines, perspectives and continents to create game-changing success for our Global 1000 clients, such as Chrysler, Citi, The Coca-Cola Company, Lufthansa, Target, and Vodafone, in 31 cities across The Americas, Europe and Asia-Pacific.</p><p>For more information, visit <a href="http://www.sapientnitro.com/en-us.html" target="_blank">www.sapientnitro.com</a>.</p>'
     },
     {
       'title'       : 'Citruspay',
@@ -107,7 +121,7 @@
       'type'        : 'bronze',
       'blurb'       : 'Citrus Pay is leading the revolution towards mobile and digital payments across all spheres of a consumer’s life. Being led by Amrish Rau and Jitendra Gupta, it is India’s fastest growing fintech company that provides consumer payments and mobile banking services. It partners with the top airlines, utilities, marketplaces, and 9000 other merchants to enable seamless, secure payments for 25 million consumers. Citrus is known for introducing industry-first payment solutions such as 1-click checkout, wallet for cabs, consumer analytics, native mobile app payments etc. Few of the credible merchants associated with Citrus are Pune Municipal Corporation, Delhi Metro, Delhi Jal Board, PVR, INOX, BookMyShow, ShopClues, Jet Airways, Indigo, GoAir, TinyOwl, Faasos, Grofers, ZoomCar, Airtel, etc.'
     },
-   {
+    {
         'title'       : 'ThoughtWorks'
       , 'id'          : 'thoughtworks'
       , 'logo'        : 'https://images.hasgeek.com/embed/file/2e668d3b59974f2f8d974e15865585ae'
@@ -115,8 +129,8 @@
       , 'display'     : 'https://www.thoughtworks.com/'
       , 'type'        : 'bronze'
       , 'blurb'       : "<p>ThoughtWorks is a global software company and community of passionate, purpose-led individuals that specialise in software consulting, delivery and products.</p><p>We work with people and organizations who have ambitious missions - whether they are in the commercial, social or government sectors. We set up smart teams who love challenges and think disruptively to help our clients succeed. Our Agile development tools help our clients continuously improve and deliver quality software.</p><p>We are strong believers in the power of software and technology as tools for social change. Through our Social Impact Program, we collaborate with organizations with a humanitarian mission and broad reach, helping them use technology to make an impact.</p><p>ThoughtWorks has grown from a small group in Chicago to a company of over 3600 passionate people spread across 35 offices in 12 countries: Australia, Brazil, Canada, China, Ecuador, Germany, India, Singapore, South Africa, the United Kingdom, and the United States.</p><p><strong>Mission</strong></p><p>Our mission is to better humanity through software and help drive the creation of a socially and economically just world. We bring together the most capable, driven and passionate people.</p><p>The three pillar model includes: <ol><li>Run a sustainable business</li><li>Champion software excellence and revolutionize the IT industry</li><li>Advocate passionately for social and economic justice</li></ol></p><p><strong>Culture</strong></p><p>Wherever we are in the world, ThoughtWorkers share the same cultural characteristics and imperatives. ThoughtWorks is a place where inspired people come to form connections and learn new skills. Our rule is: Be adventurous. Remove the constraints of enforced objectives and open the door to serendipity, immersion, and the fun of not knowing what's going to happen or who you are going to meet next. The collaborative (literally cubicle-less) working environment nurtures ownership. The organisation also treasures and encourages a healthy work life balance.</p><p>We come to work as ourselves. We enjoy each other’s company. We value honesty and transparency. Appearances and backgrounds aren’t important to us; ideas and doing the right thing are.</p>"
-    }
-, {
+    },
+    {
         'title'       : 'Activesphere'
       , 'id'          : 'activesphere'
       , 'logo'        : 'https://images.hasgeek.com/embed/file/1d3a7f826ce546d4bd8449b8445d4cde'
@@ -124,8 +138,8 @@
       ,'display'       : 'http://www.activesphere.com/'
       , 'type'        : 'community'
       , 'blurb'       : '<p>Activesphere is a consulting company. We help our clients architect, implement & scale web applications. As of now, most of our client work has been in Ruby, Javascript, AngularJS, TypeScript, D3 etc. but that being said, we love working on personal projects. Some of them have been written in Go, Haskell, Erlang etc. (Some of our hacks)</p><p>We\'re always on the lookout for interesting people & projects.</p>'
-    }
-, {
+    },
+    {
         'title'       : 'Nilenso'
       , 'id'          : 'nilenso'
       , 'logo'        : 'https://images.hasgeek.com/embed/file/9eeafee51abb459baaf8fa8a9f8e834d'
