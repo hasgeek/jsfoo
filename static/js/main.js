@@ -408,8 +408,8 @@ $(document).ready(function() {
     }
   });
   
-  
-  $('.t-shirt-image').popover({
+  $('#boxoffice-widget').popover({
+    selector: '.t-shirt-image',
     placement : 'top',
     trigger : 'hover',
     html : true
