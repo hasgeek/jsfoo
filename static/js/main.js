@@ -407,6 +407,13 @@ $(document).ready(function() {
       renderResponsiveTable();
     }
   });
+  
+  
+  $('.t-shirt-image').popover({
+    placement : 'top',
+    trigger : 'hover',
+    html : true
+  });
 
     $('.expand-cancel-form').on('click', function(event) {
         event.preventDefault();
