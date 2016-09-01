@@ -410,7 +410,7 @@ $(document).ready(function() {
   
   $('#boxoffice-widget').popover({
     selector: '.t-shirt-image',
-    placement : 'top',
+    placement : 'right',
     trigger : 'hover',
     html : true
   });
