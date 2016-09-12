@@ -3397,6 +3397,7 @@ a.hasgeek-logo:hover {
   background-color: #2E3661;
   padding: 15px 0;
   color: #fff;
+  min-height: 100px;
 }
 
 /* line 1141, ../scss/_objects.scss */
