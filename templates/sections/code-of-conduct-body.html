@@ -1,66 +1,12 @@
-<section id="code" class="clearfix{% if background %} fill-{{ background }}{% endif %} push-one">  
+<section id="code" class="space-one-top clearfix{% if background %} fill-{{ background }}{% endif %}">  
   <div class="container">
-    <div class="row-fluid space-one-bottom">
-      <h3 class="col-lg-12 large all-caps space-one-bottom prose-type medium">The Code of Conduct Applies to Everyone</h3>
-      
-      <div class="col-lg-12 regular normal">
-        <p>HasGeek conferences are spaces for developers to share knowledge, network, and collaborate to advance the state of technology.We strive to create a safe and open environment so that every participant can participate confidently, contribute to the community meaningfully, and feel enriched at the end of the conference.</p>
-        <p>This code of conduct is to create a safe environment so that everyone can voice their perspective freely.</p>
+    <div class="row space-one-bottom">
+      <div class="regular space-one-top">
+        {% with f = fragment('2017', 'code-of-conduct-body') %}
+          <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 all-caps space-three-top space-two-bottom large semibold text-center">{{ f.title }}</h3>
+          {{ f.content }}
+        {% endwith %}
       </div>
-    </div>
-
-    <div class="row-fluid space-half-bottom">
-      <h4 class="col-lg-3 regular medium all-caps space-one-bottom prose-type"><span class="visuallyhidden">Code </span>for Speakers</h4>
-      
-      <div class="col-lg-9 regular">
-        <ol>
-          <li><p>Sexual language, imagery, and objectification of the male / female / transsexual body is to be avoided.<br><em>Objectification, especially the female body, is where imagery of women and sexual activity is used in a manner that is not essential to convey an idea.</em></p></li>
-          <li><p>Sexist, racist, homophobic, or <a href="https://en.wikipedia.org/wiki/Rankism">exclusionary</a> jokes are not acceptable.</p></li>
-          <li><p>Every speaker must submit their slides at least a day before their presentation to ensure that they are in the clear.</p></li>
-          <li><p>HasGeek crew reserves the right to stop a speaker during their talk if they violate this code of conduct, overtly or otherwise.</p></li>
-          <li><p>The offending speaker is likely to be taken off stage if they make unacceptable remarks during their talk. If a speaker continues to violate the code of conduct, HasGeek reserves the right to disallow their talks from any or all of HasGeek's conferences, indefinitely.</p></li>
-        </ol>
-      </div>
-    </div>
-    
-    <div class="row-fluid space-half-bottom">
-      <h4 class="col-lg-3 regular medium all-caps space-one-bottom prose-type"><span class="visuallyhidden">Code </span>for Sponsors</h4>
-      
-      <div class="col-lg-9 regular">
-        <ol>
-          <li><p>Sexual language, imagery, and objectification of the male / female / transsexual body is to be avoided.<br><em>Objectification, especially the female body, is where imagery of women and sexual activity is used in a manner that is not essential to convey an idea.</em></p></li>
-          <li><p>Stereotypical imagery and verbal remarks that can be interpreted as a certain gender or generation’s incompetence/inability to understand ideas is to be avoided. Examples include stereotypes about software being suitable for elderly mothers.</p></li>
-          <li><p>Images of men and women without context cannot be used in promotional material.</p></li>
-          <li><p>All promotional content including booth backdrop, print promotional material, social media co-promotions, and videos, are subject to review before final printing and production. This is also explicitly mentioned in the commercial term sheet sent to every sponsor upon confirmation of sponsorship.</p></li>
-          <li><p>Booth staff, including volunteers, should not use sexualised clothing/uniforms/costumes, or otherwise create a sexualised environment.</p></li>
-        </ol>
-      </div>
-    </div>
-    
-    <div class="row-fluid space-half-bottom">
-      <h4 class="col-lg-3 regular medium all-caps space-one-bottom prose-type"><span class="visuallyhidden">Code </span>for Participants</h4>
-      
-      <div class="col-lg-9 regular">
-        <ol>
-          <li>Participants are required to refrain from harassing behavior towards speakers, other participants, sponsors, media personnel, volunteers, and HasGeek staff. Harassment includes:
-            <ul>
-              <li>offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion,</li>
-              <li>sexual images in public spaces,</li>
-              <li>deliberate intimidation,</li>
-              <li>stalking,</li>
-              <li>photography or recording without explicit consent,</li>
-              <li>sustained disruption of talks or other events,</li>
-              <li>inappropriate physical contact,</li>
-              <li>unwelcome sexual attention.</li>
-            </ul></li>
-            <li><p>Attendees asked to stop any harassing behaviour are expected to comply immediately.</p></li>
-        </ol>
-        <p>If an attendee, speaker, or sponsor engages in behaviour that violates this code of conduct, the conference organisers may take any action they deem appropriate, including warning the offender or expelling him/her from the premises with no refund.</p>
-      </div>
-    </div>
-
-    <div class="row-fluid space-two-top nospace-bottom text-center push-half-top">
-      <p class="col-lg-12 legible italic">Thank you for helping make JSFoo 2016 a welcoming, friendly&nbsp;event&nbsp;for&nbsp;all.</p>
     </div>
   </div>
 </section>

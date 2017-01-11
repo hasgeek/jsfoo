@@ -1,16 +1,12 @@
-<section id="contact" class="clearfix{% if background %} fill-{{ background }}{% endif %} push-one"> 
-<div class="container"> 
-  <div class="row-fluid">
-    <h3 class="col-lg-3 legible all-caps space-one-bottom no-space-top prose-type medium">Contact</h3>
-    
-    <div class="col-lg-9 regular">
-      <p><p>If you would like to report another speaker, attendee, sponsor, or volunteer, please approach one of the HasGeek crew and file your complaint. You may also fill out our Google form <a href="https://docs.google.com/forms/d/e/1FAIpQLSemb7SoF8GYuT5CWIrqX4Jhf95TcTqZJb-dBFE-0UxlPW72VA/viewform">here</a>, or email Sandhya (<a href="mailto:sandhya@hasgeek.com">sandhya@hasgeek.com</a>) or Karthik (<a href="mailto:karthik@hasgeek.com">karthik@hasgeek.com</a>).</p>
-      <p>If the matter is especially urgent, please call/contact any of these individuals:</p>
-      <ul>
-        <li>Zainab Bawa: <a href="tel:+919945473641">+91 99454 73641</a></li>
-        <li>Kiran Jonnalagadda: <a href="tel:+919945235123">+91 99452 35123</a></li>
-      </ul>
-      <p>Crew members are there to help participants contact the organizing team and assist those experiencing harassment to feel safe for the duration of the conference.</p>
-  </div>
+<section id="contact" class="space-one-top clearfix{% if background %} fill-{{ background }}{% endif %}"> 
+  <div class="container"> 
+    <div class="row">
+      <div class="regular space-one-top">
+        {% with f = fragment('2017', 'code-of-conduct-contact') %}
+          <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 all-caps space-three-top space-two-bottom large semibold text-center">{{ f.title }}</h3>
+          {{ f.content }}
+        {% endwith %}
+      </div>
+    </div>
   </div>
 </section>

@@ -1,1 +1,1 @@
-This is the Eventframe version of the JSFoo 2014 website.
+This is the Eventframe version of the JSFoo 2017 website.

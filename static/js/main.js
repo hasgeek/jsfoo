@@ -356,7 +356,7 @@ $(document).ready(function() {
     }, 500);
 
      // For conference and workshop schedule
-  var jsfoofunnelurl = 'https://jsfoo.talkfunnel.com/2016/schedule/json';
+  var jsfoofunnelurl = 'https://jsfoo.talkfunnel.com/2017/schedule/json';
 
   //If schedule divs are present on the page, then make the ajax call.
   if(($('.schedule-table-container').length)) {
@@ -407,6 +407,8 @@ $(document).ready(function() {
       renderResponsiveTable();
     }
   });
+
+  initLeaflets();
   
   $('#boxoffice-widget').popover({
     selector: '.t-shirt-image',
@@ -415,104 +417,17 @@ $(document).ready(function() {
     html : true
   });
 
-    $('.expand-cancel-form').on('click', function(event) {
-        event.preventDefault();
-        $('.cancel-tickets').hide();
-        $('.cancelticket-status').html('').hide();
-        var target = $(this).attr('data-target');
-        $(target).slideDown("slow");
-    });
+  // Function that tracks a click button in Google Analytics.
+  $('.button').click(function(event) {
+    var button = $(this).html();
+    var section = $(this).attr('href');
+    sendGA('click', button, section);
+  });
 
-    $('.close-form').on('click', function(event) {
-        event.preventDefault();
-        $(this).parents('.cancel-tickets').slideUp();
-        $('.cancelticket-status').html('').hide();
-    });
+  $('.click').click(function(event) {
+    var target = $(this).data('target');
+    var action = $(this).data('label');
+    sendGA('click', action, target);
+  });
 
-    var formTarget;
-    var cancelSuccessMessage = 'We are sad that you wouldn&#39;t be able to come. Your cancellation request is being processed, you should receive a refund within 7 working days. Feel free to get in touch at <a href="mailto:info@hasgeek.com" class="link-silent orange">info@hasgeek.com</a> for further queries.';
-    var transferSuccessMessage = 'We are sad that you wouldn&#39;t be able to come. Your transfer request is being processed. Feel free to get in touch at <a href="mailto:info@hasgeek.com" class="link-silent orange">info@hasgeek.com</a> for further queries.';
-
-    $('#cancelticket, #transferticket').on('submit', function(event) {
-        event.preventDefault();
-        $('.cancelticket-status').html('');
-        var formElements = $(this).serializeArray();
-        var formDataValid = true;
-        var formData ={}, postData ={};
-        for (var formIndex=0; formIndex < formElements.length; formIndex++) {
-            if(formElements[formIndex].value === "") {
-                $('.cancelticket-status').html('Please fill all the fields');
-                formDataValid = false;
-            }
-            formData[formElements[formIndex].name] = formElements[formIndex].value;
-        }
-        if(formDataValid) {
-            if(formData["type"] === "Cancel") {
-                formTarget = "cancelticket";
-                postData =  { "Order no.": formData["order-no"], "Ticket no." : formData["ticket-no"],  "Email" : formData["ticket-email"], "Type" : formData["type"], "Event" : "JSFoo 2015" };
-            }
-            else {
-                formTarget = "transferticket";
-                postData = { "Order no.": formData["order-no"], "Ticket no." : formData["ticket-no"],  "Email" : formData["ticket-email"], "Type" : formData["type"], 
-                             "Transferee name" :formData["transferee-name"], "Transferee email" : formData["transferee-email"] , "Transferee phone" : formData["transferee-phone"], "Event" : "JSFoo 2015" };
-            }
-            p = "Are you sure you want to " + formData["type"] + " your ticket?";
-            var result = window.confirm(p);
-            if(result) {
-                $('.submit-loader').show();
-                $.ajax({
-                    type: 'post',
-                    url: 'https://script.google.com/macros/s/AKfycbycMp_bW4uj2JmUS4a0ghe7W7xfUzrIP28AV_6wQihg5kX9pDxI/exec',
-                    data: postData,
-                    dataType: 'json',
-                    timeout: 5000,
-                    complete: function(response, textStatus) {
-                        $('.submit-loader').hide();
-                        if(response.status === 200) {
-                            $("#" + formTarget)[0].reset();
-                            if(formTarget === "cancelticket") {
-                                $('.cancelticket-status').show().html(cancelSuccessMessage);
-                            }
-                            else {
-                                $('.cancelticket-status').show().html(transferSuccessMessage);
-                            }
-                        }
-                        else {
-                            $('.cancelticket-status').show().html('Error, try again');
-                        }
-                    }
-                });
-            }
-        }
-    });
-
-    $('#subscribe').on('submit', function(event) {
-        event.preventDefault();
-        $('.subscribe-status').html('');
-        var postData ={};
-        if($('#subscribe-email').val() === "") {
-            $('.subscribe-status').html('Please enter an email id');
-        }
-        else {
-            postData = { "Email": $('#subscribe-email').val(), "Event" : "JSFoo 2016" };
-            $('.ajax-loader').css('visibility', 'visible');
-            $.ajax({
-                type: 'post',
-                url: 'https://script.google.com/macros/s/AKfycbwkkVFfdoQF7_aozgUPyfxDuuxOrN2melaehVBcsuP84Fa7Vks/exec',
-                data: postData,
-                dataType: 'json',
-                timeout: 5000,
-                complete: function(response, textStatus) {
-                    $('.ajax-loader').css('visibility', 'hidden');
-                    if(response.status === 200) {
-                        $("#subscribe")[0].reset();
-                        $('.subscribe-status').show().html('Thank you for subscribing!');
-                    }
-                    else {
-                        $('.subscribe-status').show().html('Error, try again.');
-                    }
-                }
-            });
-        }
-    });
 });

@@ -1,12 +1,13 @@
-<section class="clearfix{% if background %} fill-{{ background }}{% endif %} push-one">
-<div class="container">  
-  <div class="row-fluid">
-    <h3 class="col-lg-3 secondary all-caps space-one-bottom prose-type medium">License</h3>
-    
-    <div class="col-lg-9 secondary normal">
-      <p>This Code of Conduct was forked from the PyCon US Code of Conduct, which in turn was forked from the Geek Feminism wiki, created by the Ada Initiative and other volunteers and available under a Creative Commons Zero license.</p>
-       <p>The Conference Code of Conduct for Meta Refresh 2016 is licensed under a Creative Commons Attribution 3.0 Unported License.</p>
+<section class="push-two-bottom space-one-top clearfix{% if background %} fill-{{ background }}{% endif %}">
+  <div class="container"> 
+    <div class="row">
+      <div class="regular space-one-top">
+        {% with f = fragment('2017', 'code-of-conduct-license') %}
+          <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 all-caps space-three-top space-two-bottom large semibold text-center">{{ f.title }}</h3>
+          {{ f.content }}
+        {% endwith %}
+      </div>
     </div>
   </div>
-  </div>
 </section>
+

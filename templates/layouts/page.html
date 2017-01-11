@@ -8,16 +8,14 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Meet some of India’s best JS developers to talk about speed and performance of your apps, front-end and backend architecture, and cutting-edge developments in JS.
-{% endif %}">
+<meta name="description" content="{{ node.description }}">
 <meta name="author" content="HasGeek and friends">
 <meta name="keywords" content="Conference, Workshop, Javascript, Node.js, JS, Front-end, Web apps, Progressive web apps, ReactJS, Build tools, Bangalore, Bengaluru, India"> 
 
-<meta property="og:title" content="{% if page.title %}{{ page.title }} — JSFoo 2016{% else %}JSFoo - India’s first JavaScript conference{% endif %}"/>
+<meta property="og:title" content="{{ website.title }} {{ node.title }}"/>
 <meta property="og:image" content="https://images.hasgeek.com/embed/file/cd665bc09fc84671b62641a9ea8821f5"/>
 <meta property="og:url" content="{{ request.url }}"/>
-<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Meet some of India’s best JS developers to talk about speed and performance of your apps, front-end and backend architecture, and cutting-edge developments in JS.
-{% endif %}"/>
+<meta property="og:description" content="{{ node.description }}"/>
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@jsfoo" /> 
@@ -29,7 +27,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-<title>{% if page.title %}{{ page.title }} — JSFoo 2016{% else %}JSFoo - India’s first JavaScript conference{% endif %}</title>
+<title>{{ website.title }} {{ node.title }}</title>
 
 {%- if _theme %}
   {% assets "css_" + _theme -%}
@@ -82,8 +80,8 @@
     <div class="row-fluid space-half-bottom">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div id="cog" class="space-one-top">
-          <a class="push-two-top ir logo-small" href="/2016">
-            JSFoo 2016</a>
+          <a class="push-two-top ir logo-small" href="/2017">
+            JSFoo 2017</a>
         </div>
         <div class="row">
           <div class="col-sm-6">
@@ -94,8 +92,9 @@
                 <li><a class="push-two-top" href="/2015/#run-up-events">Run-up Events</a></li>-->
                 <li>
                   <div class="dropdown link-silent tiny">
-                    <a id="editions" data-toggle="dropdown" href="#">&nbsp;Bangalore 2016 <i class="fa fa-caret-down"></i>&nbsp;</a>
+                    <a id="editions" data-toggle="dropdown" href="#">&nbsp;Bangalore 2017 <i class="fa fa-caret-down"></i>&nbsp;</a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                      <li><a class="push-1q" href="https://jsfoo.in/2016/" target="_blank">Bangalore 2016</a></li>
                       <li><a class="push-1q" href="https://jsfoo.in/2015/" target="_blank">Bangalore 2015</a></li>
                       <li><a class="push-1q" href="https://jsfoo.in/2014/" target="_blank">Bangalore 2014</a></li>
                       <li><a class="push-1q" href="https://jsfoo.in/2013/" target="_blank">Bangalore 2013</a></li>
@@ -111,9 +110,7 @@
           </div>
           <div class="col-sm-6">
             <div class="flushleft space-one center-xs">
-            {% block ticket_button %}
-              <p class="space-one"><a href="https://www.flickr.com/photos/hasgeek/sets/72157670760406864" class="button regular-prose dark" target="_blank">Event photos</a></p>
-            {% endblock %}
+              <a href="https://jsfoo.talkfunnel.com/2017/" class="button">Propose a talk</a>
             </div>
           </div>
         </div>
@@ -140,11 +137,20 @@
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="regular space-four-bottom">
-          <p class="regular link-silent"><a href="http://hasgeek.com/" target="_blank" class="orange">HasGeek</a> helps people in technology meet each other, collaborate on new opportunities and advance the state of the art. We organize conferences, hacknights, workshops and geekups, and provide tools for communities to self-organize.</p>
-          <p class="regular link-silent">We’ve created conferences around the themes of <a href="http://rootconf.in/" target="_blank" class="orange">devops</a>, <a href="http://metarefresh.in/" target="_blank" class="orange">front end engineering</a>, <a href="http://www.juliacon.in/" target="_blank" class="orange">Julia</a>, <a href="http://fifthelephant.in/" target="_blank" class="orange">big data and cloud computing</a>, <a href="http://jsfoo.in/" target="_blank" class="orange">JavaScript</a> and <a href="http://droidcon.in/" target="_blank" class="orange">Android</a>. Our <a href="http://hasjob.co/" target="_blank">Job Board</a> is used by thousands of geeks every month to find new opportunities.</p>
-          <p class="regular link-silent">HasGeek is a technology company in the media business, bringing software automation to a traditionally people-intensive operation. Over the past six years, HasGeek has organized dozens of conferences attended by thousands of technology professionals, made several thousand connections, and built open source tools that are now used by many communities.</p>
+          <h3><a class="ir hasgeek-logo center-block space-one-top link-silent" href="//hasgeek.com">HasGeek</a></h3>
+          {% with f = fragment('2017', 'about-hasgeek') %}
+            {{ f.content }}
+          {% endwith %}
+
+          {% with f = fragment('2017', 'credits') %}
+          <div class="credits space-two">
+            <h2 class="calm">{{ f.title }}</h2>
+            {{ f.content }}
+          </div>
+          {% endwith %}
+
           <p class="regular link-silent text-center">All organisers, sponsors and attendees are required to follow the conference <a href="code-of-conduct" class="orange">code of conduct</a>.</p>
-          <p class="regular link-silent text-center">JSFoo is a conference by <a href="http://hasgeek.com" class="orange">HasGeek</a>. Copyright &copy; 2010–16. All rights reserved.</p>
+          <p class="regular link-silent text-center">JSFoo is a conference by <a href="http://hasgeek.com" class="orange">HasGeek</a>. Copyright &copy; 2010–17. All rights reserved.</p>
           <p class="regular link-silent text-center"><span class="wrap-mobile">For further information / sponsorship:</span> <span class="wrap-mobile"> <a href="mailto:info@hasgeek.com" class="block-link">support@hasgeek.com</a> / <a href="tel: +91-767-633-2020" class="block-link">+91-767-633-2020</a>
           <div class="legible space-one-top text-center">
             <ul class="link-silent list-plain">

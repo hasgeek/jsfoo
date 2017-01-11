@@ -1,15 +1,14 @@
 {% extends theme('layouts/page.html') %}
+
 {%
   set page = {
     'title'               : '' ,
     'description'         : '' ,
     'sections'            : [
-      ('event-summary',       '') ,
-      ('featured-speakers',  'lightblue') ,
-      ('schedule', 'lightblue'),
-      ('venue-summary',  'lightblue') ,
-      ('sponsors-summary',  'darkblue'),
-      ('credits',  '')
+      ('announcement',       '') ,
+      ('highlights',  'lightblue') ,
+      ('venue',  '') ,
+      ('sponsors-summary',  'darkblue')
     ]
   }
 %}
@@ -22,14 +21,18 @@
     <div class="row-fluid">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <h1 class="push-two-top push-one-bottom">
-          <a class="ir center-block logo" href="/2016">
-            JSFoo 2016
+          <a class="ir center-block logo" href="/2017">
+            JSFoo 2017
           </a>
         </h1>
         <div class="text-center heading-text">
-          <h2 class="legible text1">Conference and Workshops on JavaScript</h2>
-          <h3 class="large text2">15&#8211;16 September 2016, Bangalore</h3>
-          <p class="space-one"><a href="https://www.flickr.com/photos/hasgeek/sets/72157670760406864" class="button regular-prose dark" target="_blank">Event photos</a></p>
+          <h2 class="legible text1">{{ node.content }}</h2>
+          <h3 class="large text2">8&#8211;9 September 2017, Bangalore</h3>
+          {% if node.properties.buy_ticket %}
+            <p class="space-one"><a href="#tickets" class="button regular-prose dark">Buy tickets</a></p>
+          {% else %}
+            <p class="space-one"><a href="https://jsfoo.talkfunnel.com/2017/" class="button regular-prose dark" target="_blank">Propose a talk</a></p>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -46,9 +49,7 @@
     <nav class="all-caps nospace clearfix off" id="dropdown-menu">
       <ul class="link-silent clearfix">
         <li><a href="#about" class="smooth-scroll">Announcements</a></li>
-        <li><a href="#speakers" class="smooth-scroll">Featured speakers</a></li>
-        <li><a href="#schedule" class="smooth-scroll">Schedule</a></li>
-        <li><a href="/2016/nodejs-workshop" target="_blank">Workshop</a></li>
+        <li><a href="#highlights" class="smooth-scroll">Past highlight</a></li>
         <li><a href="#venue" class="smooth-scroll">Venue</a></li>
         <li><a href="#sponsors" class="smooth-scroll">Sponsors</a></li>
         <li><a href="code-of-conduct">Code of conduct</a></li>
@@ -56,84 +57,3 @@
     </nav>
   </div>
 {% endblock %}
-
-<!-- {% block footer_script %}
-<style type="text/css">       
-  #boxoffice-widget .boxoffice-button-action {        
-    background-color: #FAA51A;        
-    border-color:  #d98f15;       
-    color: #fff;        
-  }       
-  #boxoffice-widget .boxoffice-button-info {        
-    background-color: #5BC0DE;        
-    border-color: #2A9CBE;        
-    color: #fff;        
-  }       
-  #boxoffice-widget .payment-stages-bg {        
-    background-color: #2E3661;        
-  }       
-  #boxoffice-widget .progress-indicator>li {        
-    color: #FFF;        
-  }
-  #boxoffice-widget .progress-indicator>li.active, .progress-indicator > li.active .bubble {
-    color: #337AB7;
-  }    
-  #boxoffice-widget .category-heading {       
-    background-color: #549EAF;        
-    border-bottom: 3px solid #44818f;       
-    color: rgba(0,0,0,0.6);     
-    line-height: 1.1;     
-    font-weight: bold;
-  }       
-  #boxoffice-widget .category-heading:after {       
-    border-color: #549EAF transparent #549EAF #549EAF;        
-  }   
-</style>        
-        
-<script>        
-  $(function(){       
-    //Boxoffice widget        
-    var boxofficeUrl = "https://boxoffice.hasgeek.com";       
-    var username, userphone, useremail;       
-    {% if g.user %}       
-      {% if g.user.fullname %}        
-        username = "{{ g.user.fullname }}";       
-      {% endif %}       
-      {% if g.user.phone %}       
-        userphone = "{{ g.user.phone }}";       
-      {% endif %}       
-      useremail = "{{ g.user.email }}";       
-    {% endif %}       
-    $.get({   
-      url: boxofficeUrl+"/api/1/boxoffice.js",    
-      crossDomain: true   
-    }).done(function(data) {
-      var boxofficeScript = document.createElement('script');   
-      boxofficeScript.innerHTML = data.script;    
-      document.getElementsByTagName('body')[0].appendChild(boxofficeScript);    
-      window.Boxoffice.init({   
-        org: 'hasgeek',   
-        itemCollection: '063ed821-5a33-11e6-b520-539212156c90',   
-        user_name: username,    
-        user_phone: userphone,    
-        user_email: useremail,    
-        paymentDesc: 'JSFoo 2016'    
-      });
-    }).fail(function(response) {
-      var error_msg;
-      if (response.readyState === 4) {
-        error_msg = "Server error, please try again later";
-      }
-      else if (response.readyState === 0) {
-        if(!navigator.onLine) {
-          error_msg = "Unable to connect. There is no network!";
-        }
-        else {
-          error_msg = "<p>Unable to connect. If you are behind a firewall or using any script blocking extension (like Privacy Badger).<p></p> Please ensure your browser can load boxoffice.hasgeek.com, api.razorpay.com and checkout.razorpay.com</p>";
-        }
-      }
-      $('#boxoffice-widget p').html(error_msg);
-    });
-  }); 
-</script>
-{% endblock %} -->

@@ -1,60 +1,52 @@
-<section class="sponsors page-section clearfix nopush-bottom{% if background %} fill-{{ background }}{% endif %}">
-  <div class="container-fluid space-one">
-    <div class="row-fluid text-center">    
-      <div class="col-lg-12">
-          <h3 class="offset1 span4 legible medium text-center prose-type all-caps space-one-bottom">Sponsors</h3>
-      </div>
-    </div>
+<section id="sponsors" class="sponsors push-two clearfix nopush-bottom{% if background %} fill-{{ background }}{% endif %}">
+  <div class="row-fluid container">
+    <h2 class="extralarge all-caps space-one-bottom">Sponsors</h2>
   </div>
-{% with fill_cycler = cycler('fill-darkblue', 'fill-primary') %}
-  {% from theme("data/sponsors.html") import types, items %}
+</section>
+
+{% with fill_cycler = cycler('fill-blue', 'fill-gray') %}
+  {% set types = getnode(path='2017-sponsors').data['types'] %}
+  {% set items = getnode(path='2017-sponsors').data['items'] %}
   {% for type in types %}
     {% set outer = loop %}
-    {% for item in items if item.type == type.id and type.size != 'compact'  %}
+    {% for item in items if item.type == type.id and type.size != 's'  %}
       {% if loop.first %}
-      <section id="sponsor-{{ type.id }}" class="page-section {{ fill_cycler.next() }} clearfix">
-      <div class="container-fluid">
-        <div class="prose-type pad-three">
-          <h2 class="legible all-caps space-one-bottom">{{ type.title }}</h2>
+      <section class="sponsor-platinum {{ fill_cycler.next() }} clearfix">
+        <div class="row-fluid container">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 push-one-top">
+            <h2 class="legible all-caps space-one-bottom">{{ type.title }}</h2>
+          </div>     
         </div>
       {% endif %}
-        <h3 class="visuallyhidden">{{ item.title }}</h3>
-        <div id="{{ type.id }}-{{ item.id }}" class="row space-two pad-two-left pad-three-right">
-          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 regular space-half-top nospace-bottom clearfix clearboth">
+        <div id="{{ type.id }}-{{ item.id }}" class="row-fluid container push-two-top">
+          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible space-two-bottom clearfix clearboth">
             <p class="clearfix space-two-bottom">
-              <a href="{{ item.link }}" target="_blank" class="occupy fill-white sponsorlogo contain-width flushleft link-silent">
-                <img alt="{{ item.name }}" src="{{ item.logo }}">
+              <a href="{{ item.link }}" target="_blank" class="occupy fill-white sponsorlogo contain-height flushleft">
+                <img alt=" " src="{{ item.logo }}">
               </a>
             </p>
-          </div>
-
-          <div class="col-lg-7 col-md-6 col-sm-4 col-xs-12 pad-two-right pad-one-left regular space-two-bottom">
-              <div class="legible semi-bold space-half-bottom visuallyhidden">{{ item.title }}</div>
-              {{ item.blurb|safe }}
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-            {% if item.display %}
-              <h4 class="tiny all-caps nospace">Website</h4>
-              <p class="secondary prose-type space-half-top space-one-bottom link-silent sponsor-website"><a href="{{ item.link }}" class="white">{{ item.display }}</a></p>
-            {% endif %}
             
             {% if item.attendee %}
-              <h4 class="tiny all-caps nospace">Sponsor Attendees</h4>
-              <p class="regular prose-type space-half-top space-one-bottom link-silent">{{ item.attendee|safe }}</p>
+            <h4 class="tiny all-caps nospace faded">Sponsor Attendee</h3>
+            <p class="regular prose-type space-half-top space-one-bottom link-silent">{{ item.attendee|safe }}</p>
             {% endif %}
             
             {% if item.contact %}
-              <h4 class="tiny all-caps nospace">Contact</h4>
-              <p class="regular prose-type space-half-top space-one-bottom link-silent"><a href="mailto:{{ item.contact|safe }}" class="white">{{ item.contact|safe }}</a></p>
+            <h4 class="tiny all-caps nospace faded">Contact</h3>
+            <p class="regular prose-type space-half-top space-one-bottom link-silent">{{ item.contact|safe }}</p>
             {% endif %}
+            
+          </div>
+          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 regular-prose prose prose-type space-three-bottom">
+            <div class="legible space-half-bottom"><a href="{{ item.link }}" target="_blank">{{ item.title }}</a></div>
+              {% with f = fragment('2017', item.blurb) %}
+                {{ f.content }}
+              {% endwith %}
           </div>
         </div>
       {% if loop.last %}
-      </div>
       </section>
       {% endif %}
     {% endfor %}
   {% endfor %}
 {% endwith %}
-
-</section>

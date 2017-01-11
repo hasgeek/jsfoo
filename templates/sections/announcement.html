@@ -1,0 +1,20 @@
+<section id="about" class="page-section{% if background %} fill-{{ background }}{% endif %}">
+  <div class="container-fluid">
+    {% with f = fragment('2017', 'announcement') %}
+    <div class="col-lg-6 col-xs-12 section-title">
+      <div class="pad-three-left space-three-top huge nopad-xs prose-type bold darkblue">
+        {{ f.title }}
+      </div>
+    </div>
+    <div class="col-lg-6 col-xs-12">
+      <div class="legible-prose calm nopad-xs space-three-top nospace-bottom link-silent">
+        {{ f.content }}
+        {% if node.properties.propose_talk %}
+          <p class="space-one"><a href="https://jsfoo.talkfunnel.com/2017/" class="button regular-prose dark" target="_blank">Propose a talk</a></p>
+        {% endif %}
+        <p class="centered space-one-bottom">For more updates, follow us on <a href="http://www.facebook.com/jsfooindia" target="_blank" class="darkyellow">Facebook</a>, <a href="http://twitter.com/jsfooindia" target="_blank" class="darkyellow">Twitter</a> and <a href="https://www.youtube.com/user/hasgeek" title="Watch the latest videos from HasGeek" target="_blank" class="darkyellow">YouTube</a>.</p><p><a href="http://hasgeek.us2.list-manage.com/subscribe?u=c84c1486d2d6a025417c5d146&id=47afa263c6" target="_blank" class="darkyellow">Sign up</a> to receive updates and information about tickets, speakers, schedule and more.</p>
+      </div>
+    </div>
+    {% endwith %}
+  </div>
+</section> 

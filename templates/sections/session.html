@@ -1,0 +1,39 @@
+{% set session_url = node.properties.session_url %}
+{% set session = getnode(path=session_url).data['session'] %}
+
+<section id="{{ session.id }}" class="clearfix{% if background %} fill-{{ background }}{% endif %}">
+  <div class="container-fluid">
+    {% if session.label %}<h2 class="large all-caps text-center push-one">{{ session.label }}</h2>{% endif %}
+    {% for item in session|sort(attribute='count') %}
+      <div id="{{ item.id }}" class="row push-two-bottom pad-3q session">
+        <div class="row">
+          <h3 class="legible nospace-top medium push-one-top pad-half darkblue bold text-center">{{ item.title|safe }}</h3>
+          <div class="col-md-4 col-xs-12 speaker-bio">
+            {% if item.photos %}<div class="clearfix nospace-top push-one-top space-half-bottom">{% for photo in item.photos %}<img src="{{photo}}" alt="" class="center-block speaker-photo {% if item.photos|length > 1 %} speaker-photo-small {% endif %}">{% endfor %}</div>{% endif %}
+            <h4 class="regular prose-type calm all-caps space-1q-top nospace-bottom darkblue bold text-center">{{ item.speaker|safe }}</h4>
+            {% if item.twitter %}<div class="link-silent regular-prose space-1q-top nospace-bottom text-center"><a href="https://twitter.com/{{ item.twitter }}" target="_blank">@{{ item.twitter }}</a></div>{% endif %}
+            {% if item.designation %}<p class="secondary italic space-1q-top nospace-bottom darkyellow text-center">{{ item.designation|safe }}</p>{% endif %}
+            {% if item.bio %}<div class="secondary space-1q-top nospace-bottom text-center">{{ item.bio|safe }}</div>{% endif %}
+            {% if item.sponsor %}<div class="lightblue secondary-prose space-1q-top nospace-bottom link-silent"><em>Sponsored session by <a href="{{ item.sponsor_link }}" target="_blank">{{ item.sponsor }}</a></em></div>{% endif %}
+          </div>
+          <div class="col-md-8 col-xs-12">
+            {% if item.banner %}<div class="regular nospace-top push-one-top pad-half"><img src="{{ item.banner[0]|safe }}" alt="{{ item.banner[0]|safe }}"/><p class="tiny space-1q-top">{{ item.banner[1]|safe }}</p></div>{% endif %}
+            {% if item.objective %}<div class="regular nospace-top push-one-top pad-half"><h2 class="legible semibold nospace-top space-half-bottom">Abstract</h2>{{ item.objective|safe }}</div>{% endif %}
+            {% if item.preview %}<div class="pad-half"> {{ item.preview|safe }} </div>{% endif %}
+            {% if item.description %}<div class="regular space-one pad-half link-silent"><h2 class="legible semibold space-half">Outline</h2>{{ item.description|safe }}</div>{% endif %}
+            {% if item.requirements %}<div class="regular space-one pad-half"><h2 class="legible semibold space-half">Requirements</h2>{{ item.requirements|safe }}</div>{% endif %}
+            {% if item.previewphotos %}<div class="regular space-one-top pad-half link-silent">{% for link in item.previewphotos %}<img src="{{ link }}" class="preview-photos"/>{% endfor %}</div>{% endif %}
+            {% if item.links %}<div class="regular space-one-top pad-half link-silent session-links"><p class="legible semibold">Links</p><ul>{% for link in item.links %}<li><a class="orange" href="http://{{ link }}" target="_blank">{{ link }}</a></li>{% endfor %}</ul></div>{% endif %}
+            <ul class="list-plain regular space-one-top pad-half">
+              {% if item.date %}<li class="space-1q">{{ item.date|safe }}</li>{% endif %}
+              {% if item.time %}<li class="space-1q">{{ item.time|safe }}</li>{% endif %}
+              {% if item.venue %}<li class="space-1q"><i class="fa fa-map-marker"></i>&nbsp; {{ item.venue|safe }}</li>{% endif %}
+              {% if item.price %}<li class="large space-1q bold">{{ item.price|safe }}</li>{% endif %}
+              {% if item.url %}<li class="space-1q"><a class="orange" target="_blank" href="{{ item.url }}">Read workshop proposal</a></li>{% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

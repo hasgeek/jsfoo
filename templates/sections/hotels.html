@@ -1,14 +1,15 @@
-<section id="hotels" class="clearfix{% if background %} fill-{{ background }}{% endif %}">
-<div class="container">
-  <div class="row">     
-    <div class="col-lg-12">
-        <h2 class="large-prose all-caps text-center border-bottom-line space-one-bottom"><span class="fill-black pad-one">Hotels near to Venue</span></h2>
-    </div>
-  </div>
-  <div class="row">
-    {% with %}
-      {% from theme("data/hotels.html") import types, items %}
+{% set hotel_url = node.properties.hotel_url %}
 
+<section id="hotels" class="clearfix{% if background %} fill-{{ background }}{% endif %}">
+  <div class="container">
+    <div class="row">     
+      <div class="col-lg-12">
+          <h2 class="large-prose all-caps text-center border-bottom-line space-one-bottom"><span class="fill-black pad-one">Hotels near to Venue</span></h2>
+      </div>
+    </div>
+    <div class="row">
+      {% set types = getnode(path=hotel_url).data['types'] %}
+      {% set items = getnode(path=hotel_url).data['items'] %}
       <div class="table-responsive pad-3q space-half-top">
         <table class="table table-bordered">
           <thead class="fill-white">
@@ -32,8 +33,7 @@
             {% endfor %}
           </tbody>
         </table>    
-      </div>    
-    {% endwith %}
-  </div>
+      </div>
+    </div>
   </div>
 </section>

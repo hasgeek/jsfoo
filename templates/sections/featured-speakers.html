@@ -1,13 +1,26 @@
-{% with %}
-  {% from theme("data/sessions.html") import talks %}
-	{% 
-	  set session = {
-	      'id'    : 'talks'
-	    , 'label' : 'Talks'
-	    , 'link'  : 'conference#talks'
-	    , 'list'  : talks.values()
-	    , 'types' : types
-	  }
-	%}
-  {% include theme("layouts/featured-speakers.html") %}
-{% endwith %}
+<section id="speakers" class="featured-speakers push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
+  <div class="container-fluid">
+    <div class="row">
+      <h2 class="col-sm-12 col-xs-12 legible medium all-caps text-center space-one prose-type">Featured talks</h2>
+    </div>
+    <div class="row-fluid space-three-top text-center">
+      <ul class="space-half-top list-plain list-silent row">
+      {% for item in getnode(path='featured-talks').data['talks'] %}
+        <li class="col-md-3 col-sm-4 col-xs-12 text-center speaker-list">
+          <div>
+            <img class="speaker-image" src="{{ item.photo }}" alt="{{ item.speaker }}">
+          </div>
+          <div>
+            {% if item.title %} <h5 class="space-1q-top nospace-bottom link-silent"><a target="_blank" class="secondary orange dark" {% if item.funnel %} href="{{ item.funnel }}" {% endif %}>{{ item.title }}</a></h5>{% endif %}
+            <h2 class="regular bold nospace">{{ item.speaker }}</h2>
+            {% if item.twitter %}<h5 class="secondary-prose nospace twitter-blue"><a href="https://twitter.com/{{ item.twitter }}" target="_blank">@{{ item.twitter }}</a></h5>{% endif %}
+            {% if item.designation %}<h5 class="secondary-prose nospace blue">{{ item.designation|safe }}</h5>{% endif %}
+            {% if item.place %}<h5 class="secondary nospace">{{ item.place }}</h5>{% endif %}
+            {% if item.sponsor %}<h5 class="secondary nospace">Sponsored by <a target="_blank" href="{{ item.sponsor_link }}">{{ item.sponsor }}</a></h5>{% endif %}
+          </div>           
+        </li>
+      {%- endfor %}
+      </ul>
+    </div>    
+</div>
+</section>

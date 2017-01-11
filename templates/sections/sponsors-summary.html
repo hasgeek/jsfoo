@@ -1,30 +1,28 @@
-<section id="sponsors" class="sponsors page-section push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
-<div class="container-fluid">
-  <div class="row-fluid text-center">    
-    <h3 class="col-sm-12 col-xs-12 legible medium all-caps text-center space-one prose-type">Sponsors</h3>
-    
-    <div class="col-lg-12 regular space-one-top">
-      <p>Showcase your APIs, tools and products. Engage with JavaScript developers, JS communities and front-end engineers.</p>
-      
-      <p class="secondary space-line-top space-three-bottom">
-        <a class="button button-ghost-dark medium" href="http://hsgk.in/sponsor-doc" target="_blank">$.Get Sponsorship Deck</a>
-      </p>
+<section id="sponsors" class="sponsors push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
+  <div class="row-fluid container">
+    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 push-one-bottom">
+      <h2 class="extralarge all-caps">Sponsors</h2>
+    </div>
+     <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 secondary space-one-top">
+      {% with f = fragment('2017', 'about-sponsorship') %}
+        {{ f.content }}
+      {% endwith %}
     </div>
   </div>
-  <div class="pad-half nopad-xs">
   {% with %}
-    {% from theme("data/sponsors.html") import types, items %}
+    {% set types = getnode(path='2017-sponsors').data['types'] %}
+    {% set items = getnode(path='2017-sponsors').data['items'] %}
     {% for type in types %}
       {% set outer = loop %}
       {% for item in items if item.type == type.id  %}
         {% if loop.first %}
-        <div id="sponsors-{{ type.id }}" class="row-fluid container-fluid  pad-three  nopad-xs space-two-top">
-          <h3 class="col-lg-5 col-md-5 col-sm-4 col-xs-12 legible-prose all-caps space-one-bottom prose-type medium">{{ type.title }}</h3>
+        <div id="sponsors-{{ type.id }}" class="row-fluid container space-two-top">
+          <h3 class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible all-caps space-one-bottom">{{ type.title }}</h3>
 
-          <ul class="col-lg-7 col-md-7 col-sm-8 col-xs-12 nospace-bottom list-plain link-silent clearfix list-space-line sponsor-{{ type.size }}">
+          <ul class="col-lg-7 col-md-7 col-sm-7 col-xs-12 nospace-bottom list-plain link-silent clearfix list-space-line sponsor-{{ type.size }} nospace-ul">
         {% endif %}
           <li>
-              <a href="{% if type.size == 'compact' %}{{ item.link }}{% else %}sponsors#{{ type.id }}-{{ item.id }}{% endif %}" class="occupy fill-white sponsorlogo {% if item.orientation == 'portrait' %}contain-height{% elif item.orientation == 'landscape' %}contain-width{% endif %}">
+              <a href="{% if type.size == 's' %}{{ item.link }}{% else %}sponsors#{{ type.id }}-{{ item.id }}{% endif %}" {% if type.size == 's' %}target="_blank"{% endif %} class="occupy fill-white sponsorlogo {% if item.orientation == 'portrait' %}contain-height{% elif item.orientation == 'landscape' %}contain-width{% endif %}">
                 <img alt="{{ item.title }}" src="{{ item.logo }}">
               </a>
           </li>
@@ -35,6 +33,4 @@
       {% endfor %}
     {% endfor %}
   {% endwith %}
-  </div>
-</div>
 </section>

@@ -11,6 +11,7 @@
         <div><code class="pad-three-left">{ "year": "</code><a target="_blank" href="https://jsfoo.in/2013/"><code class="darkyellow">2013</code></a><code>", "city": "</code><a target="_blank" href="https://jsfoo.in/2013/"><code class="darkblue">Bangalore</code></a><code>" },</code></div>
         <div><code class="pad-three-left">{ "year": "</code><a target="_blank" href="https://jsfoo.in/2014/"><code class="darkyellow">2014</code></a><code>", "city": "</code><a target="_blank" href="https://jsfoo.in/2014/"><code class="darkblue">Bangalore</code></a><code>" }</code></div>
         <div><code class="pad-three-left">{ "year": "</code><a target="_blank" href="https://jsfoo.in/2015/"><code class="darkyellow">2015</code></a><code>", "city": "</code><a target="_blank" href="https://jsfoo.in/2015/"><code class="darkblue">Bangalore</code></a><code>" }</code></div>
+         <div><code class="pad-three-left">{ "year": "</code><a target="_blank" href="https://jsfoo.in/2016/"><code class="darkyellow">2016</code></a><code>", "city": "</code><a target="_blank" href="https://jsfoo.in/2016/"><code class="darkblue">Bangalore</code></a><code>" }</code></div>
         <div><code class="pad-two-left">]</code></div>
         <div><code class="pad-one-left">}</code></div>
         <div><code>}</code></div>
@@ -18,94 +19,26 @@
     </div>
   </div>
   <div class="clearboth push-three-top push-two-bottom">
-  <ul class="nospace-bottom contain-width list-space-line list-plain link-silent video-thumbnails clearfix">
-    <li>
-      <article class="video-thumbnail">
-        <p>
-          <a target="_blank" href="https://hasgeek.tv/jsfoo/2015/1137-guillermo-rauch-the-future-of-chat">
-            <img alt="Guillermo Rauch - The future of chat" src="https://images.hasgeek.com/embed/file/93e10127626f45b99ea6476de233ded6">
-          </a>
-        </p>
-        <h4>
-          <a class="secondary-prose" target="_blank" href="https://hasgeek.tv/jsfoo/2013-1/887-bringing-the-open-web-and-apis-to-mobile-devices-with-firefox-os">
-            The future of chat
-          </a>
-        </h4>
-        <h5>
-          Guillermo Rauch
-        </h5>
-      </article>
-    </li>
-    <li>
-      <article class="video-thumbnail">
-        <p>
-          <a target="_blank" href="https://hasgeek.tv/jsfoo/2013-1/683-killing-passwords-with-javascript">
-            <img alt="Killing Passwords with JavaScript" src="https://imgee.s3.amazonaws.com/imgee/8a02b70573c843aeae243bf4659baad5.jpeg">
-          </a>
-        </p>
-        <h4>
-          <a class="secondary-prose" target="_blank" href="https://hasgeek.tv/jsfoo/2013-1/683-killing-passwords-with-javascript">
-            Killing Passwords with JavaScript
-          </a>
-        </h4>
-        <h5>
-          Francois Marier
-        </h5>
-      </article>
-    </li>
-    <li>
-      <article class="video-thumbnail">
-        <p>
-          <a target="_blank" href="https://hasgeek.tv/jsfoo/2013-2/690-gif-animations-now-with-sound">
-            <img alt="GIF animations - Now with sound" src="https://imgee.s3.amazonaws.com/imgee/0c5360e507124ef7b58e6bb5f4f0c29d.jpeg">
-          </a>
-        </p>
-        <h4>
-          <a class="secondary-prose" target="_blank" href="https://hasgeek.tv/jsfoo/2013-2/690-gif-animations-now-with-sound">
-            GIF animations - Now with sound!
-          </a>
-        </h4>
-        <h5>
-          Hage Yaapa
-        </h5>
-      </article>
-    </li>
-    <li>
-      <article class="video-thumbnail">
-        <p>
-          <a target="_blank" href="https://hasgeek.tv/jsfoo/2013-2/688-interactive-physics-simulation-in-the-browser-what-i-learned">
-            <img alt="Interactive Physics Simulation In The Browser - What I Learned" src="https://imgee.s3.amazonaws.com/imgee/a3d8f9944c854eabab649f168e77b2d3.jpeg">
-          </a>
-        </p>
-        <h4>
-          <a class="secondary-prose" target="_blank" href="https://hasgeek.tv/jsfoo/2013-2/688-interactive-physics-simulation-in-the-browser-what-i-learned">
-            Interactive Physics Simulation In The Browser - What I Learned
-          </a>
-        </h4>
-        <h5>
-          Nilesh Trivedi
-        </h5>
-      </article>
-    </li>
-    <li>
-      <article class="video-thumbnail">
-        <p>
-          <a target="_blank" href="https://hasgeek.tv/jsfoo/2013-2/687-html5-for-the-masses-making-the-future-the-now">
-            <img alt="HTML5 for the masses - making the future the now" src="https://imgee.s3.amazonaws.com/imgee/c566c057be164f0baabdfc1f6d630df0.jpeg">
-          </a>
-        </p>
-        <h4>
-          <a class="secondary-prose" target="_blank" href="https://hasgeek.tv/jsfoo/2013-2/687-html5-for-the-masses-making-the-future-the-now">
-            HTML5 for the masses - making the future the now
-          </a>
-        </h4>
-        <h5>
-          Christian Heilmann
-        </h5>
-      </article>
-    </li>
-  </ul>
-</div>
+    <ul class="nospace-bottom contain-width list-space-line list-plain link-silent video-thumbnails clearfix">
+      {% for talk in getnode(path='past-featured-talks').data['talks'] %}
+        <li class="push-one-bottom text-center">
+          <article class="video-thumbnail secondary">
+            <p>
+              <a href="{{talk.video_url}}" target="_blank" data-label="{{talk.title}}" data-target="{{talk.video_url}}">
+                <img alt="{{talk.title}}" src="{{talk.banner}}">
+              </a>
+            </p>
+            <h4>
+              <a href="{{talk.video_url}}" target="_blank" data-label="{{talk.title}}" data-target="{{talk.video_url}}">
+                {{talk.title}}
+              </a>
+            </h4>
+            <h5>{{talk.speaker}}</h5>
+          </article>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
   <div class="clearboth space-one text-center">
     <a href="https://www.youtube.com/user/hasgeek" target="_blank" class="button regular dark">Watch Videos on HasGeek TV</a>
   </div>
