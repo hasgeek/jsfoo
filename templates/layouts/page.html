@@ -110,7 +110,11 @@
           </div>
           <div class="col-sm-6">
             <div class="flushleft space-one center-xs">
-              <a href="https://jsfoo.talkfunnel.com/2017/" class="button">Propose a talk</a>
+              {% if node.properties.buy_ticket %}
+                <a href="#tickets" class="button regular-prose dark smooth-scroll">Buy tickets</a>
+              {% else %}
+                <a href="https://jsfoo.talkfunnel.com/2017/" class="button regular-prose dark" target="_blank">Propose a talk</a>
+              {% endif %}
             </div>
           </div>
         </div>
