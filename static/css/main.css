@@ -2522,87 +2522,88 @@ header .logo {
   font-style: italic;
   margin: 0;
   padding: 0 .5rem 0 1rem;
+  font-size: 17px;
 }
 
-/* line 469, ../scss/_objects.scss */
+/* line 470, ../scss/_objects.scss */
 .video-thumbnails > li {
   float: left !important;
   width: 50% !important;
 }
 
 @media (max-width: 767px) {
-  /* line 475, ../scss/_objects.scss */
+  /* line 476, ../scss/_objects.scss */
   .video-thumbnails > li:nth-child(odd) {
     clear: both;
   }
 
-  /* line 476, ../scss/_objects.scss */
+  /* line 477, ../scss/_objects.scss */
   .video-thumbnails > li:nth-child(even) {
     float: right !important;
   }
 }
 @media (min-width: 768px) {
-  /* line 480, ../scss/_objects.scss */
+  /* line 481, ../scss/_objects.scss */
   .video-thumbnails > li {
     width: 25% !important;
     margin: 0 !important;
   }
 
-  /* line 481, ../scss/_objects.scss */
+  /* line 482, ../scss/_objects.scss */
   .video-thumbnail h4,
   .video-thumbnail h5 {
     padding: 0 1rem 0 1rem;
     max-width: 300px;
   }
 }
-/* line 485, ../scss/_objects.scss */
+/* line 486, ../scss/_objects.scss */
 .sponsor-website {
   word-break: break-all;
 }
 
-/* line 488, ../scss/_objects.scss */
+/* line 489, ../scss/_objects.scss */
 .sponsor-m > li {
   float: left !important;
   width: 48.5% !important;
   margin-left: 3%;
 }
 
-/* line 493, ../scss/_objects.scss */
+/* line 494, ../scss/_objects.scss */
 .sponsor-m > li:nth-child(odd) {
   margin-left: 0;
 }
 
-/* line 495, ../scss/_objects.scss */
+/* line 496, ../scss/_objects.scss */
 .sponsor-s > li {
   float: left !important;
   width: 32% !important;
   margin-left: 2%;
 }
 
-/* line 500, ../scss/_objects.scss */
+/* line 501, ../scss/_objects.scss */
 .sponsor-s > li:nth-child(3n+1) {
   margin-left: 0;
 }
 
-/* line 502, ../scss/_objects.scss */
+/* line 503, ../scss/_objects.scss */
 .sponsor-compact {
   border-radius: 0.25em;
   background-color: white;
 }
 
-/* line 503, ../scss/_objects.scss */
+/* line 504, ../scss/_objects.scss */
 .sponsor-compact > li {
   float: left !important;
   margin-bottom: 0 !important;
   width: 33.3333% !important;
 }
 
-/* line 508, ../scss/_objects.scss */
+/* line 509, ../scss/_objects.scss */
 .sponsor-compact > li:nth-child(3n+1) {
   margin-left: 0;
 }
 
-/* line 510, ../scss/_objects.scss */
+/* line 511, ../scss/_objects.scss */
 .sponsorlogo {
   text-align: center;
   border-radius: 0.25rem;
@@ -2611,110 +2612,110 @@ header .logo {
   padding: .84rem;
 }
 
-/* line 511, ../scss/_objects.scss */
+/* line 512, ../scss/_objects.scss */
 .sponsorlogo:hover {
   background-color: #CFE2E0 !important;
 }
 
-/* line 512, ../scss/_objects.scss */
+/* line 513, ../scss/_objects.scss */
 .sponsorlogo img {
   max-height: 100%;
   width: auto;
 }
 
-/* line 513, ../scss/_objects.scss */
+/* line 514, ../scss/_objects.scss */
 .sponsors .sponsorlogo {
   width: 100%;
 }
-/* line 515, ../scss/_objects.scss */
+/* line 516, ../scss/_objects.scss */
 .sponsors .sponsorlogo img {
   height: auto;
   max-width: 100%;
 }
 
-/* line 518, ../scss/_objects.scss */
+/* line 519, ../scss/_objects.scss */
 .sponsor-xl .sponsorlogo {
   height: 6.67rem;
   line-height: 4rem;
   padding: 1.34rem;
 }
 
-/* line 519, ../scss/_objects.scss */
+/* line 520, ../scss/_objects.scss */
 .sponsor-l .sponsorlogo {
   height: 5.34rem;
   line-height: 3.35rem;
   padding: .84rem;
 }
 
-/* line 520, ../scss/_objects.scss */
+/* line 521, ../scss/_objects.scss */
 .sponsor-m .sponsorlogo {
   height: 5.34rem;
   line-height: 2.68rem;
   padding: 1.34rem;
 }
 
-/* line 521, ../scss/_objects.scss */
+/* line 522, ../scss/_objects.scss */
 .sponsor-s .sponsorlogo {
   height: 4rem;
   line-height: 2rem;
   padding: .84rem;
 }
 
-/* line 522, ../scss/_objects.scss */
+/* line 523, ../scss/_objects.scss */
 .sponsor-compact .sponsorlogo {
   height: 4rem;
   line-height: 2rem;
   padding: .84rem;
 }
 
-/* line 524, ../scss/_objects.scss */
+/* line 525, ../scss/_objects.scss */
 .sponsor-xl .sponsorlogo.contain-width {
   padding: 1.34rem 3rem;
 }
 
-/* line 525, ../scss/_objects.scss */
+/* line 526, ../scss/_objects.scss */
 .sponsor-l .sponsorlogo.contain-width {
   padding: .84rem 4rem;
 }
 
-/* line 527, ../scss/_objects.scss */
+/* line 528, ../scss/_objects.scss */
 .sponsor-m .sponsorlogo.contain-height {
   padding: 0.5rem;
 }
 
-/* line 529, ../scss/_objects.scss */
+/* line 530, ../scss/_objects.scss */
 .credits .row-fluid .offset1 {
   margin-left: 8.51063829787234%;
   *margin-left: 8.404255319148938%;
 }
 
 @media (min-width: 1200px) {
-  /* line 535, ../scss/_objects.scss */
+  /* line 536, ../scss/_objects.scss */
   .credits .row-fluid .offset1 {
     margin-left: 8.547008547008547%;
     *margin-left: 8.440625568285142%;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
-  /* line 541, ../scss/_objects.scss */
+  /* line 542, ../scss/_objects.scss */
   .credits .row-fluid .offset1 {
     margin-left: 8.56353591160221%;
     *margin-left: 8.457152932878806%;
   }
 }
 @media (max-width: 767px) {
-  /* line 547, ../scss/_objects.scss */
+  /* line 548, ../scss/_objects.scss */
   .credits .row-fluid [class*="span"] {
     margin-right: 0;
     margin-left: 0;
   }
 
-  /* line 551, ../scss/_objects.scss */
+  /* line 552, ../scss/_objects.scss */
   .credits .row-fluid .offset1 {
     margin-left: 0;
   }
 }
-/* line 554, ../scss/_objects.scss */
+/* line 555, ../scss/_objects.scss */
 .hasgeek-logo {
   background: url(../img/hasgeek-logo.png) no-repeat scroll center center;
   width: 130px;
@@ -2723,23 +2724,23 @@ header .logo {
   border-radius: 30px 30px 30px 0;
 }
 
-/* line 561, ../scss/_objects.scss */
+/* line 562, ../scss/_objects.scss */
 a.hasgeek-logo:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* line 563, ../scss/_objects.scss */
+/* line 564, ../scss/_objects.scss */
 .nav-tabs {
   border-bottom: 1px solid rgba(222, 214, 194, 0.15);
 }
 
-/* line 566, ../scss/_objects.scss */
+/* line 567, ../scss/_objects.scss */
 .nav-tabs > li > a, .nav-tabs > li > a:hover {
   background-color: rgba(222, 214, 194, 0.4);
   color: #333;
 }
 
-/* line 570, ../scss/_objects.scss */
+/* line 571, ../scss/_objects.scss */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   background-color: rgba(222, 214, 194, 0.15);
   border-color: rgba(222, 214, 194, 0.45);
@@ -2747,26 +2748,26 @@ a.hasgeek-logo:hover {
   color: #CF6F01;
 }
 
-/* line 576, ../scss/_objects.scss */
+/* line 577, ../scss/_objects.scss */
 .nav-tabs > li:last-child > a {
   margin-right: 0;
 }
 
-/* line 579, ../scss/_objects.scss */
+/* line 580, ../scss/_objects.scss */
 .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
   background-color: rgba(207, 111, 1, 0.1);
   border-color: rgba(222, 214, 194, 0.45);
   color: #000;
 }
 
-/* line 585, ../scss/_objects.scss */
+/* line 586, ../scss/_objects.scss */
 .img-wrapper {
   width: 100%;
   overflow: hidden;
   height: 250px;
 }
 
-/* line 591, ../scss/_objects.scss */
+/* line 592, ../scss/_objects.scss */
 .navbar-fixed-top {
   width: 50%;
   right: 0;
@@ -2774,49 +2775,49 @@ a.hasgeek-logo:hover {
 }
 
 @media screen and (max-width: 30em) {
-  /* line 598, ../scss/_objects.scss */
+  /* line 599, ../scss/_objects.scss */
   nav.navbar > ul > li.inline-block {
     display: block;
   }
 
-  /* line 601, ../scss/_objects.scss */
+  /* line 602, ../scss/_objects.scss */
   nav.navbar > ul > li.space-two-top {
     margin-top: 0;
   }
 
-  /* line 604, ../scss/_objects.scss */
+  /* line 605, ../scss/_objects.scss */
   nav.navbar > ul > li.gap-3q-left {
     margin-left: 0 !important;
   }
 
-  /* line 607, ../scss/_objects.scss */
+  /* line 608, ../scss/_objects.scss */
   nav.navbar > ul > li {
     margin-top: 1em !important;
   }
 
-  /* line 610, ../scss/_objects.scss */
+  /* line 611, ../scss/_objects.scss */
   header .pull-right {
     float: left !important;
   }
 
-  /* line 613, ../scss/_objects.scss */
+  /* line 614, ../scss/_objects.scss */
   .nav-tabs > li > a, .nav-tabs > li > a:hover {
     font-size: 10px;
   }
 }
-/* line 617, ../scss/_objects.scss */
+/* line 618, ../scss/_objects.scss */
 .dropdown-menu {
   margin: 5px 0 0;
 }
 
-/* line 622, ../scss/_objects.scss */
+/* line 623, ../scss/_objects.scss */
 .featured-speakers .img-wrapper {
   height: 420px;
   width: 100%;
   position: relative;
   background-size: 100%;
 }
-/* line 628, ../scss/_objects.scss */
+/* line 629, ../scss/_objects.scss */
 .featured-speakers .speaker-meta {
   background-color: rgba(84, 158, 175, 0.7);
   color: #FFFFFF;
@@ -2826,7 +2827,7 @@ a.hasgeek-logo:hover {
   right: 0;
 }
 
-/* line 639, ../scss/_objects.scss */
+/* line 640, ../scss/_objects.scss */
 .speaker-image {
   width: 80%;
   border-radius: 50%;
@@ -2834,12 +2835,12 @@ a.hasgeek-logo:hover {
 }
 
 @media (min-width: 480px) {
-  /* line 645, ../scss/_objects.scss */
+  /* line 646, ../scss/_objects.scss */
   .speaker-image {
     width: 60%;
   }
 }
-/* line 649, ../scss/_objects.scss */
+/* line 650, ../scss/_objects.scss */
 .speaker-list {
   float: none;
   display: inline-block;
@@ -2847,26 +2848,26 @@ a.hasgeek-logo:hover {
   vertical-align: top;
 }
 
-/* line 655, ../scss/_objects.scss */
+/* line 656, ../scss/_objects.scss */
 .speaker-list {
   word-wrap: break-word;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 660, ../scss/_objects.scss */
+  /* line 661, ../scss/_objects.scss */
   .featured-speakers ul li:nth-child(3) {
     float: none;
     margin: auto;
   }
 }
-/* line 665, ../scss/_objects.scss */
+/* line 666, ../scss/_objects.scss */
 .speaker-photo {
   max-width: 250px;
   border-radius: 50%;
   border: 4px solid #CF6F01;
 }
 
-/* line 670, ../scss/_objects.scss */
+/* line 671, ../scss/_objects.scss */
 .speaker-photo-small {
   float: left;
   width: 40%;
@@ -2874,31 +2875,31 @@ a.hasgeek-logo:hover {
   max-width: auto;
 }
 
-/* line 676, ../scss/_objects.scss */
+/* line 677, ../scss/_objects.scss */
 .preview-photos {
   margin: 1% 1% 0 0;
   max-width: 48%;
 }
 
-/* line 680, ../scss/_objects.scss */
+/* line 681, ../scss/_objects.scss */
 .session:nth-child(odd) {
   background-color: #fff;
   color: #333;
 }
 
-/* line 684, ../scss/_objects.scss */
+/* line 685, ../scss/_objects.scss */
 .session-links {
   word-break: break-all;
 }
 
 @media (min-width: 768px) {
-  /* line 688, ../scss/_objects.scss */
+  /* line 689, ../scss/_objects.scss */
   .preview-photos {
     margin: 10px 1% 0 0;
     max-width: 24%;
   }
 }
-/* line 693, ../scss/_objects.scss */
+/* line 694, ../scss/_objects.scss */
 #runup-events-cards {
   padding: 0;
   float: none;
@@ -2907,7 +2908,7 @@ a.hasgeek-logo:hover {
   width: 96%;
 }
 
-/* line 700, ../scss/_objects.scss */
+/* line 701, ../scss/_objects.scss */
 .event-node {
   display: block;
   border: 1px solid #A1DADB;
@@ -2917,62 +2918,62 @@ a.hasgeek-logo:hover {
 }
 
 @media (max-width: 767px) {
-  /* line 708, ../scss/_objects.scss */
+  /* line 709, ../scss/_objects.scss */
   .event-node {
     height: 150px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 713, ../scss/_objects.scss */
+  /* line 714, ../scss/_objects.scss */
   .event-node {
     height: 300px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 718, ../scss/_objects.scss */
+  /* line 719, ../scss/_objects.scss */
   .event-node {
     height: 250px;
   }
 }
-/* line 723, ../scss/_objects.scss */
+/* line 724, ../scss/_objects.scss */
 #workshops table th:first-child, .runup-event table th:first-child {
   width: 12em;
 }
-/* line 726, ../scss/_objects.scss */
+/* line 727, ../scss/_objects.scss */
 #workshops table td, .runup-event table td {
   padding-left: 1em;
   padding-right: 1em;
 }
-/* line 729, ../scss/_objects.scss */
+/* line 730, ../scss/_objects.scss */
 #workshops table td h3, .runup-event table td h3 {
   color: #549EAF;
   padding-top: 0.8em;
 }
-/* line 733, ../scss/_objects.scss */
+/* line 734, ../scss/_objects.scss */
 #workshops table td h5, .runup-event table td h5 {
   font-size: 1em;
   padding: 0.3em;
 }
-/* line 736, ../scss/_objects.scss */
+/* line 737, ../scss/_objects.scss */
 #workshops table td h5 a, .runup-event table td h5 a {
   border-bottom: none;
 }
-/* line 740, ../scss/_objects.scss */
+/* line 741, ../scss/_objects.scss */
 #workshops table td p, #workshops table td ul, #workshops table td ol, .runup-event table td p, .runup-event table td ul, .runup-event table td ol {
   font-size: 0.8em;
   padding-bottom: 1em;
 }
-/* line 744, ../scss/_objects.scss */
+/* line 745, ../scss/_objects.scss */
 #workshops table td ul, #workshops table td ol, .runup-event table td ul, .runup-event table td ol {
   text-align: left;
 }
 
-/* line 749, ../scss/_objects.scss */
+/* line 750, ../scss/_objects.scss */
 .fill-primary.table-bordered > thead > tr > th, .fill-primary.table-bordered > tbody > tr > th, .fill-primary.table-bordered > tfoot > tr > th, .fill-primary.table-bordered > thead > tr > td, .fill-primary.table-bordered > tbody > tr > td, .fill-primary.table-bordered > tfoot > tr > td {
   border: 1px solid #549EAF;
 }
 
-/* line 755, ../scss/_objects.scss */
+/* line 756, ../scss/_objects.scss */
 .cbp_tmtimeline {
   margin: 30px 0 0 0;
   padding: 0;
@@ -2980,7 +2981,7 @@ a.hasgeek-logo:hover {
   position: relative;
 }
 
-/* line 762, ../scss/_objects.scss */
+/* line 763, ../scss/_objects.scss */
 .cbp_tmtimeline .col-md-3 img {
   border-radius: 50%;
   overflow: hidden;
@@ -2988,7 +2989,7 @@ a.hasgeek-logo:hover {
 }
 
 /* The line */
-/* line 769, ../scss/_objects.scss */
+/* line 770, ../scss/_objects.scss */
 .cbp_tmtimeline:before {
   content: '';
   position: absolute;
@@ -3000,13 +3001,13 @@ a.hasgeek-logo:hover {
   margin-left: -8px;
 }
 
-/* line 779, ../scss/_objects.scss */
+/* line 780, ../scss/_objects.scss */
 .fill-primary .cbp_tmtimeline:before {
   background: #252C52;
 }
 
 /* The date/time */
-/* line 784, ../scss/_objects.scss */
+/* line 785, ../scss/_objects.scss */
 .cbp_tmtimeline > li .cbp_tmtime {
   display: block;
   width: 20%;
@@ -3016,24 +3017,24 @@ a.hasgeek-logo:hover {
   padding-top: 3px;
 }
 
-/* line 793, ../scss/_objects.scss */
+/* line 794, ../scss/_objects.scss */
 .cbp_tmtimeline > li .cbp_tmtime span {
   text-align: right;
 }
 
-/* line 797, ../scss/_objects.scss */
+/* line 798, ../scss/_objects.scss */
 .cbp_tmtimeline > li .cbp_tmtime span:last-child {
   font-size: 0.9em;
   color: #bdd0db;
 }
 
-/* line 802, ../scss/_objects.scss */
+/* line 803, ../scss/_objects.scss */
 .cbp_tmtimeline > li .cbp_tmtime span:first-child {
   font-size: 1.5em;
 }
 
 /* Right content */
-/* line 809, ../scss/_objects.scss */
+/* line 810, ../scss/_objects.scss */
 .cbp_tmtimeline > li .cbp_tmlabel {
   margin: 0 0 15px 20%;
   padding: 0.5em 2em;
@@ -3044,7 +3045,7 @@ a.hasgeek-logo:hover {
   border-radius: 5px;
 }
 
-/* line 825, ../scss/_objects.scss */
+/* line 826, ../scss/_objects.scss */
 .cbp_tmtimeline > li .cbp_tmlabel h2 {
   margin-top: 0px;
   padding: 0 0 10px 0;
@@ -3053,7 +3054,7 @@ a.hasgeek-logo:hover {
 
 /* The triangle */
 /* The icons */
-/* line 850, ../scss/_objects.scss */
+/* line 851, ../scss/_objects.scss */
 .cbp_tmtimeline > li .cbp_tmicon {
   width: 12px;
   height: 12px;
@@ -3075,7 +3076,7 @@ a.hasgeek-logo:hover {
   margin: 12px 0 0 -10px;
 }
 
-/* line 871, ../scss/_objects.scss */
+/* line 872, ../scss/_objects.scss */
 .fill-primary .cbp_tmtimeline > li .cbp_tmicon {
   background: #2E3661;
   box-shadow: 0 0 0 5px #252C52;
@@ -3083,24 +3084,24 @@ a.hasgeek-logo:hover {
 
 /* Example Media Queries */
 @media screen and (max-width: 991px) {
-  /* line 879, ../scss/_objects.scss */
+  /* line 880, ../scss/_objects.scss */
   .cbp_tmtimeline > li .cbp_tmtime span:first-child {
     font-size: 1.4em;
   }
 
-  /* line 882, ../scss/_objects.scss */
+  /* line 883, ../scss/_objects.scss */
   .cbp_tmtimeline > li .cbp_tmtime {
     left: 40px;
   }
 }
 /* Site Navbar */
-/* line 888, ../scss/_objects.scss */
+/* line 889, ../scss/_objects.scss */
 .site-navbar {
   background-color: #000F36;
   padding: 0;
 }
 
-/* line 892, ../scss/_objects.scss */
+/* line 893, ../scss/_objects.scss */
 .nav-fixed {
   position: fixed;
   top: 0;
@@ -3109,7 +3110,7 @@ a.hasgeek-logo:hover {
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
 }
 
-/* line 899, ../scss/_objects.scss */
+/* line 900, ../scss/_objects.scss */
 .phone-menu h1 {
   float: left;
   margin: 0;
@@ -3117,12 +3118,12 @@ a.hasgeek-logo:hover {
   line-height: 1;
 }
 
-/* line 905, ../scss/_objects.scss */
+/* line 906, ../scss/_objects.scss */
 .phone-menu h1 img {
   width: 40px;
 }
 
-/* line 908, ../scss/_objects.scss */
+/* line 909, ../scss/_objects.scss */
 .menu {
   float: right;
   margin: 0;
@@ -3131,12 +3132,12 @@ a.hasgeek-logo:hover {
   cursor: pointer;
 }
 
-/* line 915, ../scss/_objects.scss */
+/* line 916, ../scss/_objects.scss */
 .no-js .menu {
   display: none;
 }
 
-/* line 918, ../scss/_objects.scss */
+/* line 919, ../scss/_objects.scss */
 .site-navbar nav {
   position: absolute;
   right: 0;
@@ -3146,19 +3147,19 @@ a.hasgeek-logo:hover {
   text-align: center;
 }
 
-/* line 926, ../scss/_objects.scss */
+/* line 927, ../scss/_objects.scss */
 .site-navbar nav.off {
   display: none;
 }
 
-/* line 929, ../scss/_objects.scss */
+/* line 930, ../scss/_objects.scss */
 .site-navbar nav ul {
   padding: 0;
   margin: 0 auto;
   list-style: none;
 }
 
-/* line 934, ../scss/_objects.scss */
+/* line 935, ../scss/_objects.scss */
 .site-navbar nav ul li a {
   display: block;
   padding: 5px 10px;
@@ -3167,23 +3168,23 @@ a.hasgeek-logo:hover {
   border-bottom: 2px solid #aaa;
 }
 
-/* line 941, ../scss/_objects.scss */
+/* line 942, ../scss/_objects.scss */
 .site-navbar a:focus, .site-navbar a:active {
   outline: none;
 }
 
 @media (min-width: 992px) {
-  /* line 946, ../scss/_objects.scss */
+  /* line 947, ../scss/_objects.scss */
   .site-navbar {
     background-color: #549EAF;
   }
 
-  /* line 949, ../scss/_objects.scss */
+  /* line 950, ../scss/_objects.scss */
   .site-navbar .phone-menu {
     display: none;
   }
 
-  /* line 952, ../scss/_objects.scss */
+  /* line 953, ../scss/_objects.scss */
   .site-navbar nav {
     display: block !important;
     position: static;
@@ -3191,7 +3192,7 @@ a.hasgeek-logo:hover {
     color: #333;
   }
 
-  /* line 958, ../scss/_objects.scss */
+  /* line 959, ../scss/_objects.scss */
   .site-navbar nav ul li {
     float: none;
     display: inline-block;
@@ -3200,7 +3201,7 @@ a.hasgeek-logo:hover {
     width: auto;
   }
 
-  /* line 965, ../scss/_objects.scss */
+  /* line 966, ../scss/_objects.scss */
   .site-navbar nav ul li a {
     width: 100%;
     font-size: 13px;
@@ -3210,36 +3211,36 @@ a.hasgeek-logo:hover {
     border-bottom: 0;
   }
 
-  /* line 973, ../scss/_objects.scss */
+  /* line 974, ../scss/_objects.scss */
   .site-navbar nav ul li:first-child a {
     border-left: 2px solid #aaa;
   }
 
-  /* line 976, ../scss/_objects.scss */
+  /* line 977, ../scss/_objects.scss */
   .site-navbar nav ul li:last-child a {
     border-right: 2px solid #aaa;
   }
 }
 @media (min-width: 1200px) {
-  /* line 982, ../scss/_objects.scss */
+  /* line 983, ../scss/_objects.scss */
   .site-navbar nav ul li a {
     font-size: 15px;
     padding: 0.6rem;
   }
 
-  /* line 986, ../scss/_objects.scss */
+  /* line 987, ../scss/_objects.scss */
   .nav-fixed.site-navbar nav ul li a {
     padding: 10px 0.6rem;
   }
 }
 @media (min-width: 1400px) {
-  /* line 992, ../scss/_objects.scss */
+  /* line 993, ../scss/_objects.scss */
   .site-navbar nav ul li a {
     font-size: 17px;
     padding: 0.6rem;
   }
 }
-/* line 998, ../scss/_objects.scss */
+/* line 999, ../scss/_objects.scss */
 .startupraid-logo {
   width: 50%;
   max-width: 200px;
@@ -3248,20 +3249,20 @@ a.hasgeek-logo:hover {
 }
 
 /* Schedule */
-/* line 1006, ../scss/_objects.scss */
+/* line 1007, ../scss/_objects.scss */
 .schedule-container {
   max-width: 1000px;
   margin: auto;
 }
 
-/* line 1007, ../scss/_objects.scss */
+/* line 1008, ../scss/_objects.scss */
 .schedule-table {
   background-color: transparent;
   border-collapse: separate;
   height: 100%;
 }
 
-/* line 1009, ../scss/_objects.scss */
+/* line 1010, ../scss/_objects.scss */
 .schedule-table thead th.time {
   width: 12%;
   background-color: transparent;
@@ -3271,7 +3272,7 @@ a.hasgeek-logo:hover {
   border-width: 0 5px 10px 0;
 }
 
-/* line 1017, ../scss/_objects.scss */
+/* line 1018, ../scss/_objects.scss */
 .schedule-table thead th.time div {
   color: #fff;
   background-color: #826995;
@@ -3282,7 +3283,7 @@ a.hasgeek-logo:hover {
   height: 65px;
 }
 
-/* line 1026, ../scss/_objects.scss */
+/* line 1027, ../scss/_objects.scss */
 .schedule-table th.track0,
 .schedule-table th.track1,
 .schedule-table th.track2 {
@@ -3293,12 +3294,12 @@ a.hasgeek-logo:hover {
   padding: 0;
 }
 
-/* line 1035, ../scss/_objects.scss */
+/* line 1036, ../scss/_objects.scss */
 .schedule-table th.track1 {
   border-width: 0 0 10px;
 }
 
-/* line 1038, ../scss/_objects.scss */
+/* line 1039, ../scss/_objects.scss */
 .schedule-table th.track0 div,
 .schedule-table th.track1 div,
 .schedule-table th.track2 div {
@@ -3314,7 +3315,7 @@ a.hasgeek-logo:hover {
   overflow: hidden;
 }
 
-/* line 1052, ../scss/_objects.scss */
+/* line 1053, ../scss/_objects.scss */
 .schedule-table th.track0.tab-active div,
 .schedule-table th.track1.tab-active div,
 .schedule-table th.track2.tab-active div {
@@ -3322,7 +3323,7 @@ a.hasgeek-logo:hover {
 }
 
 @media (min-width: 480px) {
-  /* line 1058, ../scss/_objects.scss */
+  /* line 1059, ../scss/_objects.scss */
   .schedule-table thead th.time div,
   .schedule-table th.track0 div,
   .schedule-table th.track1 div,
@@ -3331,18 +3332,18 @@ a.hasgeek-logo:hover {
     font-size: inherit;
   }
 }
-/* line 1066, ../scss/_objects.scss */
+/* line 1067, ../scss/_objects.scss */
 .schedule-table th.tab-active {
   color: #FFF;
   background-color: transparent;
 }
 
-/* line 1067, ../scss/_objects.scss */
+/* line 1068, ../scss/_objects.scss */
 .schedule-table tbody {
   height: 100%;
 }
 
-/* line 1068, ../scss/_objects.scss */
+/* line 1069, ../scss/_objects.scss */
 .schedule-table tbody td {
   display: none;
   vertical-align: top;
@@ -3350,12 +3351,12 @@ a.hasgeek-logo:hover {
   height: 100%;
 }
 
-/* line 1074, ../scss/_objects.scss */
+/* line 1075, ../scss/_objects.scss */
 .schedule-table tbody tr:nth-last-child(2) td.time-hide:last-child {
   border-bottom: transparent;
 }
 
-/* line 1077, ../scss/_objects.scss */
+/* line 1078, ../scss/_objects.scss */
 .schedule-table tbody td.time {
   display: table-cell;
   color: #826995;
@@ -3371,7 +3372,7 @@ a.hasgeek-logo:hover {
   position: relative;
 }
 
-/* line 1091, ../scss/_objects.scss */
+/* line 1092, ../scss/_objects.scss */
 .schedule-table tbody td.time .time-text {
   line-height: 1;
   padding: 0;
@@ -3379,7 +3380,7 @@ a.hasgeek-logo:hover {
   font-size: 17px;
 }
 
-/* line 1097, ../scss/_objects.scss */
+/* line 1098, ../scss/_objects.scss */
 .schedule-table .time-icon {
   width: 6px;
   height: 6px;
@@ -3391,19 +3392,19 @@ a.hasgeek-logo:hover {
   margin: 4px 0;
 }
 
-/* line 1107, ../scss/_objects.scss */
+/* line 1108, ../scss/_objects.scss */
 .schedule-table tbody td.time-hide {
   padding: 0;
   background-color: transparent;
   border-bottom: 1px solid #ccc;
 }
 
-/* line 1112, ../scss/_objects.scss */
+/* line 1113, ../scss/_objects.scss */
 .schedule-table tbody td.time-hide .time-text {
   visibility: hidden;
 }
 
-/* line 1115, ../scss/_objects.scss */
+/* line 1116, ../scss/_objects.scss */
 .schedule-table tbody td.centered {
   background-color: transparent;
   display: table-cell;
@@ -3413,7 +3414,7 @@ a.hasgeek-logo:hover {
   border-width: 5px 5px 5px 20px;
 }
 
-/* line 1123, ../scss/_objects.scss */
+/* line 1124, ../scss/_objects.scss */
 .schedule-table td.track-0 {
   width: 44%;
   background-color: transparent;
@@ -3423,7 +3424,7 @@ a.hasgeek-logo:hover {
   border-width: 5px 5px 5px 20px;
 }
 
-/* line 1131, ../scss/_objects.scss */
+/* line 1132, ../scss/_objects.scss */
 .schedule-table td.track-1 {
   width: 44%;
   background-color: transparent;
@@ -3433,7 +3434,7 @@ a.hasgeek-logo:hover {
   border-width: 5px 5px 5px 20px;
 }
 
-/* line 1139, ../scss/_objects.scss */
+/* line 1140, ../scss/_objects.scss */
 .schedule-table td.track-2 {
   width: 44%;
   background-color: transparent;
@@ -3443,7 +3444,7 @@ a.hasgeek-logo:hover {
   border-width: 5px 5px 5px 20px;
 }
 
-/* line 1147, ../scss/_objects.scss */
+/* line 1148, ../scss/_objects.scss */
 .schedule-table tbody td .content {
   padding: 0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
@@ -3453,68 +3454,68 @@ a.hasgeek-logo:hover {
   height: 100% !important;
 }
 
-/* line 1155, ../scss/_objects.scss */
+/* line 1156, ../scss/_objects.scss */
 .schedule-table tbody td.centered div {
   background-color: #2E3661;
   padding: 15px 0;
   color: #fff;
 }
 
-/* line 1160, ../scss/_objects.scss */
+/* line 1161, ../scss/_objects.scss */
 .schedule-table td.track-0 div {
   background-color: #A1DADB;
   color: #333;
 }
 
-/* line 1164, ../scss/_objects.scss */
+/* line 1165, ../scss/_objects.scss */
 .schedule-table td.track-1 div {
   background-color: #549EAF;
   color: #fff;
 }
 
-/* line 1168, ../scss/_objects.scss */
+/* line 1169, ../scss/_objects.scss */
 .schedule-table td.track-2 div {
   background-color: #549EAF;
   color: #fff;
 }
 
-/* line 1172, ../scss/_objects.scss */
+/* line 1173, ../scss/_objects.scss */
 .schedule-table tbody td h4 {
   margin: 0 !important;
   padding: 10px 10px 5px;
 }
 
-/* line 1176, ../scss/_objects.scss */
+/* line 1177, ../scss/_objects.scss */
 .schedule-table tbody td.track-1 h4 {
   padding-top: 8%;
 }
 
-/* line 1179, ../scss/_objects.scss */
+/* line 1180, ../scss/_objects.scss */
 .schedule-table tbody td p {
   margin: 0 !important;
   padding: 4px 10px 4px;
 }
 
-/* line 1183, ../scss/_objects.scss */
+/* line 1184, ../scss/_objects.scss */
 .schedule-table tbody td .title,
 .schedule-table tbody td .expand-icon {
   font-size: 17px;
   line-height: 1.3;
 }
 
-/* line 1188, ../scss/_objects.scss */
+/* line 1189, ../scss/_objects.scss */
 .schedule-table tbody td .speaker {
   font-size: 17px;
   text-transform: capitalize;
 }
 
-/* line 1192, ../scss/_objects.scss */
+/* line 1193, ../scss/_objects.scss */
 .schedule-table tbody td .duration {
   font-size: 17px;
   font-style: italic;
 }
 
-/* line 1196, ../scss/_objects.scss */
+/* line 1197, ../scss/_objects.scss */
 .schedule-table tbody td .venue {
   font-size: 14px;
   padding-bottom: 10px;
@@ -3522,96 +3523,96 @@ a.hasgeek-logo:hover {
   font-style: italics;
 }
 
-/* line 1202, ../scss/_objects.scss */
+/* line 1203, ../scss/_objects.scss */
 .schedule-table tbody td .description-text {
   padding: 2px 5px;
   font-size: 14px;
   color: #000;
 }
 
-/* line 1207, ../scss/_objects.scss */
+/* line 1208, ../scss/_objects.scss */
 .schedule-table tbody td .description-text ul {
   padding-left: 10px;
 }
 
-/* line 1210, ../scss/_objects.scss */
+/* line 1211, ../scss/_objects.scss */
 .schedule-table tbody td.tab-active {
   display: table-cell;
 }
 
-/* line 1212, ../scss/_objects.scss */
+/* line 1213, ../scss/_objects.scss */
 .js .funnel-schedule-link,
 .js .schedule-table .description-text,
 .js .schedule-table .description-text.show-text {
   display: none;
 }
 
-/* line 1217, ../scss/_objects.scss */
+/* line 1218, ../scss/_objects.scss */
 .no-js .schedule-table .js-expand {
   display: none;
 }
 
-/* line 1220, ../scss/_objects.scss */
+/* line 1221, ../scss/_objects.scss */
 .schedule-table .js-expand {
   cursor: pointer;
   margin: 0 5px;
 }
 
-/* line 1224, ../scss/_objects.scss */
+/* line 1225, ../scss/_objects.scss */
 .schedule-table .expand {
   display: block;
 }
 
 @media (max-width: 479px) {
-  /* line 1227, ../scss/_objects.scss */
+  /* line 1228, ../scss/_objects.scss */
   .schedule-table tbody td h4 {
     font-size: .8rem;
   }
 
-  /* line 1230, ../scss/_objects.scss */
+  /* line 1231, ../scss/_objects.scss */
   .schedule-table tbody td p {
     font-size: .6rem;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 1235, ../scss/_objects.scss */
+  /* line 1236, ../scss/_objects.scss */
   .schedule-table thead th.time {
     width: 12%;
     display: none;
   }
 
-  /* line 1239, ../scss/_objects.scss */
+  /* line 1240, ../scss/_objects.scss */
   .schedule-table thead th.track0 {
     width: 50%;
     display: none;
   }
 
-  /* line 1243, ../scss/_objects.scss */
+  /* line 1244, ../scss/_objects.scss */
   .schedule-table thead th.track1 {
     width: 30%;
     display: none;
   }
 
-  /* line 1247, ../scss/_objects.scss */
+  /* line 1248, ../scss/_objects.scss */
   .schedule-table thead th.track2 {
     width: 8%;
     display: none;
   }
 
-  /* line 1251, ../scss/_objects.scss */
+  /* line 1252, ../scss/_objects.scss */
   .schedule-table tbody td.time {
     width: 12%;
     padding: 5px 10px 1rem 1rem;
   }
 
-  /* line 1255, ../scss/_objects.scss */
+  /* line 1256, ../scss/_objects.scss */
   .schedule-table td.track-0 {
     width: 40%;
     background-color: transparent;
     display: table-cell;
   }
 
-  /* line 1260, ../scss/_objects.scss */
+  /* line 1261, ../scss/_objects.scss */
   .schedule-table td.track-1 {
     width: 25%;
     background-color: transparent;
@@ -3619,7 +3620,7 @@ a.hasgeek-logo:hover {
     border-width: 5px;
   }
 
-  /* line 1266, ../scss/_objects.scss */
+  /* line 1267, ../scss/_objects.scss */
   .schedule-table td.track-2 {
     width: 23%;
     background-color: transparent;
@@ -3627,7 +3628,7 @@ a.hasgeek-logo:hover {
     border-width: 5px;
   }
 
-  /* line 1272, ../scss/_objects.scss */
+  /* line 1273, ../scss/_objects.scss */
   .schedule-table td.track-empty {
     width: 34%;
     background-color: transparent;
@@ -3635,23 +3636,23 @@ a.hasgeek-logo:hover {
     border: none;
   }
 
-  /* line 1278, ../scss/_objects.scss */
+  /* line 1279, ../scss/_objects.scss */
   .schedule-table td.track-empty .content {
     box-shadow: none;
   }
 
-  /* line 1281, ../scss/_objects.scss */
+  /* line 1282, ../scss/_objects.scss */
   .schedule-table .js-expand {
     display: inline-block;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 1286, ../scss/_objects.scss */
+  /* line 1287, ../scss/_objects.scss */
   .schedule-table tbody td.time .time-text {
     font-size: 20px;
   }
 
-  /* line 1289, ../scss/_objects.scss */
+  /* line 1290, ../scss/_objects.scss */
   .schedule-table .time-icon {
     width: 12px;
     height: 12px;
@@ -3659,29 +3660,29 @@ a.hasgeek-logo:hover {
     right: -7px;
   }
 
-  /* line 1295, ../scss/_objects.scss */
+  /* line 1296, ../scss/_objects.scss */
   .schedule-table tbody td .title,
   .schedule-table tbody td .expand-icon {
     font-size: 20px;
   }
 
-  /* line 1299, ../scss/_objects.scss */
+  /* line 1300, ../scss/_objects.scss */
   .schedule-table tbody td .speaker {
     font-size: 18px;
     font-weight: bold;
   }
 
-  /* line 1303, ../scss/_objects.scss */
+  /* line 1304, ../scss/_objects.scss */
   .schedule-table tbody td .duration {
     font-size: 14px;
   }
 
-  /* line 1306, ../scss/_objects.scss */
+  /* line 1307, ../scss/_objects.scss */
   .schedule-table tbody td .venue {
     font-size: 14px;
   }
 
-  /* line 1309, ../scss/_objects.scss */
+  /* line 1310, ../scss/_objects.scss */
   .schedule-table tbody td .description-text {
     font-size: 14px;
   }

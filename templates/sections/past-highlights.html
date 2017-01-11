@@ -18,7 +18,7 @@
       </div>
     </div>
   </div>
-  <div class="clearboth push-three-top push-two-bottom">
+  <div class="clearboth push-three-top push-half-bottom">
     <ul class="nospace-bottom contain-width list-space-line list-plain link-silent video-thumbnails clearfix">
       {% for talk in getnode(path='past-featured-talks').data['talks'] %}
         <li class="push-one-bottom text-center">
@@ -29,7 +29,7 @@
               </a>
             </p>
             <h4>
-              <a href="{{talk.video_url}}" target="_blank" data-label="{{talk.title}}" data-target="{{talk.video_url}}">
+              <a href="{{talk.video_url}}" class="orange" target="_blank" data-label="{{talk.title}}" data-target="{{talk.video_url}}">
                 {{talk.title}}
               </a>
             </h4>
