@@ -21,17 +21,17 @@
     <div class="row-fluid">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <h1 class="push-two-top push-one-bottom">
-          <a class="ir center-block logo" href="/2017">
-            JSFoo 2017
+          <a class="ir center-block logo" href="/">
+            {{ website.title }} {{ node.title }}
           </a>
         </h1>
         <div class="text-center heading-text">
           <h2 class="legible text1">{{ node.content }}</h2>
-          <h3 class="large text2">8&#8211;9 September 2017, Bangalore</h3>
+          <h3 class="large text2">{{ node.properties.date }}, {{ node.properties.venue }}</h3>
           {% if node.properties.buy_ticket %}
             <p class="space-one"><a href="#tickets" class="button regular-prose dark smooth-scroll">Buy tickets</a></p>
-          {% else %}
-            <p class="space-one"><a href="https://jsfoo.talkfunnel.com/2017/" class="button regular-prose dark" target="_blank">Propose a talk</a></p>
+          {% elif node.properties.propose_talk %}
+            <p class="space-one"><a href="{{ node.properties.propose_talk }}" class="button regular-prose dark" target="_blank">Propose a talk</a></p>
           {% endif %}
         </div>
       </div>
@@ -56,4 +56,31 @@
       </ul>
     </nav>
   </div>
+{% endblock %}
+
+{% block footerscripts %}
+<script>
+$(document).ready(function() {  
+  // For conference and workshop schedule
+  var funnelurl = {{ node.properties.propose_talk }} + "schedule/json";
+  //If schedule divs are present on the page, then make the ajax call.
+  if(($('.schedule-table-container').length)) {
+
+    if($('#jsfooconferenceschedule').length) {
+      funnelurl = jsfoofunnelurl;
+      divContainer = "#jsfooconferenceschedule";
+      eventType = "conference";
+    }
+
+    $.ajax({
+      type: 'GET',
+      dataType: 'jsonp',
+      url: funnelurl,
+      success: function(data) {
+        parseJson(data, eventType, divContainer);
+      }
+    });//eof ajax call
+  }
+});
+</script>
 {% endblock %}

@@ -355,28 +355,6 @@ $(document).ready(function() {
       $('.heading-text .ticket-btn, .heading-text .transfer-links').animate({top: 0}, 500);
     }, 500);
 
-     // For conference and workshop schedule
-  var jsfoofunnelurl = 'https://jsfoo.talkfunnel.com/2017/schedule/json';
-
-  //If schedule divs are present on the page, then make the ajax call.
-  if(($('.schedule-table-container').length)) {
-
-    if($('#jsfooconferenceschedule').length) {
-      funnelurl = jsfoofunnelurl;
-      divContainer = '#jsfooconferenceschedule';
-      eventType = 'conference';
-    }
-
-    $.ajax({
-      type: 'GET',
-      dataType: 'jsonp',
-      url: funnelurl,
-      success: function(data) {
-        parseJson(data, eventType, divContainer);
-      }
-    });//eof ajax call
-  }
-
   $(window).resize(function() {
     if($(window).width() < 768) {
       renderResponsiveTable();

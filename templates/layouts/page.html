@@ -80,8 +80,8 @@
     <div class="row-fluid space-half-bottom">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div id="cog" class="space-one-top">
-          <a class="push-two-top ir logo-small" href="/2017">
-            JSFoo 2017</a>
+          <a class="push-two-top ir logo-small" href="/">
+            {{ website.title }} {{ node.title }}</a>
         </div>
         <div class="row">
           <div class="col-sm-6">
@@ -111,9 +111,9 @@
           <div class="col-sm-6">
             <div class="flushleft space-one center-xs">
               {% if node.properties.buy_ticket %}
-                <a href="#tickets" class="button regular-prose dark smooth-scroll">Buy tickets</a>
-              {% else %}
-                <a href="https://jsfoo.talkfunnel.com/2017/" class="button regular-prose dark" target="_blank">Propose a talk</a>
+                <a href="/#tickets" class="button regular-prose dark smooth-scroll">Buy tickets</a>
+              {% elif node.properties.propose_talk %}
+                <a href="{{ node.properties.propose_talk }}" class="button regular-prose dark" target="_blank">Propose a talk</a>
               {% endif %}
             </div>
           </div>
