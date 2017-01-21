@@ -1,0 +1,176 @@
+{% extends theme('layouts/page.html') %}
+{% from "baseframe/forms.html" import ajaxform %}
+{% set event = node %}
+
+{% set title = 'Run-up events' %}
+{% set description = node.description %}
+
+
+{% macro rsvp_form(node, form, waitlist=False, hascapacity=True, status='U') %}
+  <form id="rsvp" action="{{ node.url_for('rsvp') }}" class="form-inline" method="POST">
+    {{ form.hidden_tag() }}
+    {%- if status == 'U' %}
+      <p class="centered space-half">
+        {%- if waitlist %}
+          {%- if status in ['Y', 'M', 'W'] %}
+            <button name="status" value="N" class="button">Withdraw</button>
+          {%- endif %}
+          {%- if status in ['N', 'M', 'U'] %}
+            <button name="status" value="Y" class="button">Add to waiting list</button>
+          {%- endif %}
+        {%- else %}
+            {%- if hascapacity %}
+              <button name="status" value="Y" class="button">Yes</button>
+            {%- endif %}
+              <button name="status" value="N" class="button">No</button>
+            {%- if node.allow_maybe %}
+              <button name="status" value="M" class="button">Maybe</button>
+            {%- endif %}
+        {%- endif %}
+        <span class="loading hidden">&nbsp;</span>
+      </p>
+    {%- else %}
+      <p class="centered">
+        <span class="ultrafaded">Your status:</span>
+        {%- if status == 'Y' %} <span class="green">Attending</span>
+        {%- elif status == 'N' %} <span class="red">Not attending</span>
+        {%- elif status == 'M' %} <span class="blue">Maybe attending</span>
+        {%- elif status == 'W' %} <span class="orange">Wait-listed</span>
+        {% else %} Unknown {%- endif %}
+      </p>
+    {%- endif %}
+  </form>
+{% endmacro %}
+
+{% block content %}
+<section id="annoucement" class="push-one clearfix">
+  <div class="row-fluid container">
+    <div class="regular text-justify">
+      <h2>{{ event.title|safe }}</h2>
+      <div>{{ event.content }}</div>
+      <p>Date: {{ event.start_datetime.strftime('%d %B %Y') }}</p>
+      <p>Time: {{ event.start_datetime.strftime('%H:%M') }} - {{ event.end_datetime.strftime('%H:%M') }}</p>
+      <p>Venue: {{ event.location_name }}</p>
+      <p>{{ event.location_address }}</p>
+    </div>
+  </div>
+  <div class="container">
+    <article class="regular">
+      <h3 class="centered calm space-one">RSVP</h3>
+      <div class="center-block measure-8words">
+        <div class="box section">
+          {%- if g.user %}            
+            {%- if node.can_rsvp(g.user) %}
+              {%- with status = node.get_status(g.user) %}
+                {%- if node.has_capacity() %}
+                  <p>
+                    {% if node.capacity > 0 -%} The venue has limited capacity. {% endif -%}
+                    Will you be attending? Please RSVP to confirm your presence:
+                  </p>
+                  {{ rsvp_form(node, form, status=status) }}
+                {%- else %}
+                  {%- if node.allow_waitlisting %}
+                    <p>
+                      This session is fully booked, but you can place yourself in the wait list in case someone drops out.
+                    </p>
+                    {{ rsvp_form(node, form, waitlist=True, status=status) }}
+                  {%- else %}
+                    <p>This session is fully booked.</p>
+                    {%- if status in ['N', 'M'] %}
+                      {{ rsvp_form(node, form, hascapacity=False, status=status) }}
+                    {%- endif %}
+                  {%- endif %}
+                 {%- endif %}
+              {%- endwith %}
+            {%- else %}
+              <p>
+                We don’t have an email address on your profile matching your ticket.
+                Please <a href="https://auth.hasgeek.com/profile/email/new" target="_blank">add the email address</a>
+                you used when buying your ticket, <a href="{{ url_for('logout') }}">logout</a>
+                and <a href="{{ url_for('login') }}">login</a> again.
+              </p>
+            {%- endif %}
+          {%- else %}
+            <p>
+              {#{% if node.capacity > 0 -%} The venue has limited capacity. {% endif -%}#}
+              Interested in attending? Please login. You can use your existing Twitter or Google account, and if you have previously voted on a session proposal or attended a hacknight, you already have a HasGeek account.
+            </p>
+            <p class="centered">
+              <a href="{{ url_for('login') }}" class="button small-button">Login with Twitter, Google or HasGeek id</a>
+            </p>
+          {%- endif %}
+        </div>    
+      </div> 
+    </article>
+  </div>
+</section>
+
+{% set schedule = node.properties.schedule %}
+{% if schedule %}
+<section id="{{ schedule.id }}" class="schedule push-two clearfix fill-green">
+  <h4 class="text-left space-two legible text-center"><i class="fa fa-calendar"></i> {{ schedule.date }}</h4>
+  <table class="container">
+    <thead style="border-bottom: 1px solid #ccc">
+      <tr>
+        <th class="time semi-bold text-center regular"><div>Time</div></th>
+        <th class="time semi-bold text-center regular"><div>Track</div></th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for item in schedule.list %}
+      <tr style="border-bottom: 1px solid #ccc">
+        <td style="width:30%"><p class="regular text-center space-1q">{{ item.slot|replace(' ', '&nbsp;')|safe }}</p></td>
+        <td style="width:70%">
+          <p class="secondary text-center space-1q">{{ item.title|safe }}</p>
+          {% if item.speaker or item.designation %}
+            <p class="tiny text-center space-1q">{{ item.speaker|safe }}</p>
+            <p class="tiny text-center space-1q">{{ item.designation|safe }}</p>
+          {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endif %}
+
+{% set venue = node.map.items[0] %}
+{% if venue %}
+<section id="venue" class="venue push-two clearfix fill-blue">
+  <div class="container">
+    <div class="row">
+        <h2 class="text-center push-1q-bottom large all-caps">Venue</h2>
+    </div>
+    <div class="row">
+      <div class="pad-line">
+          <div class="legible-prose text-center">
+            <div class="regular-prose space-one">
+              <p class="legible semibold">{{ venue.title|safe }}</p>
+              <p class="legible">{{ node.properties.address|safe }}</p>
+            </div>
+          </div>
+      </div>
+      <div class="no-js-hidden space-one clearfix">
+          <h3 class="visuallyhidden">Map</h3>
+          <div class="legible-prose prose prose-type clearfix">
+              <div
+                class="border-one leaflet-map" id="toner" class="map"
+                data-label="{{ venue.title }}"
+                data-zoom="{{ venue.zoomlevel }}"
+                data-marker="{{ venue.marker }}">
+                <p class="text-center regular">Loading ...</p>
+              </div>
+          </div>
+      </div>
+
+      {% if venue.url %}
+      <div class="space-one text-center">
+        <p class="regular semibold"><a href="{{ venue.url|safe }}" class="button secondary dark heading"target="_blank">Find directions</a></p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}

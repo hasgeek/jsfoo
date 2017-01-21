@@ -1311,3 +1311,157 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
     font-size: 14px;
   }
 }
+
+/* -------------------------------------
+ * timeline
+ * ------------------------------------- */
+
+#htimeline{
+  list-style: none;
+  margin: 120px 0 0;
+  padding: 0;
+  border-top: 8px solid #E9F0F3;
+  display: table;
+  border-spacing: 30px 0;
+}
+#htimeline li{
+  display: table-cell;
+  width: 8%;
+  text-align: center;
+}
+#htimeline li .relative{
+  position: relative;
+}
+#htimeline p{
+  margin: 0 0 15px;
+}
+
+#htimeline .date{
+  text-align: center;
+  top: -55px;
+  left: 0;
+  right: 0;
+  font-size: 0.95em;
+  line-height: 20px;
+  position: absolute;
+}
+  
+#htimeline .circle{
+  margin: 0 auto;
+  top: -14px;
+  left: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background: #FFF;
+  border: 5px solid #E9F0F3;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+}
+
+#htimeline .content{
+  width: 100%;
+  margin-top: 20px;
+  vertical-align: top;
+  padding-top: 15px;
+  transition: width 0.4s linear, max-height 0.4s linear;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 0.5em;
+  border-color: #DCE8ED;
+  position: relative;
+  background-color: #F6F9FA;
+  color: #444;
+}
+#htimeline .content:before, .content:after{
+  content: "";
+  width: 0;
+  height: 0;
+  border: solid transparent;
+  position: absolute;
+  pointer-events: none;
+  bottom: 100%;
+}
+#htimeline .content:before{
+    border-bottom-color: inherit;
+    border-width: 15px;
+    left: 50%;
+    margin-left: -15px;
+  top: -30px;
+}
+#htimeline .content:after{
+  border-bottom-color: #F6F9FA;
+  border-width: 12px;
+  left: 50%;
+  margin-left: -12px;
+  top: -24px;
+}
+
+#htimeline label{
+  font-size: 1.3em;
+  position: absolute;
+  z-index: 100;
+  cursor: pointer;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+  top: 60px;
+}
+
+#htimeline .radio{
+  display: none;
+}
+#htimeline .radio:checked + .relative label{
+  cursor: auto;
+  width: 400px;
+  transition: width 0.3s linear 0.2s;
+}
+#htimeline .radio:checked + .relative .circle{
+  background: red;
+}
+#htimeline .radio:checked ~ .content{
+  border-color: #CCC;
+}
+#htimeline .radio:checked ~ .content p{
+  color: #ccc;
+  transition: color 0.3s linear 0.3s;
+}
+
+#htimeline .radio + .relative .circle {
+  background: #ccc;
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+#htimeline .radio.theme-red + .relative .circle {
+  background: #CB1D1E;
+}
+#htimeline .radio.theme-green + .relative .circle {
+  background: #73BD2C;
+}
+#htimeline .radio ~ .content {
+  border-color: #333;
+  transform: translateX(20px);
+  transition: max-height 0.4s linear, border-color 0.5s linear, transform 0.2s linear;
+}
+#htimeline .radio ~ .content p {
+  color: #333;
+  transition: color 0.3s linear 0.3s;
+}
+
+.fill-white #htimeline a:hover,
+.fill-white #htimeline a:focus {
+    color: #333;
+    border-color: inherit;
+}
+.fill-white #htimeline a:hover div.content,
+.fill-white #htimeline a:focus div.content{
+  background-color: #E9F0F3;
+}
+.fill-white #htimeline a:hover div.content:after,
+.fill-white #htimeline a:focus div.content:after{
+  border-bottom-color: #E9F0F3;
+}
