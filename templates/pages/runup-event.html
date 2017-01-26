@@ -54,6 +54,7 @@
       <p>{{ event.location_address }}</p>
     </div>
   </div>
+  {%- if not node.properties.rsvp %}
   <div class="container">
     <article class="regular">
       <h3 class="centered calm space-one">RSVP</h3>
@@ -103,6 +104,7 @@
       </div> 
     </article>
   </div>
+  {%- endif %}
 </section>
 
 {% set schedule = node.properties.schedule %}
