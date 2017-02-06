@@ -1,12 +1,12 @@
-<section id="sponsors" class="sponsors push-two clearfix nopush-bottom{% if background %} fill-{{ background }}{% endif %}">
+<section id="sponsors" class="sponsors push-two clearfix">
   <div class="row-fluid container">
     <h2 class="extralarge all-caps space-one-bottom">Sponsors</h2>
   </div>
 </section>
 
 {% with fill_cycler = cycler('fill-blue', 'fill-gray') %}
-  {% set types = getnode(path='2017-sponsors').data['types'] %}
-  {% set items = getnode(path='2017-sponsors').data['items'] %}
+  {% set types = getnode(path='2017-sponsors-type').data['types'] %}
+  {% set items = getnode(path='2017-sponsors').data['sponsors'] %}
   {% for type in types %}
     {% set outer = loop %}
     {% for item in items if item.type == type.id and type.size != 's'  %}

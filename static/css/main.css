@@ -1181,6 +1181,11 @@ h2.border-bottom-line > span {
   right: 0;
 }
 
+/* line 397, ../scss/_layout.scss */
+section {
+  background: transparent url("https://images.hasgeek.com/embed/file/e635625dbf6441698323f1671bf47143") bottom center repeat-x;
+}
+
 /* ========= */
 /* = Theme = */
 /* ========= */
@@ -3723,12 +3728,11 @@ a.hasgeek-logo:hover {
   top: -55px;
   left: 0;
   right: 0;
-  font-size: 0.95em;
   line-height: 20px;
   position: absolute;
 }
 
-/* line 1349, ../scss/_objects.scss */
+/* line 1348, ../scss/_objects.scss */
 #htimeline .circle {
   margin: 0 auto;
   top: -14px;
@@ -3743,7 +3747,7 @@ a.hasgeek-logo:hover {
   position: absolute;
 }
 
-/* line 1363, ../scss/_objects.scss */
+/* line 1362, ../scss/_objects.scss */
 #htimeline .content {
   width: 100%;
   margin-top: 20px;
@@ -3759,7 +3763,7 @@ a.hasgeek-logo:hover {
   color: #444;
 }
 
-/* line 1377, ../scss/_objects.scss */
+/* line 1376, ../scss/_objects.scss */
 #htimeline .content:before, .content:after {
   content: "";
   width: 0;
@@ -3770,7 +3774,7 @@ a.hasgeek-logo:hover {
   bottom: 100%;
 }
 
-/* line 1386, ../scss/_objects.scss */
+/* line 1385, ../scss/_objects.scss */
 #htimeline .content:before {
   border-bottom-color: inherit;
   border-width: 15px;
@@ -3779,7 +3783,7 @@ a.hasgeek-logo:hover {
   top: -30px;
 }
 
-/* line 1393, ../scss/_objects.scss */
+/* line 1392, ../scss/_objects.scss */
 #htimeline .content:after {
   border-bottom-color: #F6F9FA;
   border-width: 12px;
@@ -3788,7 +3792,7 @@ a.hasgeek-logo:hover {
   top: -24px;
 }
 
-/* line 1401, ../scss/_objects.scss */
+/* line 1400, ../scss/_objects.scss */
 #htimeline label {
   font-size: 1.3em;
   position: absolute;
@@ -3802,35 +3806,35 @@ a.hasgeek-logo:hover {
   top: 60px;
 }
 
-/* line 1414, ../scss/_objects.scss */
+/* line 1413, ../scss/_objects.scss */
 #htimeline .radio {
   display: none;
 }
 
-/* line 1417, ../scss/_objects.scss */
+/* line 1416, ../scss/_objects.scss */
 #htimeline .radio:checked + .relative label {
   cursor: auto;
   width: 400px;
   transition: width 0.3s linear 0.2s;
 }
 
-/* line 1422, ../scss/_objects.scss */
+/* line 1421, ../scss/_objects.scss */
 #htimeline .radio:checked + .relative .circle {
   background: red;
 }
 
-/* line 1425, ../scss/_objects.scss */
+/* line 1424, ../scss/_objects.scss */
 #htimeline .radio:checked ~ .content {
   border-color: #CCC;
 }
 
-/* line 1428, ../scss/_objects.scss */
+/* line 1427, ../scss/_objects.scss */
 #htimeline .radio:checked ~ .content p {
   color: #ccc;
   transition: color 0.3s linear 0.3s;
 }
 
-/* line 1433, ../scss/_objects.scss */
+/* line 1432, ../scss/_objects.scss */
 #htimeline .radio + .relative .circle {
   background: #ccc;
   display: block;
@@ -3838,44 +3842,191 @@ a.hasgeek-logo:hover {
   width: 20px;
 }
 
-/* line 1439, ../scss/_objects.scss */
+/* line 1438, ../scss/_objects.scss */
 #htimeline .radio.theme-red + .relative .circle {
   background: #CB1D1E;
 }
 
-/* line 1442, ../scss/_objects.scss */
+/* line 1441, ../scss/_objects.scss */
 #htimeline .radio.theme-green + .relative .circle {
   background: #73BD2C;
 }
 
-/* line 1445, ../scss/_objects.scss */
+/* line 1444, ../scss/_objects.scss */
 #htimeline .radio ~ .content {
   border-color: #333;
   transform: translateX(20px);
   transition: max-height 0.4s linear, border-color 0.5s linear, transform 0.2s linear;
 }
 
-/* line 1450, ../scss/_objects.scss */
+/* line 1449, ../scss/_objects.scss */
 #htimeline .radio ~ .content p {
   color: #333;
   transition: color 0.3s linear 0.3s;
 }
 
-/* line 1455, ../scss/_objects.scss */
+/* line 1454, ../scss/_objects.scss */
 .fill-white #htimeline a:hover,
 .fill-white #htimeline a:focus {
   color: #333;
   border-color: inherit;
 }
 
-/* line 1460, ../scss/_objects.scss */
+/* line 1459, ../scss/_objects.scss */
 .fill-white #htimeline a:hover div.content,
 .fill-white #htimeline a:focus div.content {
   background-color: #E9F0F3;
 }
 
-/* line 1464, ../scss/_objects.scss */
+/* line 1463, ../scss/_objects.scss */
 .fill-white #htimeline a:hover div.content:after,
 .fill-white #htimeline a:focus div.content:after {
   border-bottom-color: #E9F0F3;
+}
+
+/* Proposal section */
+/* line 1468, ../scss/_objects.scss */
+.proposals {
+  width: 100%;
+  height: 480px;
+  overflow: auto;
+  outline: none;
+  padding-left: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  /* line 1480, ../scss/_objects.scss */
+  .proposals {
+    height: 460px;
+  }
+}
+/* line 1486, ../scss/_objects.scss */
+.proposal-card {
+  display: inline-block;
+  vertical-align: top;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  padding: 0;
+  background-color: #fff;
+  width: 290px;
+  height: 400px;
+  margin: 30px 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  /* line 1502, ../scss/_objects.scss */
+  .proposal-card {
+    width: 420px;
+    height: 380px;
+    margin: 30px 15px;
+  }
+}
+/* line 1509, ../scss/_objects.scss */
+.proposal-card :focus,
+.proposal-card :active {
+  outline: none;
+}
+
+/* line 1514, ../scss/_objects.scss */
+.talk .title {
+  font-weight: bold;
+  font-size: 18px;
+  min-height: 50px;
+  max-height: 75px;
+  /* fit text in one line */
+  margin: 0 0 10px;
+  padding: 15px 15px 0;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  /* line 1525, ../scss/_objects.scss */
+  .talk .title {
+    max-height: 55px;
+    /* fit text in one line */
+  }
+}
+/* line 1530, ../scss/_objects.scss */
+.talk .separator {
+  border-width: 3px;
+  border-color: #716ead;
+  margin: 0;
+}
+
+/* line 1536, ../scss/_objects.scss */
+.talk .description {
+  max-height: 270px;
+  overflow: hidden;
+  padding: 15px 15px 0;
+}
+
+/* line 1542, ../scss/_objects.scss */
+.description:after {
+  content: "";
+  width: 100%;
+  height: 52px;
+  position: absolute;
+  left: 0;
+  bottom: 52px;
+  z-index: 4;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 70%, #fff 100%);
+}
+
+@media (min-width: 768px) {
+  /* line 1554, ../scss/_objects.scss */
+  .talk .description {
+    max-height: 250px;
+  }
+}
+/* line 1559, ../scss/_objects.scss */
+.proposal-card .description p,
+.proposal-card .description ul,
+.proposal-card .description ol,
+.proposal-card .description pre {
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1570, ../scss/_objects.scss */
+.proposal-card .description ul,
+.proposal-card .description ol {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+/* line 1576, ../scss/_objects.scss */
+.talk .fullname {
+  background-color: #716ead;
+  margin: 0;
+  padding: 15px;
+  color: #fff;
+  text-align: right;
+  line-height: 1.2;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* line 1588, ../scss/_objects.scss */
+.modal-description-title {
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+/* line 1593, ../scss/_objects.scss */
+.modal-description {
+  margin: 0 0 10px;
+}
+
+/* line 1597, ../scss/_objects.scss */
+body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
+  margin-right: 0 !important;
 }

@@ -1,9 +1,9 @@
 {% set session_url = node.properties.session_url %}
 {% set session = getnode(path=session_url).data['session'] %}
 
-<section id="{{ session.id }}" class="clearfix{% if background %} fill-{{ background }}{% endif %}">
+<section id="{{ session.id }}" class="push-two clearfix">
   <div class="container-fluid">
-    {% if session.label %}<h2 class="large all-caps text-center push-one">{{ session.label }}</h2>{% endif %}
+    {% if session.label %}<h2 class="text-center push-1q-bottom large all-caps">{{ session.label }}</h2>{% endif %}
     {% for item in session|sort(attribute='count') %}
       <div id="{{ item.id }}" class="row push-two-bottom pad-3q session">
         <div class="row">

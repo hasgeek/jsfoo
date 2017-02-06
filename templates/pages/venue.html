@@ -1,11 +1,6 @@
 {% extends theme('layouts/page.html') %}
-{%
-  set page = {
-      'title'       : 'Venue + Local Info'
-    , 'description' : 'Venue and Local Information for JSFoo 2017'
-    , 'sections'    : [
-        ('venue-summary',  'lightblue')
-      , ('hotels',            'lightblue')
-    ]
-  }
-%}
+
+{% block content %}
+  {% include theme("sections/venue-summary.html") %}
+  {% include theme("sections/hotels.html") %}
+{% endblock %}

@@ -1,12 +1,10 @@
 {% extends theme('layouts/page.html') %}
-{%
-  set page = {
-      'title'       : 'Workshop'
-    , 'description' : 'Workshop for JSFoo 2017'
-    , 'sections'    : [
-        ('session', ''),
-        ('venue',  'lightblue') ,
-        ('sponsors-summary',  'darkblue')
-    ]
-  }
-%}
+
+{% block content %}
+  {% include theme("sections/session.html") %}
+  {% if node.properties.tickets %}
+    {% include theme("sections/tickets.html") %}
+  {% endif %}
+  {% include theme("sections/venue.html") %}
+  {% include theme("sections/sponsors-summary.html") %}
+{% endblock %}

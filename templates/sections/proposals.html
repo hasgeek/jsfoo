@@ -1,0 +1,48 @@
+<section id="proposals" class="push-three-top push-two-bottom clearfix">
+  <h2 class="calm centered space-one large text-center">Proposals</h2>
+  <div id="funnel-proposals">
+    <p class="text-center secondary">Loading...</p>
+    {%raw%}
+    <script id="proposals-wrapper" type="text/ractive">
+      <div class="proposals">
+      <div class="mCustomScrollbar" data-mcs-theme="dark">
+        {{#proposals}}
+          <div class="proposal-card click" data-toggle="modal" data-target="#{{id}}" data-label="Funnel proposal card">
+            <div class="talk">
+              <p class="title"><span>{{title}}</span></p>
+              <hr class="separator">
+              <div class="description secondary-prose">
+                {{{objective}}}
+              </div>
+              <p class="fullname secondary"><span>{{fullname}}</span></p>
+            </div>
+          </div>
+        {{/}}
+      </div>
+      </div>
+      {{#proposals}}
+      <div class="modal fade" id="{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h3 class="modal-title secondary">{{title}}</h3>
+            </div>
+            <div class="modal-body">
+              <h4 class="modal-description-title secondary">Outline</h4>
+              <div class="modal-description secondary-prose">{{{description}}}</div>
+              <h4 class="modal-description-title secondary">Abstract</h4>
+              <div class="modal-description secondary-prose">{{{objective}}}</div>
+            </div>
+            <div class="modal-footer">
+              <a type="button" class="btn btn-primary" href="{{url}}" target="_blank" data-target="{{url}}" data-label="Vote">Vote</a>
+              <a type="button" class="btn btn-primary" href="{{url}}/#comments" target="_blank" data-target="{{url}}/#comments" data-label="Discuss">Discuss</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/}}
+    </script>
+    {%endraw%}
+  </div>
+</section>

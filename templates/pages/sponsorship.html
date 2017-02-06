@@ -1,0 +1,168 @@
+{% extends theme('layouts/page.html') %}
+
+{% block content %}
+  {% include theme("sections/event-highlights.html") %}
+  {% include theme("sections/sponsorship-catalogue.html") %}
+  {% include theme("sections/testimonials.html") %}
+  {% include theme("sections/venue.html") %}
+  {% include theme("sections/sponsors.html") %}
+{% endblock %}
+
+{% block navtype %}
+<div id="nav-home">
+  <nav class="navbar navbar-default" id="site-nav" role="navigation">
+    <div class="sitebar">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand smooth-scroll" href="#header">Rootconf</a>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#event-highlights" class="smooth-scroll">Highlights</a></li>
+          <li><a href="#sponsorship" class="smooth-scroll">Become a sponsor</a></li>
+          <li><a href="#testimonials" class="smooth-scroll">Testimonials</a></li>
+          <li><a href="#venue" class="smooth-scroll">Venue</a></li>
+          <li><a href="#sponsors" class="smooth-scroll">Sponsors</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+            <ul class="dropdown-menu">   
+              <li><a href="#about" class="smooth-scroll">About HasGeek</a></li>
+              <li><a href="code-of-conduct">Code of conduct</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+{% endblock %}
+
+{% block banner %}
+<header class="masthead-home fill-dark" id="header">
+  <div id="lamp">
+    <div id="wire"></div>
+      <div id="holder"></div>
+      <div id="bulb"></div>
+      <div id="light"></div>
+  </div>
+  
+  <div class="display-board-container">
+
+    <div class="display-board push-one">
+      <div class="white extralarge text-center">
+        <div class="link line2 text-center title-type push-2q-top">
+          <div class="logo"><img src="https://imgee.s3.amazonaws.com/imgee/769dc463009d4cf09be7352c8c7b3628.png" width="80px" alt="###">rootconf</div><!-- <div id="blink-wrapper"><span id="blink"></span></div> -->
+        </div>
+        <p class="secondary prose-type space-half-top">
+          {% if node.properties.tagline %}
+            {{ node.properties.tagline }}
+          {% else %}
+            Conference &amp; Workshops on DevOps and Cloud Infrastructure
+          {% endif %}
+        </p>
+        <div class="intro row-fluid secondary prose prose-type thin space-half-top text-center">
+          <p class="nospace">
+            {% if node.properties.date %}
+              {{ node.properties.date }}
+            {% endif %}
+          </p>
+        </div>
+        <div class="intro row-fluid secondary prose prose-type thin space-half-top text-center">
+          <p class="nospace">
+            {% if node.properties.venue %}
+              {{ node.properties.venue }}
+            {% else %}
+              MLR Convention Centre, JP Nagar
+            {% endif %}
+          </p>
+        </div>
+      </div>
+      <div class="push-one text-center">
+        <a href="#tickets" class="button smooth-scroll">Become a sponsor</a>
+      </div>
+    </div> 
+
+    <div id="mast-img"></div> 
+    <div id="mast-floor">
+      <div class="masthead-test">
+        <img src="https://imgee.s3.amazonaws.com/imgee/ae4c466819ce4701bbdb851b8988ed1e_w992_h225.jpeg" alt="">
+      </div>
+    </div> 
+    <p class="large white scroll-down link-silent nospace text-right pad-two"><a href="#event-highlights" class="smooth-scroll fa fa-chevron-down visible-lg white"></a></p>
+
+  </div>
+</header>
+{% endblock %}
+
+{% block footerscripts %}
+<style type="text/css">
+  #outreach-widget .outreach-button-action {
+    background: #DF5E0E;
+    border-color: #a64508;
+    color: #fff;
+    border-width: 0 0 3px;
+  }
+  #outreach-widget .outreach-button-info {
+    background-color: #F5F5F5;
+    border-color: #ADADAD;
+    color: #333;
+    border-width: 1px 1px 3px;
+  }
+  .category-heading {
+    font-size: 1.650rem;
+    line-height: 1.30;
+    font-weight: 500;
+    margin-top: 1.00rem!important;
+    margin-bottom: 0!important;
+    padding: 0 15px;
+  }
+  .category-description {
+    margin: 0;
+  }
+  #outreach-widget .ticket-description {
+    font-size: .800rem;
+    line-height: 1.60;
+  }
+</style>
+        
+<script>
+  $(function(){
+    //outreach widget
+    var outreachUrl = "https://outreach.hasgeek.com"
+    $.get({
+      url: outreachUrl+"/api/1/outreach.js",
+      crossDomain: true
+    }).done(function(data) {
+      var outreachScript = document.createElement('script');
+      outreachScript.innerHTML = data.script;
+      document.getElementsByTagName('body')[0].appendChild(outreachScript);
+      window.outreach_widget.init({
+        orgName: "hasgeek",
+        itemCollection: "{{ node.properties.outreach_item_collection }}",
+        eventName: "{{ node.properties.event_name }}"
+      });
+
+    }).fail(function(response) {
+      var error_msg;
+      if (response.readyState === 4) {
+        error_msg = "Server error, please try again later";
+      }
+      else if (response.readyState === 0) {
+        if(!navigator.onLine) {
+          error_msg = "Unable to connect. There is no network!";
+        }
+        else {
+          error_msg = "<p>Unable to connect. If you are behind a firewall or using any script blocking extension (like Privacy Badger).<p></p> Please ensure your browser can load outreach.hasgeek.com</p>";
+        }
+      }
+      $('#outreach-widget p').html(error_msg);
+    });
+  });
+</script>
+{% endblock %}

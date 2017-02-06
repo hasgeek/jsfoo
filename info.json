@@ -1,19 +1,24 @@
 {
     "application": "eventframe",
     "identifier": "jsfoo2017",
-    "name": "JSFoo 2017",
+    "name": "JSFoo",
     "author": "HasGeek",
-    "description": "JSFoo Bangalore 2017 website template",
+    "description": "JSFoo Bangalore website template",
     "license": "All rights reserved",
     "doctype": "html5",
     "options": {
         "assets_css": [
             "css/vendor/bootstrap.min.css",
+            "css/vendor/jquery.mCustomScrollbar.min.css",
             "css/font-awesome.css",
             "css/main.css"
         ],
         "assets_js": [
             "js/vendor/bootstrap.min.js",
+            "js/vendor/jquery.mobile.custom.min.js",
+            "js/vendor/jquery.mousewheel.js",
+            "js/vendor/jquery.mCustomScrollbar.min.js",
+            "js/vendor/ractive.min.js",
             "js/maps.js",
             "js/main.js"
         ]

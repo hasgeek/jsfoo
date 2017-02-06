@@ -1,7 +1,7 @@
 {% set venue_url = node.properties.url %}
 {% set venue = getnode(path=venue_url).data['venue'] %}
 
-<section id="venue" class="venue push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
+<section id="venue" class="venue push-two clearfix fill-primary">
   <div class="container">
     <div class="row">
         <h2 class="text-center push-1q-bottom large all-caps">Venue</h2>

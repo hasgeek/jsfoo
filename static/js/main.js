@@ -174,13 +174,8 @@ var renderScheduleTable = function(schedules, eventType, divContainer) {
       $(".schedule-table-container p.loadingtxt").hide();
     }
     else {
-      //var workshopDates = $('#dl-workshopschedule').attr('data-date');
-      //workshopDates = workshopDates.split('-');
-      //var date = schedule.date.substr(8, 2);
-      //if (workshopDates.indexOf(date) > -1) {
-        $(divContainer).append(Mustache.render(tableTemplate, schedule));
-        $(".schedule-table-container p.loadingtxt").hide();
-      //}
+      $(divContainer).append(Mustache.render(tableTemplate, schedule));
+      $(".schedule-table-container p.loadingtxt").hide();
     }
   });
   if ($(window).width() < 768){
@@ -299,6 +294,56 @@ function parseJson(data, eventType, divContainer) {
   }
 }
 
+var updateFontSize = function(elem) {
+  var fontStep = 1;
+  var parentWidth = $(elem).width();
+  var parentHeight = parseInt($(elem).css('max-height'), 10);
+  var childElem = $(elem).find('span');
+  while ((childElem.width() > parentWidth) || (childElem.height() > parentHeight)) {
+    childElem.css('font-size', parseInt(childElem.css('font-size'), 10) - fontStep + 'px');
+  }
+};
+
+var getElemWidth = function(elem) {
+  var card_width = $(elem).css('width');
+  var card_margin = $(elem).css('margin-left');
+  var card_total_width = parseInt(card_width, 10) + 2.5 * parseInt(card_margin, 10);
+  return card_total_width;
+};
+
+var enableScroll = function(items_length) {
+  $(".mCustomScrollbar").css('width', items_length * getElemWidth(".proposal-card") + 'px');
+  $('.mCustomScrollbar').mCustomScrollbar({ axis:"x", theme: "dark-3", scrollInertia: 10, alwaysShowScrollbar: 0});
+};
+
+function parseProposalJson(json) {
+  var proposal_ractive = new Ractive({
+    el: '#funnel-proposals',
+    template: '#proposals-wrapper',
+    data: {
+      proposals: json.proposals
+    },
+    complete: function() {
+      $.each($('.proposal-card .title'), function(index, title) {
+        updateFontSize(title);
+      });
+
+      //Set width of content div to enable horizontal scrolling
+      enableScroll(json.proposals.length);
+
+      $(window).resize(function() {
+        enableScroll(json.proposals.length);
+      });
+
+      $('#funnel-proposals .click, #funnel-proposals .btn').click(function(event) {
+        var action = $(this).data('label');
+        var target = $(this).data('target');
+        sendGA('click', action, target);
+      });
+    }
+  });
+};
+
 $(document).ready(function() {
     if($(".site-navbar").length) {
       var siteNavTop = $(".site-navbar").offset().top;
@@ -334,21 +379,6 @@ $(document).ready(function() {
         $('html,body').animate({scrollTop:sectionPos}, '900');
     });
 
-    $('.turn-right').click(function() {
-        $(this).parent('.box-front-side').addClass('flip').delay(400).queue(function() {
-            $(this).removeClass('show-side').removeClass('flip');
-            $(this).parents('.box').find('.box-back-side').addClass('show-side');
-            $(this).clearQueue();
-        });
-    });
-    $('.turn-left').click(function() {
-        $(this).parent('.box-back-side').addClass('flip').delay(400).queue(function() {
-            $(this).removeClass('show-side').removeClass('flip');
-            $(this).parents('.box').find('.box-front-side').addClass('show-side');
-            $(this).clearQueue();
-        });
-    });
-
     setTimeout(function() {
       $('.heading-text .text1').animate({right: 0}, 500);
       $('.heading-text .text2').animate({left: 0}, 500);
@@ -364,7 +394,7 @@ $(document).ready(function() {
     }
   });
 
-  $('#jsfooconferenceschedule').on('click', 'table td .js-expand', function() {
+  $('#conferenceschedule').on('click', 'table td .js-expand', function() {
     if($(this).hasClass('fa-caret-right')) {
       $(this).removeClass('fa-caret-right').addClass('fa-caret-down');
       $(this).parents('td').find('.description-text').slideDown();
@@ -375,7 +405,7 @@ $(document).ready(function() {
     }
   });
 
-  $('#jsfooconferenceschedule').on('click', 'table th.track0, table th.track1, table th.track2', function() {
+  $('#conferenceschedule').on('click', 'table th.track0, table th.track1, table th.track2', function() {
     if($(window).width() < 768){
       var parentTable = $(this).parents('table');
       var activeColumn = $(this).attr('data-td');
@@ -394,6 +424,12 @@ $(document).ready(function() {
     trigger : 'hover',
     html : true
   });
+
+  var sendGA = function(category, action, label) {
+    if (typeof ga !== "undefined") {
+      ga('send', { hitType: 'event', eventCategory: category, eventAction: action, eventLabel: label});
+    }
+  };
 
   // Function that tracks a click button in Google Analytics.
   $('.button').click(function(event) {

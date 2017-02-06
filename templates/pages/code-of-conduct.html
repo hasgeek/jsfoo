@@ -1,13 +1,8 @@
 {% extends theme('layouts/page.html') %}
-{%
-  set page = {
-      'title'       : 'Code of Conduct'
-    , 'description' : 'Code of Conduct for JSFoo 2017'
-    , 'sections'    : [
-        ('code-of-conduct-intro',   '')
-      , ('code-of-conduct-body',    'lightblue')
-      , ('code-of-conduct-contact', 'darkyellow')
-      , ('code-of-conduct-license', 'primary')
-    ]
-  }
-%}
+
+{% block content %}
+  {% include theme("sections/code-of-conduct-intro.html") %}
+  {% include theme("sections/code-of-conduct-body.html") %}
+  {% include theme("sections/code-of-conduct-contact.html") %}
+  {% include theme("sections/code-of-conduct-license.html") %}
+{% endblock %}

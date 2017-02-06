@@ -1,21 +1,21 @@
 {% set events = getnode(path='runup-events-list').data['runup-list'] %}
 
-<section id="runup-events" class="push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
+<section id="runup-events" class="push-two clearfix">
   <div class="row-fluid text-center space-three-bottom">
-    <h2>{{ getnode(path='runup-events-list').title }}</h2>
+    <h2 class="text-center push-1q-bottom large all-caps">{{ getnode(path='runup-events-list').title }}</h2>
     
     <ul id='htimeline'>
       {% for event in events %}
         <li class='work'>
           <input class='radio {% if event.featured %}theme-red{% else %}theme-green{% endif %}' id='work4' name='works' type='radio'>
           <div class="relative">
-            <span class='date'>{{ event.date }}</span>
+            <span class='date secondary'>{{ event.date }}</span>
             <span class='circle'></span>
           </div>
           <a class="link-silent" href="{{ event.url }}">
             <div class='content'>
-              <p>{{ event.title }}</p>
-              <p><i class="fa fa-map-marker"></i> {{ event.city }}</p>
+              <p class="secondary">{{ event.title }}</p>
+              <p class="tiny"><i class="fa fa-map-marker"></i> {{ event.city }}</p>
             </div>
           </a>
         </li>

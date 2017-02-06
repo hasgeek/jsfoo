@@ -43,7 +43,7 @@
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,400,600" />
 <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Montserrat:400,700" rel="stylesheet"> 
 <link href='//fonts.googleapis.com/css?family=Syncopate:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="/_baseframe/css/networkbar.css">
 
@@ -67,6 +67,9 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
+
+<script type="text/javascript" src="//use.typekit.net/gfr4qlr.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 <div class="">
   {% block networkbar %}
@@ -109,7 +112,7 @@
             </nav>
           </div>
           <div class="col-sm-6">
-            <div class="flushleft space-one center-xs">
+            <div class="flushright space-one center-xs">
               {% if node.properties.buy_ticket %}
                 <a href="/#tickets" class="button regular-prose dark smooth-scroll">Buy tickets</a>
               {% elif node.properties.propose_talk %}
@@ -127,12 +130,6 @@
 {% block sitenav %}{% endblock %}
 
 {% block content %}
-  {% for item in page.sections  %}
-    {% with %}
-      {% if item is string %} {% set section = item %} {% else %} {% set section, background = item %} {% endif %}
-      {% include theme('sections/'+section+'.html') %}
-    {% endwith %}
-  {% endfor %}
 {% endblock %}
 
 
@@ -215,7 +212,7 @@ if (location.hostname == 'jsfoo.in') {
   });
 </script>
 
-{% block footer_script %}{% endblock %}
+{% block footerscripts %}{% endblock %}
 
 </body>
 </html>

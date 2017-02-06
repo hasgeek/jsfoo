@@ -1,0 +1,19 @@
+<section id="testimonials" class="push-three-top push-two-bottom clearfix">
+  <div class="row-fluid container">
+    <div class="regular text-justify">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <h2 class="calm centered space-one large text-center">Testimonials</h2>
+        {% set testimonials = getnode(path='testimonials').data['testimonials'] %}
+        {% for testimonial in testimonials  %}
+        <div class="speech-bubble">
+          <blockquote class="rectangle-speech-border">
+            {{ testimonial.blurb|safe }}
+          </blockquote>
+          <p class="attendee blue nospace">{{ testimonial.name|safe }}</p>
+          <p class="attendee blue nospace">{{ testimonial.designation|safe }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
