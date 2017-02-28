@@ -1,0 +1,29 @@
+<section id="blog" class="push-four section-divider clearfix">
+  <div class="container">
+    <div class="row">
+      <h3 class="huge col-xs-12 text-center">JSFoo blog</h3>
+      <div id="entries-wrapper">
+        <p class="text-center regular">Loading...</p>
+        {%raw%}
+          <script id="entries" type="text/ractive">
+            {{#content}}
+              <div class="col-xs-12 col-sm-6 col-md-4 card-wrapper">
+                <a class="card click link-silent" data-target="{{ link }}" data-label="{{ title }}" href="{{ link }}" target="_blank">
+                  <div class="talk">
+                    <h3 class="title js-blog-title nospace"><span>{{ title }}</span></h3>
+                    <hr class="separator">
+                    <div class="description">{{{ description }}}</div>
+                    <h5 class="fullname medium regular"><span>{{ author }}</span></h5>
+                  </div>
+                </a>
+              </div>
+            {{/}}
+          </script>
+        {%endraw%}
+      </div>
+      <div class="push-two col-xs-12 text-center">
+        <a href="{{ node.properties.blog }}" class="button btn-shadow" target="_blank">Read more on JSFoo blog</a>
+      </div>
+    </div>
+  </div>
+</section>

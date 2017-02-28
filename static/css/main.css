@@ -3110,7 +3110,7 @@ a.hasgeek-logo:hover {
 .nav-fixed {
   position: fixed;
   top: 0;
-  z-index: 9999;
+  z-index: 1049;
   width: 100%;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
 }

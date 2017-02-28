@@ -1,3 +1,80 @@
+window.Jsfoo = {};
+
+Jsfoo.sendGA = function (category, action, label) {
+  if (typeof ga !== "undefined") {
+    ga('send', { hitType: 'event', eventCategory: category, eventAction: action, eventLabel: label});
+  }
+};
+
+Jsfoo.updateFontSize = function (elem) {
+  var fontStep = 1;
+  var parentWidth = $(elem).width();
+  var parentHeight = parseInt($(elem).css('max-height'), 10);
+  var childElem = $(elem).find('span');
+  while ((childElem.width() > parentWidth) || (childElem.height() > parentHeight)) {
+    childElem.css('font-size', parseInt(childElem.css('font-size'), 10) - fontStep + 'px');
+  }
+};
+
+Jsfoo.getElemWidth = function(elem) {
+  var card_width = $(elem).css('width');
+  var card_margin = $(elem).css('margin-left');
+  var card_total_width = parseInt(card_width, 10) + 2.5 * parseInt(card_margin, 10);
+  return card_total_width;
+};
+
+Jsfoo.enableScroll = function(items_length) {
+  $(".mCustomScrollbar").css('width', items_length * Jsfoo.getElemWidth(".proposal-card") + 'px');
+  $('.mCustomScrollbar').mCustomScrollbar({ axis:"x", theme: "dark-3", scrollInertia: 10, alwaysShowScrollbar: 0});
+};
+
+Jsfoo.parseJson = function (data, wrapper, div, type) {
+  var proposal_ractive = new Ractive({
+    el: wrapper,
+    template: div,
+    data: {
+      content: data
+    },
+    oncomplete: function () {
+      var clickElem = wrapper + " .click";
+
+      $(clickElem).click(function(event) {
+        var target = $(this).data('target');
+        var action = $(this).data('label');
+        Jsfoo.sendGA('click', action, target);
+      });
+    }
+  });
+};
+
+Jsfoo.parseProposalJson = function(json) {
+  var proposal_ractive = new Ractive({
+    el: '#funnel-proposals',
+    template: '#proposals-wrapper',
+    data: {
+      proposals: json.proposals
+    },
+    oncomplete: function() {
+      $.each($('.proposal-card .title'), function(index, title) {
+        Jsfoo.updateFontSize(title);
+      });
+
+      //Set width of content div to enable horizontal scrolling
+      Jsfoo.enableScroll(json.proposals.length);
+
+      $(window).resize(function() {
+        Jsfoo.enableScroll(json.proposals.length);
+      });
+
+      $('#funnel-proposals .click, #funnel-proposals .btn').click(function(event) {
+        var action = $(this).data('label');
+        var target = $(this).data('target');
+        Jsfoo.sendGA('click', action, target);
+      });
+    }
+  });
+};
+
 // For conference and workshop schedule
 //dateStr is expected in the format 2015-07-16", then returns "Thu Jul 16 2015"
 var getDateString = function(dateStr) {
@@ -183,7 +260,7 @@ var renderScheduleTable = function(schedules, eventType, divContainer) {
   }
 }
 
-function parseJson(data, eventType, divContainer) {
+Jsfoo.parseScheduleJson = function (data, eventType, divContainer) {
   var schedules = data.schedule;
   var workshopSchedule = [];
   var conferenceSchedule = [];
@@ -294,56 +371,6 @@ function parseJson(data, eventType, divContainer) {
   }
 }
 
-var updateFontSize = function(elem) {
-  var fontStep = 1;
-  var parentWidth = $(elem).width();
-  var parentHeight = parseInt($(elem).css('max-height'), 10);
-  var childElem = $(elem).find('span');
-  while ((childElem.width() > parentWidth) || (childElem.height() > parentHeight)) {
-    childElem.css('font-size', parseInt(childElem.css('font-size'), 10) - fontStep + 'px');
-  }
-};
-
-var getElemWidth = function(elem) {
-  var card_width = $(elem).css('width');
-  var card_margin = $(elem).css('margin-left');
-  var card_total_width = parseInt(card_width, 10) + 2.5 * parseInt(card_margin, 10);
-  return card_total_width;
-};
-
-var enableScroll = function(items_length) {
-  $(".mCustomScrollbar").css('width', items_length * getElemWidth(".proposal-card") + 'px');
-  $('.mCustomScrollbar').mCustomScrollbar({ axis:"x", theme: "dark-3", scrollInertia: 10, alwaysShowScrollbar: 0});
-};
-
-function parseProposalJson(json) {
-  var proposal_ractive = new Ractive({
-    el: '#funnel-proposals',
-    template: '#proposals-wrapper',
-    data: {
-      proposals: json.proposals
-    },
-    complete: function() {
-      $.each($('.proposal-card .title'), function(index, title) {
-        updateFontSize(title);
-      });
-
-      //Set width of content div to enable horizontal scrolling
-      enableScroll(json.proposals.length);
-
-      $(window).resize(function() {
-        enableScroll(json.proposals.length);
-      });
-
-      $('#funnel-proposals .click, #funnel-proposals .btn').click(function(event) {
-        var action = $(this).data('label');
-        var target = $(this).data('target');
-        sendGA('click', action, target);
-      });
-    }
-  });
-};
-
 $(document).ready(function() {
     if($(".site-navbar").length) {
       var siteNavTop = $(".site-navbar").offset().top;
@@ -415,8 +442,6 @@ $(document).ready(function() {
       renderResponsiveTable();
     }
   });
-
-  initLeaflets();
   
   $('#boxoffice-widget').popover({
     selector: '.t-shirt-image',
@@ -425,23 +450,17 @@ $(document).ready(function() {
     html : true
   });
 
-  var sendGA = function(category, action, label) {
-    if (typeof ga !== "undefined") {
-      ga('send', { hitType: 'event', eventCategory: category, eventAction: action, eventLabel: label});
-    }
-  };
-
   // Function that tracks a click button in Google Analytics.
   $('.button').click(function(event) {
     var button = $(this).html();
     var section = $(this).attr('href');
-    sendGA('click', button, section);
+    Jsfoo.sendGA('click', button, section);
   });
 
   $('.click').click(function(event) {
     var target = $(this).data('target');
     var action = $(this).data('label');
-    sendGA('click', action, target);
+    Jsfoo.sendGA('click', action, target);
   });
 
 });

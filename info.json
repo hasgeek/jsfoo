@@ -11,6 +11,7 @@
             "css/vendor/bootstrap.min.css",
             "css/vendor/jquery.mCustomScrollbar.min.css",
             "css/font-awesome.css",
+            "css/vendor/leaflet.min.css",
             "css/main.css"
         ],
         "assets_js": [
@@ -19,6 +20,9 @@
             "js/vendor/jquery.mousewheel.js",
             "js/vendor/jquery.mCustomScrollbar.min.js",
             "js/vendor/ractive.min.js",
+            "js/vendor/leaflet.js",
+            "js/vendor/mustache.min.js",
+            "js/vendor/feednami.js",
             "js/maps.js",
             "js/main.js"
         ]

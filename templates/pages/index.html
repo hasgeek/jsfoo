@@ -121,66 +121,134 @@
 </style> 
 
 <script>
-$(document).ready(function() {  
-  // For conference and workshop schedule
-  var funnelurl = "{{ node.properties.propose_talk }}" + "schedule/json";
-  //If schedule divs are present on the page, then make the ajax call.
-  if(($('#conferenceschedule').length) || ($('#workshopschedule').length)) {
-    $.ajax({
-      type: 'GET',
-      dataType: 'jsonp',
-      url: funnelurl,
-      success: function(data) {
-        console.log("schedule", data);
-        parseJson(data, 'conference', '#conferenceschedule');
-      }
-    });//eof ajax call
+$(document).ready(function() {
+
+  var logError = function (errorMsg) {
+    $('#boxoffice-widget p').html(errorMsg);
+    {% if g.user %}
+      Raven.setUserContext({
+        email: "{{ g.user.email }}",
+        id: "{{ g.user.username }}"
+      });
+    {% endif %}
+    Raven.captureMessage(errorMsg, {
+      level: 'error',
+      logger: 'boxoffice'
+    });
+    Jsfoo.sendGA('error', 'boxoffice load error', errorMsg);
+    loadProposals();
+    initLeaflets();
   }
 
-    // For proposals
-  var proposals_url = "{{ node.properties.propose_talk }}" + 'json';
+  var loadBlog = function () {
+    var url = "{{ node.properties.blog }}"
+    if (url) {
+      var blog = [];
+      feednami.setPublicApiKey('27e9bf43bffd7b67277ff3639b85da428fac21bb4997f1964d4234c237c5e993');
+      feednami.load(url).then(function(feed) {
+        //Copy only six blog entries
+        var entries = feed.entries.slice(0, 6);
+        for(var index in entries) {
+          entry = entries[index];
+          //Remove img and iframe
+          var description = entry.description.replace(/<img[^>]*>/g,"");
+          description = description.replace(/<iframe[^>]*>/g,"");
+          blog.push({"title": entry.title, "author":entry.author, "description": description, "link": entry.link})
+        }
+        Jsfoo.parseJson(blog, '#entries-wrapper', '#entries', 'blog');
+      });
+    }
+  };
 
-  //If funnel-proposals divs is present on the page, then make the ajax call.
-  if(($('#funnel-proposals').length)) {
-    $.ajax({
-      type: 'GET',
-      dataType: 'jsonp',
-      url: proposals_url,
-      success: function(data) {
-        parseProposalJson(data);
-      }
-    });//eof ajax call
-  }
+  var loadSchedule = function () {
+    // For conference and workshop schedule
+    var funnelurl = "{{ node.properties.propose_talk }}" + "schedule/json";
+    //If schedule divs are present on the page, then make the ajax call.
+    if(($('#conferenceschedule').length) || ($('#workshopschedule').length)) {
+      $.ajax({
+        type: 'GET',
+        dataType: 'jsonp',
+        url: funnelurl,
+        success: function(data) {
+          Jsfoo.parseScheduleJson(data, 'conference', '#conferenceschedule');
+        }
+      });//eof ajax call
+    }
+  };
+
+  var loadProposals = function () {
+    var proposals_url = "{{ node.properties.propose_talk }}" + 'json';
+
+    //If funnel-proposals divs is present on the page, then make the ajax call.
+    if(($('#funnel-proposals').length)) {
+      $.ajax({
+        type: 'GET',
+        dataType: 'jsonp',
+        url: proposals_url,
+        success: function(data) {
+          Jsfoo.parseProposalJson(data);
+        }
+      });//eof ajax call
+    }
+  };
 
   var boxofficeUrl = "https://boxoffice.hasgeek.com";
+  var itemCollectionId = "{{ node.properties.item_collection }}"
 
-  $.get({       
-    url: boxofficeUrl+"/api/1/boxoffice.js",    
-    crossDomain: true       
-  }).done(function(data) {        
-    var boxofficeScript = document.createElement('script');       
-    boxofficeScript.innerHTML = data.script;        
-    document.getElementsByTagName('body')[0].appendChild(boxofficeScript);        
-    window.Boxoffice.init({       
-      org: "hasgeek",       
-      itemCollection: "{{ node.properties.item_collection }}",     
-      paymentDesc: "{{ node.properties.payment_desc }}"       
-    });       
-  }).fail(function(response) {        
-    var error_msg;    
-    if (response.readyState === 4) {    
-      error_msg = "Server error, please try again later";   
-    }   
-    else if (response.readyState === 0) {   
-      if(!navigator.onLine) {   
-        error_msg = "Unable to connect. There is no network!";    
-      }   
-      else {    
-        error_msg = "<p>Unable to connect. If you are behind a firewall or using any script blocking extension (like Privacy Badger).<p></p> Please ensure your browser can load boxoffice.hasgeek.com, api.razorpay.com and checkout.razorpay.com</p>";    
-      }   
-    }   
-    $('#boxoffice-widget p').html(error_msg);   
-  }); 
+  if (itemCollectionId) {
+    $.get({
+      url: boxofficeUrl + "/api/1/boxoffice.js",
+      crossDomain: true,
+      timeout: 8000,
+      retries: 5,
+      retryInterval: 8000,
+      success: function(data) {
+        var boxofficeScript = document.createElement('script');
+        boxofficeScript.innerHTML = data.script;
+        document.getElementsByTagName('body')[0].appendChild(boxofficeScript);
+        window.Boxoffice.init({
+          org: "hasgeek",
+          itemCollection: itemCollectionId,
+          paymentDesc: "{{ node.properties.payment_desc }}"
+        });
+        loadBlog();
+        loadSchedule();
+        loadProposals();
+        initLeaflets();
+      },
+      error: function(response) {
+        var ajaxLoad = this;
+        ajaxLoad.retries -= 1;
+        var errorMsg;
+        if (response.readyState === 4) {
+          errorMsg = "Server error, please try again later.";
+          logError(errorMsg);
+        }
+        else if (response.readyState === 0) {
+          if (ajaxLoad.retries < 0) {
+            if(!navigator.onLine) {
+              errorMsg = "Unable to connect. There is no network!";
+              logError(errorMsg);
+            }
+            else {
+              errorMsg = "Unable to connect. If you are behind a firewall or using any script blocking extension (like Privacy Badger). Please ensure your browser can load boxoffice.hasgeek.com, api.razorpay.com and checkout.razorpay.com .";
+              logError(errorMsg);
+            }
+          } else {
+            setTimeout(function() {
+              $.get(ajaxLoad);
+            }, ajaxLoad.retryInterval);
+          }
+        }
+      }
+    });
+  }
+  else {
+    loadBlog();
+    loadSchedule();
+    loadProposals();
+    initLeaflets();
+  }
 
 });
 </script>
