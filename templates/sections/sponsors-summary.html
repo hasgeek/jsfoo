@@ -1,13 +1,15 @@
 <section id="sponsors" class="sponsors push-two clearfix fill-darkblue">
   <div class="row-fluid container">
     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 push-one-bottom">
-      <h2 class="extralarge all-caps">Sponsors</h2>
+      <h2 class="extralarge">Sponsors</h2>
     </div>
-     <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 secondary space-one-top">
-      {% with f = fragment('2017', 'about-sponsorship') %}
-        {{ f.content }}
-      {% endwith %}
-    </div>
+    {% if not node.properties.hide_about_sponsorship %}
+      <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 secondary space-one-top">
+        {% with f = fragment('2017', 'about-sponsorship') %}
+          {{ f.content }}
+        {% endwith %}
+      </div>
+    {% endif %}
   </div>
   {% with %}
     {% set types = getnode(path='2017-sponsors').data['types'] %}

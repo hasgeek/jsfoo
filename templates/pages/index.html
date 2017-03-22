@@ -37,7 +37,7 @@
           </a>
         </h1>
         <div class="text-center heading-text">
-          <h2 class="legible text1">{{ node.content }}</h2>
+          <h2 class="legible text1">{{ node.properties.tagline }}</h2>
           <h3 class="large text2">{{ node.properties.date }}, {{ node.properties.venue }}</h3>
           {% if node.properties.buy_ticket %}
             <p class="space-one"><a href="#tickets" class="button regular-prose dark smooth-scroll">Buy tickets</a></p>
@@ -57,7 +57,7 @@
       <h1 class="logo link-silent"><a href="#page" class="smooth-scroll"><img src="{{ theme_static('img/logo.png') }}"/></a></h1>
       <p id="menu-btn" class="menu white regular" data-target="#dropdown-menu"><i class="fa fa-bars"></i></p>
     </div>
-    <nav class="all-caps nospace clearfix off" id="dropdown-menu">
+    <nav class="nospace clearfix off" id="dropdown-menu">
       <ul class="link-silent clearfix">
         <li><a href="#about" class="smooth-scroll">Announcements</a></li>
         {% if node.properties.past_highlights %}

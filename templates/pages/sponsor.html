@@ -1,0 +1,122 @@
+{% extends theme('layouts/page.html') %}
+
+{% block content %}
+  {% include theme("sections/highlights.html") %}
+  {% include theme("sections/sponsorship-catalogue.html") %}
+  {% include theme("sections/testimonials.html") %}
+  {% if node.properties.sponsors %}
+    {% include theme("sections/sponsors-summary.html") %}
+  {% endif %}
+{% endblock %}
+
+{% block header %}
+  <header class="container-fluid">
+    <div class="masthead">
+      {% include theme("layouts/masthead.html") %}
+    </div>
+    <div class="row-fluid">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h1 class="push-two-top push-one-bottom">
+          <a class="ir center-block logo" href="/">
+            {{ website.title }} {{ node.title }}
+          </a>
+        </h1>
+        <div class="text-center heading-text">
+          <h2 class="legible text1">{{ node.properties.tagline }}</h2>
+          <h3 class="large text2">{{ node.properties.date }}, {{ node.properties.venue }}</h3>
+          <p class="space-one"><a href="#become-a-sponsor" class="button regular-prose dark">Become a sponsor</a></p>
+        </div>
+      </div>
+    </div>
+  {% block banner %}{% endblock %}
+  </header>
+{% endblock %}
+
+{% block sitenav %}
+  <div class="site-navbar">
+    <div class="phone-menu clearfix">
+      <h1 class="logo link-silent"><a href="#page" class="smooth-scroll"><img src="{{ theme_static('img/logo.png') }}"/></a></h1>
+      <p id="menu-btn" class="menu white regular" data-target="#dropdown-menu"><i class="fa fa-bars"></i></p>
+    </div>
+    <nav class="nospace clearfix off" id="dropdown-menu">
+      <ul class="link-silent clearfix">
+        <li><a href="#about" class="smooth-scroll">Highlights</a></li>
+        <li><a href="#become-a-sponsor" class="smooth-scroll">Become a sponsor</a></li>
+        <li><a href="#testimonials" class="smooth-scroll">Testimonials</a></li>
+        {% if node.properties.sponsors %}
+          <li><a href="#sponsors" class="smooth-scroll">Sponsors</a></li>
+        {% endif %}
+        <li><a href="#about" class="smooth-scroll">About HasGeek</a></li>
+      </ul>
+    </nav>
+  </div>
+{% endblock %}
+
+{% block footerscripts %}
+<style type="text/css">
+  #outreach-widget .outreach-button-action {
+    background: #DF5E0E;
+    border-color: #a64508;
+    color: #fff;
+    border-width: 0 0 3px;
+  }
+  #outreach-widget .outreach-button-info {
+    background-color: #F5F5F5;
+    border-color: #ADADAD;
+    color: #333;
+    border-width: 1px 1px 3px;
+  }
+  .category-heading {
+    font-size: 1.650rem;
+    line-height: 1.30;
+    font-weight: 500;
+    margin-top: 1.00rem!important;
+    margin-bottom: 0!important;
+    padding: 0 15px;
+  }
+  .category-description {
+    margin: 0;
+  }
+  #outreach-widget .ticket-description {
+    font-size: .800rem;
+    line-height: 1.60;
+  }
+</style>
+        
+<script>
+  $(function(){
+    //outreach widget
+    var outreachUrl = "http://outreach.vidya.dev:4000"
+    $.get({
+      url: outreachUrl+"/api/1/outreach.js",
+      crossDomain: true
+    }).done(function(data) {
+      var outreachScript = document.createElement('script');
+      outreachScript.innerHTML = data.script;
+      document.getElementsByTagName('body')[0].appendChild(outreachScript);
+      window.outreach_widget.init({
+        orgName: "hasgeek",
+        itemCollection: "{{ node.properties.item_collection }}",
+        eventName: "{{ node.properties.event_name }}"
+      });
+
+    }).fail(function(response) {
+      var error_msg;
+      if (response.readyState === 4) {
+        error_msg = "Server error, please try again later";
+      }
+      else if (response.readyState === 0) {
+        if(!navigator.onLine) {
+          error_msg = "Unable to connect. There is no network!";
+        }
+        else {
+          error_msg = "<p>Unable to connect. If you are behind a firewall or using any script blocking extension (like Privacy Badger).<p></p> Please ensure your browser can load outreach.hasgeek.com</p>";
+        }
+      }
+      $('#outreach-widget p').html(error_msg);
+    });
+    
+    initLeaflets();
+  });
+</script>
+{% endblock %}
