@@ -1,7 +1,7 @@
 {% set events = getnode(path='runup-events-list').data['runup-list'] %}
 
 <section id="runup-events" class="push-two clearfix">
-  <div class="row text-center space-three-bottom">
+  <div class="text-center space-three-bottom">
     <h2 class="text-center push-1q-bottom large">{{ getnode(path='runup-events-list').title }}</h2>
     
     <ul id='htimeline'>
@@ -15,7 +15,7 @@
           <a class="link-silent" href="{{ event.url }}">
             <div class='content'>
               <p class="secondary">{{ event.title }}</p>
-              <p class="tiny"><i class="fa fa-map-marker"></i> {{ event.city }}</p>
+              <p class="tiny"><i class="fa fa-child"></i> {{ event.city }}</p>
             </div>
           </a>
         </li>
