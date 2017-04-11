@@ -10,7 +10,7 @@
         "assets_css": [
             "css/vendor/bootstrap.min.css",
             "css/vendor/jquery.mCustomScrollbar.min.css",
-            "css/font-awesome.css",
+            "css/vendor/font-awesome.css",
             "css/vendor/leaflet.min.css",
             "css/main.css"
         ],

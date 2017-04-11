@@ -5,7 +5,6 @@
     color: $white;
     line-height: 1.4;
     padding: .3em 1.5em .20em;
-    text-transform: uppercase;
     text-align: center;
     border-radius: 0.2em;
     border: 0;
@@ -1004,7 +1003,42 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 }
 
 /* Schedule */
-.schedule-container { max-width: 1000px; margin: auto;}
+.schedule-container { 
+  max-width: 1000px; 
+  margin: auto;
+  min-height: 7030px;
+}
+
+@media (min-width: 480px) {
+  .schedule-container {
+    min-height: 5700px;
+  }
+}
+
+@media (min-width: 768px) {
+  .schedule-container {
+    min-height: 4730px;
+  }
+}
+
+@media (min-width: 980px) {
+  .schedule-container {
+    min-height: 4600px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .schedule-container {
+    min-height: 4770px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .schedule-container {
+    min-height: 4810px;
+  }
+}
+
 .schedule-table { background-color: transparent; border-collapse: separate; height: 100%;}
 
 .schedule-table thead th.time   { 
